@@ -23,13 +23,13 @@ This curated list contains 23 awesome open-source projects with a total of 4.7K 
 
 - [Power System Dynamic Simulation](#power-system-dynamic-simulation) _5 projects_
 - [Power System Steady State Simulation](#power-system-steady-state-simulation) _7 projects_
+- [Optimization solver](#optimization-solver) _2 projects_
+- [Power System Data Analysis](#power-system-data-analysis) _2 projects_
+- [Infrastructure for Co-Simulation](#infrastructure-for-co-simulation) _3 projects_
 - [Gas Network Simulation](#gas-network-simulation) _1 projects_
 - [Machine Learning/Reinforcement Learning](#machine-learningreinforcement-learning) _1 projects_
 - [Visualization](#visualization) _1 projects_
 - [Messaging](#messaging) _1 projects_
-- [Infrastructure for Co-Simulation](#infrastructure-for-co-simulation) _3 projects_
-- [Power System Data Analysis](#power-system-data-analysis) _2 projects_
-- [Optimization solver](#optimization-solver) _2 projects_
 
 ## Explanation
 - 🥇🥈🥉&nbsp; Combined project-quality score
@@ -150,6 +150,78 @@ This curated list contains 23 awesome open-source projects with a total of 4.7K 
 </details>
 <br>
 
+## Optimization solver
+
+<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
+
+<details><summary><b><a href="https://coin-or.github.io/Ipopt/">Ipopt</a></b> (🥇23 ·  ⭐ 930) - COIN-OR Interior Point Optimizer. <code><a href="http://bit.ly/2M0xmjV">EPL-2.0</a></code></summary>
+
+- [GitHub](https://github.com/coin-or/Ipopt) (👨‍💻 22 · 🔀 200 · 📥 5.8K · 📋 500 - 0% open · ⏱️ 22.11.2022):
+
+	```
+	git clone https://github.com/coin-or/Ipopt
+	```
+- [PyPi](https://pypi.org/project/ipopt) (📥 3.1K / month):
+	```
+	pip install ipopt
+	```
+- [Conda](https://anaconda.org/anaconda/ipopt):
+	```
+	conda install -c anaconda ipopt
+	```
+</details>
+<details><summary><b><a href="https://highs.dev/">HiGHS</a></b> (🥇23 ·  ⭐ 420) - High performance serial and parallel solver for large scale sparse linear.. <code><a href="http://bit.ly/34MBwT8">MIT</a></code></summary>
+
+- [GitHub](https://github.com/ERGO-Code/HiGHS) (👨‍💻 44 · 🔀 86 · 📦 5 · 📋 330 - 14% open · ⏱️ 29.11.2022):
+
+	```
+	git clone https://github.com/ERGO-Code/HiGHS
+	```
+- [PyPi](https://pypi.org/project/scikit-highs) (📥 17 / month):
+	```
+	pip install scikit-highs
+	```
+</details>
+<br>
+
+## Power System Data Analysis
+
+<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
+
+<details><summary>Show 2 hidden projects...</summary>
+
+- <b><a href="https://ourworldindata.org/energy">Data on Energy</a></b> (🥇10 ·  ⭐ 140) - Data on energy by Our World in Data. <code><a href="https://tldrlegal.com/search?q=CC-BY">❗️CC-BY</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code>
+- <b><a href="https://github.com/tamu-engineering-research/COVID-EMDA">COVID-EMDA</a></b> (🥉9 ·  ⭐ 53) - Cross-Domain Data Hub with Electricity Market, Coronavirus Case,.. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code>
+</details>
+<br>
+
+## Infrastructure for Co-Simulation
+
+<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
+
+<details><summary><b><a href="https://precice.org/">precice</a></b> (🥇23 ·  ⭐ 480) - Partitioned multi-physics simulations. <code><a href="http://bit.ly/37RvQcA">❗️LGPL-3.0</a></code></summary>
+
+- [GitHub](https://github.com/precice/precice) (👨‍💻 46 · 🔀 130 · 📥 13K · 📋 620 - 24% open · ⏱️ 28.11.2022):
+
+	```
+	git clone https://github.com/precice/precice
+	```
+- [PyPi](https://pypi.org/project/pyprecice) (📥 210 / month):
+	```
+	pip install pyprecice
+	```
+- [Conda](https://anaconda.org/anaconda/pyprecice):
+	```
+	conda install -c anaconda pyprecice
+	```
+</details>
+<details><summary>Show 2 hidden projects...</summary>
+
+- <b><a href="https://helics.org/tools/">HELICS</a></b> (🥉22 ·  ⭐ 83) - Large-scale Infrastructure Co-Simulation. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia.ico" style="display:inline;" width="13" height="13"></code>
+- <b><a href="https://github.com/CURENT/ltb2">Large-scale Testbed (LTB)</a></b> (🥉5 ·  ⭐ 2) - CURENT LTB. <code><a href="http://bit.ly/2M0xdwT">❗️GPL-3.0</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/LTB.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/CURENT_Logo_Transparent.ico" style="display:inline;" width="13" height="13"></code>
+</details>
+<br>
+
 ## Gas Network Simulation
 
 <a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
@@ -187,78 +259,6 @@ This curated list contains 23 awesome open-source projects with a total of 4.7K 
 <details><summary>Show 1 hidden projects...</summary>
 
 - <b><a href="https://ltbdime.readthedocs.io/en/latest/">LTB DiME</a></b> (🥇6 ·  ⭐ 1) - Distributed Messaging Environment for CURENT Large-scale.. <code><a href="http://bit.ly/2M0xdwT">❗️GPL-3.0</a></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/LTB.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/CURENT_Logo_Transparent.ico" style="display:inline;" width="13" height="13"></code>
-</details>
-<br>
-
-## Infrastructure for Co-Simulation
-
-<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
-
-<details><summary><b><a href="https://precice.org/">precice</a></b> (🥇23 ·  ⭐ 480) - Partitioned multi-physics simulations. <code><a href="http://bit.ly/37RvQcA">❗️LGPL-3.0</a></code></summary>
-
-- [GitHub](https://github.com/precice/precice) (👨‍💻 46 · 🔀 130 · 📥 13K · 📋 620 - 24% open · ⏱️ 28.11.2022):
-
-	```
-	git clone https://github.com/precice/precice
-	```
-- [PyPi](https://pypi.org/project/pyprecice) (📥 210 / month):
-	```
-	pip install pyprecice
-	```
-- [Conda](https://anaconda.org/anaconda/pyprecice):
-	```
-	conda install -c anaconda pyprecice
-	```
-</details>
-<details><summary>Show 2 hidden projects...</summary>
-
-- <b><a href="https://helics.org/tools/">HELICS</a></b> (🥉22 ·  ⭐ 83) - Large-scale Infrastructure Co-Simulation. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia.ico" style="display:inline;" width="13" height="13"></code>
-- <b><a href="https://github.com/CURENT/ltb2">Large-scale Testbed (LTB)</a></b> (🥉5 ·  ⭐ 2) - CURENT LTB. <code><a href="http://bit.ly/2M0xdwT">❗️GPL-3.0</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/LTB.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/CURENT_Logo_Transparent.ico" style="display:inline;" width="13" height="13"></code>
-</details>
-<br>
-
-## Power System Data Analysis
-
-<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
-
-<details><summary>Show 2 hidden projects...</summary>
-
-- <b><a href="https://ourworldindata.org/energy">Data on Energy</a></b> (🥇10 ·  ⭐ 140) - Data on energy by Our World in Data. <code><a href="https://tldrlegal.com/search?q=CC-BY">❗️CC-BY</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code>
-- <b><a href="https://github.com/tamu-engineering-research/COVID-EMDA">COVID-EMDA</a></b> (🥉9 ·  ⭐ 53) - Cross-Domain Data Hub with Electricity Market, Coronavirus Case,.. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code>
-</details>
-<br>
-
-## Optimization solver
-
-<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
-
-<details><summary><b><a href="https://coin-or.github.io/Ipopt/">Ipopt</a></b> (🥇23 ·  ⭐ 930) - COIN-OR Interior Point Optimizer. <code><a href="http://bit.ly/2M0xmjV">EPL-2.0</a></code></summary>
-
-- [GitHub](https://github.com/coin-or/Ipopt) (👨‍💻 22 · 🔀 200 · 📥 5.8K · 📋 500 - 0% open · ⏱️ 22.11.2022):
-
-	```
-	git clone https://github.com/coin-or/Ipopt
-	```
-- [PyPi](https://pypi.org/project/ipopt) (📥 3.1K / month):
-	```
-	pip install ipopt
-	```
-- [Conda](https://anaconda.org/anaconda/ipopt):
-	```
-	conda install -c anaconda ipopt
-	```
-</details>
-<details><summary><b><a href="https://highs.dev/">HiGHS</a></b> (🥇23 ·  ⭐ 420) - High performance serial and parallel solver for large scale sparse linear.. <code><a href="http://bit.ly/34MBwT8">MIT</a></code></summary>
-
-- [GitHub](https://github.com/ERGO-Code/HiGHS) (👨‍💻 44 · 🔀 86 · 📦 5 · 📋 330 - 14% open · ⏱️ 29.11.2022):
-
-	```
-	git clone https://github.com/ERGO-Code/HiGHS
-	```
-- [PyPi](https://pypi.org/project/scikit-highs) (📥 17 / month):
-	```
-	pip install scikit-highs
-	```
 </details>
 
 ---
