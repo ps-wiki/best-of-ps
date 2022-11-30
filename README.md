@@ -71,10 +71,17 @@ This curated list contains 19 awesome open-source projects with a total of 3.2K 
 	conda install -c anaconda andes
 	```
 </details>
-<details><summary>Show 4 hidden projects...</summary>
+<details><summary><b><a href="https://github.com/NREL-SIIP/PowerSimulationsDynamics.jl">PowerSimulationsDynamics</a></b> (🥈17 ·  ⭐ 100) - Dynamic Power System simulations. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- <b><a href="https://github.com/NREL-SIIP/PowerSimulationsDynamics.jl">PowerSimulationsDynamics</a></b> (🥈17 ·  ⭐ 99) - Dynamic Power System simulations. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia.ico" style="display:inline;" width="13" height="13"></code>
-- <b><a href="https://github.com/modelica-3rdparty/PowerSystems">PowerSystems</a></b> (🥉14 ·  ⭐ 47 · ➕) - Modelica 3rd party library for electrical power.. <code><a href="https://tldrlegal.com/search?q=Modelica%20License%202">❗️Modelica License 2</a></code>
+- [GitHub](https://github.com/NREL-SIIP/PowerSimulationsDynamics.jl) (👨‍💻 10 · 🔀 24 · 📋 110 - 31% open · ⏱️ 29.11.2022):
+
+	```
+	git clone https://github.com/NREL-SIIP/PowerSimulationsDynamics.jl
+	```
+</details>
+<details><summary>Show 3 hidden projects...</summary>
+
+- <b><a href="https://github.com/modelica-3rdparty/PowerSystems">PowerSystems</a></b> (🥉14 ·  ⭐ 47) - Modelica 3rd party library for electrical power.. <code><a href="https://tldrlegal.com/search?q=Modelica%20License%202">❗️Modelica License 2</a></code>
 - <b><a href="https://github.com/changgang/steps/wiki/">STEPS</a></b> (🥉9 ·  ⭐ 26 · 💤) - Balanced large-scale AC-DC hybrid power system analysis. <code><a href="http://bit.ly/34MBwT8">MIT</a></code>
 - <b><a href="https://github.com/OpenHybridSim/OpenHybridSim-code">OpenHybridSim</a></b> (🥉6 ·  ⭐ 7 · 💀) - Power system Electromagnetic Transient-Transient Stability.. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code>
 </details>
@@ -86,7 +93,7 @@ This curated list contains 19 awesome open-source projects with a total of 3.2K 
 
 <details><summary><b><a href="https://www.pandapower.org/">pandapower</a></b> (🥇31 ·  ⭐ 570) - Convenient Power System Modelling and Analysis. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/e2nIEE/pandapower) (👨‍💻 93 · 🔀 370 · 📦 180 · 📋 770 - 18% open · ⏱️ 29.11.2022):
+- [GitHub](https://github.com/e2nIEE/pandapower) (👨‍💻 95 · 🔀 370 · 📦 180 · 📋 770 - 18% open · ⏱️ 30.11.2022):
 
 	```
 	git clone https://github.com/e2nIEE/pandapower
@@ -102,7 +109,7 @@ This curated list contains 19 awesome open-source projects with a total of 3.2K 
 </details>
 <details><summary><b><a href="https://pypsa.readthedocs.io/en/latest/">PyPSA</a></b> (🥈30 ·  ⭐ 750) - Simulating and optimising modern power and energy systems. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/PyPSA/PyPSA) (👨‍💻 51 · 🔀 310 · 📦 75 · 📋 220 - 25% open · ⏱️ 29.11.2022):
+- [GitHub](https://github.com/PyPSA/PyPSA) (👨‍💻 52 · 🔀 310 · 📦 75 · 📋 220 - 25% open · ⏱️ 30.11.2022):
 
 	```
 	git clone https://github.com/PyPSA/PyPSA
@@ -116,9 +123,9 @@ This curated list contains 19 awesome open-source projects with a total of 3.2K 
 	conda install -c anaconda pypsa
 	```
 </details>
-<details><summary><b><a href="https://www.advancedgridinsights.com/gridcal">GridCal</a></b> (🥈20 ·  ⭐ 300 · 📉) - Cross-platform power systems software. <code><a href="http://bit.ly/37RvQcA">❗️LGPL-3.0</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://www.advancedgridinsights.com/gridcal">GridCal</a></b> (🥈20 ·  ⭐ 300) - Cross-platform power systems software. <code><a href="http://bit.ly/37RvQcA">❗️LGPL-3.0</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/SanPen/GridCal) (👨‍💻 27 · 🔀 70 · 📥 23 · 📦 2 · ⏱️ 13.10.2022):
+- [GitHub](https://github.com/SanPen/GridCal) (👨‍💻 27 · 🔀 71 · 📥 23 · 📦 2 · ⏱️ 13.10.2022):
 
 	```
 	git clone https://github.com/SanPen/GridCal
@@ -174,7 +181,7 @@ This curated list contains 19 awesome open-source projects with a total of 3.2K 
 
 <details><summary>Show 1 hidden projects...</summary>
 
-- <b><a href="https://agvis.readthedocs.io/en/latest/">LTB AGVis</a></b> (🥇8) - Another Grid Visualizer, visualization program for CURENT Large-.. <code><a href="http://bit.ly/2M0xdwT">❗️GPL-3.0</a></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/LTB.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/CURENT_Logo_Transparent.ico" style="display:inline;" width="13" height="13"></code>
+- <b><a href="https://agvis.readthedocs.io/en/latest/">LTB AGVis</a></b> (🥇6 ·  ⭐ 1 · 📉) - Another Grid Visualizer, visualization program for.. <code><a href="http://bit.ly/2M0xdwT">❗️GPL-3.0</a></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/LTB.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/CURENT_Logo_Transparent.ico" style="display:inline;" width="13" height="13"></code>
 </details>
 <br>
 
@@ -194,7 +201,7 @@ This curated list contains 19 awesome open-source projects with a total of 3.2K 
 
 <details><summary><b><a href="https://precice.org/">precice</a></b> (🥇23 ·  ⭐ 480) - Partitioned multi-physics simulations. <code><a href="http://bit.ly/37RvQcA">❗️LGPL-3.0</a></code></summary>
 
-- [GitHub](https://github.com/precice/precice) (👨‍💻 46 · 🔀 130 · 📥 13K · 📋 620 - 24% open · ⏱️ 28.11.2022):
+- [GitHub](https://github.com/precice/precice) (👨‍💻 46 · 🔀 130 · 📥 13K · 📋 620 - 24% open · ⏱️ 30.11.2022):
 
 	```
 	git clone https://github.com/precice/precice
