@@ -1,11 +1,11 @@
 <!-- markdownlint-disable -->
 <h1 align="center">
-    Best-of Open Source Libraries for Power System Analysis
+    Popular Open Source Libraries for Power System Analysis
     <br>
 </h1>
 
 <p align="center">
-    <strong>🏆&nbsp; A ranked list of awesome projects for power system analysis. Updated weekly.</strong>
+    <strong>🏆&nbsp; A ranked list of popular projects for Power System Analysis. Updated weekly.</strong>
 </p>
 
 <p align="center">
@@ -15,9 +15,7 @@
     <a href="https://github.com/jinningwang/best-of-ps/releases" title="Best-of Updates"><img src="https://img.shields.io/github/release-date/jinningwang/best-of-ps?color=green&label=updated"></a>
 </p>
 
-This curated list contains 31 awesome open-source projects with a total of 6K stars grouped into 10 categories. All projects are ranked by a project-quality score, which is calculated based on various metrics automatically collected from GitHub and different package managers. If you like to add or update projects, feel free to open an [issue](https://github.com/jinningwang/best-of-ps/issues/new/choose), submit a [pull request](https://github.com/jinningwang/best-of-ps/pulls), or directly edit the [projects.yaml](https://github.com/jinningwang/best-of-ps/edit/main/projects.yaml). Contributions are very welcome!
-
-> 🧙‍♂️  Discover other [best-of lists](https://best-of.org) or [create your own](https://github.com/best-of-lists/best-of/blob/main/create-best-of-list.md).
+This curated list contains 31 popular open-source projects with a total of 6K stars grouped into 10 categories. All projects are ranked by a project-popular score, which is calculated based on various metrics automatically collected from GitHub and different package managers. If you like to add or update projects, feel free to open an [issue](https://github.com/jinningwang/best-of-ps/issues/new/choose), submit a [pull request](https://github.com/jinningwang/best-of-ps/pulls), or directly edit the [projects.yaml](https://github.com/jinningwang/best-of-ps/edit/main/projects.yaml). Contributions are very welcome!
 
 ## Contents
 
@@ -25,12 +23,13 @@ This curated list contains 31 awesome open-source projects with a total of 6K st
 - [Steady State](#steady-state) _11 projects_
 - [Optimizer](#optimizer) _2 projects_
 - [Machine/Reinforcement Learning](#machinereinforcement-learning) _2 projects_
-- [Power System Data](#power-system-data) _2 projects_
-- [Co-Simulation Platform for Energy System](#co-simulation-platform-for-energy-system) _2 projects_
+- [Power System Co-Simulation](#power-system-co-simulation) _1 projects_
+- [Co-Simulation Framework](#co-simulation-framework) _2 projects_
 - [Gas](#gas) _1 projects_
 - [Visualization](#visualization) _2 projects_
 - [Messaging](#messaging) _1 projects_
-- [Co-Simulation Platform for Other Physical System](#co-simulation-platform-for-other-physical-system) _2 projects_
+- [Power System Data](#power-system-data) _2 projects_
+- [Others](#others) _1 projects_
 
 ## Explanation
 - 🥇🥈🥉&nbsp; Combined project-quality score
@@ -63,12 +62,12 @@ _Power System Dynamic Simulation._
 
 <details><summary><b><a href="https://github.com/cuihantao/andes">LTB andes</a></b> (🥇19 ·  ⭐ 130) - Transient Stability Simulator with Hybrid Symbolic-.. <code><a href="http://bit.ly/2M0xdwT">❗️GPL-3.0</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://raw.githubusercontent.com/ml-tooling/best-of-ml-python/main/config/images/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/LTB.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/CURENT_Logo_Transparent.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/cuihantao/andes) (👨‍💻 16 · 🔀 60 · 📦 6 · 📋 44 - 9% open · ⏱️ 18.11.2022):
+- [GitHub](https://github.com/cuihantao/andes) (👨‍💻 16 · 🔀 60 · 📦 6 · 📋 44 - 9% open · ⏱️ 01.12.2022):
 
 	```
 	git clone https://github.com/cuihantao/andes
 	```
-- [PyPi](https://pypi.org/project/andes) (📥 290 / month):
+- [PyPi](https://pypi.org/project/andes) (📥 260 / month):
 	```
 	pip install andes
 	```
@@ -81,7 +80,7 @@ _Power System Dynamic Simulation._
 	docker pull cuihantao/andes
 	```
 </details>
-<details><summary><b><a href="https://www.nrel.gov/analysis/siip.html">PowerSimulationsDynamics.jl</a></b> (🥈17 ·  ⭐ 100 · ➕) - Dynamic Power System simulations; Part of the SIIP at.. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://www.nrel.gov/analysis/siip.html">PowerSimulationsDynamics.jl</a></b> (🥈17 ·  ⭐ 100) - Dynamic Power System simulations; Part of the SIIP at.. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/NREL-SIIP/PowerSimulationsDynamics.jl) (👨‍💻 10 · 🔀 24 · 📋 110 - 31% open · ⏱️ 29.11.2022):
 
@@ -89,7 +88,7 @@ _Power System Dynamic Simulation._
 	git clone https://github.com/NREL-SIIP/PowerSimulationsDynamics.jl
 	```
 </details>
-<details><summary><b><a href="https://github.com/changgang/steps">STEPS</a></b> (🥉9 ·  ⭐ 26 · 💤) - Balanced large-scale AC-DC hybrid power system analysis. <code><a href="http://bit.ly/34MBwT8">MIT</a></code></summary>
+<details><summary><b><a href="https://github.com/changgang/steps">STEPS</a></b> (🥉8 ·  ⭐ 26 · 💤) - Balanced large-scale AC-DC hybrid power system analysis. <code><a href="http://bit.ly/34MBwT8">MIT</a></code></summary>
 
 - [GitHub](https://github.com/changgang/steps) (👨‍💻 3 · 🔀 11 · 📥 8 · 📦 5 · ⏱️ 13.04.2022):
 
@@ -101,7 +100,7 @@ _Power System Dynamic Simulation._
 
 - <b><a href="https://github.com/modelica-3rdparty/PowerSystems">PowerSystems</a></b> (🥈14 ·  ⭐ 47) - Modelica 3rd party library for electrical power systems. <code><a href="https://modelica.org/licenses/ModelicaLicense2/">❗️Custom</a></code>
 - <b><a href="https://github.com/OpenHybridSim/OpenHybridSim-code">OpenHybridSim</a></b> (🥉6 ·  ⭐ 7 · 💀) - Power system Electromagnetic Transient-Transient Stability.. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code>
-- <b><a href="https://www.dsatools.com">TSAT</a></b> (🥉2 · ➕) - Electromechanical Time-domain Simulation; Part of DSA Tools. <code><a href="https://www.dsatools.com/dsatools-software-license-agreement/">❗️Custom</a></code>
+- <b><a href="https://www.dsatools.com">TSAT</a></b> (🥉2) - Electromechanical Time-domain Simulation; Part of DSA Tools. <code><a href="https://www.dsatools.com/dsatools-software-license-agreement/">❗️Custom</a></code>
 </details>
 <br>
 
@@ -113,7 +112,7 @@ _Power System Steady State Simulation_
 
 <details><summary><b><a href="https://www.pandapower.org/">pandapower</a></b> (🥇31 ·  ⭐ 570) - Convenient Power System Modelling and Analysis. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/e2nIEE/pandapower) (👨‍💻 95 · 🔀 370 · 📦 180 · 📋 770 - 18% open · ⏱️ 30.11.2022):
+- [GitHub](https://github.com/e2nIEE/pandapower) (👨‍💻 95 · 🔀 370 · 📦 180 · 📋 770 - 18% open · ⏱️ 01.12.2022):
 
 	```
 	git clone https://github.com/e2nIEE/pandapower
@@ -133,12 +132,12 @@ _Power System Steady State Simulation_
 </details>
 <details><summary><b><a href="https://github.com/PyPSA/PyPSA">PyPSA</a></b> (🥇30 ·  ⭐ 750) - Simulating and optimising modern power and energy systems. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/PyPSA/PyPSA) (👨‍💻 52 · 🔀 310 · 📦 75 · 📋 220 - 25% open · ⏱️ 30.11.2022):
+- [GitHub](https://github.com/PyPSA/PyPSA) (👨‍💻 53 · 🔀 310 · 📦 75 · 📋 220 - 25% open · ⏱️ 01.12.2022):
 
 	```
 	git clone https://github.com/PyPSA/PyPSA
 	```
-- [PyPi](https://pypi.org/project/pypsa) (📥 3K / month):
+- [PyPi](https://pypi.org/project/pypsa) (📥 3.1K / month):
 	```
 	pip install pypsa
 	```
@@ -179,15 +178,15 @@ _Power System Steady State Simulation_
 	docker pull matpower/matpower
 	```
 </details>
-<details><summary><b><a href="https://www.nrel.gov/analysis/siip.html">PowerSimulations.jl</a></b> (🥈20 ·  ⭐ 180 · ➕) - Optimization Simulation and Modeling of Power.. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://www.nrel.gov/analysis/siip.html">PowerSimulations.jl</a></b> (🥈20 ·  ⭐ 180) - Optimization Simulation and Modeling of Power.. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/NREL-SIIP/PowerSimulations.jl) (👨‍💻 28 · 🔀 42 · 📋 220 - 7% open · ⏱️ 09.11.2022):
+- [GitHub](https://github.com/NREL-SIIP/PowerSimulations.jl) (👨‍💻 28 · 🔀 42 · 📋 220 - 7% open · ⏱️ 01.12.2022):
 
 	```
 	git clone https://github.com/nrel-siip/powersimulations.jl
 	```
 </details>
-<details><summary><b><a href="https://www.gridpath.io/">GridPath</a></b> (🥉17 ·  ⭐ 63) - Power system planning and operations. <code><a href="http://bit.ly/3nYMfla">Apache-2</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://www.gridpath.io/">GridPath</a></b> (🥉16 ·  ⭐ 63 · 📉) - Power system planning and operations. <code><a href="http://bit.ly/3nYMfla">Apache-2</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/blue-marble/gridpath) (👨‍💻 7 · 🔀 25 · 📥 380 · 📋 300 - 20% open · ⏱️ 21.06.2022):
 
@@ -198,10 +197,10 @@ _Power System Steady State Simulation_
 <details><summary>Show 5 hidden projects...</summary>
 
 - <b><a href="rwl.github.io/PYPOWER/api/">PYPOWER</a></b> (🥉19 ·  ⭐ 250) - Port of MATPOWER to Python. <code><a href="https://tldrlegal.com/search?q=BSD">❗️BSD</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code>
-- <b><a href="https://github.com/lanl-ansi/PowerModels.jl">PowerModels.jl</a></b> (🥉17 ·  ⭐ 290 · ➕) - Power Network Optimization. <code><a href="https://tldrlegal.com/search?q=BSD">❗️BSD</a></code> <code><img src="https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia.ico" style="display:inline;" width="13" height="13"></code>
-- <b><a href="https://github.com/grid-parity-exchange/Egret">EGRET</a></b> (🥉15 ·  ⭐ 96 · ➕) - Tools for Power Systems Optimization Modeling. <code><a href="https://tldrlegal.com/search?q=BSD">❗️BSD</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code>
-- <b><a href="https://www.dsatools.com">VSAT</a></b> (🥉2 · ➕) - Voltage Security Assessment using powerflow-based steady-state methods; Part of.. <code><a href="https://www.dsatools.com/dsatools-software-license-agreement/">❗️Custom</a></code>
-- <b><a href="https://www.dsatools.com">PSAT</a></b> (🥉2 · ➕) - Powerflow Analysis; Part of DSA Tools. <code><a href="https://www.dsatools.com/dsatools-software-license-agreement/">❗️Custom</a></code>
+- <b><a href="https://github.com/lanl-ansi/PowerModels.jl">PowerModels.jl</a></b> (🥉18 ·  ⭐ 290 · 📈) - Power Network Optimization. <code><a href="https://tldrlegal.com/search?q=BSD">❗️BSD</a></code> <code><img src="https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia.ico" style="display:inline;" width="13" height="13"></code>
+- <b><a href="https://github.com/grid-parity-exchange/Egret">EGRET</a></b> (🥉15 ·  ⭐ 96) - Tools for Power Systems Optimization Modeling. <code><a href="https://tldrlegal.com/search?q=BSD">❗️BSD</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code>
+- <b><a href="https://www.dsatools.com">VSAT</a></b> (🥉2) - Voltage Security Assessment using powerflow-based steady-state methods; Part of DSA.. <code><a href="https://www.dsatools.com/dsatools-software-license-agreement/">❗️Custom</a></code>
+- <b><a href="https://www.dsatools.com">PSAT</a></b> (🥉2) - Powerflow Analysis; Part of DSA Tools. <code><a href="https://www.dsatools.com/dsatools-software-license-agreement/">❗️Custom</a></code>
 </details>
 <br>
 
@@ -232,7 +231,7 @@ _Power System Steady State Simulation_
 	```
 	git clone https://github.com/ERGO-Code/HiGHS
 	```
-- [PyPi](https://pypi.org/project/scikit-highs) (📥 17 / month):
+- [PyPi](https://pypi.org/project/scikit-highs) (📥 19 / month):
 	```
 	pip install scikit-highs
 	```
@@ -250,7 +249,7 @@ _Power System Steady State Simulation_
 	```
 	git clone https://github.com/rte-france/Grid2Op
 	```
-- [PyPi](https://pypi.org/project/Grid2Op) (📥 460 / month):
+- [PyPi](https://pypi.org/project/Grid2Op) (📥 470 / month):
 	```
 	pip install Grid2Op
 	```
@@ -266,7 +265,7 @@ _Power System Steady State Simulation_
 	```
 	git clone https://github.com/cuihantao/andes_gym
 	```
-- [PyPi](https://pypi.org/project/andes) (📥 290 / month):
+- [PyPi](https://pypi.org/project/andes) (📥 260 / month):
 	```
 	pip install andes
 	```
@@ -277,45 +276,47 @@ _Power System Steady State Simulation_
 </details>
 <br>
 
-## Power System Data
+## Power System Co-Simulation
 
 <a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
 
-🔗&nbsp;<b><a href="https://ourworldindata.org/energy">Data on Energy</a></b> ( ⭐ 140)  - Data on energy by Our World in Data. <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code>
-
-🔗&nbsp;<b><a href="https://github.com/tamu-engineering-research/COVID-EMDA">COVID-EMDA</a></b> ( ⭐ 53)  - Cross-Domain Data Hub with Electricity Market, Coronavirus Case, Mobility and.. <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code>
-
-<br>
-
-## Co-Simulation Platform for Energy System
-
-<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
-
-_Infrastructure for Co-Simulation_
-
-<details><summary><b><a href="https://helics.org/tools/">HELICS</a></b> (🥇22 ·  ⭐ 83) - Large-scale Infrastructure Co-Simulation. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia.ico" style="display:inline;" width="13" height="13"></code></summary>
-
-- [GitHub](https://github.com/GMLC-TDC/HELICS) (👨‍💻 37 · 🔀 33 · 📥 16K · 📋 600 - 12% open · ⏱️ 21.10.2022):
-
-	```
-	git clone https://github.com/GMLC-TDC/HELICS
-	```
-- [PyPi](https://pypi.org/project/helics) (📥 950 / month):
-	```
-	pip install helics
-	```
-- [Conda](https://anaconda.org/anaconda/helics):
-	```
-	conda install -c anaconda helics
-	```
-</details>
-<details><summary><b><a href="https://github.com/CURENT/ltb2">Large-scale Testbed (LTB)</a></b> (🥉5 ·  ⭐ 2) - CURENT Large-scale Testbed. <code><a href="http://bit.ly/2M0xdwT">❗️GPL-3.0</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/LTB.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/CURENT_Logo_Transparent.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://github.com/CURENT/ltb2">Large-scale Testbed (LTB)</a></b> (🥇5 ·  ⭐ 2) - Large-scale Testbed, with SELF-DEVELOPED Simulation.. <code><a href="http://bit.ly/2M0xdwT">❗️GPL-3.0</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/LTB.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/CURENT_Logo_Transparent.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/CURENT/ltb2) (👨‍💻 3 · 🔀 1 · ⏱️ 30.11.2022):
 
 	```
 	git clone https://github.com/CURENT/ltb2
 	```
+</details>
+<br>
+
+## Co-Simulation Framework
+
+<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
+
+<details><summary><b><a href="https://precice.org/">precice</a></b> (🥉23 ·  ⭐ 480) - Partitioned multi-physics simulations. <code><a href="http://bit.ly/37RvQcA">❗️LGPL-3.0</a></code></summary>
+
+- [GitHub](https://github.com/precice/precice) (👨‍💻 46 · 🔀 130 · 📥 13K · 📋 620 - 24% open · ⏱️ 01.12.2022):
+
+	```
+	git clone https://github.com/precice/precice
+	```
+- [PyPi](https://pypi.org/project/pyprecice) (📥 210 / month):
+	```
+	pip install pyprecice
+	```
+- [Conda](https://anaconda.org/anaconda/pyprecice):
+	```
+	conda install -c anaconda pyprecice
+	```
+- [Docker Hub](https://hub.docker.com/r/precice/precice) (📥 8.2K · ⏱️ 10.08.2022):
+	```
+	docker pull precice/precice
+	```
+</details>
+<details><summary>Show 1 hidden projects...</summary>
+
+- <b><a href="https://openmodelica.org">OpenModelica</a></b> (🥇28 ·  ⭐ 550) - Modelica-based modeling and simulation environment. <code><a href="https://modelica.org/licenses/ModelicaLicense2/">❗️Custom</a></code>
 </details>
 <br>
 
@@ -327,7 +328,7 @@ _Gas Network Simulation_
 
 <details><summary><b><a href="https://www.pandapipes.org/">pandapipes</a></b> (🥇21 ·  ⭐ 65) - A pipeflow calculation tool. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/e2nIEE/pandapipes) (👨‍💻 13 · 🔀 33 · 📦 6 · 📋 90 - 54% open · ⏱️ 25.10.2022):
+- [GitHub](https://github.com/e2nIEE/pandapipes) (👨‍💻 13 · 🔀 33 · 📦 6 · 📋 90 - 53% open · ⏱️ 01.12.2022):
 
 	```
 	git clone https://github.com/e2nIEE/pandapipes
@@ -353,7 +354,7 @@ _Visualization for Power Grid_
 	git clone https://github.com/nrel-siip/powergraphics.jl
 	```
 </details>
-<details><summary><b><a href="https://github.com/CURENT/agvis">LTB AGVis</a></b> (🥉6 ·  ⭐ 1 · 📉) - Geographical Visualization of Power Grid; Part of.. <code><a href="http://bit.ly/2M0xdwT">❗️GPL-3.0</a></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/LTB.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/CURENT_Logo_Transparent.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://github.com/CURENT/agvis">LTB AGVis</a></b> (🥉6 ·  ⭐ 1) - Geographical Visualization of Power Grid; Part of CURENT.. <code><a href="http://bit.ly/2M0xdwT">❗️GPL-3.0</a></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/LTB.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/CURENT/ltb2/blob/main/images/icon/CURENT_Logo_Transparent.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/CURENT/agvis) (👨‍💻 7 · 🔀 4 · ⏱️ 30.11.2022):
 
@@ -379,41 +380,47 @@ _Messaging Environment for Distributed Computation_
 </details>
 <br>
 
-## Co-Simulation Platform for Other Physical System
+## Power System Data
 
 <a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
 
-_Infrastructure for Co-Simulation_
+🔗&nbsp;<b><a href="https://ourworldindata.org/energy">Data on Energy</a></b> ( ⭐ 140)  - Data on energy by Our World in Data. <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code>
 
-<details><summary><b><a href="https://precice.org/">precice</a></b> (🥉23 ·  ⭐ 480) - Partitioned multi-physics simulations. <code><a href="http://bit.ly/37RvQcA">❗️LGPL-3.0</a></code></summary>
+🔗&nbsp;<b><a href="https://github.com/tamu-engineering-research/COVID-EMDA">COVID-EMDA</a></b> ( ⭐ 53 · 💤)  - Cross-Domain Data Hub with Electricity Market, Coronavirus Case, Mobility.. <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code>
 
-- [GitHub](https://github.com/precice/precice) (👨‍💻 46 · 🔀 130 · 📥 13K · 📋 620 - 24% open · ⏱️ 30.11.2022):
+<br>
+
+## Others
+
+<a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
+
+<details><summary><b><a href="https://helics.org/tools/">HELICS</a></b> (🥇22 ·  ⭐ 83) - Framework to Integrate Simulators Designed for Separate TDC.. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://www.python.org/static/favicon.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/JuliaLang/julia-logo-graphics/blob/master/images/julia.ico" style="display:inline;" width="13" height="13"></code></summary>
+
+- [GitHub](https://github.com/GMLC-TDC/HELICS) (👨‍💻 37 · 🔀 33 · 📥 16K · 📋 600 - 12% open · ⏱️ 21.10.2022):
 
 	```
-	git clone https://github.com/precice/precice
+	git clone https://github.com/GMLC-TDC/HELICS
 	```
-- [PyPi](https://pypi.org/project/pyprecice) (📥 210 / month):
+- [PyPi](https://pypi.org/project/helics) (📥 920 / month):
 	```
-	pip install pyprecice
+	pip install helics
 	```
-- [Conda](https://anaconda.org/anaconda/pyprecice):
+- [Conda](https://anaconda.org/anaconda/helics):
 	```
-	conda install -c anaconda pyprecice
+	conda install -c anaconda helics
 	```
-- [Docker Hub](https://hub.docker.com/r/precice/precice) (📥 8.2K · ⏱️ 10.08.2022):
-	```
-	docker pull precice/precice
-	```
-</details>
-<details><summary>Show 1 hidden projects...</summary>
-
-- <b><a href="https://openmodelica.org">OpenModelica</a></b> (🥇28 ·  ⭐ 550 · ➕) - Modelica-based modeling and simulation environment. <code><a href="https://modelica.org/licenses/ModelicaLicense2/">❗️Custom</a></code>
 </details>
 
 ---
+## Limitations
+
+- **Project Data Collection**: The data collection is incomplete for the projects that are not majorly hosted in GitHub.
+- [**Project Popularity Score**](https://github.com/best-of-lists/best-of-generator#project-quality-score): The source template calls it as ***Quality***, however, I rename it as ***Popularity***. 
+  > This calculation is just chosen by ***EXPERIENCE***. There is ***NO*** scientific proof that this really reflects the ***QUALITY*** of a project. 
+
+
 ## Related Resources
 
-- [**Project Quality Score**](https://github.com/best-of-lists/best-of-generator#project-quality-score): **This calculation is just chosen by experience. There is no scientific proof that this really reflects the quality of a project.**
 - [**Papers With Code**](https://paperswithcode.com): Discover ML papers, code, and evaluation tables.
 
 ## Contribution
