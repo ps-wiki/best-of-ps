@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/ps-wiki-best-of-ps-badge.png)](https://mseep.ai/app/ps-wiki-best-of-ps)
+
 <!-- markdownlint-disable -->
 
 <h1 align="center">
