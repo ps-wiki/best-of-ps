@@ -99,7 +99,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/CURENT/andes
 	```
-- [PyPi](https://pypi.org/project/andes) (📥 2.6K / month · 📦 4 · ⏱️ 05.01.2025):
+- [PyPi](https://pypi.org/project/andes) (📥 1.6K / month · 📦 4 · ⏱️ 05.01.2025):
 	```
 	pip install andes
 	```
@@ -114,7 +114,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 </details>
 <details><summary><b><a href="https://www.gridlabd.org/">GridLAB-D</a></b> (🥈19 ·  ⭐ 190) - Distribution power system simulator. <code><a href="https://github.com/gridlab-d/gridlab-d/blob/master/LICENSE">❗️Custom</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/gridlab-d/gridlab-d) (👨‍💻 76 · 🔀 120 · 📥 8.1K · 📋 1.4K - 24% open · ⏱️ 28.05.2025):
+- [GitHub](https://github.com/gridlab-d/gridlab-d) (👨‍💻 76 · 🔀 120 · 📥 8.2K · 📋 1.4K - 24% open · ⏱️ 28.05.2025):
 
 	```
 	git clone https://github.com/gridlab-d/gridlab-d
@@ -122,7 +122,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 </details>
 <details><summary><b><a href="https://github.com/OpenIPSL/OpenIPSL">OpenIPSL</a></b> (🥈17 ·  ⭐ 99) - A Power System Library written in the Modelica. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/modelica.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/OpenIPSL/OpenIPSL) (👨‍💻 35 · 🔀 62 · 📥 500 · 📋 130 - 12% open · ⏱️ 22.10.2025):
+- [GitHub](https://github.com/OpenIPSL/OpenIPSL) (👨‍💻 35 · 🔀 62 · 📥 510 · 📋 130 - 12% open · ⏱️ 22.10.2025):
 
 	```
 	git clone https://github.com/OpenIPSL/OpenIPSL
@@ -136,7 +136,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	git clone https://github.com/NREL-Sienna/PowerSimulationsDynamics.jl
 	```
 </details>
-<details><summary><b><a href="https://gridpack.pnnl.gov/wiki/index.php/Main_Page">GridPACK</a></b> (🥈16 ·  ⭐ 57) - High-Performance Electric Grid Simulation. <code><a href="https://github.com/GridOPTICS/GridPACK/blob/develop/docs/markdown/LICENSE.md">❗️Custom</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://gridpack.pnnl.gov/wiki/index.php/Main_Page">GridPACK</a></b> (🥈15 ·  ⭐ 58) - High-Performance Electric Grid Simulation. <code><a href="https://github.com/GridOPTICS/GridPACK/blob/develop/docs/markdown/LICENSE.md">❗️Custom</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/GridOPTICS/GridPACK) (👨‍💻 57 · 🔀 23 · 📥 630 · 📋 140 - 18% open · ⏱️ 24.11.2025):
 
@@ -175,19 +175,19 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/changgang/steps
 	```
-- [PyPi](https://pypi.org/project/stepspy) (📥 290 / month · ⏱️ 22.09.2024):
+- [PyPi](https://pypi.org/project/stepspy) (📥 340 / month · ⏱️ 22.09.2024):
 	```
 	pip install stepspy
 	```
 </details>
-<details><summary><b><a href="https://www.epri.com/OpenDER">OpenDER</a></b> (🥉12 ·  ⭐ 68) - Inverter-based DER simulation. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/non-profit2.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://www.epri.com/OpenDER">OpenDER</a></b> (🥉11 ·  ⭐ 68) - Inverter-based DER simulation. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/non-profit2.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/epri-dev/OpenDER) (👨‍💻 2 · 🔀 29 · 📦 3 · ⏱️ 15.04.2025):
 
 	```
 	git clone https://github.com/epri-dev/OpenDER
 	```
-- [PyPi](https://pypi.org/project/opender) (📥 1.1K / month · ⏱️ 13.04.2025):
+- [PyPi](https://pypi.org/project/opender) (📥 770 / month · ⏱️ 13.04.2025):
 	```
 	pip install opender
 	```
@@ -248,17 +248,17 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 
 <details><summary><b><a href="https://dpsim.fein-aachen.org/">DPsim</a></b> (🥇23 ·  ⭐ 110) - Simulation for both EMT and phasor. <code><a href="http://bit.ly/3postzC">MPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/sogno-platform/dpsim) (👨‍💻 39 · 🔀 68 · 📦 14 · 📋 190 - 45% open · ⏱️ 16.12.2025):
+- [GitHub](https://github.com/sogno-platform/dpsim) (👨‍💻 39 · 🔀 70 · 📦 14 · 📋 190 - 45% open · ⏱️ 22.12.2025):
 
 	```
 	git clone https://github.com/sogno-platform/dpsim
 	```
-- [PyPi](https://pypi.org/project/dpsim) (📥 460 / month · ⏱️ 10.12.2025):
+- [PyPi](https://pypi.org/project/dpsim) (📥 450 / month · ⏱️ 10.12.2025):
 	```
 	pip install dpsim
 	```
 </details>
-<details><summary><b><a href="https://github.com/NREL/ParaEMT_public">ParaEMT</a></b> (🥉8 ·  ⭐ 79) - Parallel EMT simulation. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://github.com/NREL/ParaEMT_public">ParaEMT</a></b> (🥉8 ·  ⭐ 80) - Parallel EMT simulation. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/NREL/ParaEMT_public) (👨‍💻 4 · 🔀 35 · 📋 5 - 80% open · ⏱️ 24.05.2025):
 
@@ -279,7 +279,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/e2nIEE/pandapower
 	```
-- [PyPi](https://pypi.org/project/pandapower) (📥 180K / month · 📦 75 · ⏱️ 16.12.2025):
+- [PyPi](https://pypi.org/project/pandapower) (📥 160K / month · 📦 75 · ⏱️ 16.12.2025):
 	```
 	pip install pandapower
 	```
@@ -294,51 +294,51 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 </details>
 <details><summary><b><a href="https://pypsa.org">PyPSA</a></b> (🥇33 ·  ⭐ 1.8K) - Python for Power System Analysis. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/PyPSA/PyPSA) (👨‍💻 110 · 🔀 580 · 📦 310 · 📋 510 - 23% open · ⏱️ 18.12.2025):
+- [GitHub](https://github.com/PyPSA/PyPSA) (👨‍💻 110 · 🔀 590 · 📦 310 · 📋 510 - 23% open · ⏱️ 22.12.2025):
 
 	```
 	git clone https://github.com/PyPSA/PyPSA
 	```
-- [PyPi](https://pypi.org/project/pypsa) (📥 75K / month · 📦 39 · ⏱️ 04.12.2025):
+- [PyPi](https://pypi.org/project/pypsa) (📥 61K / month · 📦 39 · ⏱️ 22.12.2025):
 	```
 	pip install pypsa
 	```
-- [Conda](https://anaconda.org/conda-forge/pypsa) (📥 180K · ⏱️ 04.12.2025):
+- [Conda](https://anaconda.org/conda-forge/pypsa) (📥 190K · ⏱️ 22.12.2025):
 	```
 	conda install -c conda-forge pypsa
 	```
 </details>
 <details><summary><b><a href="https://github.com/PowerGridModel/power-grid-model">Power Grid Model</a></b> (🥇31 ·  ⭐ 200) - Steady-state distribution power system analysis. <code><a href="http://bit.ly/3postzC">MPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/non-profit2.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/PowerGridModel/power-grid-model) (👨‍💻 29 · 🔀 48 · 📥 1.7K · 📦 36 · 📋 280 - 35% open · ⏱️ 17.12.2025):
+- [GitHub](https://github.com/PowerGridModel/power-grid-model) (👨‍💻 30 · 🔀 49 · 📥 1.7K · 📦 36 · 📋 280 - 36% open · ⏱️ 24.12.2025):
 
 	```
 	git clone https://github.com/PowerGridModel/power-grid-model
 	```
-- [PyPi](https://pypi.org/project/power-grid-model) (📥 63K / month · 📦 13 · ⏱️ 17.12.2025):
+- [PyPi](https://pypi.org/project/power-grid-model) (📥 69K / month · 📦 13 · ⏱️ 24.12.2025):
 	```
 	pip install power-grid-model
 	```
-- [Conda](https://anaconda.org/conda-forge/power-grid-model) (📥 4.2M · ⏱️ 17.12.2025):
+- [Conda](https://anaconda.org/conda-forge/power-grid-model) (📥 4.2M · ⏱️ 24.12.2025):
 	```
 	conda install -c conda-forge power-grid-model
 	```
 </details>
-<details><summary><b><a href="https://www.eroots.tech/software">GridCal</a></b> (🥇26 ·  ⭐ 490 · 📈) - Cross-platform power systems software. <code><a href="http://bit.ly/37RvQcA">❗️LGPL-3.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/volunteer.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://www.eroots.tech/software">GridCal</a></b> (🥇25 ·  ⭐ 490 · 📉) - Cross-platform power systems software. <code><a href="http://bit.ly/37RvQcA">❗️LGPL-3.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/volunteer.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/SanPen/VeraGrid) (👨‍💻 59 · 🔀 120 · 📥 57 · 📋 290 - 9% open · ⏱️ 11.12.2025):
 
 	```
 	git clone https://github.com/SanPen/GridCal
 	```
-- [PyPi](https://pypi.org/project/GridCal) (📥 17K / month · ⏱️ 27.08.2025):
+- [PyPi](https://pypi.org/project/GridCal) (📥 16K / month · ⏱️ 27.08.2025):
 	```
 	pip install GridCal
 	```
 </details>
 <details><summary><b><a href="https://www.powsybl.org">PowSyBl Core</a></b> (🥇25 ·  ⭐ 150) - Framework to build power system software. <code><a href="http://bit.ly/3postzC">MPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/java.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/non-profit2.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/powsybl/powsybl-core) (👨‍💻 120 · 🔀 50 · 📦 94 · 📋 710 - 39% open · ⏱️ 03.12.2025):
+- [GitHub](https://github.com/powsybl/powsybl-core) (👨‍💻 120 · 🔀 50 · 📦 94 · 📋 710 - 39% open · ⏱️ 19.12.2025):
 
 	```
 	git clone https://github.com/powsybl/powsybl-core
@@ -351,7 +351,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/MATPOWER/matpower
 	```
-- [Docker Hub](https://hub.docker.com/r/matpower/matpower) (📥 3.5K · ⏱️ 26.09.2025):
+- [Docker Hub](https://hub.docker.com/r/matpower/matpower) (📥 3.6K · ⏱️ 26.09.2025):
 	```
 	docker pull matpower/matpower
 	```
@@ -363,7 +363,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/rwl/PYPOWER
 	```
-- [PyPi](https://pypi.org/project/PYPOWER) (📥 53K / month · 📦 20 · ⏱️ 10.07.2025):
+- [PyPi](https://pypi.org/project/PYPOWER) (📥 47K / month · 📦 20 · ⏱️ 10.07.2025):
 	```
 	pip install PYPOWER
 	```
@@ -378,41 +378,53 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 </details>
 <details><summary><b><a href="https://www.nrel.gov/analysis/sienna.html">PowerSimulations.jl</a></b> (🥈23 ·  ⭐ 300) - Power Systems optimization simulation and modeling;.. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/NREL-Sienna/PowerSimulations.jl) (👨‍💻 49 · 🔀 78 · 📋 490 - 19% open · ⏱️ 17.12.2025):
+- [GitHub](https://github.com/NREL-Sienna/PowerSimulations.jl) (👨‍💻 49 · 🔀 78 · 📋 490 - 20% open · ⏱️ 23.12.2025):
 
 	```
 	git clone https://github.com/NREL-Sienna/PowerSimulations.jl
 	```
 </details>
-<details><summary><b><a href="https://www.powsybl.org">PyPowSyBl</a></b> (🥈23 ·  ⭐ 78 · 📈) - A PowSyBl and Python integration. <code><a href="http://bit.ly/3postzC">MPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/java.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/non-profit2.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://www.powsybl.org">PyPowSyBl</a></b> (🥈23 ·  ⭐ 78) - A PowSyBl and Python integration. <code><a href="http://bit.ly/3postzC">MPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/java.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/non-profit2.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/powsybl/pypowsybl) (👨‍💻 38 · 🔀 16 · 📥 390 · 📋 280 - 32% open · ⏱️ 10.12.2025):
 
 	```
 	git clone https://github.com/powsybl/pypowsybl
 	```
-- [PyPi](https://pypi.org/project/pypowsybl) (📥 9.9K / month · 📦 8 · ⏱️ 31.10.2025):
+- [PyPi](https://pypi.org/project/pypowsybl) (📥 11K / month · 📦 8 · ⏱️ 31.10.2025):
 	```
 	pip install pypowsybl
 	```
 </details>
-<details><summary><b><a href="https://l2rpn.chalearn.org/">LightSim2Grid</a></b> (🥈22 ·  ⭐ 59 · 📈) - A fast backend for the Grid2Op. <code><a href="http://bit.ly/3postzC">MPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/for-profit.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://www.gurobi.com/features/gurobi-optimods/">Gurobi OptiMods</a></b> (🥈22 ·  ⭐ 170 · 📈) - Implemented optimization use cases using Gurobi. <code><a href="http://bit.ly/3nYMfla">Apache-2</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/for-profit.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/Grid2op/lightsim2grid) (👨‍💻 7 · 🔀 12 · 📥 300 · 📦 70 · 📋 57 - 31% open · ⏱️ 09.12.2025):
+- [GitHub](https://github.com/Gurobi/gurobi-optimods) (👨‍💻 17 · 🔀 38 · 📦 9 · 📋 87 - 28% open · ⏱️ 25.11.2025):
+
+	```
+	git clone https://github.com/Gurobi/gurobi-optimods
+	```
+- [PyPi](https://pypi.org/project/gurobi-optimods) (📥 1.4K / month · 📦 2 · ⏱️ 25.11.2025):
+	```
+	pip install gurobi-optimods
+	```
+</details>
+<details><summary><b><a href="https://l2rpn.chalearn.org/">LightSim2Grid</a></b> (🥈22 ·  ⭐ 59) - A fast backend for the Grid2Op. <code><a href="http://bit.ly/3postzC">MPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/for-profit.ico" style="display:inline;" width="13" height="13"></code></summary>
+
+- [GitHub](https://github.com/Grid2op/lightsim2grid) (👨‍💻 7 · 🔀 12 · 📥 300 · 📦 71 · 📋 57 - 31% open · ⏱️ 09.12.2025):
 
 	```
 	git clone https://github.com/BDonnot/lightsim2grid
 	```
-- [PyPi](https://pypi.org/project/LightSim2Grid) (📥 28K / month · 📦 24 · ⏱️ 09.12.2025):
+- [PyPi](https://pypi.org/project/LightSim2Grid) (📥 24K / month · 📦 24 · ⏱️ 09.12.2025):
 	```
 	pip install LightSim2Grid
 	```
-- [Docker Hub](https://hub.docker.com/r/bdonnot/lightsim2grid) (📥 430 · ⏱️ 01.02.2022):
+- [Docker Hub](https://hub.docker.com/r/bdonnot/lightsim2grid) (📥 440 · ⏱️ 01.02.2022):
 	```
 	docker pull bdonnot/lightsim2grid
 	```
 </details>
-<details><summary><b><a href="https://pypsa.org">PyPSA-Eur</a></b> (🥈21 ·  ⭐ 500) - Sector-Coupled Optimisation Model of the European Energy.. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://pypsa.org">PyPSA-Eur</a></b> (🥈21 ·  ⭐ 510) - Sector-Coupled Optimisation Model of the European Energy.. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/PyPSA/pypsa-eur) (👨‍💻 100 · 🔀 350 · 📋 640 - 33% open · ⏱️ 18.12.2025):
 
@@ -426,22 +438,10 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 </details>
 <details><summary><b><a href="https://pypsa-meets-earth.github.io/">PyPSA-Earth</a></b> (🥈21 ·  ⭐ 310) - Open optimisation model for study energy system.. <code><a href="http://bit.ly/3pwmjO5">❗️AGPL-3.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/volunteer.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/pypsa-meets-earth/pypsa-earth) (👨‍💻 87 · 🔀 280 · 📋 590 - 34% open · ⏱️ 16.12.2025):
+- [GitHub](https://github.com/pypsa-meets-earth/pypsa-earth) (👨‍💻 87 · 🔀 280 · 📋 590 - 34% open · ⏱️ 24.12.2025):
 
 	```
 	git clone https://github.com/pypsa-meets-earth/pypsa-earth
-	```
-</details>
-<details><summary><b><a href="https://www.gurobi.com/features/gurobi-optimods/">Gurobi OptiMods</a></b> (🥈21 ·  ⭐ 170) - Implemented optimization use cases using Gurobi. <code><a href="http://bit.ly/3nYMfla">Apache-2</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/for-profit.ico" style="display:inline;" width="13" height="13"></code></summary>
-
-- [GitHub](https://github.com/Gurobi/gurobi-optimods) (👨‍💻 17 · 🔀 38 · 📦 9 · 📋 87 - 28% open · ⏱️ 25.11.2025):
-
-	```
-	git clone https://github.com/Gurobi/gurobi-optimods
-	```
-- [PyPi](https://pypi.org/project/gurobi-optimods) (📥 530 / month · 📦 2 · ⏱️ 25.11.2025):
-	```
-	pip install gurobi-optimods
 	```
 </details>
 <details><summary><b><a href="https://www.gridpath.io/">GridPath</a></b> (🥈21 ·  ⭐ 120) - Power system planning and operations. <code><a href="http://bit.ly/3nYMfla">Apache-2</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/for-profit.ico" style="display:inline;" width="13" height="13"></code></summary>
@@ -451,7 +451,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/blue-marble/gridpath
 	```
-- [PyPi](https://pypi.org/project/GridPath) (📥 440 / month · ⏱️ 10.12.2025):
+- [PyPi](https://pypi.org/project/GridPath) (📥 380 / month · ⏱️ 10.12.2025):
 	```
 	pip install GridPath
 	```
@@ -494,17 +494,17 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 </details>
 <details><summary><b><a href="https://github.com/IIT-EnergySystemModels/openTEPES">openTEPES</a></b> (🥈18 ·  ⭐ 50) - Open Generation, Storage, and Transmission Operation.. <code><a href="http://bit.ly/3pwmjO5">❗️AGPL-3.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/IIT-EnergySystemModels/openTEPES) (👨‍💻 10 · 🔀 26 · 📥 120 · 📋 15 - 20% open · ⏱️ 17.12.2025):
+- [GitHub](https://github.com/IIT-EnergySystemModels/openTEPES) (👨‍💻 10 · 🔀 26 · 📥 120 · 📋 15 - 20% open · ⏱️ 24.12.2025):
 
 	```
 	git clone https://github.com/IIT-EnergySystemModels/openTEPES
 	```
-- [PyPi](https://pypi.org/project/openTEPES) (📥 460 / month · ⏱️ 26.11.2025):
+- [PyPi](https://pypi.org/project/openTEPES) (📥 650 / month · ⏱️ 26.11.2025):
 	```
 	pip install openTEPES
 	```
 </details>
-<details><summary><b><a href="https://www.nrel.gov/analysis/sienna.html">PowerNetworkMatrices.jl</a></b> (🥈18 ·  ⭐ 26) - Power systems matrices; NREL Sienna. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://www.nrel.gov/analysis/sienna.html">PowerNetworkMatrices.jl</a></b> (🥈18 ·  ⭐ 27) - Power systems matrices; NREL Sienna. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/NREL-Sienna/PowerNetworkMatrices.jl) (👨‍💻 12 · 🔀 21 · 📋 100 - 29% open · ⏱️ 08.12.2025):
 
@@ -528,36 +528,36 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	git clone https://github.com/PyPSA/pypsa-usa
 	```
 </details>
+<details><summary><b><a href="https://ltb.curent.org/">LTB AMS</a></b> (🥉17 ·  ⭐ 19 · 📈) - Scheduling Modeling and Simulation; CURENT LTB. <code><a href="http://bit.ly/2M0xdwT">❗️GPL-3.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/azure.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
+
+- [GitHub](https://github.com/CURENT/ams) (👨‍💻 4 · 🔀 9 · 📥 92 · 📦 3 · 📋 24 - 54% open · ⏱️ 23.12.2025):
+
+	```
+	git clone https://github.com/CURENT/ams
+	```
+- [PyPi](https://pypi.org/project/ltbams) (📥 510 / month · ⏱️ 23.12.2025):
+	```
+	pip install ltbams
+	```
+- [Conda](https://anaconda.org/conda-forge/ltbams) (📥 24K · ⏱️ 23.12.2025):
+	```
+	conda install -c conda-forge ltbams
+	```
+</details>
 <details><summary><b><a href="https://www.powsybl.org">Open RAO</a></b> (🥉16 ·  ⭐ 29) - Power systems coordinated capacity calculation and.. <code><a href="http://bit.ly/3postzC">MPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/java.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/non-profit2.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/powsybl/powsybl-open-rao) (👨‍💻 38 · 🔀 8 · 📥 52 · 📋 210 - 36% open · ⏱️ 15.12.2025):
+- [GitHub](https://github.com/powsybl/powsybl-open-rao) (👨‍💻 38 · 🔀 8 · 📥 52 · 📋 210 - 36% open · ⏱️ 22.12.2025):
 
 	```
 	git clone https://github.com/powsybl/powsybl-open-rao
 	```
 </details>
-<details><summary><b><a href="https://www.nrel.gov/analysis/sienna.html">PowerFlows.jl</a></b> (🥉16 ·  ⭐ 26) - Collection of Power Flow solution; NREL Sienna. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://www.nrel.gov/analysis/sienna.html">PowerFlows.jl</a></b> (🥉16 ·  ⭐ 27) - Collection of Power Flow solution; NREL Sienna. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/NREL-Sienna/PowerFlows.jl) (👨‍💻 12 · 🔀 24 · 📋 150 - 37% open · ⏱️ 10.12.2025):
 
 	```
 	git clone https://github.com/NREL-Sienna/PowerFlows.jl
-	```
-</details>
-<details><summary><b><a href="https://ltb.curent.org/">LTB AMS</a></b> (🥉16 ·  ⭐ 19) - Scheduling Modeling and Simulation; CURENT LTB. <code><a href="http://bit.ly/2M0xdwT">❗️GPL-3.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/azure.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
-
-- [GitHub](https://github.com/CURENT/ams) (👨‍💻 4 · 🔀 9 · 📥 84 · 📦 3 · 📋 24 - 62% open · ⏱️ 29.09.2025):
-
-	```
-	git clone https://github.com/CURENT/ams
-	```
-- [PyPi](https://pypi.org/project/ltbams) (📥 230 / month · ⏱️ 29.09.2025):
-	```
-	pip install ltbams
-	```
-- [Conda](https://anaconda.org/conda-forge/ltbams) (📥 23K · ⏱️ 17.12.2025):
-	```
-	conda install -c conda-forge ltbams
 	```
 </details>
 <details><summary><b><a href="https://www.nrel.gov/analysis/reeds/">ReEDS-2.0</a></b> (🥉15 ·  ⭐ 170) - Capacity planning and dispatch model. <code><a href="http://bit.ly/2M0xdwT">❗️GPL-3.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
@@ -576,7 +576,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	git clone https://github.com/ANL-CEEESA/UnitCommitment.jl
 	```
 </details>
-<details><summary><b><a href="https://www.gridpath.io/">ExaGO</a></b> (🥉14 ·  ⭐ 90) - Large-scale power grid optimization. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://www.gridpath.io/">ExaGO</a></b> (🥉14 ·  ⭐ 92) - Large-scale power grid optimization. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/pnnl/ExaGO) (👨‍💻 33 · 🔀 15 · 📋 100 - 54% open · ⏱️ 11.12.2025):
 
@@ -607,7 +607,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/felipemarkson/dssdata
 	```
-- [PyPi](https://pypi.org/project/dssdata) (📥 55 / month · ⏱️ 24.01.2023):
+- [PyPi](https://pypi.org/project/dssdata) (📥 51 / month · ⏱️ 24.01.2023):
 	```
 	pip install dssdata
 	```
@@ -708,7 +708,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/dss-extensions/OpenDSSDirect.py
 	```
-- [PyPi](https://pypi.org/project/OpenDSSDirect.py) (📥 15K / month · 📦 16 · ⏱️ 11.03.2021):
+- [PyPi](https://pypi.org/project/OpenDSSDirect.py) (📥 8.7K / month · 📦 16 · ⏱️ 11.03.2021):
 	```
 	pip install OpenDSSDirect.py
 	```
@@ -720,7 +720,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/PauloRadatz/py_dss_interface
 	```
-- [PyPi](https://pypi.org/project/py-dss-interface) (📥 8K / month · 📦 9 · ⏱️ 09.09.2025):
+- [PyPi](https://pypi.org/project/py-dss-interface) (📥 7.7K / month · 📦 9 · ⏱️ 09.09.2025):
 	```
 	pip install py-dss-interface
 	```
@@ -732,14 +732,14 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/sogno-platform/cimpy
 	```
-- [PyPi](https://pypi.org/project/cimpy) (📥 1.4K / month · 📦 1 · ⏱️ 20.06.2024):
+- [PyPi](https://pypi.org/project/cimpy) (📥 1.2K / month · 📦 1 · ⏱️ 20.06.2024):
 	```
 	pip install cimpy
 	```
 </details>
 <details><summary><b><a href="https://github.com/ieeh-tu-dresden/powerfactory-tools">powerfactory-tools</a></b> (🥈16 ·  ⭐ 42) - Python toolbox for control of DIgSILENT PowerFactory. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/ieeh-tu-dresden/powerfactory-tools) (👨‍💻 4 · 🔀 7 · 📥 380 · 📦 2 · 📋 180 - 9% open · ⏱️ 03.12.2025):
+- [GitHub](https://github.com/ieeh-tu-dresden/powerfactory-tools) (👨‍💻 4 · 🔀 7 · 📥 380 · 📦 2 · 📋 190 - 9% open · ⏱️ 19.12.2025):
 
 	```
 	git clone https://github.com/ieeh-tu-dresden/powerfactory-tools
@@ -757,14 +757,14 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	git clone https://github.com/dss-extensions/dss_capi
 	```
 </details>
-<details><summary><b><a href="https://github.com/UGM-EPSLab/matpowercaseframes">matpowercaseframes</a></b> (🥈16 ·  ⭐ 5 · 📈) - Parse MATPOWER case into pandas DataFrame. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://github.com/UGM-EPSLab/matpowercaseframes">matpowercaseframes</a></b> (🥈16 ·  ⭐ 5) - Parse MATPOWER case into pandas DataFrame. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/UGM-EPSLab/matpowercaseframes) (👨‍💻 7 · 🔀 3 · 📋 8 - 37% open · ⏱️ 31.05.2025):
 
 	```
 	git clone https://github.com/UGM-EPSLab/matpowercaseframes
 	```
-- [PyPi](https://pypi.org/project/matpowercaseframes) (📥 26K / month · 📦 7 · ⏱️ 27.09.2025):
+- [PyPi](https://pypi.org/project/matpowercaseframes) (📥 21K / month · 📦 7 · ⏱️ 27.09.2025):
 	```
 	pip install matpowercaseframes
 	```
@@ -776,7 +776,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/mzy2240/ESA
 	```
-- [PyPi](https://pypi.org/project/esa) (📥 400 / month · 📦 1 · ⏱️ 05.06.2023):
+- [PyPi](https://pypi.org/project/esa) (📥 240 / month · 📦 1 · ⏱️ 05.06.2023):
 	```
 	pip install esa
 	```
@@ -788,7 +788,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/NREL/PyDSS
 	```
-- [PyPi](https://pypi.org/project/pydss) (📥 42 / month · ⏱️ 17.08.2011):
+- [PyPi](https://pypi.org/project/pydss) (📥 39 / month · ⏱️ 17.08.2011):
 	```
 	pip install pydss
 	```
@@ -820,7 +820,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/lanl-ansi/grg-pssedata
 	```
-- [PyPi](https://pypi.org/project/grg-pssedata) (📥 120 / month · 📦 1 · ⏱️ 15.12.2020):
+- [PyPi](https://pypi.org/project/grg-pssedata) (📥 82 / month · 📦 1 · ⏱️ 15.12.2020):
 	```
 	pip install grg-pssedata
 	```
@@ -840,7 +840,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/dss-extensions/AltDSS-Python
 	```
-- [PyPi](https://pypi.org/project/altdss) (📥 5K / month · 📦 2 · ⏱️ 29.03.2024):
+- [PyPi](https://pypi.org/project/altdss) (📥 1.8K / month · 📦 2 · ⏱️ 29.03.2024):
 	```
 	pip install altdss
 	```
@@ -852,14 +852,14 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/RWTH-IAEW/cimpyorm
 	```
-- [PyPi](https://pypi.org/project/cimpyorm) (📥 6.4K / month · ⏱️ 19.10.2023):
+- [PyPi](https://pypi.org/project/cimpyorm) (📥 6.3K / month · ⏱️ 19.10.2023):
 	```
 	pip install cimpyorm
 	```
 </details>
 <details><summary><b><a href="https://www.pscad.com/">mhi-pscad</a></b> (🥉10) - PSCAD Automation library. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/for-profit.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [PyPi](https://pypi.org/project/mhi-pscad) (📥 3.1K / month · 📦 2 · ⏱️ 21.11.2025):
+- [PyPi](https://pypi.org/project/mhi-pscad) (📥 2.8K / month · 📦 2 · ⏱️ 21.11.2025):
 	```
 	pip install mhi-pscad
 	```
@@ -933,14 +933,14 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/e2nIEE/pandapipes
 	```
-- [PyPi](https://pypi.org/project/pandapipes) (📥 12K / month · 📦 10 · ⏱️ 27.06.2025):
+- [PyPi](https://pypi.org/project/pandapipes) (📥 10K / month · 📦 10 · ⏱️ 27.06.2025):
 	```
 	pip install pandapipes
 	```
 </details>
-<details><summary><b><a href="https://github.com/lanl-ansi/GasModels.jl">GasModels.jl</a></b> (🥉16 ·  ⭐ 78) - Gas Network Optimization. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://github.com/lanl-ansi/GasModels.jl">GasModels.jl</a></b> (🥉14 ·  ⭐ 78 · 📉) - Gas Network Optimization. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/lanl-ansi/GasModels.jl) (👨‍💻 16 · 🔀 19 · 📋 170 - 28% open · ⏱️ 01.10.2025):
+- [GitHub](https://github.com/lanl-ansi/GasModels.jl) (👨‍💻 16 · 🔀 20 · 📋 170 - 28% open · ⏱️ 01.10.2025):
 
 	```
 	git clone https://github.com/lanl-ansi/GasModels.jl
@@ -962,24 +962,24 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 
 <details><summary><b><a href="https://openmodelica.org">OpenModelica</a></b> (🥇29 ·  ⭐ 1.2K) - Modelica-based environment for modeling and simulation. <code><a href="https://modelica.org/licenses/ModelicaLicense2/">❗️Custom</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/modelica.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/OpenModelica/OpenModelica) (👨‍💻 200 · 🔀 350 · 📥 500 · 📋 8.6K - 24% open · ⏱️ 18.12.2025):
+- [GitHub](https://github.com/OpenModelica/OpenModelica) (👨‍💻 200 · 🔀 360 · 📥 500 · 📋 8.6K - 24% open · ⏱️ 24.12.2025):
 
 	```
 	git clone https://github.com/OpenModelica/OpenModelica
 	```
-- [Docker Hub](https://hub.docker.com/r/openmodelica/openmodelica) (📥 58K · ⭐ 6 · ⏱️ 25.11.2025):
+- [Docker Hub](https://hub.docker.com/r/openmodelica/openmodelica) (📥 58K · ⭐ 6 · ⏱️ 19.12.2025):
 	```
 	docker pull openmodelica/openmodelica
 	```
 </details>
 <details><summary><b><a href="https://precice.org/">precice</a></b> (🥉26 ·  ⭐ 860) - Precise Code Interaction Coupling Environment. <code><a href="http://bit.ly/37RvQcA">❗️LGPL-3.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/precice/precice) (👨‍💻 62 · 🔀 210 · 📥 40K · 📋 940 - 21% open · ⏱️ 15.12.2025):
+- [GitHub](https://github.com/precice/precice) (👨‍💻 62 · 🔀 210 · 📥 40K · 📋 940 - 21% open · ⏱️ 25.12.2025):
 
 	```
 	git clone https://github.com/precice/precice
 	```
-- [PyPi](https://pypi.org/project/pyprecice) (📥 1.4K / month · 📦 8 · ⏱️ 16.10.2025):
+- [PyPi](https://pypi.org/project/pyprecice) (📥 1.2K / month · 📦 8 · ⏱️ 16.10.2025):
 	```
 	pip install pyprecice
 	```
@@ -987,7 +987,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	conda install -c conda-forge pyprecice
 	```
-- [Docker Hub](https://hub.docker.com/r/precice/precice) (📥 34K · ⏱️ 18.12.2025):
+- [Docker Hub](https://hub.docker.com/r/precice/precice) (📥 34K · ⏱️ 25.12.2025):
 	```
 	docker pull precice/precice
 	```
@@ -1000,12 +1000,12 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 
 <details><summary><b><a href="https://github.com/cvxpy/cvxpy">CVXPY</a></b> (🥇40 ·  ⭐ 6K) - Convex optimization modeling language. <code><a href="http://bit.ly/3nYMfla">Apache-2</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/cvxpy/cvxpy) (👨‍💻 240 · 🔀 1.1K · 📥 640 · 📦 18K · 📋 1.6K - 16% open · ⏱️ 18.12.2025):
+- [GitHub](https://github.com/cvxpy/cvxpy) (👨‍💻 240 · 🔀 1.1K · 📥 640 · 📦 18K · 📋 1.6K - 16% open · ⏱️ 22.12.2025):
 
 	```
 	git clone https://github.com/cvxpy/cvxpy
 	```
-- [PyPi](https://pypi.org/project/cvxpy) (📥 3.1M / month · 📦 830 · ⏱️ 05.12.2025):
+- [PyPi](https://pypi.org/project/cvxpy) (📥 2.9M / month · 📦 830 · ⏱️ 05.12.2025):
 	```
 	pip install cvxpy
 	```
@@ -1014,7 +1014,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	conda install -c conda-forge cvxpy
 	```
 </details>
-<details><summary><b><a href="https://www.pyomo.org">Pyomo</a></b> (🥇40 ·  ⭐ 2.3K) - Python-based Optimization Modeling Language. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://www.pyomo.org">Pyomo</a></b> (🥇40 ·  ⭐ 2.4K) - Python-based Optimization Modeling Language. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/Pyomo/pyomo) (👨‍💻 180 · 🔀 560 · 📥 5.3K · 📦 4.7K · 📋 1.5K - 21% open · ⏱️ 10.12.2025):
 
@@ -1037,7 +1037,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/cvxopt/cvxopt
 	```
-- [PyPi](https://pypi.org/project/cvxopt) (📥 710K / month · 📦 460 · ⏱️ 09.08.2023):
+- [PyPi](https://pypi.org/project/cvxopt) (📥 840K / month · 📦 460 · ⏱️ 09.08.2023):
 	```
 	pip install cvxopt
 	```
@@ -1054,14 +1054,14 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	git clone https://github.com/jump-dev/JuMP.jl
 	```
 </details>
-<details><summary><b><a href="https://github.com/metab0t/PyOptInterface">PyOptInterface</a></b> (🥉20 ·  ⭐ 300) - Efficient modeling interface for optimization in.. <code><a href="http://bit.ly/3postzC">MPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/volunteer.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://github.com/metab0t/PyOptInterface">PyOptInterface</a></b> (🥉21 ·  ⭐ 300 · 📈) - Efficient modeling interface for optimization in.. <code><a href="http://bit.ly/3postzC">MPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/volunteer.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/metab0t/PyOptInterface) (👨‍💻 2 · 🔀 20 · 📦 21 · 📋 38 - 18% open · ⏱️ 11.12.2025):
+- [GitHub](https://github.com/metab0t/PyOptInterface) (👨‍💻 4 · 🔀 20 · 📦 21 · 📋 39 - 17% open · ⏱️ 24.12.2025):
 
 	```
 	git clone https://github.com/metab0t/PyOptInterface
 	```
-- [PyPi](https://pypi.org/project/pyoptinterface) (📥 2.3K / month · 📦 6 · ⏱️ 21.09.2025):
+- [PyPi](https://pypi.org/project/pyoptinterface) (📥 3.3K / month · 📦 6 · ⏱️ 21.09.2025):
 	```
 	pip install pyoptinterface
 	```
@@ -1073,7 +1073,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/XiongPengNUS/rsome
 	```
-- [PyPi](https://pypi.org/project/rsome) (📥 2.4K / month · 📦 4 · ⏱️ 29.10.2024):
+- [PyPi](https://pypi.org/project/rsome) (📥 2.1K / month · 📦 4 · ⏱️ 29.10.2024):
 	```
 	pip install rsome
 	```
@@ -1085,7 +1085,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/sanurielf/kvxopt
 	```
-- [PyPi](https://pypi.org/project/kvxopt) (📥 6.7K / month · 📦 14 · ⏱️ 26.10.2025):
+- [PyPi](https://pypi.org/project/kvxopt) (📥 4.3K / month · 📦 14 · ⏱️ 26.10.2025):
 	```
 	pip install kvxopt
 	```
@@ -1110,12 +1110,12 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 
 <details><summary><b><a href="https://developers.google.com/optimization/">OR-Tools</a></b> (🥇38 ·  ⭐ 13K) - Google Optimization Tools. <code><a href="http://bit.ly/3nYMfla">Apache-2</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/cpp.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/java.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/for-profit.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/google/or-tools) (👨‍💻 190 · 🔀 2.3K · 📥 390K · 📦 360 · 📋 3.2K - 2% open · ⏱️ 25.11.2025):
+- [GitHub](https://github.com/google/or-tools) (👨‍💻 190 · 🔀 2.3K · 📥 400K · 📦 360 · 📋 3.2K - 2% open · ⏱️ 21.12.2025):
 
 	```
 	git clone https://github.com/google/or-tools
 	```
-- [PyPi](https://pypi.org/project/ortools) (📥 3.5M / month · 📦 310 · ⏱️ 19.06.2025):
+- [PyPi](https://pypi.org/project/ortools) (📥 3.3M / month · 📦 310 · ⏱️ 19.06.2025):
 	```
 	pip install ortools
 	```
@@ -1126,28 +1126,28 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 </details>
 <details><summary><b><a href="https://github.com/google/or-tools">Xopt</a></b> (🥇35 ·  ⭐ 13K) - Flexible high-level optimization in Python. <code><a href="http://bit.ly/3postzC">MPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/google/or-tools) (👨‍💻 190 · 🔀 2.3K · 📥 390K · 📦 360 · 📋 3.2K - 2% open · ⏱️ 25.11.2025):
+- [GitHub](https://github.com/google/or-tools) (👨‍💻 190 · 🔀 2.3K · 📥 400K · 📦 360 · 📋 3.2K - 2% open · ⏱️ 21.12.2025):
 
 	```
 	git clone https://github.com/google/or-tools
 	```
-- [PyPi](https://pypi.org/project/xopt) (📥 1.7K / month · 📦 5 · ⏱️ 03.12.2025):
+- [PyPi](https://pypi.org/project/xopt) (📥 1.9K / month · 📦 5 · ⏱️ 03.12.2025):
 	```
 	pip install xopt
 	```
-- [Conda](https://anaconda.org/conda-forge/xopt) (📥 67K · ⏱️ 03.12.2025):
+- [Conda](https://anaconda.org/conda-forge/xopt) (📥 68K · ⏱️ 03.12.2025):
 	```
 	conda install -c conda-forge xopt
 	```
 </details>
 <details><summary><b><a href="https://highs.dev/">HiGHS</a></b> (🥇35 ·  ⭐ 1.4K) - Large-scale Sparse Linear Problem Optimizer. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/rust.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/r.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/cpp.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/ERGO-Code/HiGHS) (👨‍💻 98 · 🔀 260 · 📥 17K · 📋 980 - 12% open · ⏱️ 11.12.2025):
+- [GitHub](https://github.com/ERGO-Code/HiGHS) (👨‍💻 98 · 🔀 270 · 📥 17K · 📋 980 - 12% open · ⏱️ 11.12.2025):
 
 	```
 	git clone https://github.com/ERGO-Code/HiGHS
 	```
-- [PyPi](https://pypi.org/project/highspy) (📥 580K / month · 📦 100 · ⏱️ 25.10.2025):
+- [PyPi](https://pypi.org/project/highspy) (📥 560K / month · 📦 100 · ⏱️ 25.10.2025):
 	```
 	pip install highspy
 	```
@@ -1158,7 +1158,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 </details>
 <details><summary><b><a href="https://github.com/google/or-tools">Tulip</a></b> (🥈33 ·  ⭐ 13K) - Interior-point solver in pure Julia. <code><a href="http://bit.ly/3postzC">MPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/google/or-tools) (👨‍💻 190 · 🔀 2.3K · 📥 390K · 📦 360 · 📋 3.2K - 2% open · ⏱️ 25.11.2025):
+- [GitHub](https://github.com/google/or-tools) (👨‍💻 190 · 🔀 2.3K · 📥 400K · 📦 360 · 📋 3.2K - 2% open · ⏱️ 21.12.2025):
 
 	```
 	git clone https://github.com/google/or-tools
@@ -1166,28 +1166,28 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 </details>
 <details><summary><b><a href="https://www.scipopt.org/">PySCIPOpt</a></b> (🥈32 ·  ⭐ 950) - Python interface for SCIP. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/scipopt/PySCIPOpt) (👨‍💻 85 · 🔀 270 · 📦 410 · 📋 620 - 4% open · ⏱️ 05.12.2025):
+- [GitHub](https://github.com/scipopt/PySCIPOpt) (👨‍💻 85 · 🔀 270 · 📦 410 · 📋 620 - 4% open · ⏱️ 25.12.2025):
 
 	```
 	git clone https://github.com/scipopt/PySCIPOpt
 	```
-- [PyPi](https://pypi.org/project/PySCIPOpt) (📥 190K / month · 📦 86 · ⏱️ 28.11.2025):
+- [PyPi](https://pypi.org/project/PySCIPOpt) (📥 180K / month · 📦 86 · ⏱️ 28.11.2025):
 	```
 	pip install PySCIPOpt
 	```
-- [Conda](https://anaconda.org/conda-forge/pyscipopt) (📥 620K · ⏱️ 30.08.2025):
+- [Conda](https://anaconda.org/conda-forge/pyscipopt) (📥 630K · ⏱️ 30.08.2025):
 	```
 	conda install -c conda-forge pyscipopt
 	```
 </details>
 <details><summary><b><a href="https://osqp.org">OSQP</a></b> (🥈30 ·  ⭐ 2K) - Operator Splitting QP Solver. <code><a href="http://bit.ly/3nYMfla">Apache-2</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/octave.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/r.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/osqp/osqp) (👨‍💻 36 · 🔀 380 · 📥 150K · 📋 390 - 28% open · ⏱️ 10.11.2025):
+- [GitHub](https://github.com/osqp/osqp) (👨‍💻 36 · 🔀 380 · 📥 160K · 📋 390 - 28% open · ⏱️ 10.11.2025):
 
 	```
 	git clone https://github.com/osqp/osqp
 	```
-- [PyPi](https://pypi.org/project/osqp) (📥 2.7M / month · 📦 120 · ⏱️ 15.10.2025):
+- [PyPi](https://pypi.org/project/osqp) (📥 2.6M / month · 📦 120 · ⏱️ 15.10.2025):
 	```
 	pip install osqp
 	```
@@ -1203,7 +1203,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/cvxgrp/scs
 	```
-- [PyPi](https://pypi.org/project/scs) (📥 2.4M / month · 📦 66 · ⏱️ 12.10.2025):
+- [PyPi](https://pypi.org/project/scs) (📥 2.3M / month · 📦 66 · ⏱️ 12.10.2025):
 	```
 	pip install scs
 	```
@@ -1212,18 +1212,18 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	conda install -c conda-forge scs
 	```
 </details>
-<details><summary><b><a href="https://www.coin-or.org/">Ipopt</a></b> (🥉26 ·  ⭐ 1.7K) - COIN-OR Interior Point Optimizer. <code><a href="http://bit.ly/2M0xmjV">EPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/non-profit2.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://www.coin-or.org/">Ipopt</a></b> (🥉25 ·  ⭐ 1.7K · 📉) - COIN-OR Interior Point Optimizer. <code><a href="http://bit.ly/2M0xmjV">EPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/non-profit2.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/coin-or/Ipopt) (👨‍💻 38 · 🔀 300 · 📥 26K · 📋 620 - 1% open · ⏱️ 30.09.2025):
+- [GitHub](https://github.com/coin-or/Ipopt) (👨‍💻 38 · 🔀 300 · 📥 27K · 📋 620 - 1% open · ⏱️ 30.09.2025):
 
 	```
 	git clone https://github.com/coin-or/Ipopt
 	```
-- [PyPi](https://pypi.org/project/ipopt) (📥 13K / month · 📦 10 · ⏱️ 07.04.2021):
+- [PyPi](https://pypi.org/project/ipopt) (📥 12K / month · 📦 10 · ⏱️ 07.04.2021):
 	```
 	pip install ipopt
 	```
-- [Conda](https://anaconda.org/conda-forge/ipopt) (📥 2M · ⏱️ 18.08.2025):
+- [Conda](https://anaconda.org/conda-forge/ipopt) (📥 2.1M · ⏱️ 18.08.2025):
 	```
 	conda install -c conda-forge ipopt
 	```
@@ -1235,7 +1235,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/embotech/ecos
 	```
-- [PyPi](https://pypi.org/project/ecos) (📥 730K / month · 📦 49 · ⏱️ 18.06.2024):
+- [PyPi](https://pypi.org/project/ecos) (📥 710K / month · 📦 49 · ⏱️ 18.06.2024):
 	```
 	pip install ecos
 	```
@@ -1244,9 +1244,25 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	conda install -c conda-forge ecos
 	```
 </details>
-<details><summary><b><a href="https://www.coin-or.org/">CBC</a></b> (🥉23 ·  ⭐ 960) - COIN-OR Branch-and-Cut solver. <code><a href="http://bit.ly/2M0xmjV">EPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/non-profit2.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://github.com/oxfordcontrol/Clarabel.rs">Clarabel.rs</a></b> (🥉24 ·  ⭐ 500 · 📈) - Interior-point solver for convex conic optimisation.. <code><a href="http://bit.ly/3nYMfla">Apache-2</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/rust.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/coin-or/Cbc) (👨‍💻 35 · 🔀 130 · 📥 240K · 📋 540 - 28% open · ⏱️ 15.12.2025):
+- [GitHub](https://github.com/oxfordcontrol/Clarabel.rs) (👨‍💻 11 · 🔀 38 · 📦 50 · 📋 63 - 22% open · ⏱️ 25.09.2025):
+
+	```
+	git clone https://github.com/oxfordcontrol/Clarabel.rs
+	```
+- [PyPi](https://pypi.org/project/clarabel) (📥 2.1M / month · 📦 43 · ⏱️ 11.06.2025):
+	```
+	pip install clarabel
+	```
+- [Conda](https://anaconda.org/conda-forge/clarabel) (📥 310K · ⏱️ 17.12.2025):
+	```
+	conda install -c conda-forge clarabel
+	```
+</details>
+<details><summary><b><a href="https://www.coin-or.org/">CBC</a></b> (🥉23 ·  ⭐ 970) - COIN-OR Branch-and-Cut solver. <code><a href="http://bit.ly/2M0xmjV">EPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/non-profit2.ico" style="display:inline;" width="13" height="13"></code></summary>
+
+- [GitHub](https://github.com/coin-or/Cbc) (👨‍💻 35 · 🔀 130 · 📥 250K · 📋 540 - 28% open · ⏱️ 19.12.2025):
 
 	```
 	git clone https://github.com/coin-or/Cbc
@@ -1256,9 +1272,9 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	conda install -c conda-forge coincbc
 	```
 </details>
-<details><summary><b><a href="https://www.coin-or.org/">Clp</a></b> (🥉23 ·  ⭐ 960) - COIN-OR Linear Programming Solver. <code><a href="http://bit.ly/2M0xmjV">EPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/non-profit2.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://www.coin-or.org/">Clp</a></b> (🥉23 ·  ⭐ 970) - COIN-OR Linear Programming Solver. <code><a href="http://bit.ly/2M0xmjV">EPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/non-profit2.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/coin-or/Cbc) (👨‍💻 35 · 🔀 130 · 📥 240K · 📋 540 - 28% open · ⏱️ 15.12.2025):
+- [GitHub](https://github.com/coin-or/Cbc) (👨‍💻 35 · 🔀 130 · 📥 250K · 📋 540 - 28% open · ⏱️ 19.12.2025):
 
 	```
 	git clone https://github.com/coin-or/Cbc
@@ -1268,30 +1284,14 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	conda install -c conda-forge coin-or-clp
 	```
 </details>
-<details><summary><b><a href="https://github.com/oxfordcontrol/Clarabel.rs">Clarabel.rs</a></b> (🥉23 ·  ⭐ 500) - Interior-point solver for convex conic optimisation.. <code><a href="http://bit.ly/3nYMfla">Apache-2</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/rust.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
-
-- [GitHub](https://github.com/oxfordcontrol/Clarabel.rs) (👨‍💻 11 · 🔀 38 · 📦 50 · 📋 63 - 22% open · ⏱️ 25.09.2025):
-
-	```
-	git clone https://github.com/oxfordcontrol/Clarabel.rs
-	```
-- [PyPi](https://pypi.org/project/clarabel) (📥 2.2M / month · 📦 43 · ⏱️ 11.06.2025):
-	```
-	pip install clarabel
-	```
-- [Conda](https://anaconda.org/conda-forge/clarabel) (📥 300K · ⏱️ 17.12.2025):
-	```
-	conda install -c conda-forge clarabel
-	```
-</details>
-<details><summary><b><a href="https://ampl.com/">AMPLPY</a></b> (🥉22 ·  ⭐ 81 · 📉) - Python API for AMPL. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/for-profit.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://ampl.com/">AMPLPY</a></b> (🥉22 ·  ⭐ 81) - Python API for AMPL. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/for-profit.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/ampl/amplpy) (👨‍💻 9 · 🔀 19 · 📦 130 · 📋 50 - 2% open · ⏱️ 08.12.2025):
 
 	```
 	git clone https://github.com/ampl/amplpy
 	```
-- [PyPi](https://pypi.org/project/amplpy) (📥 51K / month · 📦 11 · ⏱️ 08.12.2025):
+- [PyPi](https://pypi.org/project/amplpy) (📥 47K / month · 📦 11 · ⏱️ 08.12.2025):
 	```
 	pip install amplpy
 	```
@@ -1300,14 +1300,14 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	conda install -c conda-forge amplpy
 	```
 </details>
-<details><summary><b><a href="https://github.com/PREDICT-EPFL/piqp">PIQP</a></b> (🥉19 ·  ⭐ 130 · 📉) - Proximal Interior Point Quadratic Programming solver. <code><a href="http://bit.ly/3rqEWVr">BSD-2</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/octave.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/r.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://github.com/PREDICT-EPFL/piqp">PIQP</a></b> (🥉20 ·  ⭐ 130 · 📈) - Proximal Interior Point Quadratic Programming solver. <code><a href="http://bit.ly/3rqEWVr">BSD-2</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/octave.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/r.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/PREDICT-EPFL/piqp) (👨‍💻 5 · 🔀 18 · 📥 990 · 📦 49 · 📋 19 - 26% open · ⏱️ 23.09.2025):
+- [GitHub](https://github.com/PREDICT-EPFL/piqp) (👨‍💻 5 · 🔀 18 · 📥 1K · 📦 49 · 📋 19 - 26% open · ⏱️ 23.09.2025):
 
 	```
 	git clone https://github.com/PREDICT-EPFL/piqp
 	```
-- [PyPi](https://pypi.org/project/piqp) (📥 22K / month · 📦 9 · ⏱️ 16.09.2025):
+- [PyPi](https://pypi.org/project/piqp) (📥 19K / month · 📦 9 · ⏱️ 16.09.2025):
 	```
 	pip install piqp
 	```
@@ -1318,7 +1318,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 </details>
 <details><summary><b><a href="https://github.com/MadNLP/MadNLP.jl">MadNLP</a></b> (🥉16 ·  ⭐ 230) - A solver for nonlinear programming with GPU support. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/MadNLP/MadNLP.jl) (👨‍💻 18 · 🔀 20 · 📋 120 - 29% open · ⏱️ 18.12.2025):
+- [GitHub](https://github.com/MadNLP/MadNLP.jl) (👨‍💻 18 · 🔀 20 · 📋 120 - 30% open · ⏱️ 22.12.2025):
 
 	```
 	git clone https://github.com/MadNLP/MadNLP.jl
@@ -1326,7 +1326,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 </details>
 <details><summary><b><a href="https://github.com/oxfordcontrol/Clarabel.jl">Clarabel.jl</a></b> (🥉15 ·  ⭐ 240) - Interior-point solver for convex conic optimisation.. <code><a href="http://bit.ly/3nYMfla">Apache-2</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/oxfordcontrol/Clarabel.jl) (👨‍💻 12 · 🔀 25 · 📋 69 - 14% open · ⏱️ 25.08.2025):
+- [GitHub](https://github.com/oxfordcontrol/Clarabel.jl) (👨‍💻 12 · 🔀 26 · 📋 71 - 16% open · ⏱️ 25.08.2025):
 
 	```
 	git clone https://github.com/oxfordcontrol/Clarabel.jl
@@ -1346,14 +1346,14 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 
 <a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
 
-<details><summary><b><a href="https://l2rpn.chalearn.org/">Grid2Op</a></b> (🥇26 ·  ⭐ 400) - Modeling sequential decision making in power systems. <code><a href="http://bit.ly/3postzC">MPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/for-profit.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://l2rpn.chalearn.org/">Grid2Op</a></b> (🥇25 ·  ⭐ 400 · 📉) - Modeling sequential decision making in power systems. <code><a href="http://bit.ly/3postzC">MPL-2.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/for-profit.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/Grid2op/grid2op) (👨‍💻 32 · 🔀 140 · 📋 380 - 14% open · ⏱️ 18.11.2025):
 
 	```
 	git clone https://github.com/rte-france/Grid2Op
 	```
-- [PyPi](https://pypi.org/project/Grid2Op) (📥 10K / month · 📦 23 · ⏱️ 24.07.2025):
+- [PyPi](https://pypi.org/project/Grid2Op) (📥 7.1K / month · 📦 23 · ⏱️ 24.07.2025):
 	```
 	pip install Grid2Op
 	```
@@ -1415,7 +1415,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/CURENT/agvis
 	```
-- [PyPi](https://pypi.org/project/agvis) (📥 32 / month · ⏱️ 07.06.2024):
+- [PyPi](https://pypi.org/project/agvis) (📥 42 / month · ⏱️ 07.06.2024):
 	```
 	pip install agvis
 	```
@@ -1426,14 +1426,14 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 
 <a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
 
-<details><summary><b><a href="https://helics.org/tools/">HELICS</a></b> (🥇23 ·  ⭐ 150 · 📉) - Co-simulation framework. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/octave.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/java.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://helics.org/tools/">HELICS</a></b> (🥇23 ·  ⭐ 160) - Co-simulation framework. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/octave.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/java.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/GMLC-TDC/HELICS) (👨‍💻 39 · 🔀 50 · 📥 30K · 📋 680 - 13% open · ⏱️ 16.08.2025):
 
 	```
 	git clone https://github.com/GMLC-TDC/HELICS
 	```
-- [PyPi](https://pypi.org/project/helics) (📥 4.9K / month · 📦 13 · ⏱️ 28.02.2025):
+- [PyPi](https://pypi.org/project/helics) (📥 4.6K / month · 📦 13 · ⏱️ 28.02.2025):
 	```
 	pip install helics
 	```
@@ -1480,12 +1480,12 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 
 <details><summary><b><a href="https://www.gridstatus.io">GridStatus</a></b> (🥇26 ·  ⭐ 380) - Extract data from ISOs and other sources. <code><a href="http://bit.ly/3aKzpTv">BSD-3</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/for-profit.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/gridstatus/gridstatus) (👨‍💻 36 · 🔀 70 · 📦 24 · 📋 130 - 32% open · ⏱️ 16.12.2025):
+- [GitHub](https://github.com/gridstatus/gridstatus) (👨‍💻 36 · 🔀 70 · 📦 24 · 📋 130 - 32% open · ⏱️ 23.12.2025):
 
 	```
 	git clone https://github.com/kmax12/gridstatus
 	```
-- [PyPi](https://pypi.org/project/gridstatus) (📥 65K / month · 📦 2 · ⏱️ 11.12.2025):
+- [PyPi](https://pypi.org/project/gridstatus) (📥 60K / month · 📦 2 · ⏱️ 11.12.2025):
 	```
 	pip install gridstatus
 	```
@@ -1501,7 +1501,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/PyPSA/atlite
 	```
-- [PyPi](https://pypi.org/project/atlite) (📥 4.5K / month · ⏱️ 12.05.2025):
+- [PyPi](https://pypi.org/project/atlite) (📥 3.6K / month · ⏱️ 12.05.2025):
 	```
 	pip install atlite
 	```
@@ -1517,7 +1517,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/PyPSA/powerplantmatching
 	```
-- [PyPi](https://pypi.org/project/powerplantmatching) (📥 1.5K / month · ⏱️ 01.02.2025):
+- [PyPi](https://pypi.org/project/powerplantmatching) (📥 1.3K / month · ⏱️ 01.02.2025):
 	```
 	pip install powerplantmatching
 	```
@@ -1526,14 +1526,14 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	conda install -c conda-forge powerplantmatching
 	```
 </details>
-<details><summary><b><a href="https://simbench.de/en/">SimBench</a></b> (🥉20 ·  ⭐ 120) - Benchmark dataset of German LV/MV/HV grids including.. <code><a href="https://tldrlegal.com/search?q=odbl-1.0">❗️odbl-1.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code>juptyer</code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://simbench.de/en/">SimBench</a></b> (🥉19 ·  ⭐ 120 · 📉) - Benchmark dataset of German LV/MV/HV grids including.. <code><a href="https://tldrlegal.com/search?q=odbl-1.0">❗️odbl-1.0</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code>juptyer</code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/e2nIEE/simbench) (👨‍💻 5 · 🔀 33 · 📦 47 · 📋 37 - 13% open · ⏱️ 23.10.2025):
 
 	```
 	git clone https://github.com/e2nIEE/simbench
 	```
-- [PyPi](https://pypi.org/project/simbench) (📥 9.5K / month · 📦 10 · ⏱️ 13.04.2025):
+- [PyPi](https://pypi.org/project/simbench) (📥 7.3K / month · 📦 10 · ⏱️ 13.04.2025):
 	```
 	pip install simbench
 	```
@@ -1542,18 +1542,18 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	conda install -c conda-forge simbench
 	```
 </details>
-<details><summary><b><a href="https://groups.io/g/powergenome">PowerGenome</a></b> (🥉17 ·  ⭐ 220) - Create inputs for power systems models. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://groups.io/g/powergenome">PowerGenome</a></b> (🥉17 ·  ⭐ 230) - Create inputs for power systems models. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/PowerGenome/PowerGenome) (👨‍💻 18 · 🔀 73 · 📋 190 - 48% open · ⏱️ 21.03.2025):
 
 	```
 	git clone https://github.com/PowerGenome/PowerGenome
 	```
-- [PyPi](https://pypi.org/project/PowerGenome) (📥 71 / month · ⏱️ 21.03.2025):
+- [PyPi](https://pypi.org/project/PowerGenome) (📥 54 / month · ⏱️ 21.03.2025):
 	```
 	pip install PowerGenome
 	```
-- [Conda](https://anaconda.org/conda-forge/powergenome) (📥 1.3K · ⏱️ 22.04.2025):
+- [Conda](https://anaconda.org/conda-forge/powergenome) (📥 1.4K · ⏱️ 22.04.2025):
 	```
 	conda install -c conda-forge powergenome
 	```
@@ -1565,14 +1565,14 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/rebase-energy/EnergyDataModel
 	```
-- [PyPi](https://pypi.org/project/energydatamodel) (📥 76 / month · 📦 2 · ⏱️ 05.10.2025):
+- [PyPi](https://pypi.org/project/energydatamodel) (📥 57 / month · 📦 2 · ⏱️ 05.10.2025):
 	```
 	pip install energydatamodel
 	```
 </details>
 <details><summary><b><a href="https://deepsolar.web.app">DeepSolar</a></b> (🥉9 ·  ⭐ 260 · 💤) - Houseshold-level solar panel identification with deep.. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/wangzhecheng/DeepSolar) (👨‍💻 2 · 🔀 72 · 📋 17 - 76% open · ⏱️ 26.03.2019):
+- [GitHub](https://github.com/wangzhecheng/DeepSolar) (👨‍💻 2 · 🔀 71 · 📋 17 - 76% open · ⏱️ 26.03.2019):
 
 	```
 	git clone https://github.com/wangzhecheng/DeepSolar
@@ -1591,7 +1591,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/gseim/gseim
 	```
-- [PyPi](https://pypi.org/project/GSEIM) (📥 11 / month · ⏱️ 16.07.2022):
+- [PyPi](https://pypi.org/project/GSEIM) (📥 9 / month · ⏱️ 16.07.2022):
 	```
 	pip install GSEIM
 	```
@@ -1609,7 +1609,7 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 	```
 	git clone https://github.com/dsgrid/dsgrid
 	```
-- [PyPi](https://pypi.org/project/dsgrid) (📥 57 / month · ⏱️ 18.12.2014):
+- [PyPi](https://pypi.org/project/dsgrid) (📥 41 / month · ⏱️ 18.12.2014):
 	```
 	pip install dsgrid
 	```
@@ -1662,27 +1662,27 @@ This curated list contains 160 open-source projects with a total of 78K stars gr
 
 <a href="#contents"><img align="right" width="15" height="15" src="https://git.io/JtehR" alt="Back to top"></a>
 
-<details><summary><b><a href="https://power-agent.github.io">PowerMCP</a></b> (🥇7 ·  ⭐ 72 · 📉) - Collection of MCP servers for power system software. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://power-agent.github.io">PowerMCP</a></b> (🥇8 ·  ⭐ 74) - Collection of MCP servers for power system software. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
-- [GitHub](https://github.com/Power-Agent/PowerMCP) (👨‍💻 5 · 🔀 20 · 📋 2 - 50% open · ⏱️ 19.11.2025):
+- [GitHub](https://github.com/Power-Agent/PowerMCP) (👨‍💻 5 · 🔀 21 · 📋 2 - 50% open · ⏱️ 19.11.2025):
 
 	```
 	git clone https://github.com/Power-Agent/PowerMCP
 	```
 </details>
-<details><summary><b><a href="https://github.com/cdgaete/pypsa-mcp">PyPSA MCP</a></b> (🥇7 ·  ⭐ 45) - PyPSA Energy Modeling for LLMs. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/volunteer.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://github.com/cdgaete/pypsa-mcp">PyPSA MCP</a></b> (🥇8 ·  ⭐ 45) - PyPSA Energy Modeling for LLMs. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico" style="display:inline;" width="13" height="13"></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/volunteer.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/cdgaete/pypsa-mcp) (👨‍💻 2 · 🔀 4 · 📥 5 · ⏱️ 22.04.2025):
 
 	```
 	git clone https://github.com/cdgaete/pypsa-mcp
 	```
-- [PyPi](https://pypi.org/project/pypsamcp) (📥 16 / month · ⏱️ 22.04.2025):
+- [PyPi](https://pypi.org/project/pypsamcp) (📥 30 / month · ⏱️ 22.04.2025):
 	```
 	pip install pypsamcp
 	```
 </details>
-<details><summary><b><a href="https://power-agent.github.io">PowerFM</a></b> (🥇7 ·  ⭐ 31) - Foundation models in the power and energy domain. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
+<details><summary><b><a href="https://power-agent.github.io">PowerFM</a></b> (🥉7 ·  ⭐ 31) - Foundation models in the power and energy domain. <code><a href="http://bit.ly/34MBwT8">MIT</a></code> <code><img src="https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico" style="display:inline;" width="13" height="13"></code></summary>
 
 - [GitHub](https://github.com/Power-Agent/PowerFM) (🔀 1 · ⏱️ 04.11.2025):
 
