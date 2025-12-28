@@ -621,15 +621,15 @@ projects:
     license: BSD
     description: Power Network Optimization
 
-  - name: GridCal
+  - name: VeraGrid
     category: steady-state
-    labels: ["gha", "pypi", "python", "volunteer"]
-    github_id: SanPen/GridCal
-    pypi_id: GridCal
+    labels: ["gha", "pypi", "python", "for-profit"]
+    github_id: SanPen/VeraGrid
+    pypi_id: veragrid
     # conda_id:
     homepage: https://www.eroots.tech/software
-    docs_url: https://gridcal.readthedocs.io/en/latest/?badge=latest
-    license: LGPL-3
+    docs_url: https://veragrid.readthedocs.io/en/latest/?badge=latest
+    license: MPL-2.0
     description: Cross-platform power systems software
 
   - name: GridPath
