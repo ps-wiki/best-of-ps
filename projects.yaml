@@ -630,7 +630,7 @@ projects:
     homepage: https://www.eroots.tech/software
     docs_url: https://veragrid.readthedocs.io/en/latest/?badge=latest
     license: MPL-2.0
-    description: Cross-platform power systems software
+    description: Cross-platform power systems software, power flows, investments analysis, optimization and plenty of other stuff
 
   - name: GridPath
     category: steady-state
