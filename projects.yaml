@@ -79,9 +79,6 @@ labels:
   - label: "gha"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico"
     description: "CI via GitHub Actions"
-  - label: "azure"
-    image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/azure.ico"
-    description: "CI via Azure Pipelines"
 # --- Release Channels ---
   - label: "pypi"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico"
@@ -205,7 +202,7 @@ projects:
 
   - name: LTB ANDES
     category: phasor
-    labels: ["gha", "azure", "pypi", "conda", "jupyter", "python", "julia", "university"]
+    labels: ["gha", "pypi", "conda", "jupyter", "python", "julia", "university"]
     github_id: CURENT/andes
     pypi_id: andes
     conda_id: conda-forge/andes
@@ -397,7 +394,7 @@ projects:
 
   - name: LTB AMS
     category: steady-state
-    labels: ["gha", "azure", "pypi", "conda", "jupyter", "python", "university"]
+    labels: ["gha", "pypi", "conda", "jupyter", "python", "university"]
     github_id: CURENT/ams
     pypi_id: ltbams
     conda_id: conda-forge/ltbams
