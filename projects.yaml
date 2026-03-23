@@ -770,6 +770,17 @@ projects:
     license: MIT
     description: Stochastic unit commitment extension for PyPSA with market and multistage optimization
 
+  - name: hynet
+    category: steady-state
+    labels: ["pypi", "python", "university"]
+    gitlab_id: tum-msv/hynet
+    pypi_id: hynet
+    # conda_id:
+    # homepage:
+    docs_url: https://hynet.readthedocs.io/en/latest/
+    license: BSD-3
+    description: Optimal power flow framework for hybrid AC/DC power systems
+
 # --- Interface ---
   - name: matpower-pip
     category: intf
