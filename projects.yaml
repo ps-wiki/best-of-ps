@@ -108,7 +108,7 @@ projects:
   - name: ParaEMT
     category: emt
     labels: ["python", "lab"]
-    github_id: NREL/ParaEMT_public
+    github_id: NatLabRockies/ParaEMT_public
     # pypi_id:
     # conda_id:
     # homepage:
@@ -176,7 +176,7 @@ projects:
     github_id: NREL-Sienna/PowerSimulationsDynamics.jl
     # pypi_id:
     # conda_id:
-    homepage: https://www.nrel.gov/analysis/sienna.html
+    homepage: https://www.nlr.gov/analysis/sienna.html
     docs_url: https://nrel-sienna.github.io/PowerSimulationsDynamics.jl/stable
     license: BSD-3
     description: Dynamic Power System simulations; NREL Sienna
@@ -314,7 +314,7 @@ projects:
   - name: ASSET
     category: steady-state
     labels: ["python", "lab"]
-    github_id: NREL/ASSET
+    github_id: NatLabRockies/ASSET
     # pypi_id:
     # conda_id:
     # dockerhub_id:
@@ -350,12 +350,12 @@ projects:
   - name: REopt
     category: steady-state
     labels: ["gha", "python", "julia", "lab"]
-    github_id: NREL/REopt_API
+    github_id: NatLabRockies/REopt_API
     # pypi_id:
     # conda_id:
     # dockerhub_id:
-    homepage: https://www.nrel.gov/reopt/
-    docs_url: https://github.com/NREL/REopt_API/wiki
+    homepage: https://www.nlr.gov/reopt/
+    docs_url: https://github.com/NatLabRockies/REopt_API/wiki
     license: BSD-3
     description: Renewable Energy Integration & Optimization
 
@@ -441,7 +441,7 @@ projects:
     github_id: NREL-Sienna/PowerFlows.jl
     # pypi_id:
     # conda_id:
-    homepage: https://www.nrel.gov/analysis/sienna.html
+    homepage: https://www.nlr.gov/analysis/sienna.html
     docs_url: https://nrel-sienna.github.io/PowerFlows.jl/dev/
     license: BSD-3
     description: Collection of Power Flow solution; NREL Sienna
@@ -451,7 +451,7 @@ projects:
     github_id: NREL-Sienna/PowerNetworkMatrices.jl
     # pypi_id:
     # conda_id:
-    homepage: https://www.nrel.gov/analysis/sienna.html
+    homepage: https://www.nlr.gov/analysis/sienna.html
     docs_url: https://nrel-sienna.github.io/PowerNetworkMatrices.jl/stable/
     license: BSD-3
     description: Power systems matrices; NREL Sienna
@@ -461,7 +461,7 @@ projects:
     github_id: NREL-Sienna/PowerSimulations.jl
     # pypi_id:
     # conda_id:
-    homepage: https://www.nrel.gov/analysis/sienna.html
+    homepage: https://www.nlr.gov/analysis/sienna.html
     docs_url: https://nrel-sienna.github.io/PowerSimulations.jl/latest
     license: BSD-3
     description: Power Systems optimization simulation and modeling; NREL Sienna
@@ -471,7 +471,7 @@ projects:
     github_id: NREL-Sienna/PowerSystemsInvestments.jl
     # pypi_id:
     # conda_id:
-    homepage: https://www.nrel.gov/analysis/sienna.html
+    homepage: https://www.nlr.gov/analysis/sienna.html
     docs_url: https://nrel-sienna.github.io/PowerSystemsInvestments.jl/stable
     license: BSD-3
     description: Power Systems investment models; NREL Sienna
@@ -481,7 +481,7 @@ projects:
     github_id: NREL-Sienna/PowerSystemsInvestmentsPortfolios.jl
     # pypi_id:
     # conda_id:
-    homepage: https://www.nrel.gov/analysis/sienna.html
+    homepage: https://www.nlr.gov/analysis/sienna.html
     docs_url: https://nrel-sienna.github.io/PowerSystemsInvestmentsPortfolios.jl/stable
     license: BSD-3
     description: Data models for Power Systems investment models; NREL Sienna
@@ -687,11 +687,11 @@ projects:
   - name: ReEDS-2.0
     category: steady-state
     labels: ["python", "gha", "lab"]
-    github_id: NREL/ReEDS-2.0
+    github_id: NatLabRockies/ReEDS-2.0
     # pypi_id:
     # conda_id:
-    homepage: https://www.nrel.gov/analysis/reeds/
-    docs_url: https://www.nrel.gov/docs/fy21osti/78195.pdf
+    homepage: https://www.nlr.gov/analysis/reeds/
+    docs_url: https://www.nlr.gov/docs/fy21osti/78195.pdf
     license: GPL-3.0
     description: Capacity planning and dispatch model
 
@@ -880,11 +880,11 @@ projects:
   - name: PyDSS
     category: intf
     labels: ["gha", "pypi", "python", "lab"]
-    github_id: NREL/PyDSS
+    github_id: NatLabRockies/PyDSS
     pypi_id: pydss
     # conda_id:
-    homepage: https://www.nrel.gov/grid/pydss.html
-    docs_url: https://nrel.github.io/PyDSS/index.html
+    homepage: https://www.nlr.gov/grid/pydss.html
+    docs_url: https://natlabrockies.github.io/PyDSS/index.html
     license: BSD-3
     description: A Python wrapper for OpenDSS
 
@@ -1665,7 +1665,7 @@ projects:
     github_id: NREL-Sienna/powergraphics.jl
     # pypi_id:
     # conda_id:
-    homepage: https://www.nrel.gov/analysis/sienna.html
+    homepage: https://www.nlr.gov/analysis/sienna.html
     docs_url: https://nrel-sienna.github.io/PowerGraphics.jl/stable/
     license: BSD-3
     description: Visualization for PowerSimulations; NREL Sienna
@@ -1783,11 +1783,11 @@ projects:
   - name: dGen
     category: dataman
     labels: ["gha", "python", "jupyter", "lab"]
-    github_id: NREL/dgen
+    github_id: NatLabRockies/dgen
     # pypi_id:
     # conda_id:
     # dockerhub_id:
     # homepage:
-    docs_url: https://nrel.github.io/dgen/
+    docs_url: https://natlabrockies.github.io/dgen/
     license: BSD-3
     description: The Distributed Generation Market Demand (dGen) model
