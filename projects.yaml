@@ -814,6 +814,17 @@ projects:
     license: BSD-3
     description: U.S. regional economy, greenhouse gas, and energy model
 
+  - name: PowerfulCases
+    category: data
+    labels: ["gha", "pypi", "octave", "python"]
+    github_id: cuihantao/PowerfulCases
+    pypi_id: powerfulcases
+    # conda_id:
+    # homepage:
+    # docs_url:
+    license: undefined
+    description: Test case data management for power systems simulation
+
 # --- Interface ---
   - name: matpower-pip
     category: intf
