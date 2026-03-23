@@ -847,6 +847,17 @@ projects:
     license: DOE/NREL/ALLIANCE data use disclaimer agreement
     description: Reliability Test System dataset for Grid Modernization Lab Consortium studies
 
+  - name: ERAD
+    category: intf
+    labels: ["gha", "pypi", "python", "lab"]
+    github_id: NLR-Distribution-Suite/erad
+    pypi_id: NREL-erad
+    # conda_id:
+    homepage: https://nlr-distribution-suite.github.io/erad/
+    docs_url: https://nlr-distribution-suite.github.io/erad/
+    license: BSD-3
+    description: Toolkit for computing resilience metrics for power distribution systems
+
 # --- Interface ---
   - name: matpower-pip
     category: intf
