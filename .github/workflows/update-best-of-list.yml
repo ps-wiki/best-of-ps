@@ -48,6 +48,21 @@ jobs:
         with:
           libraries_key: ${{ secrets.LIBRARIES_KEY }}
           github_key: ${{ secrets.PAT_TOKEN }}
+      - name: soften generated dead-project wording
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('README.md')
+          text = path.read_text()
+          text = text.replace(
+              '- 💀&nbsp; Dead project _(24 months no activity)_',
+              '- 🧊&nbsp; Long-inactive project _(24 months no visible activity)_'
+          )
+          text = text.replace('💀', '🧊')
+          text = text.replace('Dead project', 'Long-inactive project')
+          path.write_text(text)
+          PY
       - name: push-update
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
