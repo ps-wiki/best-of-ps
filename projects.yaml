@@ -825,6 +825,17 @@ projects:
     license: undefined
     description: Test case data management for power systems simulation
 
+  - name: PowerDynData.jl
+    category: data
+    labels: ["julia", "gha"]
+    github_id: cuihantao/PowerDynData.jl
+    # pypi_id:
+    # conda_id:
+    homepage: http://cui.eecps.com/PowerDynData.jl/
+    docs_url: https://cuihantao.github.io/PowerDynData.jl
+    license: MIT
+    description: Julia package for parsing PSS/E DYR dynamic data files
+
 # --- Interface ---
   - name: matpower-pip
     category: intf
