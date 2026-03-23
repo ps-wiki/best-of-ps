@@ -836,6 +836,17 @@ projects:
     license: MIT
     description: Julia package for parsing PSS/E DYR dynamic data files
 
+  - name: RTS-GMLC
+    category: data
+    labels: ["gha", "lab"]
+    github_id: GridMod/RTS-GMLC
+    # pypi_id:
+    # conda_id:
+    # homepage:
+    # docs_url:
+    license: DOE/NREL/ALLIANCE data use disclaimer agreement
+    description: Reliability Test System dataset for Grid Modernization Lab Consortium studies
+
 # --- Interface ---
   - name: matpower-pip
     category: intf
