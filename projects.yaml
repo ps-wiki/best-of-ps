@@ -759,6 +759,17 @@ projects:
     license: AGPL-3
     description: Open Generation, Storage, and Transmission Operation and Expansion Planning Model
 
+  - name: PyPSA-stochUC
+    category: steady-state
+    labels: ["python"]
+    github_id: PPGS-Tools/PyPSA-stochUC
+    # pypi_id:
+    # conda_id:
+    # homepage:
+    # docs_url:
+    license: MIT
+    description: Stochastic unit commitment extension for PyPSA with market and multistage optimization
+
 # --- Interface ---
   - name: matpower-pip
     category: intf
