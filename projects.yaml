@@ -792,6 +792,17 @@ projects:
     license: GPL-3
     description: Optimisation and Analysis Toolbox for Power Systems
 
+  - name: Prescient
+    category: steady-state
+    labels: ["gha", "pypi", "python"]
+    github_id: grid-parity-exchange/Prescient
+    pypi_id: gridx-prescient
+    # conda_id:
+    # homepage:
+    docs_url: https://prescient.readthedocs.io/
+    license: BSD-3
+    description: Production cost modeling for power generation and distribution networks
+
 # --- Interface ---
   - name: matpower-pip
     category: intf
