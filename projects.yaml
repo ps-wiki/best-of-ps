@@ -781,6 +781,17 @@ projects:
     license: BSD-3
     description: Optimal power flow framework for hybrid AC/DC power systems
 
+  - name: OATS
+    category: steady-state
+    labels: ["pypi", "python", "university"]
+    github_id: bukhsh/oats
+    pypi_id: oatspower
+    # conda_id:
+    # homepage:
+    docs_url: https://oats.readthedocs.io
+    license: GPL-3
+    description: Optimisation and Analysis Toolbox for Power Systems
+
 # --- Interface ---
   - name: matpower-pip
     category: intf
