@@ -803,6 +803,17 @@ projects:
     license: BSD-3
     description: Production cost modeling for power generation and distribution networks
 
+  - name: US-REGEN
+    category: steady-state
+    labels: ["non-profit"]
+    github_id: epri-dev/US-REGEN
+    # pypi_id:
+    # conda_id:
+    homepage: https://esca.epri.com/usregen
+    docs_url: https://us-regen-docs.epri.com/
+    license: BSD-3
+    description: U.S. regional economy, greenhouse gas, and energy model
+
 # --- Interface ---
   - name: matpower-pip
     category: intf
