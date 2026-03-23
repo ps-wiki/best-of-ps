@@ -858,6 +858,17 @@ projects:
     license: BSD-3
     description: Toolkit for computing resilience metrics for power distribution systems
 
+  - name: powfacpy
+    category: intf
+    labels: ["gha", "pypi", "python", "non-profit"]
+    github_id: FraunhIEE-UniKassel-PowSysStability/powfacpy
+    pypi_id: powfacpy
+    # conda_id:
+    # homepage:
+    docs_url: https://fraunhiee-unikassel-powsysstability.github.io/powfacpy/docs/
+    license: MIT
+    description: Python wrapper around the DIgSILENT PowerFactory API
+
 # --- Interface ---
   - name: matpower-pip
     category: intf
