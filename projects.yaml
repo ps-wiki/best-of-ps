@@ -869,6 +869,17 @@ projects:
     license: MIT
     description: Python wrapper around the DIgSILENT PowerFactory API
 
+  - name: PSST
+    category: steady-state
+    labels: ["pypi", "python", "university"]
+    github_id: ames-market/psst
+    pypi_id: psst
+    # conda_id:
+    # homepage:
+    docs_url: https://psst.readthedocs.io/
+    license: AMES License
+    description: Power System Simulation Toolbox for SCUC and SCED in electricity market simulation
+
 # --- Interface ---
   - name: matpower-pip
     category: intf
