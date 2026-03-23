@@ -575,6 +575,17 @@ projects:
     license: BSD-3
     description: Steady state power flow simulation
 
+  - name: DPLib
+    category: steady-state
+    labels: ["octave", "university"]
+    github_id: LSU-RAISE-LAB/DPLib
+    # pypi_id:
+    # conda_id:
+    # homepage:
+    # docs_url:
+    license: Academic and Research Use Only
+    description: MATLAB-based distributed benchmark library and solvers for power system analysis and optimization
+
   - name: pandapower
     category: steady-state
     labels: ["gha", "pypi", "conda", "jupyter", "python", "university"]
