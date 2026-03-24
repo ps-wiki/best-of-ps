@@ -524,7 +524,7 @@ projects:
     # pypi_id:
     # conda_id:
     # homepage:
-    docs_url: https://pypsa-distribution.readthedocs.io/
+    docs_url: https://pypsa-distribution.readthedocs.io/en/latest/
     license: GPL-3
     description: Multi-energy model for small scale applications in high spatial and temporal resolution
   - name: PyPSA-Earth
@@ -853,7 +853,7 @@ projects:
     github_id: NLR-Distribution-Suite/erad
     pypi_id: NREL-erad
     # conda_id:
-    homepage: https://nlr-distribution-suite.github.io/erad/
+    # homepage:
     docs_url: https://nlr-distribution-suite.github.io/erad/
     license: BSD-3
     description: Toolkit for computing resilience metrics for power distribution systems
@@ -894,7 +894,7 @@ projects:
 
   - name: mypower
     category: steady-state
-    labels: ["python", "intf", "university"]
+    labels: ["python", "university"]
     github_id: yasirroni/mypower
     # pypi_id:
     # conda_id:
@@ -1541,14 +1541,14 @@ projects:
 
   - name: SimBench
     category: data
-    labels: ["python", "pypi", "conda", "juptyer", "gha"]
-    github_id:  e2nIEE/simbench 
+    labels: ["python", "pypi", "conda", "jupyter", "gha"]
+    github_id: e2nIEE/simbench
     pypi_id: simbench
     conda_id: conda-forge/simbench
     license: odbl-1.0
     description: Benchmark dataset of German LV/MV/HV grids including 15min time series for 1 year
     homepage: https://simbench.de/en/
-    docs_url: https://simbench.readthedocs.io/en/stable/?badge=stable
+    docs_url: https://simbench.readthedocs.io/en/stable/
 
   - name: Electrical Signals Databases
     category: data
