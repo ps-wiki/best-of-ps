@@ -814,6 +814,72 @@ projects:
     license: BSD-3
     description: U.S. regional economy, greenhouse gas, and energy model
 
+  - name: PowerfulCases
+    category: data
+    labels: ["gha", "pypi", "octave", "python"]
+    github_id: cuihantao/PowerfulCases
+    pypi_id: powerfulcases
+    # conda_id:
+    # homepage:
+    # docs_url:
+    license: undefined
+    description: Test case data management for power systems simulation
+
+  - name: PowerDynData.jl
+    category: data
+    labels: ["julia", "gha"]
+    github_id: cuihantao/PowerDynData.jl
+    # pypi_id:
+    # conda_id:
+    homepage: http://cui.eecps.com/PowerDynData.jl/
+    docs_url: https://cuihantao.github.io/PowerDynData.jl
+    license: MIT
+    description: Julia package for parsing PSS/E DYR dynamic data files
+
+  - name: RTS-GMLC
+    category: data
+    labels: ["gha", "lab"]
+    github_id: GridMod/RTS-GMLC
+    # pypi_id:
+    # conda_id:
+    # homepage:
+    # docs_url:
+    license: DOE/NREL/ALLIANCE data use disclaimer agreement
+    description: Reliability Test System dataset for Grid Modernization Lab Consortium studies
+
+  - name: ERAD
+    category: intf
+    labels: ["gha", "pypi", "python", "lab"]
+    github_id: NLR-Distribution-Suite/erad
+    pypi_id: NREL-erad
+    # conda_id:
+    homepage: https://nlr-distribution-suite.github.io/erad/
+    docs_url: https://nlr-distribution-suite.github.io/erad/
+    license: BSD-3
+    description: Toolkit for computing resilience metrics for power distribution systems
+
+  - name: powfacpy
+    category: intf
+    labels: ["gha", "pypi", "python", "non-profit"]
+    github_id: FraunhIEE-UniKassel-PowSysStability/powfacpy
+    pypi_id: powfacpy
+    # conda_id:
+    # homepage:
+    docs_url: https://fraunhiee-unikassel-powsysstability.github.io/powfacpy/docs/
+    license: MIT
+    description: Python wrapper around the DIgSILENT PowerFactory API
+
+  - name: PSST
+    category: steady-state
+    labels: ["pypi", "python", "university"]
+    github_id: ames-market/psst
+    pypi_id: psst
+    # conda_id:
+    # homepage:
+    docs_url: https://psst.readthedocs.io/
+    license: AMES License
+    description: Power System Simulation Toolbox for SCUC and SCED in electricity market simulation
+
 # --- Interface ---
   - name: matpower-pip
     category: intf
