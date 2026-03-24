@@ -523,7 +523,7 @@ projects:
     github_id: pypsa-meets-earth/pypsa-distribution
     # pypi_id:
     # conda_id:
-    homepage: https://pypsa-meets-earth.github.io/
+    # homepage:
     docs_url: https://pypsa-distribution.readthedocs.io/
     license: GPL-3
     description: Multi-energy model for small scale applications in high spatial and temporal resolution
