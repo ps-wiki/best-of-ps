@@ -150,7 +150,7 @@ projects:
 
   - name: GridPACK
     category: phasor
-    labels: ["c", "python", "lab"]
+    labels: ["c", "gha", "python", "lab"]
     github_id: GridOPTICS/GridPACK
     # pypi_id:
     # conda_id:
@@ -498,7 +498,7 @@ projects:
     description: Python for Power System Analysis
   - name: PyPSA-USA
     category: steady-state
-    labels: ["python", "jupyter", "university"]
+    labels: ["gha", "python", "jupyter", "university"]
     github_id: PyPSA/pypsa-usa
     # pypi_id:
     # conda_id:
@@ -838,7 +838,7 @@ projects:
 
   - name: RTS-GMLC
     category: data
-    labels: ["gha", "lab"]
+    labels: ["lab"]
     github_id: GridMod/RTS-GMLC
     # pypi_id:
     # conda_id:
@@ -860,7 +860,7 @@ projects:
 
   - name: powfacpy
     category: intf
-    labels: ["gha", "pypi", "python", "non-profit"]
+    labels: ["pypi", "python", "non-profit"]
     github_id: FraunhIEE-UniKassel-PowSysStability/powfacpy
     pypi_id: powfacpy
     # conda_id:
@@ -871,7 +871,7 @@ projects:
 
   - name: PSST
     category: steady-state
-    labels: ["pypi", "python", "university"]
+    labels: ["gha", "pypi", "python", "university"]
     github_id: ames-market/psst
     pypi_id: psst
     # conda_id:
@@ -915,7 +915,7 @@ projects:
 
   - name: CIMTool-Builders-Library
     category: intf
-    labels: ["gha", "non-profit"]
+    labels: ["non-profit"]
     github_id: CIMug-org/CIMTool-Builders-Library
     # pypi_id:
     # conda_id:
@@ -980,7 +980,7 @@ projects:
 
   - name: Andes.jl
     category: intf
-    labels: ["julia", "university"]
+    labels: ["gha", "julia", "university"]
     github_id: cuihantao/Andes.jl
     # pypi_id:
     # conda_id:
@@ -1011,7 +1011,7 @@ projects:
 
   - name: AltDSS-Python
     category: intf
-    labels: ["gha", "pypi", "python", "jupyter"]
+    labels: ["pypi", "python", "jupyter"]
     github_id: dss-extensions/AltDSS-Python
     pypi_id: altdss
     # conda_id:
@@ -1077,7 +1077,7 @@ projects:
 
   - name: py-dss-interface
     category: intf
-    labels: ["gha", "pypi", "python", "jupyter", "non-profit"]
+    labels: ["pypi", "python", "jupyter", "non-profit"]
     github_id: PauloRadatz/py_dss_interface
     pypi_id: py-dss-interface
     # conda_id:
@@ -1096,7 +1096,7 @@ projects:
     description: Python interface to PowerWorld
   - name: EasySimauto.jl
     category: intf
-    labels: ["julia", "university"]
+    labels: ["gha", "julia", "university"]
     github_id: mzy2240/EasySimauto.jl
     # pypi_id:
     # conda_id:
@@ -1184,7 +1184,7 @@ projects:
 
   - name: ECOS
     category: ops
-    labels: ["python", "julia", "c", "octave", "r", "university"]
+    labels: ["pypi", "conda", "python", "julia", "c", "octave", "r", "university"]
     github_id: embotech/ecos
     pypi_id: ecos
     conda_id: conda-forge/ecos
@@ -1272,7 +1272,7 @@ projects:
 
   - name: OR-Tools
     category: ops
-    labels: ["gha", "python", "cpp", "java", "for-profit"]
+    labels: ["gha", "pypi", "conda", "python", "cpp", "java", "for-profit"]
     github_id: google/or-tools
     pypi_id: ortools
     conda_id: conda-forge/ortools-python
@@ -1406,7 +1406,7 @@ projects:
 # --- Data Source ---
   - name: EnergyDataModel
     category: data
-    labels: ["pypi", "python", "jupyter", "gha", "for-profit"]
+    labels: ["pypi", "python", "jupyter", "for-profit"]
     github_id: rebase-energy/EnergyDataModel
     pypi_id: energydatamodel
     # conda_id:
@@ -1483,7 +1483,7 @@ projects:
 
   - name: GridStatus
     category: data
-    labels: ["gha", "pypi", "python", "for-profit"]
+    labels: ["gha", "pypi", "conda", "python", "for-profit"]
     github_id: kmax12/gridstatus
     pypi_id: gridstatus
     conda_id: services/gridstatus
@@ -1678,7 +1678,7 @@ projects:
 # --- CoSim Environment ---
   - name: OpenModelica
     category: cosime
-    labels: ["modelica", "python", "university"]
+    labels: ["gha", "modelica", "python", "university"]
     github_id: OpenModelica/OpenModelica
     # pypi_id:
     # conda_id:
@@ -1771,7 +1771,7 @@ projects:
 
   - name: LTB AGVis
     category: vis
-    labels: ["pypi", "python", "university"]
+    labels: ["gha", "pypi", "python", "university"]
     github_id: CURENT/agvis
     pypi_id: agvis
     # conda_id:
@@ -1794,7 +1794,7 @@ projects:
 # --- Power Electronics ---
   - name: GSEIM
     category: pe
-    labels: ["gha", "pypi", "python", "volunteer"]
+    labels: ["pypi", "python", "volunteer"]
     github_id: gseim/gseim
     pypi_id: GSEIM
     # conda_id:
