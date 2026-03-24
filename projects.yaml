@@ -503,7 +503,7 @@ projects:
     # pypi_id:
     # conda_id:
     homepage: https://pypsa.org
-    docs_url: https://pypsa-usa.readthedocs.io/
+    docs_url: https://pypsa-usa.readthedocs.io/en/latest/
     license: MIT
     description: Power System Model for the United States
   - name: PyPSA-Eur
@@ -514,7 +514,7 @@ projects:
     # pypi_id:
     # conda_id:
     homepage: https://pypsa.org
-    docs_url: https://pypsa-eur.readthedocs.io/en/latest/?badge=latest
+    docs_url: https://pypsa-eur.readthedocs.io/en/latest/
     license: MIT
     description: Sector-Coupled Optimisation Model of the European Energy System
   - name: PyPSA-Distribution
@@ -647,7 +647,7 @@ projects:
     pypi_id: GridPath
     # conda_id:
     homepage: https://www.gridpath.io/
-    docs_url: https://gridpath.readthedocs.io/en/latest/?badge=latest
+    docs_url: https://gridpath.readthedocs.io/en/latest/
     license: Apache-2
     description: Power system planning and operations
 
