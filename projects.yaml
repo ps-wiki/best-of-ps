@@ -155,8 +155,8 @@ projects:
     # pypi_id:
     # conda_id:
     homepage: https://gridpack.pnnl.gov/wiki/index.php/Main_Page
-    docs_url: https://github.com/GridOPTICS/GridPACK/blob/develop/docs/user_manual/GridPACK.pdf
-    license: https://github.com/GridOPTICS/GridPACK/blob/develop/docs/markdown/LICENSE.md
+    docs_url: https://github.com/GridOPTICS/GridPACK/wiki
+    license: BSD-3
     description: High-Performance Electric Grid Simulation
 
   - name: GridLAB-D
@@ -166,8 +166,8 @@ projects:
     # pypi_id:
     # conda_id:
     homepage: https://www.gridlabd.org/
-    docs_url: https://gridlab-d.shoutwiki.com/wiki/Source_documentation
-    license: https://github.com/gridlab-d/gridlab-d/blob/master/LICENSE
+    docs_url: https://gridlab-d.readthedocs.io/en/docs/
+    license: BSD-3
     description: Distribution power system simulator
 
   - name: PowerSimulationsDynamics.jl
@@ -176,7 +176,7 @@ projects:
     github_id: NREL-Sienna/PowerSimulationsDynamics.jl
     # pypi_id:
     # conda_id:
-    homepage: https://www.nlr.gov/analysis/sienna.html
+    homepage: https://www.nlr.gov/analysis/sienna
     docs_url: https://nrel-sienna.github.io/PowerSimulationsDynamics.jl/stable
     license: BSD-3
     description: Dynamic Power System simulations; NREL Sienna
@@ -231,7 +231,7 @@ projects:
     # conda_id:
     # homepage:
     docs_url: https://build.openmodelica.org/Documentation/PowerSystems.html
-    license: https://modelica.org/licenses/ModelicaLicense2/
+    license: Modelica License 2
     description: Modelica 3rd party library for electrical power systems
 
   - name: OpenHybridSim
@@ -247,7 +247,7 @@ projects:
 
   - name: STEPS
     category: phasor
-    labels: ["c", "python", "university"]
+    labels: ["c", "pypi", "python", "university"]
     github_id: changgang/steps
     pypi_id: stepspy
     # conda_id:
@@ -441,7 +441,7 @@ projects:
     github_id: NREL-Sienna/PowerFlows.jl
     # pypi_id:
     # conda_id:
-    homepage: https://www.nlr.gov/analysis/sienna.html
+    homepage: https://www.nlr.gov/analysis/sienna
     docs_url: https://nrel-sienna.github.io/PowerFlows.jl/dev/
     license: BSD-3
     description: Collection of Power Flow solution; NREL Sienna
@@ -451,7 +451,7 @@ projects:
     github_id: NREL-Sienna/PowerNetworkMatrices.jl
     # pypi_id:
     # conda_id:
-    homepage: https://www.nlr.gov/analysis/sienna.html
+    homepage: https://www.nlr.gov/analysis/sienna
     docs_url: https://nrel-sienna.github.io/PowerNetworkMatrices.jl/stable/
     license: BSD-3
     description: Power systems matrices; NREL Sienna
@@ -461,7 +461,7 @@ projects:
     github_id: NREL-Sienna/PowerSimulations.jl
     # pypi_id:
     # conda_id:
-    homepage: https://www.nlr.gov/analysis/sienna.html
+    homepage: https://www.nlr.gov/analysis/sienna
     docs_url: https://nrel-sienna.github.io/PowerSimulations.jl/latest
     license: BSD-3
     description: Power Systems optimization simulation and modeling; NREL Sienna
@@ -471,7 +471,7 @@ projects:
     github_id: NREL-Sienna/PowerSystemsInvestments.jl
     # pypi_id:
     # conda_id:
-    homepage: https://www.nlr.gov/analysis/sienna.html
+    homepage: https://www.nlr.gov/analysis/sienna
     docs_url: https://nrel-sienna.github.io/PowerSystemsInvestments.jl/stable
     license: BSD-3
     description: Power Systems investment models; NREL Sienna
@@ -481,7 +481,7 @@ projects:
     github_id: NREL-Sienna/PowerSystemsInvestmentsPortfolios.jl
     # pypi_id:
     # conda_id:
-    homepage: https://www.nlr.gov/analysis/sienna.html
+    homepage: https://www.nlr.gov/analysis/sienna
     docs_url: https://nrel-sienna.github.io/PowerSystemsInvestmentsPortfolios.jl/stable
     license: BSD-3
     description: Data models for Power Systems investment models; NREL Sienna
@@ -642,7 +642,7 @@ projects:
 
   - name: GridPath
     category: steady-state
-    labels: ["gha", "python", "for-profit"]
+    labels: ["gha", "pypi", "python", "for-profit"]
     github_id: blue-marble/gridpath
     pypi_id: GridPath
     # conda_id:
@@ -664,7 +664,7 @@ projects:
 
   - name: Gurobi OptiMods
     category: steady-state
-    labels: ["gha", "python", "for-profit"]
+    labels: ["gha", "pypi", "python", "for-profit"]
     github_id: Gurobi/gurobi-optimods
     pypi_id: gurobi-optimods
     # conda_id:
@@ -691,7 +691,7 @@ projects:
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/reeds/
-    docs_url: https://www.nlr.gov/docs/fy21osti/78195.pdf
+    docs_url: https://docs.nlr.gov/docs/fy21osti/78195.pdf
     license: GPL-3.0
     description: Capacity planning and dispatch model
 
@@ -750,7 +750,7 @@ projects:
 
   - name: openTEPES
     category: steady-state
-    labels: ["python", "jupyter", "gha", "university"]
+    labels: ["pypi", "python", "jupyter", "gha", "university"]
     github_id: IIT-EnergySystemModels/openTEPES
     pypi_id: openTEPES
     # conda_id:
@@ -947,7 +947,7 @@ projects:
 
   - name: CIMpy
     category: intf
-    labels: ["gha", "python", "non-profit"]
+    labels: ["gha", "pypi", "python", "non-profit"]
     github_id: sogno-platform/cimpy
     pypi_id: cimpy
     # conda_id:
@@ -958,7 +958,7 @@ projects:
 
   - name: PSSE RAW
     category: intf
-    labels: ["pypi", "python", "for-profit"]
+    labels: ["python", "for-profit"]
     github_id: anderson-optimization/em-psse
     # pypi_id:
     # conda_id:
@@ -1004,7 +1004,7 @@ projects:
     github_id: NatLabRockies/PyDSS
     pypi_id: pydss
     # conda_id:
-    homepage: https://www.nlr.gov/grid/pydss.html
+    homepage: https://www.nlr.gov/grid/pydss
     docs_url: https://natlabrockies.github.io/PyDSS/index.html
     license: BSD-3
     description: A Python wrapper for OpenDSS
@@ -1684,8 +1684,8 @@ projects:
     # conda_id:
     dockerhub_id: openmodelica/openmodelica
     homepage: https://openmodelica.org
-    docs_url: https://openmodelica.org/useresresources/userdocumentation
-    license: https://modelica.org/licenses/ModelicaLicense2/
+    docs_url: https://openmodelica.org/doc/OpenModelicaUsersGuide/latest/
+    license: Modelica License 2
     description: Modelica-based environment for modeling and simulation
 
   - name: precice
@@ -1786,7 +1786,7 @@ projects:
     github_id: NREL-Sienna/powergraphics.jl
     # pypi_id:
     # conda_id:
-    homepage: https://www.nlr.gov/analysis/sienna.html
+    homepage: https://www.nlr.gov/analysis/sienna
     docs_url: https://nrel-sienna.github.io/PowerGraphics.jl/stable/
     license: BSD-3
     description: Visualization for PowerSimulations; NREL Sienna
