@@ -344,7 +344,7 @@ projects:
     # dockerhub_id:
     # homepage:
     docs_url: https://anl-ceeesa.github.io/EGRIP.jl/stable/
-    license: BSD 3
+    license: BSD-3
     description: Julia/MATALB package for power system restoration planning and verification
 
   - name: REopt
@@ -670,7 +670,7 @@ projects:
     # conda_id:
     homepage: https://www.gurobi.com/features/gurobi-optimods/
     docs_url: https://gurobi-optimods.readthedocs.io/en/stable/
-    license: Apache-2.0
+    license: Apache-2
     description: Implemented optimization use cases using Gurobi
 
   - name: PowerFlowAnalyzer
@@ -681,7 +681,7 @@ projects:
     # conda_id:
     # homepage:
     docs_url: https://power-flow-analyzer.github.io/
-    license: Apache-2.0
+    license: Apache-2
     description: Toolbox for power system analysis
 
   - name: ReEDS-2.0
@@ -692,7 +692,7 @@ projects:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/reeds/
     docs_url: https://docs.nlr.gov/docs/fy21osti/78195.pdf
-    license: GPL-3.0
+    license: GPL-3
     description: Capacity planning and dispatch model
 
   - name: GenX
@@ -822,7 +822,7 @@ projects:
     # conda_id:
     # homepage:
     # docs_url:
-    license: undefined
+    license: MIT
     description: Test case data management for power systems simulation
 
   - name: PowerDynData.jl
@@ -921,7 +921,7 @@ projects:
     # conda_id:
     # homepage:
     docs_url: https://cimtool-builders.ucaiug.io/
-    license: Apache-2.0
+    license: Apache-2
     description: Publically available XSLT builders
   - name: CIMTool
     category: intf
@@ -1092,7 +1092,7 @@ projects:
     pypi_id: esa
     # conda_id:
     docs_url: https://mzy2240.github.io/ESA/html/index.html
-    license: Apache-2.0
+    license: Apache-2
     description: Python interface to PowerWorld
   - name: EasySimauto.jl
     category: intf
@@ -1102,7 +1102,7 @@ projects:
     # conda_id:
     # homepage:
     # docs_url:
-    license: Apache-2.0
+    license: Apache-2
     description: Julia interface for EasySimAuto and PowerWorld
 
   - name: mhi-pscad
@@ -1136,7 +1136,7 @@ projects:
     # conda_id:
     # homepage:
     docs_url: https://clarabel.org
-    license: Apache-2.0
+    license: Apache-2
     description: Interior-point solver for convex conic optimisation in Julia
   - name: Clarabel.rs
     category: ops
@@ -1146,7 +1146,7 @@ projects:
     conda_id: conda-forge/clarabel
     # homepage:
     docs_url: https://oxfordcontrol.github.io/ClarabelDocs/stable/
-    license: Apache-2.0
+    license: Apache-2
     description: Interior-point solver for convex conic optimisation in Rust
 
   - name: CBC
@@ -1754,7 +1754,7 @@ projects:
     # conda_id:
     homepage: https://ltb.curent.org/
     docs_url: https://ltbdime.readthedocs.io/en/latest/
-    license: GPL-3.0
+    license: GPL-3
     description: Distributed Messaging Environment; CURENT LTB
 
 # --- Visualization ---
@@ -1777,7 +1777,7 @@ projects:
     # conda_id:
     homepage: https://ltb.curent.org/
     docs_url: https://agvis.readthedocs.io/en/latest/
-    license: GPL-3.0
+    license: GPL-3
     description: Geographical Visualization for Power Grid; CURENT LTB
 
   - name: PowerGraphics.jl
@@ -1800,7 +1800,7 @@ projects:
     # conda_id:
     # homepage:
     docs_url: https://gseim.github.io/build/html/index.html
-    license: GPL-3.0
+    license: GPL-3
     description: Simulation of electrical circuits
 
 # --- Textbook ---
