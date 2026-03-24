@@ -78,7 +78,7 @@ labels:
 # --- CI ---
   - label: "gha"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico"
-    description: "CI via GitHub Actions"
+    description: "Public GitHub Actions automation for validation, build, docs, release, publish, or deploy workflows"
 # --- Release Channels ---
   - label: "pypi"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico"
