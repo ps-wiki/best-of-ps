@@ -420,7 +420,7 @@ projects:
     pypi_id: pypowsybl
     # conda_id:
     homepage: https://www.powsybl.org
-    docs_url: https://pypowsybl.readthedocs.io/en/latest/
+    docs_url: https://powsybl.readthedocs.io/projects/pypowsybl/en/latest/
     license: MPL-2.0
     description: A PowSyBl and Python integration
 
@@ -1605,7 +1605,7 @@ projects:
     github_id: Power-Agent/PowerMCP
     # pypi_id:
     # conda_id:
-    homepage: https://power-agent.github.io
+    homepage: http://poweragent.seas.harvard.edu/
     # docs_url:
     license: MIT
     description: Collection of MCP servers for power system software
@@ -1615,7 +1615,7 @@ projects:
     github_id: Power-Agent/PowerFM
     # pypi_id:
     # conda_id:
-    homepage: https://power-agent.github.io
+    homepage: http://poweragent.seas.harvard.edu/
     # docs_url:
     license: MIT
     description: Foundation models in the power and energy domain
@@ -1625,7 +1625,7 @@ projects:
     github_id: Power-Agent/PowerWF
     # pypi_id:
     # conda_id:
-    homepage: https://power-agent.github.io
+    homepage: http://poweragent.seas.harvard.edu/
     # docs_url:
     license: MIT
     description: Collection of agentic workflows for power system applications
