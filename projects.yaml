@@ -431,7 +431,7 @@ projects:
     # pypi_id:
     # conda_id:
     homepage: https://www.powsybl.org
-    docs_url: https://powsybl.readthedocs.io/projects/openrao/en/stable/?badge=stable
+    docs_url: https://powsybl.readthedocs.io/projects/openrao/en/stable/
     license: MPL-2.0
     description: Power systems coordinated capacity calculation and security analysis
 
@@ -831,7 +831,7 @@ projects:
     github_id: cuihantao/PowerDynData.jl
     # pypi_id:
     # conda_id:
-    homepage: http://cui.eecps.com/PowerDynData.jl/
+    # homepage:
     docs_url: https://cuihantao.github.io/PowerDynData.jl
     license: MIT
     description: Julia package for parsing PSS/E DYR dynamic data files
@@ -994,7 +994,7 @@ projects:
     github_id: epri-dev/OpenDER_interface
     # pypi_id:
     # conda_id:
-    homepage: https://www.epri.com/OpenDER
+    # homepage:
     license: BSD-3
     description: Interface for OpenDER
 
