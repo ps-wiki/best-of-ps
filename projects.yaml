@@ -1323,7 +1323,7 @@ projects:
     # homepage:
     docs_url: https://sanurielf.github.io/kvxopt/userguide/
     license: GPL-3
-    description: CVXOPT with more wrappers suite-sparse.
+    description: CVXOPT with additional SuiteSparse wrappers.
 
   - name: CVXOPT
     github_id: cvxopt/cvxopt
