@@ -1314,6 +1314,28 @@ projects:
     license: MIT
     description: A solver for nonlinear programming with GPU support
 
+  - name: KVXOPT
+    github_id: sanurielf/kvxopt
+    labels: ["gha", "pypi", "conda", "python", "volunteer"]
+    category: ops
+    pypi_id: kvxopt
+    conda_id: conda-forge/kvxopt
+    # homepage:
+    docs_url: https://sanurielf.github.io/kvxopt/userguide/
+    license: GPL-3
+    description: CVXOPT with more wrappers suite-sparse.
+
+  - name: CVXOPT
+    github_id: cvxopt/cvxopt
+    labels: ["gha", "pypi", "conda", "python", "octave", "julia", "university"]
+    category: ops
+    pypi_id: cvxopt
+    conda_id: conda-forge/cvxopt
+    homepage: https://cvxopt.org/
+    docs_url: http://cvxopt.org/userguide/
+    license: GPL-3
+    description: Python Software for Convex Optimization
+
 # --- Optimization Language ---
   - name: PyOptInterface
     github_id: metab0t/PyOptInterface
@@ -1347,28 +1369,6 @@ projects:
     docs_url: http://www.cvxpy.org/
     license: Apache-2
     description: Convex optimization modeling language
-
-  - name: KVXOPT
-    github_id: sanurielf/kvxopt
-    labels: ["gha", "pypi", "conda", "python", "volunteer"]
-    category: opl
-    pypi_id: kvxopt
-    conda_id: conda-forge/kvxopt
-    # homepage:
-    docs_url: https://sanurielf.github.io/kvxopt/userguide/
-    license: GPL-3
-    description: CVXOPT with more wrappers suite-sparse.
-
-  - name: CVXOPT
-    github_id: cvxopt/cvxopt
-    labels: ["gha", "pypi", "conda", "python", "octave", "julia", "university"]
-    category: opl
-    pypi_id: cvxopt
-    conda_id: conda-forge/cvxopt
-    homepage: https://cvxopt.org/
-    docs_url: http://cvxopt.org/userguide/
-    license: GPL-3
-    description: Python Software for Convex Optimization
 
   - name: Pyomo
     github_id: Pyomo/pyomo
