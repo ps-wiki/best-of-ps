@@ -1,0 +1,266 @@
+name: finish-best-of-update
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "Reviewed pull request number"
+        required: true
+        type: string
+      expected_head_sha:
+        description: "Exact reviewed PR head SHA"
+        required: true
+        type: string
+      version:
+        description: "Update version/tag, for example 2026.07.23"
+        required: true
+        type: string
+      update_branch:
+        description: "Reviewed update branch, for example update/2026.07.23"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: finish-best-of-update-${{ inputs.version }}
+  cancel-in-progress: false
+
+jobs:
+  verify-and-finish:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      PR_NUMBER: ${{ inputs.pr_number }}
+      EXPECTED_HEAD_SHA: ${{ inputs.expected_head_sha }}
+      VERSION: ${{ inputs.version }}
+      UPDATE_BRANCH: ${{ inputs.update_branch }}
+      DEFAULT_BRANCH: main
+
+    steps:
+      - name: Validate inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          [[ "$PR_NUMBER" =~ ^[0-9]+$ ]] || {
+            echo "pr_number must be numeric" >&2
+            exit 1
+          }
+
+          [[ "$EXPECTED_HEAD_SHA" =~ ^[0-9a-fA-F]{40}$ ]] || {
+            echo "expected_head_sha must be a full 40-character commit SHA" >&2
+            exit 1
+          }
+
+          [[ "$VERSION" =~ ^[0-9]{4}\.[0-9]{2}\.[0-9]{2}([.-][0-9]{2}\.[0-9]{2})?$ ]] || {
+            echo "version has an unexpected format: $VERSION" >&2
+            exit 1
+          }
+
+          [[ "$UPDATE_BRANCH" == "update/$VERSION" ]] || {
+            echo "update_branch must exactly equal update/$VERSION" >&2
+            exit 1
+          }
+
+          [[ "$UPDATE_BRANCH" != "$DEFAULT_BRANCH" ]] || {
+            echo "Refusing to operate on the default branch" >&2
+            exit 1
+          }
+
+      - name: Verify reviewed pull request state
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          pr_json="$(gh api "repos/$REPO/pulls/$PR_NUMBER")"
+
+          state="$(jq -r '.state' <<<"$pr_json")"
+          draft="$(jq -r '.draft' <<<"$pr_json")"
+          title="$(jq -r '.title' <<<"$pr_json")"
+          base_ref="$(jq -r '.base.ref' <<<"$pr_json")"
+          head_ref="$(jq -r '.head.ref' <<<"$pr_json")"
+          head_sha="$(jq -r '.head.sha' <<<"$pr_json")"
+          head_repo="$(jq -r '.head.repo.full_name' <<<"$pr_json")"
+          merged="$(jq -r '.merged' <<<"$pr_json")"
+
+          [[ "$state" == "open" ]] || {
+            echo "PR is not open: $state" >&2
+            exit 1
+          }
+          [[ "$merged" == "false" ]] || {
+            echo "PR is already merged" >&2
+            exit 1
+          }
+          [[ "$draft" == "false" ]] || {
+            echo "PR is still a draft" >&2
+            exit 1
+          }
+          [[ "$title" == "Best-of update: $VERSION" ]] || {
+            echo "Unexpected PR title: $title" >&2
+            exit 1
+          }
+          [[ "$base_ref" == "$DEFAULT_BRANCH" ]] || {
+            echo "Unexpected base branch: $base_ref" >&2
+            exit 1
+          }
+          [[ "$head_ref" == "$UPDATE_BRANCH" ]] || {
+            echo "Unexpected head branch: $head_ref" >&2
+            exit 1
+          }
+          [[ "$head_repo" == "$REPO" ]] || {
+            echo "PR head repository does not match target repository: $head_repo" >&2
+            exit 1
+          }
+          [[ "$head_sha" == "$EXPECTED_HEAD_SHA" ]] || {
+            echo "PR head SHA changed after review" >&2
+            echo "Expected: $EXPECTED_HEAD_SHA" >&2
+            echo "Actual:   $head_sha" >&2
+            exit 1
+          }
+
+          branch_sha="$(gh api "repos/$REPO/git/ref/heads/$UPDATE_BRANCH" --jq '.object.sha')"
+          [[ "$branch_sha" == "$EXPECTED_HEAD_SHA" ]] || {
+            echo "Update branch no longer points to the reviewed SHA" >&2
+            exit 1
+          }
+
+      - name: Verify matching draft release exists
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          releases="$(gh api --paginate "repos/$REPO/releases?per_page=100")"
+          release_count="$(jq --arg tag "$VERSION" '[.[] | select(.tag_name == $tag)] | length' <<<"$releases")"
+
+          [[ "$release_count" == "1" ]] || {
+            echo "Expected exactly one release for tag $VERSION, found $release_count" >&2
+            exit 1
+          }
+
+          is_draft="$(jq -r --arg tag "$VERSION" '.[] | select(.tag_name == $tag) | .draft' <<<"$releases")"
+          is_prerelease="$(jq -r --arg tag "$VERSION" '.[] | select(.tag_name == $tag) | .prerelease' <<<"$releases")"
+
+          [[ "$is_draft" == "true" ]] || {
+            echo "Matching release exists but is not a draft" >&2
+            exit 1
+          }
+          [[ "$is_prerelease" == "false" ]] || {
+            echo "Matching release is unexpectedly marked prerelease" >&2
+            exit 1
+          }
+
+      - name: Merge reviewed pull request
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          gh pr merge "$PR_NUMBER" \
+            --repo "$REPO" \
+            --merge \
+            --match-head-commit "$EXPECTED_HEAD_SHA"
+
+      - name: Verify merge completed
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          pr_json="$(gh api "repos/$REPO/pulls/$PR_NUMBER")"
+          merged="$(jq -r '.merged' <<<"$pr_json")"
+          merged_sha="$(jq -r '.merge_commit_sha' <<<"$pr_json")"
+
+          [[ "$merged" == "true" ]] || {
+            echo "PR merge could not be verified" >&2
+            exit 1
+          }
+
+          echo "MERGE_COMMIT_SHA=$merged_sha" >> "$GITHUB_ENV"
+
+      - name: Publish matching draft release as latest
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          release_id="$(gh api --paginate "repos/$REPO/releases?per_page=100" \
+            --jq ".[] | select(.tag_name == \"$VERSION\") | .id")"
+
+          [[ -n "$release_id" ]] || {
+            echo "Matching release disappeared before publication" >&2
+            exit 1
+          }
+
+          gh api \
+            --method PATCH \
+            "repos/$REPO/releases/$release_id" \
+            -F draft=false \
+            -F prerelease=false \
+            -F make_latest=true >/dev/null
+
+      - name: Verify release publication
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          release_json="$(gh api "repos/$REPO/releases/tags/$VERSION")"
+          is_draft="$(jq -r '.draft' <<<"$release_json")"
+          is_prerelease="$(jq -r '.prerelease' <<<"$release_json")"
+
+          [[ "$is_draft" == "false" ]] || {
+            echo "Release is still a draft" >&2
+            exit 1
+          }
+          [[ "$is_prerelease" == "false" ]] || {
+            echo "Release is unexpectedly marked prerelease" >&2
+            exit 1
+          }
+
+          latest_tag="$(gh api "repos/$REPO/releases/latest" --jq '.tag_name')"
+          [[ "$latest_tag" == "$VERSION" ]] || {
+            echo "Release published, but latest release is $latest_tag instead of $VERSION" >&2
+            exit 1
+          }
+
+      - name: Delete reviewed update branch
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          branch_sha="$(gh api "repos/$REPO/git/ref/heads/$UPDATE_BRANCH" --jq '.object.sha')"
+          [[ "$branch_sha" == "$EXPECTED_HEAD_SHA" ]] || {
+            echo "Refusing to delete branch because it moved after review" >&2
+            exit 1
+          }
+
+          gh api \
+            --method DELETE \
+            "repos/$REPO/git/refs/heads/$UPDATE_BRANCH"
+
+      - name: Verify final state
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          merged="$(gh api "repos/$REPO/pulls/$PR_NUMBER" --jq '.merged')"
+          [[ "$merged" == "true" ]] || {
+            echo "Final PR state is not merged" >&2
+            exit 1
+          }
+
+          release_draft="$(gh api "repos/$REPO/releases/tags/$VERSION" --jq '.draft')"
+          [[ "$release_draft" == "false" ]] || {
+            echo "Final release state is still draft" >&2
+            exit 1
+          }
+
+          if gh api "repos/$REPO/git/ref/heads/$UPDATE_BRANCH" >/dev/null 2>&1; then
+            echo "Update branch still exists after deletion" >&2
+            exit 1
+          fi
+
+          echo "Finished best-of update $VERSION"
+          echo "Merged PR #$PR_NUMBER at reviewed head $EXPECTED_HEAD_SHA"
+          echo "Published release $VERSION as latest"
+          echo "Deleted branch $UPDATE_BRANCH"
