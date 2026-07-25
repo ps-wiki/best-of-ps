@@ -175,6 +175,7 @@ projects:
     labels: ["gha", "julia", "lab"]
     github_id: NREL-Sienna/PowerSimulationsDynamics.jl
     julia_id: PowerSimulationsDynamics
+    # paper_id:
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/sienna
@@ -330,6 +331,7 @@ projects:
     labels: ["julia", "gha", "lab"]
     github_id: ANL-CEEESA/UnitCommitment.jl
     julia_id: UnitCommitment
+    # paper_id:
     # pypi_id:
     # conda_id:
     # dockerhub_id:
@@ -444,6 +446,7 @@ projects:
     labels: ["gha", "julia", "lab"]
     github_id: NREL-Sienna/PowerFlows.jl
     julia_id: PowerFlows
+    # paper_id:
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/sienna
@@ -455,6 +458,7 @@ projects:
     labels: ["gha", "julia", "lab"]
     github_id: NREL-Sienna/PowerNetworkMatrices.jl
     julia_id: PowerNetworkMatrices
+    # paper_id:
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/sienna
@@ -466,6 +470,7 @@ projects:
     labels: ["gha", "julia", "lab"]
     github_id: NREL-Sienna/PowerSimulations.jl
     julia_id: PowerSimulations
+    # paper_id:
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/sienna
@@ -632,6 +637,7 @@ projects:
     labels: ["gha", "julia", "lab"]
     github_id: lanl-ansi/PowerModels.jl
     julia_id: PowerModels
+    # paper_id:
     # pypi_id:
     # conda_id:
     # homepage:
@@ -1037,6 +1043,7 @@ projects:
     labels: ["gha", "pypi", "python", "jupyter", "volunteer"]
     github_id: dss-extensions/OpenDSSDirect.py
     pypi_id: OpenDSSDirect.py
+    # paper_id:
     # conda_id:
     homepage: https://dss-extensions.org/
     docs_url: https://dss-extensions.org/OpenDSSDirect.py/
@@ -1206,6 +1213,7 @@ projects:
     labels: ["pypi", "conda", "python", "julia", "c", "octave", "r", "university"]
     github_id: embotech/ecos
     julia_id: ECOS
+    # paper_id:
     pypi_id: ecos
     conda_id: conda-forge/ecos
     # homepage:
@@ -1761,6 +1769,7 @@ projects:
     labels: ["gha", "julia", "lab"]
     github_id: lanl-ansi/GasModels.jl
     julia_id: GasModels
+    # paper_id:
     # pypi_id:
     # conda_id:
     # homepage:

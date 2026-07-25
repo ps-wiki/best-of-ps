@@ -117,7 +117,10 @@ The curated metadata extensions are repository-specific and are not consumed by
 the upstream best-of generator yet. They are intended to support future local
 metadata collection, rendering, and scoring scripts for Julia registry adoption
 signals and paper citation signals. Keep these values conservative: leave a
-field blank when the registry identity or core paper is uncertain.
+field blank when the registry identity or core paper is uncertain. A commented
+curated metadata field, such as <code># paper_id:</code>, means the field was
+checked and is currently considered not applicable; re-check it during later
+validation passes because project packaging and citation metadata can change.
 
 ## Improve metadata collection
 
