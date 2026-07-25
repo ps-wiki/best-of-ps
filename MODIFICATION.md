@@ -70,6 +70,42 @@ scripts in this repository first. A forked generator or custom GitHub Action
 should be considered only if local scripts become hard to maintain or if the
 metadata model becomes broadly useful to other best-of lists.
 
+## Score Extension Experiment
+
+The first local scoring extension uses these curated project fields:
+
+- `julia_id`: Julia package name used by JuliaPkgStats and the Julia General
+  registry ecosystem.
+- `paper_doi`: DOI for the core software, method, or philosophy paper.
+
+The local scripts under `scripts/` support a staged workflow:
+
+- `validate_metadata.py` checks repository-specific metadata conventions.
+- `collect_julia_metrics.py` collects Julia package-server user download
+  counts through JuliaPkgStats.
+- `collect_citation_metrics.py` collects DOI citation metadata from OpenAlex.
+- `preview_score_extensions.py` previews local score adjustments against the
+  latest generated history CSV.
+
+The current score-preview formula is intentionally bounded and log-scaled:
+
+- Julia adjustment: registration bonus plus a capped package-server monthly
+  download score.
+- Citation adjustment: DOI-resolution bonus plus capped lifetime and recent
+  citation-count scores.
+
+These adjustments are experimental until representative projects have been
+audited. The main fairness constraints are:
+
+- Do not treat Julia package-server user requests as total Julia downloads.
+- Do not treat OpenAlex citation counts as universal citation counts.
+- Do not let raw downloads or citations dominate the upstream project score.
+- Compare rank movement on representative Python, Julia, solver, simulator, and
+  data projects before wiring the adjusted score into README rendering.
+
+Generated metric outputs should go under `metadata/generated/`, which is ignored
+by default because those files are volatile snapshots.
+
 ## Local-Only Workspaces
 
 The `.agents/` directory is ignored on purpose. It can hold local audit notes,

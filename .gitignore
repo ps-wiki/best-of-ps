@@ -92,3 +92,4 @@ temp/*
 # local test
 .secrets
 .agents/
+metadata/generated/
