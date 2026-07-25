@@ -174,6 +174,7 @@ projects:
     category: phasor
     labels: ["gha", "julia", "lab"]
     github_id: NREL-Sienna/PowerSimulationsDynamics.jl
+    julia_id: PowerSimulationsDynamics
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/sienna
@@ -204,6 +205,7 @@ projects:
     category: phasor
     labels: ["gha", "pypi", "conda", "jupyter", "python", "julia", "university"]
     github_id: CURENT/andes
+    julia_id: Andes
     pypi_id: andes
     conda_id: conda-forge/andes
     dockerhub_id: CURENT/andes
@@ -327,6 +329,7 @@ projects:
     category: steady-state
     labels: ["julia", "gha", "lab"]
     github_id: ANL-CEEESA/UnitCommitment.jl
+    julia_id: UnitCommitment
     # pypi_id:
     # conda_id:
     # dockerhub_id:
@@ -339,6 +342,7 @@ projects:
     category: steady-state
     labels: ["julia", "octave", "gha", "lab"]
     github_id: ANL-CEEESA/EGRIP.jl
+    julia_id: EGRIP
     # pypi_id:
     # conda_id:
     # dockerhub_id:
@@ -439,6 +443,7 @@ projects:
     category: steady-state
     labels: ["gha", "julia", "lab"]
     github_id: NREL-Sienna/PowerFlows.jl
+    julia_id: PowerFlows
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/sienna
@@ -449,6 +454,7 @@ projects:
     category: steady-state
     labels: ["gha", "julia", "lab"]
     github_id: NREL-Sienna/PowerNetworkMatrices.jl
+    julia_id: PowerNetworkMatrices
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/sienna
@@ -459,6 +465,7 @@ projects:
     category: steady-state
     labels: ["gha", "julia", "lab"]
     github_id: NREL-Sienna/PowerSimulations.jl
+    julia_id: PowerSimulations
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/sienna
@@ -469,6 +476,7 @@ projects:
     category: steady-state
     labels: ["gha", "julia", "lab"]
     github_id: NREL-Sienna/PowerSystemsInvestments.jl
+    julia_id: PowerSystemsInvestments
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/sienna
@@ -479,6 +487,7 @@ projects:
     category: steady-state
     labels: ["gha", "julia", "lab"]
     github_id: NREL-Sienna/PowerSystemsInvestmentsPortfolios.jl
+    julia_id: PowerSystemsInvestmentsPortfolios
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/sienna
@@ -622,6 +631,7 @@ projects:
     category: steady-state
     labels: ["gha", "julia", "lab"]
     github_id: lanl-ansi/PowerModels.jl
+    julia_id: PowerModels
     # pypi_id:
     # conda_id:
     # homepage:
@@ -699,6 +709,7 @@ projects:
     category: steady-state
     labels: ["julia", "gha", "university"]
     github_id: GenXProject/GenX
+    julia_id: GenX
     # pypi_id:
     # conda_id:
     homepage: https://energy.mit.edu/genx/
@@ -829,6 +840,7 @@ projects:
     category: data
     labels: ["julia", "gha"]
     github_id: cuihantao/PowerDynData.jl
+    julia_id: PowerDynData
     # pypi_id:
     # conda_id:
     # homepage:
@@ -1035,6 +1047,7 @@ projects:
     category: intf
     labels: ["gha", "julia", "volunteer"]
     github_id: dss-extensions/OpenDSSDirect.jl
+    julia_id: OpenDSSDirect
     # pypi_id:
     # conda_id:
     homepage: https://dss-extensions.org/
@@ -1098,6 +1111,7 @@ projects:
     category: intf
     labels: ["gha", "julia", "university"]
     github_id: mzy2240/EasySimauto.jl
+    julia_id: EasySimauto
     # pypi_id:
     # conda_id:
     # homepage:
@@ -1132,6 +1146,7 @@ projects:
     category: ops
     labels: ["gha", "julia", "university"]
     github_id: oxfordcontrol/Clarabel.jl
+    julia_id: Clarabel
     # pypi_id:
     # conda_id:
     # homepage:
@@ -1175,6 +1190,7 @@ projects:
     category: ops
     labels: ["gha", "pypi", "conda", "python", "octave", "julia", "r", "c", "university"]
     github_id: cvxgrp/scs
+    julia_id: SCS
     pypi_id: scs
     conda_id: conda-forge/scs
     # homepage:
@@ -1186,6 +1202,7 @@ projects:
     category: ops
     labels: ["pypi", "conda", "python", "julia", "c", "octave", "r", "university"]
     github_id: embotech/ecos
+    julia_id: ECOS
     pypi_id: ecos
     conda_id: conda-forge/ecos
     # homepage:
@@ -1197,6 +1214,7 @@ projects:
     category: ops
     labels: ["gha", "pypi", "conda", "python", "c", "julia", "octave", "r", "university"]
     github_id: osqp/osqp
+    julia_id: OSQP
     pypi_id: osqp
     conda_id: conda-forge/osqp
     homepage: https://osqp.org
@@ -1239,6 +1257,7 @@ projects:
 
   - name: HiGHS
     github_id: ERGO-Code/HiGHS
+    julia_id: HiGHS
     labels: ["gha", "pypi", "conda", "jupyter", "python", "c", "julia", "rust", "r", "cpp", "university"]
     category: ops
     pypi_id: highspy
@@ -1285,6 +1304,7 @@ projects:
     category: ops
     labels: ["gha", "julia", "university"]
     github_id: google/or-tools
+    julia_id: Tulip
     # pypi_id:
     # conda_id:
     # homepage:
@@ -1307,6 +1327,7 @@ projects:
     category: ops
     labels: ["gha", "julia", "university"]
     github_id: MadNLP/MadNLP.jl
+    julia_id: MadNLP
     # pypi_id: ipopt
     # conda_id: conda-forge/ipopt
     # homepage: https://www.coin-or.org/
@@ -1385,6 +1406,7 @@ projects:
     labels: ["gha", "jupyter", "julia", "non-profit"]
     category: opl
     github_id: jump-dev/JuMP.jl
+    julia_id: JuMP
     # pypi_id:
     # conda_id:
     homepage: https://jump.dev
@@ -1396,6 +1418,7 @@ projects:
     labels: ["gha", "julia", "university"]
     category: opl
     github_id: exanauts/ExaModels.jl
+    julia_id: ExaModels
     # pypi_id:
     # conda_id:
     # homepage:
@@ -1727,6 +1750,7 @@ projects:
     category: gasnet
     labels: ["gha", "julia", "lab"]
     github_id: lanl-ansi/GasModels.jl
+    julia_id: GasModels
     # pypi_id:
     # conda_id:
     # homepage:
@@ -1737,6 +1761,7 @@ projects:
 # --- Messaging ---
   - name: HELICS
     github_id: GMLC-TDC/HELICS
+    julia_id: HELICS
     labels: ["gha", "pypi", "conda", "python", "julia", "octave", "java", "c", "lab"]
     category: msg
     pypi_id: helics
@@ -1784,6 +1809,7 @@ projects:
     category: vis
     labels: ["gha", "julia", "jupyter", "lab"]
     github_id: NREL-Sienna/powergraphics.jl
+    julia_id: PowerGraphics
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/sienna
