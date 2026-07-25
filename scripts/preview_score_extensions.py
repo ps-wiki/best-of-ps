@@ -108,8 +108,6 @@ def preview(
         citation = citation_metrics.get(name, {})
         resolved_paper_count = int(citation.get("resolved_paper_count") or 0)
         arxiv_paper_count = int(citation.get("arxiv_paper_count") or 0)
-        if resolved_paper_count == 0 and citation.get("paper_doi") and not citation.get("errors"):
-            resolved_paper_count = 1
         citation_bonus = PAPER_RECORD_BONUS if resolved_paper_count > 0 or arxiv_paper_count > 0 else 0.0
         citation_count_score = positive_log_score(
             citation.get("cited_by_count"),

@@ -76,18 +76,17 @@ The first local scoring extension uses these curated project fields:
 
 - `julia_id`: Julia package name used by JuliaPkgStats and the Julia General
   registry ecosystem.
-- `paper_doi`: DOI for the core software, method, or philosophy paper.
-- `paper_dois`: additional DOIs for projects with multiple official core
-  citation papers.
-- `paper_arxiv`: arXiv identifier for a core paper when no DOI is available.
-- `paper_arxivs`: additional arXiv identifiers for DOI-less core papers.
+- `paper_id`: core software, method, or philosophy paper identifier. It accepts
+  one DOI, one `arXiv:` identifier, or a list mixing both for projects with
+  multiple official core citation papers.
 
 The local scripts under `scripts/` support a staged workflow:
 
 - `validate_metadata.py` checks repository-specific metadata conventions.
 - `collect_julia_metrics.py` collects Julia package-server user download
   counts through JuliaPkgStats.
-- `collect_citation_metrics.py` collects DOI citation metadata from OpenAlex.
+- `collect_citation_metrics.py` collects DOI citation metadata from OpenAlex
+  and records arXiv paper identifiers.
 - `preview_score_extensions.py` previews local score adjustments against the
   latest generated history CSV.
 
@@ -95,9 +94,9 @@ The current score-preview formula is intentionally bounded and log-scaled:
 
 - Julia adjustment: registration bonus plus a capped package-server monthly
   download score.
-- Citation adjustment: one DOI-resolution bonus per project plus capped
+- Citation adjustment: one paper-record bonus per project plus capped
   lifetime and recent citation-count scores aggregated across the project's
-  resolved core papers.
+  resolved DOI-backed core papers.
 
 These adjustments are experimental until representative projects have been
 audited. The main fairness constraints are:

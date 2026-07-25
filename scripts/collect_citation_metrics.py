@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -25,6 +26,8 @@ except ImportError:  # pragma: no cover - exercised only when env is missing dep
 
 OPENALEX_WORKS = "https://api.openalex.org/works"
 USER_AGENT = "best-of-ps metadata collector"
+DOI_RE = re.compile(r"^10\.\d{4,9}/\S+$", re.IGNORECASE)
+ARXIV_RE = re.compile(r"^arxiv:(\d{4}\.\d{4,5})(v\d+)?$", re.IGNORECASE)
 
 
 def load_projects(path: Path) -> list[dict[str, Any]]:
@@ -43,48 +46,30 @@ def normalize_doi(doi: str) -> str:
     return doi
 
 
-def project_dois(project: dict[str, Any]) -> list[str]:
-    dois: list[str] = []
-    paper_doi = project.get("paper_doi")
-    if paper_doi:
-        dois.append(normalize_doi(str(paper_doi)))
-    paper_dois = project.get("paper_dois")
-    if isinstance(paper_dois, list):
-        dois.extend(normalize_doi(str(doi)) for doi in paper_dois if doi)
-
-    seen: set[str] = set()
-    unique_dois: list[str] = []
-    for doi in dois:
-        key = doi.lower()
-        if key in seen:
-            continue
-        seen.add(key)
-        unique_dois.append(doi)
-    return unique_dois
-
-
 def normalize_arxiv(arxiv_id: str) -> str:
     return arxiv_id.strip().removeprefix("arXiv:").removeprefix("arxiv:")
 
 
-def project_arxivs(project: dict[str, Any]) -> list[str]:
-    arxivs: list[str] = []
-    paper_arxiv = project.get("paper_arxiv")
-    if paper_arxiv:
-        arxivs.append(normalize_arxiv(str(paper_arxiv)))
-    paper_arxivs = project.get("paper_arxivs")
-    if isinstance(paper_arxivs, list):
-        arxivs.extend(normalize_arxiv(str(arxiv_id)) for arxiv_id in paper_arxivs if arxiv_id)
+def project_paper_ids(project: dict[str, Any]) -> tuple[list[str], list[str]]:
+    paper_id = project.get("paper_id")
+    if paper_id is None:
+        return [], []
+    raw_ids = paper_id if isinstance(paper_id, list) else [paper_id]
 
+    dois: list[str] = []
+    arxivs: list[str] = []
     seen: set[str] = set()
-    unique_arxivs: list[str] = []
-    for arxiv_id in arxivs:
-        key = arxiv_id.lower()
-        if key in seen:
+    for raw_id in raw_ids:
+        identifier = str(raw_id).strip()
+        key = identifier.lower()
+        if not identifier or key in seen:
             continue
         seen.add(key)
-        unique_arxivs.append(arxiv_id)
-    return unique_arxivs
+        if DOI_RE.match(identifier):
+            dois.append(normalize_doi(identifier))
+        elif ARXIV_RE.match(identifier):
+            arxivs.append(normalize_arxiv(identifier))
+    return dois, arxivs
 
 
 def fetch_openalex(doi: str, timeout: float) -> dict[str, Any] | None:
@@ -107,8 +92,7 @@ def fetch_openalex(doi: str, timeout: float) -> dict[str, Any] | None:
 def collect(projects: list[dict[str, Any]], timeout: float) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for project in projects:
-        dois = project_dois(project)
-        arxivs = project_arxivs(project)
+        dois, arxivs = project_paper_ids(project)
         if not dois and not arxivs:
             continue
         name = str(project.get("name", dois[0] if dois else arxivs[0]))
@@ -116,7 +100,8 @@ def collect(projects: list[dict[str, Any]], timeout: float) -> list[dict[str, An
         errors: list[str] = []
         for doi in dois:
             paper: dict[str, Any] = {
-                "paper_doi": doi,
+                "paper_id": doi,
+                "paper_type": "doi",
                 "openalex_id": None,
                 "title": None,
                 "publication_year": None,
@@ -145,7 +130,8 @@ def collect(projects: list[dict[str, Any]], timeout: float) -> list[dict[str, An
         for arxiv_id in arxivs:
             papers.append(
                 {
-                    "paper_arxiv": arxiv_id,
+                    "paper_id": f"arXiv:{arxiv_id}",
+                    "paper_type": "arxiv",
                     "arxiv_url": f"https://arxiv.org/abs/{arxiv_id}",
                     "source": "arxiv",
                     "cited_by_count": None,
@@ -154,13 +140,10 @@ def collect(projects: list[dict[str, Any]], timeout: float) -> list[dict[str, An
                 }
             )
         resolved_papers = [paper for paper in papers if paper.get("openalex_id") and not paper.get("errors")]
-        arxiv_papers = [paper for paper in papers if paper.get("paper_arxiv") and not paper.get("errors")]
+        arxiv_papers = [paper for paper in papers if paper.get("paper_type") == "arxiv" and not paper.get("errors")]
         row: dict[str, Any] = {
             "name": name,
-            "paper_doi": dois[0] if dois else None,
-            "paper_dois": dois,
-            "paper_arxiv": arxivs[0] if arxivs else None,
-            "paper_arxivs": arxivs,
+            "paper_id": [paper["paper_id"] for paper in papers],
             "source": "openalex",
             "paper_count": len(papers),
             "resolved_paper_count": len(resolved_papers),
@@ -192,8 +175,8 @@ def main() -> int:
         "source": "https://api.openalex.org/works",
         "metric_notes": [
             "cited_by_count is OpenAlex coverage, not a universal citation count.",
-            "paper_doi should point to the primary core paper; paper_dois can list additional official core papers.",
-            "paper_arxiv and paper_arxivs record official core papers without DOI-backed citation counts.",
+            "paper_id can be a DOI, an arXiv identifier prefixed with arXiv:, or a list mixing both.",
+            "arXiv paper identifiers are recorded without DOI-backed citation counts.",
             "Project-level cited_by_count sums resolved papers and can double-count citing works across related papers.",
         ],
         "projects": metrics,

@@ -1147,7 +1147,7 @@ projects:
     labels: ["gha", "julia", "university"]
     github_id: oxfordcontrol/Clarabel.jl
     julia_id: Clarabel
-    paper_arxiv: "2405.12762"
+    paper_id: "arXiv:2405.12762"
     # pypi_id:
     # conda_id:
     # homepage:
@@ -1158,7 +1158,7 @@ projects:
     category: ops
     labels: ["gha", "pypi", "conda", "python", "rust", "university"]
     github_id: oxfordcontrol/Clarabel.rs
-    paper_arxiv: "2405.12762"
+    paper_id: "arXiv:2405.12762"
     pypi_id: clarabel
     conda_id: conda-forge/clarabel
     # homepage:
@@ -1193,7 +1193,7 @@ projects:
     labels: ["gha", "pypi", "conda", "python", "octave", "julia", "r", "c", "university"]
     github_id: cvxgrp/scs
     julia_id: SCS
-    paper_doi: 10.1007/s10957-016-0892-3
+    paper_id: 10.1007/s10957-016-0892-3
     pypi_id: scs
     conda_id: conda-forge/scs
     # homepage:
@@ -1218,7 +1218,7 @@ projects:
     labels: ["gha", "pypi", "conda", "python", "c", "julia", "octave", "r", "university"]
     github_id: osqp/osqp
     julia_id: OSQP
-    paper_doi: 10.1007/s12532-020-00179-2
+    paper_id: 10.1007/s12532-020-00179-2
     pypi_id: osqp
     conda_id: conda-forge/osqp
     homepage: https://osqp.org
@@ -1262,7 +1262,7 @@ projects:
   - name: HiGHS
     github_id: ERGO-Code/HiGHS
     julia_id: HiGHS
-    paper_doi: 10.1007/s12532-017-0130-5
+    paper_id: 10.1007/s12532-017-0130-5
     labels: ["gha", "pypi", "conda", "jupyter", "python", "c", "julia", "rust", "r", "cpp", "university"]
     category: ops
     pypi_id: highspy
@@ -1333,9 +1333,9 @@ projects:
     labels: ["gha", "julia", "university"]
     github_id: MadNLP/MadNLP.jl
     julia_id: MadNLP
-    paper_arxiv: "2307.16830"
-    paper_arxivs:
-      - "2010.02404"
+    paper_id:
+      - "arXiv:2307.16830"
+      - "arXiv:2010.02404"
     # pypi_id: ipopt
     # conda_id: conda-forge/ipopt
     # homepage: https://www.coin-or.org/
@@ -1415,7 +1415,7 @@ projects:
     category: opl
     github_id: jump-dev/JuMP.jl
     julia_id: JuMP
-    paper_doi: 10.1007/s12532-023-00239-3
+    paper_id: 10.1007/s12532-023-00239-3
     # pypi_id:
     # conda_id:
     homepage: https://jump.dev
@@ -1428,6 +1428,7 @@ projects:
     category: opl
     github_id: exanauts/ExaModels.jl
     julia_id: ExaModels
+    paper_id: 10.1016/j.epsr.2024.110651
     # pypi_id:
     # conda_id:
     # homepage:

@@ -28,7 +28,7 @@ Before opening an issue or pull request, please ensure that you adhere to the fo
       github_id: tensorflow/tensorflow
       pypi_id: tensorflow
       conda_id: tensorflow
-      # paper_doi: 10.xxxx/yyyy
+      # paper_id: 10.xxxx/yyyy
       labels: ["tensorflow"]
       category: ml-frameworks
     ```
@@ -106,20 +106,8 @@ Before opening an issue or pull request, please ensure that you adhere to the fo
         <td>Julia package name in the General registry, without the <code>.jl</code> suffix unless the registry name includes it. Use this for Julia packages whose release and adoption signals are not represented by PyPI or Conda.</td>
     </tr>
     <tr>
-        <td><code>paper_doi</code></td>
-        <td>DOI for the core software, methods, or philosophy paper most directly associated with the project. Prefer a project-recommended citation DOI over a loosely related paper.</td>
-    </tr>
-    <tr>
-        <td><code>paper_dois</code></td>
-        <td>List of additional core paper DOIs when a project officially asks users to cite more than one paper. Keep <code>paper_doi</code> as the primary or most general citation when possible.</td>
-    </tr>
-    <tr>
-        <td><code>paper_arxiv</code></td>
-        <td>arXiv identifier for the primary core paper when no DOI is available yet, e.g. <code>2405.12762</code>.</td>
-    </tr>
-    <tr>
-        <td><code>paper_arxivs</code></td>
-        <td>List of additional arXiv identifiers for official core papers without DOI metadata.</td>
+        <td><code>paper_id</code></td>
+        <td>Core software, methods, or philosophy paper identifier. Use a DOI such as <code>10.xxxx/yyyy</code>, an arXiv identifier prefixed with <code>arXiv:</code>, or a list mixing both when a project officially asks users to cite multiple core papers.</td>
     </tr>
 </table>
 
