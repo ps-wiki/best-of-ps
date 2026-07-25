@@ -41,22 +41,22 @@ def validate_project(project: dict[str, Any], index: int) -> list[str]:
         if not isinstance(paper_doi, str) or not DOI_RE.match(paper_doi.strip()):
             errors.append(f"{name}: paper_doi must look like a DOI, e.g. 10.xxxx/yyyy")
 
-    julia_registry_id = project.get("julia_registry_id")
-    if julia_registry_id is not None:
-        if not isinstance(julia_registry_id, str) or not julia_registry_id.strip():
-            errors.append(f"{name}: julia_registry_id must be a non-empty string")
-        elif "/" in julia_registry_id:
-            errors.append(f"{name}: julia_registry_id should be the registry package name, not a URL or owner/name path")
+    julia_id = project.get("julia_id")
+    if julia_id is not None:
+        if not isinstance(julia_id, str) or not julia_id.strip():
+            errors.append(f"{name}: julia_id must be a non-empty string")
+        elif "/" in julia_id:
+            errors.append(f"{name}: julia_id should be the registry package name, not a URL or owner/name path")
 
     return errors
 
 
 def summarize(projects: list[dict[str, Any]]) -> str:
-    julia_registry_count = sum(1 for project in projects if project.get("julia_registry_id"))
+    julia_count = sum(1 for project in projects if project.get("julia_id"))
     paper_doi_count = sum(1 for project in projects if project.get("paper_doi"))
     return (
         f"Validated {len(projects)} projects "
-        f"({julia_registry_count} julia_registry_id, {paper_doi_count} paper_doi)."
+        f"({julia_count} julia_id, {paper_doi_count} paper_doi)."
     )
 
 

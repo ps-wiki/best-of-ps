@@ -102,7 +102,7 @@ Before opening an issue or pull request, please ensure that you adhere to the fo
         <td colspan="2"><b>Curated Metadata Extensions:</b></td>
     </tr>
     <tr>
-        <td><code>julia_registry_id</code></td>
+        <td><code>julia_id</code></td>
         <td>Julia package name in the General registry, without the <code>.jl</code> suffix unless the registry name includes it. Use this for Julia packages whose release and adoption signals are not represented by PyPI or Conda.</td>
     </tr>
     <tr>
