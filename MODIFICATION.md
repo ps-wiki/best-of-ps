@@ -77,6 +77,8 @@ The first local scoring extension uses these curated project fields:
 - `julia_id`: Julia package name used by JuliaPkgStats and the Julia General
   registry ecosystem.
 - `paper_doi`: DOI for the core software, method, or philosophy paper.
+- `paper_dois`: additional DOIs for projects with multiple official core
+  citation papers.
 
 The local scripts under `scripts/` support a staged workflow:
 
@@ -91,8 +93,9 @@ The current score-preview formula is intentionally bounded and log-scaled:
 
 - Julia adjustment: registration bonus plus a capped package-server monthly
   download score.
-- Citation adjustment: DOI-resolution bonus plus capped lifetime and recent
-  citation-count scores.
+- Citation adjustment: one DOI-resolution bonus per project plus capped
+  lifetime and recent citation-count scores aggregated across the project's
+  resolved core papers.
 
 These adjustments are experimental until representative projects have been
 audited. The main fairness constraints are:

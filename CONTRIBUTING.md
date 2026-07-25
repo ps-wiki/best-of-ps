@@ -109,6 +109,10 @@ Before opening an issue or pull request, please ensure that you adhere to the fo
         <td><code>paper_doi</code></td>
         <td>DOI for the core software, methods, or philosophy paper most directly associated with the project. Prefer a project-recommended citation DOI over a loosely related paper.</td>
     </tr>
+    <tr>
+        <td><code>paper_dois</code></td>
+        <td>List of additional core paper DOIs when a project officially asks users to cite more than one paper. Keep <code>paper_doi</code> as the primary or most general citation when possible.</td>
+    </tr>
 </table>
 
 Please refer to the [best-of-generator documentation](https://github.com/best-of-lists/best-of-generator#project-properties) for a complete and up-to-date list of supported project properties.

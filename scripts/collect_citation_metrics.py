@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Collect OpenAlex citation metrics for projects with `paper_doi`."""
+"""Collect OpenAlex citation metrics for projects with `paper_doi` or `paper_dois`."""
 
 from __future__ import annotations
 
@@ -43,6 +43,26 @@ def normalize_doi(doi: str) -> str:
     return doi
 
 
+def project_dois(project: dict[str, Any]) -> list[str]:
+    dois: list[str] = []
+    paper_doi = project.get("paper_doi")
+    if paper_doi:
+        dois.append(normalize_doi(str(paper_doi)))
+    paper_dois = project.get("paper_dois")
+    if isinstance(paper_dois, list):
+        dois.extend(normalize_doi(str(doi)) for doi in paper_dois if doi)
+
+    seen: set[str] = set()
+    unique_dois: list[str] = []
+    for doi in dois:
+        key = doi.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        unique_dois.append(doi)
+    return unique_dois
+
+
 def fetch_openalex(doi: str, timeout: float) -> dict[str, Any] | None:
     work_id = f"https://doi.org/{normalize_doi(doi)}"
     url = f"{OPENALEX_WORKS}/{quote(work_id, safe=':/')}?mailto=best-of-ps@example.org"
@@ -63,38 +83,52 @@ def fetch_openalex(doi: str, timeout: float) -> dict[str, Any] | None:
 def collect(projects: list[dict[str, Any]], timeout: float) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for project in projects:
-        paper_doi = project.get("paper_doi")
-        if not paper_doi:
+        dois = project_dois(project)
+        if not dois:
             continue
-        name = str(project.get("name", paper_doi))
-        doi = normalize_doi(str(paper_doi))
+        name = str(project.get("name", dois[0]))
+        papers: list[dict[str, Any]] = []
+        errors: list[str] = []
+        for doi in dois:
+            paper: dict[str, Any] = {
+                "paper_doi": doi,
+                "openalex_id": None,
+                "title": None,
+                "publication_year": None,
+                "cited_by_count": None,
+                "counts_by_year": [],
+                "errors": [],
+            }
+            try:
+                data = fetch_openalex(doi, timeout)
+                if data is None:
+                    paper["errors"].append("openalex: DOI not found")
+                else:
+                    paper.update(
+                        {
+                            "openalex_id": data.get("id"),
+                            "title": data.get("title") or data.get("display_name"),
+                            "publication_year": data.get("publication_year"),
+                            "cited_by_count": data.get("cited_by_count"),
+                            "counts_by_year": data.get("counts_by_year") or [],
+                        }
+                    )
+            except (HTTPError, URLError, TimeoutError, ValueError) as exc:
+                paper["errors"].append(f"openalex: {exc}")
+            errors.extend(f"{doi}: {error}" for error in paper["errors"])
+            papers.append(paper)
+        resolved_papers = [paper for paper in papers if paper.get("openalex_id") and not paper.get("errors")]
         row: dict[str, Any] = {
             "name": name,
-            "paper_doi": doi,
+            "paper_doi": dois[0],
+            "paper_dois": dois,
             "source": "openalex",
-            "openalex_id": None,
-            "title": None,
-            "publication_year": None,
-            "cited_by_count": None,
-            "counts_by_year": [],
-            "errors": [],
+            "paper_count": len(papers),
+            "resolved_paper_count": len(resolved_papers),
+            "cited_by_count": sum(int(paper.get("cited_by_count") or 0) for paper in resolved_papers),
+            "papers": papers,
+            "errors": errors,
         }
-        try:
-            data = fetch_openalex(doi, timeout)
-            if data is None:
-                row["errors"].append("openalex: DOI not found")
-            else:
-                row.update(
-                    {
-                        "openalex_id": data.get("id"),
-                        "title": data.get("title") or data.get("display_name"),
-                        "publication_year": data.get("publication_year"),
-                        "cited_by_count": data.get("cited_by_count"),
-                        "counts_by_year": data.get("counts_by_year") or [],
-                    }
-                )
-        except (HTTPError, URLError, TimeoutError, ValueError) as exc:
-            row["errors"].append(f"openalex: {exc}")
         rows.append(row)
     return rows
 
@@ -118,7 +152,8 @@ def main() -> int:
         "source": "https://api.openalex.org/works",
         "metric_notes": [
             "cited_by_count is OpenAlex coverage, not a universal citation count.",
-            "paper_doi should point to the core software, method, or philosophy paper recommended by the project.",
+            "paper_doi should point to the primary core paper; paper_dois can list additional official core papers.",
+            "Project-level cited_by_count sums resolved papers and can double-count citing works across related papers.",
         ],
         "projects": metrics,
     }

@@ -63,6 +63,17 @@ def recent_citations(counts_by_year: Any, years: int = 2) -> int:
     return total
 
 
+def project_recent_citations(citation: dict[str, Any]) -> int:
+    papers = citation.get("papers")
+    if isinstance(papers, list):
+        return sum(
+            recent_citations(paper.get("counts_by_year"))
+            for paper in papers
+            if isinstance(paper, dict) and not paper.get("errors")
+        )
+    return recent_citations(citation.get("counts_by_year"))
+
+
 def index_by_name(payload: dict[str, Any]) -> dict[str, dict[str, Any]]:
     projects = payload.get("projects")
     if not isinstance(projects, list):
@@ -95,7 +106,10 @@ def preview(
         )
 
         citation = citation_metrics.get(name, {})
-        citation_bonus = CITATION_DOI_BONUS if citation.get("paper_doi") and not citation.get("errors") else 0.0
+        resolved_paper_count = int(citation.get("resolved_paper_count") or 0)
+        if resolved_paper_count == 0 and citation.get("paper_doi") and not citation.get("errors"):
+            resolved_paper_count = 1
+        citation_bonus = CITATION_DOI_BONUS if resolved_paper_count > 0 else 0.0
         citation_count_score = positive_log_score(
             citation.get("cited_by_count"),
             divisor=2.0,
@@ -103,7 +117,7 @@ def preview(
             cap=CITATION_COUNT_CAP,
         )
         citation_recent_score = positive_log_score(
-            recent_citations(citation.get("counts_by_year")),
+            project_recent_citations(citation),
             divisor=1.5,
             offset=0.0,
             cap=CITATION_RECENT_CAP,
