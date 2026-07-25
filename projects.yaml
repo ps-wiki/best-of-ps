@@ -207,6 +207,7 @@ projects:
     labels: ["gha", "pypi", "conda", "jupyter", "python", "julia", "university"]
     github_id: CURENT/andes
     julia_id: Andes
+    paper_id: 10.1109/TPWRS.2020.3017019
     pypi_id: andes
     conda_id: conda-forge/andes
     dockerhub_id: CURENT/andes
@@ -219,6 +220,7 @@ projects:
     category: phasor
     labels: ["gha", "modelica", "university"]
     github_id: OpenIPSL/OpenIPSL
+    paper_id: 10.1016/j.softx.2022.101277
     # pypi_id:
     # conda_id:
     # homepage:
@@ -402,6 +404,7 @@ projects:
     category: steady-state
     labels: ["gha", "pypi", "conda", "jupyter", "python", "university"]
     github_id: CURENT/ams
+    paper_id: 10.1109/TSTE.2025.3528027
     pypi_id: ltbams
     conda_id: conda-forge/ltbams
     homepage: https://ltb.curent.org/
@@ -504,6 +507,7 @@ projects:
     category: steady-state
     labels: ["gha", "pypi", "conda", "python", "jupyter", "university"]
     github_id: PyPSA/PyPSA
+    paper_id: 10.5334/jors.188
     pypi_id: pypsa
     conda_id: conda-forge/pypsa
     homepage: https://pypsa.org
@@ -514,6 +518,7 @@ projects:
     category: steady-state
     labels: ["gha", "python", "jupyter", "university"]
     github_id: PyPSA/pypsa-usa
+    # paper_id:
     # pypi_id:
     # conda_id:
     homepage: https://pypsa.org
@@ -525,6 +530,7 @@ projects:
     labels: ["gha", "python", "university"]
     github_id: PyPSA/pypsa-eur
     dockerhub_id: nimfetrisa/pypsa-eur
+    # paper_id:
     # pypi_id:
     # conda_id:
     homepage: https://pypsa.org
@@ -545,6 +551,7 @@ projects:
     category: steady-state
     labels: ["gha", "python", "volunteer"]
     github_id: pypsa-meets-earth/pypsa-earth
+    paper_id: 10.1016/j.apenergy.2023.121096
     # pypi_id:
     # conda_id:
     homepage: https://pypsa-meets-earth.github.io/
@@ -568,6 +575,9 @@ projects:
     category: steady-state
     labels: ["gha", "octave", "university"]
     github_id: MATPOWER/most
+    paper_id:
+      - 10.1109/TPWRS.2010.2051168
+      - 10.1109/TSG.2013.2281001
     # pypi_id:
     # conda_id:
     homepage: https://matpower.org/
@@ -578,6 +588,7 @@ projects:
     category: steady-state
     labels: ["gha", "octave", "university"]
     github_id: MATPOWER/matpower
+    paper_id: 10.1109/TPWRS.2010.2051168
     # pypi_id:
     # conda_id:
     dockerhub_id: matpower/matpower
@@ -601,6 +612,7 @@ projects:
     category: steady-state
     labels: ["gha", "pypi", "conda", "jupyter", "python", "university"]
     github_id: e2nIEE/pandapower
+    paper_id: 10.1109/TPWRS.2018.2829021
     pypi_id: pandapower
     conda_id: conda-forge/pandapower 
     dockerhub_id: pauldepraz/pandapowerapi
@@ -613,6 +625,7 @@ projects:
     category: steady-state
     labels: ["gha", "pypi", "conda", "python", "non-profit"]
     github_id: rwl/PYPOWER
+    # paper_id:
     pypi_id: PYPOWER
     conda_id: invenia/pypower
     dockerhub_id: hwanghust/pypower
@@ -704,6 +717,7 @@ projects:
     category: steady-state
     labels: ["python", "gha", "lab"]
     github_id: NatLabRockies/ReEDS-2.0
+    # paper_id:
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/reeds/
@@ -716,6 +730,7 @@ projects:
     labels: ["julia", "gha", "university"]
     github_id: GenXProject/GenX
     julia_id: GenX
+    # paper_id:
     # pypi_id:
     # conda_id:
     homepage: https://energy.mit.edu/genx/
@@ -727,6 +742,7 @@ projects:
     category: steady-state
     labels: ["gha", "pypi", "conda", "python", "c", "jupyter", "non-profit"]
     github_id: PowerGridModel/power-grid-model
+    paper_id: 10.1049/icp.2023.0633
     pypi_id: power-grid-model
     conda_id: conda-forge/power-grid-model
     # homepage:
@@ -749,6 +765,7 @@ projects:
     category: steady-state
     labels: ["gha", "pypi", "python"]
     github_id: felipemarkson/dssdata
+    # paper_id:
     pypi_id: dssdata
     # conda_id:
     docs_url: https://felipemarkson.github.io/dssdata/
@@ -903,6 +920,7 @@ projects:
     category: intf
     labels: ["gha", "pypi", "python", "university"]
     github_id: yasirroni/matpower-pip
+    # paper_id:
     pypi_id: matpower
     # conda_id:
     # homepage:
@@ -914,6 +932,7 @@ projects:
     category: steady-state
     labels: ["python", "university"]
     github_id: yasirroni/mypower
+    # paper_id:
     # pypi_id:
     # conda_id:
     # homepage:
@@ -1109,6 +1128,7 @@ projects:
     category: intf
     labels: ["pypi", "python", "university"]
     github_id: mzy2240/ESA
+    paper_id: 10.21105/joss.02289
     pypi_id: esa
     # conda_id:
     docs_url: https://mzy2240.github.io/ESA/html/index.html
@@ -1141,6 +1161,7 @@ projects:
     category: intf
     labels: ["pypi", "python", "university", "jupyter", "gha"]
     github_id: ieeh-tu-dresden/powerfactory-tools
+    paper_id: 10.21105/joss.09281
     pypi_id: ieeh-powerfactory-tools
     # conda_id:
     # homepage:
@@ -1284,6 +1305,7 @@ projects:
     category: ops
     labels: ["gha", "pypi", "conda", "python", "lab"]
     github_id: scipopt/PySCIPOpt
+    paper_id: 10.1007/978-3-319-42432-3_37
     pypi_id: PySCIPOpt
     conda_id: conda-forge/pyscipopt
     homepage: https://www.scipopt.org/
@@ -1411,6 +1433,7 @@ projects:
     github_id: Pyomo/pyomo
     labels: ["gha", "pypi", "conda", "jupyter", "python", "lab"]
     category: opl
+    paper_id: 10.1007/978-3-030-68928-5
     pypi_id: Pyomo
     conda_id: conda-forge/pyomo
     homepage: https://www.pyomo.org
@@ -1526,6 +1549,7 @@ projects:
     category: data
     labels: ["gha", "pypi", "conda", "python", "for-profit"]
     github_id: kmax12/gridstatus
+    # paper_id:
     pypi_id: gridstatus
     conda_id: services/gridstatus
     homepage: https://www.gridstatus.io
@@ -1537,6 +1561,7 @@ projects:
     category: data
     labels: ["gha", "pypi", "conda", "python", "university"]
     github_id: PyPSA/powerplantmatching
+    paper_id: 10.1016/j.esr.2018.11.004
     pypi_id: powerplantmatching
     conda_id: conda-forge/powerplantmatching
     homepage: https://pypsa.org
@@ -1548,6 +1573,7 @@ projects:
     category: data
     labels: ["gha", "pypi", "conda", "jupyter", "python", "university"]
     github_id: PyPSA/atlite
+    paper_id: 10.21105/joss.03294
     pypi_id: atlite
     conda_id: conda-forge/atlite
     homepage: https://pypsa.org
@@ -1721,6 +1747,7 @@ projects:
     category: cosime
     labels: ["gha", "modelica", "python", "university"]
     github_id: OpenModelica/OpenModelica
+    paper_id: 10.4173/mic.2020.4.1
     # pypi_id:
     # conda_id:
     dockerhub_id: openmodelica/openmodelica
@@ -1817,6 +1844,7 @@ projects:
     category: vis
     labels: ["gha", "pypi", "python", "university"]
     github_id: CURENT/agvis
+    paper_id: 10.1109/NAPS58826.2023.10318583
     pypi_id: agvis
     # conda_id:
     homepage: https://ltb.curent.org/
