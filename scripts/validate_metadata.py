@@ -20,6 +20,7 @@ except ImportError:  # pragma: no cover - exercised only when env is missing dep
 
 
 DOI_RE = re.compile(r"^10\.\d{4,9}/\S+$", re.IGNORECASE)
+ARXIV_RE = re.compile(r"^(\d{4}\.\d{4,5})(v\d+)?$", re.IGNORECASE)
 
 
 def load_projects(path: Path) -> list[dict[str, Any]]:
@@ -56,6 +57,26 @@ def validate_project(project: dict[str, Any], index: int) -> list[str]:
                     errors.append(f"{name}: paper_dois[{doi_index}] duplicates another DOI")
                 seen_dois.add(normalized)
 
+    paper_arxiv = project.get("paper_arxiv")
+    if paper_arxiv is not None:
+        if not isinstance(paper_arxiv, str) or not ARXIV_RE.match(paper_arxiv.strip()):
+            errors.append(f"{name}: paper_arxiv must look like an arXiv id, e.g. 2405.12762")
+
+    paper_arxivs = project.get("paper_arxivs")
+    if paper_arxivs is not None:
+        if not isinstance(paper_arxivs, list):
+            errors.append(f"{name}: paper_arxivs must be a list of arXiv id strings")
+        else:
+            seen_arxivs = {paper_arxiv.strip().lower()} if isinstance(paper_arxiv, str) else set()
+            for arxiv_index, arxiv_id in enumerate(paper_arxivs, start=1):
+                if not isinstance(arxiv_id, str) or not ARXIV_RE.match(arxiv_id.strip()):
+                    errors.append(f"{name}: paper_arxivs[{arxiv_index}] must look like an arXiv id, e.g. 2405.12762")
+                    continue
+                normalized = arxiv_id.strip().lower()
+                if normalized in seen_arxivs:
+                    errors.append(f"{name}: paper_arxivs[{arxiv_index}] duplicates another arXiv id")
+                seen_arxivs.add(normalized)
+
     julia_id = project.get("julia_id")
     if julia_id is not None:
         if not isinstance(julia_id, str) or not julia_id.strip():
@@ -68,7 +89,11 @@ def validate_project(project: dict[str, Any], index: int) -> list[str]:
 
 def summarize(projects: list[dict[str, Any]]) -> str:
     julia_count = sum(1 for project in projects if project.get("julia_id"))
-    paper_metadata_count = sum(1 for project in projects if project.get("paper_doi") or project.get("paper_dois"))
+    paper_metadata_count = sum(
+        1
+        for project in projects
+        if project.get("paper_doi") or project.get("paper_dois") or project.get("paper_arxiv") or project.get("paper_arxivs")
+    )
     return (
         f"Validated {len(projects)} projects "
         f"({julia_count} julia_id, {paper_metadata_count} paper citation metadata)."

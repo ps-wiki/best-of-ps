@@ -113,6 +113,14 @@ Before opening an issue or pull request, please ensure that you adhere to the fo
         <td><code>paper_dois</code></td>
         <td>List of additional core paper DOIs when a project officially asks users to cite more than one paper. Keep <code>paper_doi</code> as the primary or most general citation when possible.</td>
     </tr>
+    <tr>
+        <td><code>paper_arxiv</code></td>
+        <td>arXiv identifier for the primary core paper when no DOI is available yet, e.g. <code>2405.12762</code>.</td>
+    </tr>
+    <tr>
+        <td><code>paper_arxivs</code></td>
+        <td>List of additional arXiv identifiers for official core papers without DOI metadata.</td>
+    </tr>
 </table>
 
 Please refer to the [best-of-generator documentation](https://github.com/best-of-lists/best-of-generator#project-properties) for a complete and up-to-date list of supported project properties.

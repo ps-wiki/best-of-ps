@@ -14,7 +14,7 @@ from typing import Any
 
 JULIA_REGISTRATION_BONUS = 1.0
 JULIA_MONTHLY_DOWNLOAD_CAP = 6.0
-CITATION_DOI_BONUS = 1.0
+PAPER_RECORD_BONUS = 1.0
 CITATION_COUNT_CAP = 6.0
 CITATION_RECENT_CAP = 3.0
 
@@ -107,9 +107,10 @@ def preview(
 
         citation = citation_metrics.get(name, {})
         resolved_paper_count = int(citation.get("resolved_paper_count") or 0)
+        arxiv_paper_count = int(citation.get("arxiv_paper_count") or 0)
         if resolved_paper_count == 0 and citation.get("paper_doi") and not citation.get("errors"):
             resolved_paper_count = 1
-        citation_bonus = CITATION_DOI_BONUS if resolved_paper_count > 0 else 0.0
+        citation_bonus = PAPER_RECORD_BONUS if resolved_paper_count > 0 or arxiv_paper_count > 0 else 0.0
         citation_count_score = positive_log_score(
             citation.get("cited_by_count"),
             divisor=2.0,

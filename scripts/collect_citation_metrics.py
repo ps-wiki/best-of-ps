@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Collect OpenAlex citation metrics for projects with `paper_doi` or `paper_dois`."""
+"""Collect citation metadata for projects with DOI or arXiv paper fields."""
 
 from __future__ import annotations
 
@@ -63,6 +63,30 @@ def project_dois(project: dict[str, Any]) -> list[str]:
     return unique_dois
 
 
+def normalize_arxiv(arxiv_id: str) -> str:
+    return arxiv_id.strip().removeprefix("arXiv:").removeprefix("arxiv:")
+
+
+def project_arxivs(project: dict[str, Any]) -> list[str]:
+    arxivs: list[str] = []
+    paper_arxiv = project.get("paper_arxiv")
+    if paper_arxiv:
+        arxivs.append(normalize_arxiv(str(paper_arxiv)))
+    paper_arxivs = project.get("paper_arxivs")
+    if isinstance(paper_arxivs, list):
+        arxivs.extend(normalize_arxiv(str(arxiv_id)) for arxiv_id in paper_arxivs if arxiv_id)
+
+    seen: set[str] = set()
+    unique_arxivs: list[str] = []
+    for arxiv_id in arxivs:
+        key = arxiv_id.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        unique_arxivs.append(arxiv_id)
+    return unique_arxivs
+
+
 def fetch_openalex(doi: str, timeout: float) -> dict[str, Any] | None:
     work_id = f"https://doi.org/{normalize_doi(doi)}"
     url = f"{OPENALEX_WORKS}/{quote(work_id, safe=':/')}?mailto=best-of-ps@example.org"
@@ -84,9 +108,10 @@ def collect(projects: list[dict[str, Any]], timeout: float) -> list[dict[str, An
     rows: list[dict[str, Any]] = []
     for project in projects:
         dois = project_dois(project)
-        if not dois:
+        arxivs = project_arxivs(project)
+        if not dois and not arxivs:
             continue
-        name = str(project.get("name", dois[0]))
+        name = str(project.get("name", dois[0] if dois else arxivs[0]))
         papers: list[dict[str, Any]] = []
         errors: list[str] = []
         for doi in dois:
@@ -117,14 +142,29 @@ def collect(projects: list[dict[str, Any]], timeout: float) -> list[dict[str, An
                 paper["errors"].append(f"openalex: {exc}")
             errors.extend(f"{doi}: {error}" for error in paper["errors"])
             papers.append(paper)
+        for arxiv_id in arxivs:
+            papers.append(
+                {
+                    "paper_arxiv": arxiv_id,
+                    "arxiv_url": f"https://arxiv.org/abs/{arxiv_id}",
+                    "source": "arxiv",
+                    "cited_by_count": None,
+                    "counts_by_year": [],
+                    "errors": [],
+                }
+            )
         resolved_papers = [paper for paper in papers if paper.get("openalex_id") and not paper.get("errors")]
+        arxiv_papers = [paper for paper in papers if paper.get("paper_arxiv") and not paper.get("errors")]
         row: dict[str, Any] = {
             "name": name,
-            "paper_doi": dois[0],
+            "paper_doi": dois[0] if dois else None,
             "paper_dois": dois,
+            "paper_arxiv": arxivs[0] if arxivs else None,
+            "paper_arxivs": arxivs,
             "source": "openalex",
             "paper_count": len(papers),
             "resolved_paper_count": len(resolved_papers),
+            "arxiv_paper_count": len(arxiv_papers),
             "cited_by_count": sum(int(paper.get("cited_by_count") or 0) for paper in resolved_papers),
             "papers": papers,
             "errors": errors,
@@ -153,6 +193,7 @@ def main() -> int:
         "metric_notes": [
             "cited_by_count is OpenAlex coverage, not a universal citation count.",
             "paper_doi should point to the primary core paper; paper_dois can list additional official core papers.",
+            "paper_arxiv and paper_arxivs record official core papers without DOI-backed citation counts.",
             "Project-level cited_by_count sums resolved papers and can double-count citing works across related papers.",
         ],
         "projects": metrics,

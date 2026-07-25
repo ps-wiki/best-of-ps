@@ -79,6 +79,8 @@ The first local scoring extension uses these curated project fields:
 - `paper_doi`: DOI for the core software, method, or philosophy paper.
 - `paper_dois`: additional DOIs for projects with multiple official core
   citation papers.
+- `paper_arxiv`: arXiv identifier for a core paper when no DOI is available.
+- `paper_arxivs`: additional arXiv identifiers for DOI-less core papers.
 
 The local scripts under `scripts/` support a staged workflow:
 
