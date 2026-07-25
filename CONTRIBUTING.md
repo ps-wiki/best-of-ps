@@ -28,6 +28,7 @@ Before opening an issue or pull request, please ensure that you adhere to the fo
       github_id: tensorflow/tensorflow
       pypi_id: tensorflow
       conda_id: tensorflow
+      # paper_doi: 10.xxxx/yyyy
       labels: ["tensorflow"]
       category: ml-frameworks
     ```
@@ -97,13 +98,35 @@ Before opening an issue or pull request, please ensure that you adhere to the fo
         <td><code>maven_id</code></td>
         <td>Artifact ID on <a href="https://mvnrepository.com">Maven central</a>, e.g. <code>org.apache.flink:flink-core</code>. </td>
     </tr>
+    <tr>
+        <td colspan="2"><b>Curated Metadata Extensions:</b></td>
+    </tr>
+    <tr>
+        <td><code>julia_registry_id</code></td>
+        <td>Julia package name in the General registry, without the <code>.jl</code> suffix unless the registry name includes it. Use this for Julia packages whose release and adoption signals are not represented by PyPI or Conda.</td>
+    </tr>
+    <tr>
+        <td><code>paper_doi</code></td>
+        <td>DOI for the core software, methods, or philosophy paper most directly associated with the project. Prefer a project-recommended citation DOI over a loosely related paper.</td>
+    </tr>
 </table>
 
 Please refer to the [best-of-generator documentation](https://github.com/best-of-lists/best-of-generator#project-properties) for a complete and up-to-date list of supported project properties.
 
+The curated metadata extensions are repository-specific and are not consumed by
+the upstream best-of generator yet. They are intended to support future local
+metadata collection, rendering, and scoring scripts for Julia registry adoption
+signals and paper citation signals. Keep these values conservative: leave a
+field blank when the registry identity or core paper is uncertain.
+
 ## Improve metadata collection
 
-If you like to contribute to or share suggestions regarding the project metadata collection, please refer to the [best-of-generator](https://github.com/best-of-lists/best-of-generator) repository.
+If you like to contribute to or share suggestions regarding the upstream project metadata collection, please refer to the [best-of-generator](https://github.com/best-of-lists/best-of-generator) repository.
+
+For power-system-specific metadata that is not supported upstream yet, this
+repository may keep small scripts under `scripts/`. These scripts should make
+their data source explicit and should avoid mixing incompatible adoption signals
+without documenting the scoring rule.
 
 ## Improve markdown generation
 
