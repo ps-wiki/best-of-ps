@@ -1,0 +1,194 @@
+#!/usr/bin/env python3
+"""Collect citation metadata for projects with DOI or arXiv paper fields."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+from urllib.error import HTTPError, URLError
+from urllib.parse import quote
+from urllib.request import Request, urlopen
+
+try:
+    import yaml
+except ImportError:  # pragma: no cover - exercised only when env is missing deps.
+    print(
+        "error: PyYAML is required. Run with `conda run -n bestps python scripts/collect_citation_metrics.py`.",
+        file=sys.stderr,
+    )
+    raise SystemExit(2)
+
+
+OPENALEX_WORKS = "https://api.openalex.org/works"
+USER_AGENT = "best-of-ps metadata collector"
+DOI_RE = re.compile(r"^10\.\d{4,9}/\S+$", re.IGNORECASE)
+ARXIV_RE = re.compile(r"^arxiv:(\d{4}\.\d{4,5})(v\d+)?$", re.IGNORECASE)
+
+
+def load_projects(path: Path) -> list[dict[str, Any]]:
+    data = yaml.safe_load(path.read_text())
+    projects = data.get("projects") if isinstance(data, dict) else None
+    if not isinstance(projects, list):
+        raise ValueError(f"{path} must contain a projects list")
+    return [project for project in projects if isinstance(project, dict)]
+
+
+def normalize_doi(doi: str) -> str:
+    doi = doi.strip()
+    for prefix in ("https://doi.org/", "http://doi.org/", "doi:"):
+        if doi.lower().startswith(prefix):
+            return doi[len(prefix) :]
+    return doi
+
+
+def normalize_arxiv(arxiv_id: str) -> str:
+    return arxiv_id.strip().removeprefix("arXiv:").removeprefix("arxiv:")
+
+
+def project_paper_ids(project: dict[str, Any]) -> tuple[list[str], list[str]]:
+    paper_id = project.get("paper_id")
+    if paper_id is None:
+        return [], []
+    raw_ids = paper_id if isinstance(paper_id, list) else [paper_id]
+
+    dois: list[str] = []
+    arxivs: list[str] = []
+    seen: set[str] = set()
+    for raw_id in raw_ids:
+        identifier = str(raw_id).strip()
+        key = identifier.lower()
+        if not identifier or key in seen:
+            continue
+        seen.add(key)
+        if DOI_RE.match(identifier):
+            dois.append(normalize_doi(identifier))
+        elif ARXIV_RE.match(identifier):
+            arxivs.append(normalize_arxiv(identifier))
+    return dois, arxivs
+
+
+def fetch_openalex(doi: str, timeout: float) -> dict[str, Any] | None:
+    work_id = f"https://doi.org/{normalize_doi(doi)}"
+    url = f"{OPENALEX_WORKS}/{quote(work_id, safe=':/')}?mailto=best-of-ps@example.org"
+    try:
+        request = Request(url, headers={"User-Agent": USER_AGENT})
+        with urlopen(request, timeout=timeout) as response:
+            payload = response.read().decode("utf-8")
+    except HTTPError as exc:
+        if exc.code == 404:
+            return None
+        raise
+    data = json.loads(payload)
+    if not isinstance(data, dict):
+        raise ValueError(f"expected JSON object from {url}")
+    return data
+
+
+def collect(projects: list[dict[str, Any]], timeout: float) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for project in projects:
+        dois, arxivs = project_paper_ids(project)
+        if not dois and not arxivs:
+            continue
+        name = str(project.get("name", dois[0] if dois else arxivs[0]))
+        papers: list[dict[str, Any]] = []
+        errors: list[str] = []
+        for doi in dois:
+            paper: dict[str, Any] = {
+                "paper_id": doi,
+                "paper_type": "doi",
+                "openalex_id": None,
+                "title": None,
+                "publication_year": None,
+                "cited_by_count": None,
+                "counts_by_year": [],
+                "errors": [],
+            }
+            try:
+                data = fetch_openalex(doi, timeout)
+                if data is None:
+                    paper["errors"].append("openalex: DOI not found")
+                else:
+                    paper.update(
+                        {
+                            "openalex_id": data.get("id"),
+                            "title": data.get("title") or data.get("display_name"),
+                            "publication_year": data.get("publication_year"),
+                            "cited_by_count": data.get("cited_by_count"),
+                            "counts_by_year": data.get("counts_by_year") or [],
+                        }
+                    )
+            except (HTTPError, URLError, TimeoutError, ValueError) as exc:
+                paper["errors"].append(f"openalex: {exc}")
+            errors.extend(f"{doi}: {error}" for error in paper["errors"])
+            papers.append(paper)
+        for arxiv_id in arxivs:
+            papers.append(
+                {
+                    "paper_id": f"arXiv:{arxiv_id}",
+                    "paper_type": "arxiv",
+                    "arxiv_url": f"https://arxiv.org/abs/{arxiv_id}",
+                    "source": "arxiv",
+                    "cited_by_count": None,
+                    "counts_by_year": [],
+                    "errors": [],
+                }
+            )
+        resolved_papers = [paper for paper in papers if paper.get("openalex_id") and not paper.get("errors")]
+        arxiv_papers = [paper for paper in papers if paper.get("paper_type") == "arxiv" and not paper.get("errors")]
+        row: dict[str, Any] = {
+            "name": name,
+            "paper_id": [paper["paper_id"] for paper in papers],
+            "source": "openalex",
+            "paper_count": len(papers),
+            "resolved_paper_count": len(resolved_papers),
+            "arxiv_paper_count": len(arxiv_papers),
+            "cited_by_count": sum(int(paper.get("cited_by_count") or 0) for paper in resolved_papers),
+            "papers": papers,
+            "errors": errors,
+        }
+        rows.append(row)
+    return rows
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--projects", default="projects.yaml", type=Path)
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--timeout", default=20.0, type=float)
+    args = parser.parse_args()
+
+    try:
+        projects = load_projects(args.projects)
+        metrics = collect(projects, args.timeout)
+    except Exception as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 1
+
+    payload = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "source": "https://api.openalex.org/works",
+        "metric_notes": [
+            "cited_by_count is OpenAlex coverage, not a universal citation count.",
+            "paper_id can be a DOI, an arXiv identifier prefixed with arXiv:, or a list mixing both.",
+            "arXiv paper identifiers are recorded without DOI-backed citation counts.",
+            "Project-level cited_by_count sums resolved papers and can double-count citing works across related papers.",
+        ],
+        "projects": metrics,
+    }
+    text = json.dumps(payload, indent=2, sort_keys=True)
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(text + "\n")
+    else:
+        print(text)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
