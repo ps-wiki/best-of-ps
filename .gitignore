@@ -91,3 +91,4 @@ temp/*
 
 # local test
 .secrets
+.agents/
