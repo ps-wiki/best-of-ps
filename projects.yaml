@@ -813,8 +813,9 @@ projects:
 
   - name: openTEPES
     category: steady-state
-    labels: ["pypi", "python", "jupyter", "gha", "university"]
+    labels: ["python", "gha", "university"]
     github_id: IIT-EnergySystemModels/openTEPES
+    paper_id: 10.1016/j.softx.2022.101070
     pypi_id: openTEPES
     # conda_id:
     # homepage:
