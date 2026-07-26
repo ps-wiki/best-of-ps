@@ -1863,8 +1863,9 @@ projects:
   - name: HELICS
     github_id: GMLC-TDC/HELICS
     julia_id: HELICS
-    labels: ["gha", "pypi", "conda", "python", "julia", "octave", "java", "c", "lab"]
-    category: msg
+    labels: ["cpp", "gha", "lab"]
+    category: cosim
+    paper_id: 10.1109/ACCESS.2024.3363615
     pypi_id: helics
     conda_id: conda-forge/helics
     homepage: https://helics.org/tools/
