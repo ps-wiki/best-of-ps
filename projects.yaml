@@ -366,7 +366,7 @@ projects:
 
   - name: EGRIP.jl
     category: steady-state
-    labels: ["julia", "octave", "gha", "lab"]
+    labels: ["julia", "matlab", "gha", "lab"]
     github_id: ANL-CEEESA/EGRIP.jl
     julia_id: EGRIP
     # pypi_id:
