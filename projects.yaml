@@ -1253,7 +1253,7 @@ projects:
 
   - name: SCS
     category: ops
-    labels: ["gha", "pypi", "conda", "python", "octave", "julia", "r", "c", "university"]
+    labels: ["c", "gha", "university"]
     github_id: cvxgrp/scs
     julia_id: SCS
     paper_id: 10.1007/s10957-016-0892-3
