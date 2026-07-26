@@ -1971,9 +1971,9 @@ projects:
     description: Master's course of power systems analysis at ULiège.
 
   - name: Tutorial on DER Hosting Capacity Part 0
-    category: book
+    category: education
     resource: True
-    labels: ["jupyter", "python", "university"]
+    labels: ["python", "university"]
     github_id: Team-Nando/Tutorial-DERHostingCapacity-0-dss_python
     license: BSD-3.0
     description: Using dss_python
