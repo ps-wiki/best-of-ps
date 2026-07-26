@@ -951,7 +951,7 @@ projects:
 # --- Interface ---
   - name: matpower-pip
     category: intf
-    labels: ["gha", "pypi", "python", "university"]
+    labels: ["python", "gha", "university"]
     github_id: yasirroni/matpower-pip
     # paper_id:
     pypi_id: matpower
