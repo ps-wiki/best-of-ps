@@ -768,7 +768,7 @@ projects:
 
   - name: Power Grid Model
     category: steady-state
-    labels: ["gha", "pypi", "conda", "python", "c", "jupyter", "non-profit"]
+    labels: ["cpp", "gha", "non-profit"]
     github_id: PowerGridModel/power-grid-model
     paper_id: 10.1049/icp.2023.0633
     pypi_id: power-grid-model
