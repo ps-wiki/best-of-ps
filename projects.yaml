@@ -730,8 +730,8 @@ projects:
     description: Implemented optimization use cases using Gurobi
 
   - name: PowerFlowAnalyzer
-    category: steady-state
-    labels: ["octave", "java", "university"]
+    category: vis
+    labels: ["matlab", "java", "university"]
     github_id: power-flow-analyzer/PowerFlowAnalyzer
     # pypi_id:
     # conda_id:
