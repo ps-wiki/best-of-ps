@@ -1750,8 +1750,9 @@ projects:
 # --- Machine/Reinforcement Learning ---
   - name: Daline
     github_id: JarvisETHZ/Daline
-    labels: ["octave", "university"]
+    labels: ["matlab", "university"]
     category: mrl
+    paper_id: 10.3929/ethz-b-000681867
     # pypi_id:
     # conda_id:
     # dockerhub_id:
