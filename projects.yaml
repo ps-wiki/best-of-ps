@@ -1678,6 +1678,7 @@ projects:
     labels: ["lab"]
     resource: True
     github_id: lbl-hub/CSEE-Benchmark
+    paper_id: 10.13334/j.0258-8013.pcsee.230534
     # homepage:
     # license:
     description: A new type of power system calculation example by the China EPRI
