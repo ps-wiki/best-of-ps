@@ -1161,7 +1161,7 @@ projects:
 
   - name: Easy SimAuto
     category: intf
-    labels: ["pypi", "python", "university"]
+    labels: ["python", "university"]
     github_id: mzy2240/ESA
     paper_id: 10.21105/joss.02289
     pypi_id: esa
