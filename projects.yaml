@@ -871,7 +871,7 @@ projects:
 
   - name: US-REGEN
     category: steady-state
-    labels: ["non-profit"]
+    labels: ["gams", "non-profit"]
     github_id: epri-dev/US-REGEN
     # pypi_id:
     # conda_id:
