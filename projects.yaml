@@ -1303,8 +1303,8 @@ projects:
     description: Proximal Interior Point Quadratic Programming solver
 
   - name: AMPLPY
-    category: ops
-    labels: ["gha", "pypi", "conda", "jupyter", "python", "for-profit"]
+    category: intf
+    labels: ["python", "gha", "for-profit"]
     github_id: ampl/amplpy
     pypi_id: amplpy
     conda_id: conda-forge/amplpy
