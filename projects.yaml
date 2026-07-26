@@ -1577,6 +1577,7 @@ projects:
     labels: ["non-profit"]
     resource: True
     github_id: power-grid-lib/pglib-opf-hvdc
+    paper_id: 10.1109/TPWRS.2019.2897835
     homepage: https://power-grid-lib.github.io
     docs_url: https://ieeexplore.ieee.org/document/8636236
     license: CC-BY-4.0
