@@ -1005,8 +1005,8 @@ projects:
     description: CIMug's CIMTool for the CIM.
 
   - name: cimpyorm
-    category: intf
-    labels: ["gha", "python", "pypi", "university"]
+    category: dataman
+    labels: ["python", "gha", "university"]
     github_id: RWTH-IAEW/cimpyorm
     pypi_id: cimpyorm
     # conda_id:
