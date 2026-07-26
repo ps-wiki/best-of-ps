@@ -391,7 +391,7 @@ projects:
 
   - name: DOPER
     category: steady-state
-    labels: ["gha", "python", "jupyter", "lab"]
+    labels: ["python", "gha", "lab"]
     github_id: LBNL-ETA/DOPER
     # pypi_id:
     # conda_id:
