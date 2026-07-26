@@ -1117,8 +1117,8 @@ projects:
     description: Cross-platform Julia interface to OpenDSS
 
   - name: AltDSS/DSS C-API
-    category: intf
-    labels: ["gha", "volunteer"]
+    category: steady-state
+    labels: ["pascal", "gha", "community"]
     github_id: dss-extensions/dss_capi
     # pypi_id:
     # conda_id:
