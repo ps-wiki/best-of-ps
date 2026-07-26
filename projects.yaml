@@ -1425,7 +1425,7 @@ projects:
 
   - name: CVXOPT
     github_id: cvxopt/cvxopt
-    labels: ["gha", "pypi", "conda", "python", "octave", "julia", "university"]
+    labels: ["python", "c", "gha", "university"]
     category: ops
     pypi_id: cvxopt
     conda_id: conda-forge/cvxopt
