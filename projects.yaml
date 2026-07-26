@@ -1194,7 +1194,7 @@ projects:
 
   - name: powerfactory-tools
     category: intf
-    labels: ["pypi", "python", "university", "jupyter", "gha"]
+    labels: ["python", "gha", "university"]
     github_id: ieeh-tu-dresden/powerfactory-tools
     paper_id: 10.21105/joss.09281
     pypi_id: ieeh-powerfactory-tools
