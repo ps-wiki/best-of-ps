@@ -1463,8 +1463,9 @@ projects:
 
   - name: CVXPY
     github_id: cvxpy/cvxpy
-    labels: ["gha", "pypi", "conda", "python", "university"]
+    labels: ["python", "cpp", "gha", "community"]
     category: opl
+    paper_id: 10.1080/23307706.2017.1397554
     pypi_id: cvxpy
     conda_id: conda-forge/cvxpy
     # homepage:
