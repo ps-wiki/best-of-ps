@@ -1039,8 +1039,8 @@ projects:
     description: PSSE RAW parser
 
   - name: grg-pssedata
-    category: intf
-    labels: ["pypi", "python", "lab"]
+    category: dataman
+    labels: ["python", "lab"]
     github_id: lanl-ansi/grg-pssedata
     pypi_id: grg-pssedata
     # conda_id:
