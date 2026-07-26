@@ -574,7 +574,7 @@ projects:
     description: Multi-energy model for small scale applications in high spatial and temporal resolution
   - name: PyPSA-Earth
     category: steady-state
-    labels: ["gha", "python", "volunteer"]
+    labels: ["python", "gha", "community"]
     github_id: pypsa-meets-earth/pypsa-earth
     paper_id: 10.1016/j.apenergy.2023.121096
     # pypi_id:
