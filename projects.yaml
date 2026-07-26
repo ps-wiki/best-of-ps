@@ -974,7 +974,7 @@ projects:
 
   - name: matpowercaseframes
     category: intf
-    labels: ["gha", "python", "pypi", "jupyter", "university"]
+    labels: ["python", "gha", "university"]
     github_id: UGM-EPSLab/matpowercaseframes
     pypi_id: matpowercaseframes
     # conda_id:
