@@ -1947,9 +1947,9 @@ projects:
     homepage: https://powercybertraining.github.io
 
   - name: TextbookSimulations
-    category: book
+    category: education
     resource: True
-    labels: ["julia", "jupyter", "university"]
+    labels: ["julia", "university"]
     github_id: Power-Systems-Textbook/TextbookSimulations
     license: CC0-1.0
     description: Examples and problems accompanying Daniel Kirschen's Power Systems Textbook
