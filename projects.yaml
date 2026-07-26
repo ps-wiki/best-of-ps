@@ -1414,7 +1414,7 @@ projects:
 
   - name: KVXOPT
     github_id: sanurielf/kvxopt
-    labels: ["gha", "pypi", "conda", "python", "volunteer"]
+    labels: ["python", "c", "gha"]
     category: ops
     pypi_id: kvxopt
     conda_id: conda-forge/kvxopt
