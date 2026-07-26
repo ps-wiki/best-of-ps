@@ -1605,8 +1605,8 @@ projects:
     description: Extract data from ISOs and other sources
 
   - name: powerplantmatching
-    category: data
-    labels: ["gha", "pypi", "conda", "python", "university"]
+    category: dataman
+    labels: ["python", "gha", "university"]
     github_id: PyPSA/powerplantmatching
     paper_id: 10.1016/j.esr.2018.11.004
     pypi_id: powerplantmatching
