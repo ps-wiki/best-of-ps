@@ -182,11 +182,13 @@ projects:
     description: Distribution power system simulator
 
   - name: PowerSimulationsDynamics.jl
-    category: phasor
-    labels: ["gha", "julia", "lab"]
+    category: electromechanical
+    labels: ["julia", "gha", "lab"]
     github_id: NREL-Sienna/PowerSimulationsDynamics.jl
     julia_id: PowerSimulationsDynamics
-    # paper_id:
+    paper_id:
+      - "arXiv:2308.02921"
+      - 10.1109/TPWRS.2023.3303291
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/sienna
