@@ -549,10 +549,13 @@ projects:
     description: Power System Model for the United States
   - name: PyPSA-Eur
     category: steady-state
-    labels: ["gha", "python", "university"]
+    labels: ["python", "gha", "university"]
     github_id: PyPSA/pypsa-eur
     dockerhub_id: nimfetrisa/pypsa-eur
-    # paper_id:
+    paper_id:
+      - 10.1016/j.esr.2018.08.012
+      - 10.1016/j.joule.2023.06.016
+      - 10.1016/j.joule.2022.04.016
     # pypi_id:
     # conda_id:
     homepage: https://pypsa.org
