@@ -1399,7 +1399,7 @@ projects:
 
   - name: MadNLP
     category: ops
-    labels: ["gha", "julia", "university"]
+    labels: ["julia", "gha", "lab"]
     github_id: MadNLP/MadNLP.jl
     julia_id: MadNLP
     paper_id:
