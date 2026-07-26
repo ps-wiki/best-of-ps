@@ -197,8 +197,8 @@ projects:
     description: Dynamic Power System simulations; NREL Sienna
 
   - name: GenSAS
-    category: phasor
-    labels: ["cpp", "gha", "lab"]
+    category: steady-state
+    labels: ["cpp", "modelica", "gha", "lab"]
     github_id: ANL-CEEESA/gensas
     # pypi_id:
     # conda_id:
