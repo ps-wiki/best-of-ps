@@ -719,8 +719,8 @@ projects:
     description: Large-scale power grid optimization
 
   - name: Gurobi OptiMods
-    category: steady-state
-    labels: ["gha", "pypi", "python", "for-profit"]
+    category: opl
+    labels: ["python", "gha", "for-profit"]
     github_id: Gurobi/gurobi-optimods
     pypi_id: gurobi-optimods
     # conda_id:
