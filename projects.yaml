@@ -1588,6 +1588,7 @@ projects:
     labels: ["university"]
     resource: True
     github_id: enliten/ENLITEN-Grid-Econ-Data
+    paper_id: 10.1038/s41597-023-02448-w
     license: GPL-3
     description: Economic data on WECC and NPCC
 
