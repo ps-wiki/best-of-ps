@@ -527,7 +527,7 @@ projects:
 
   - name: PyPSA
     category: steady-state
-    labels: ["gha", "pypi", "conda", "python", "jupyter", "university"]
+    labels: ["python", "gha", "university"]
     github_id: PyPSA/PyPSA
     paper_id: 10.5334/jors.188
     pypi_id: pypsa
