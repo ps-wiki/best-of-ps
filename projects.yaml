@@ -1231,7 +1231,7 @@ projects:
 
   - name: CBC
     category: ops
-    labels: ["gha", "conda", "python", "julia", "c", "non-profit"]
+    labels: ["cpp", "gha", "non-profit"]
     github_id: coin-or/Cbc
     # pypi_id:
     conda_id: conda-forge/coincbc
