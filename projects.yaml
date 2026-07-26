@@ -1072,7 +1072,7 @@ projects:
 
   - name: PyDSS
     category: intf
-    labels: ["gha", "pypi", "python", "lab"]
+    labels: ["python", "gha", "lab"]
     github_id: NatLabRockies/PyDSS
     pypi_id: pydss
     # conda_id:
