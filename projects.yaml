@@ -1617,8 +1617,8 @@ projects:
     description: Tools to combine multiple power plant databases
 
   - name: Atlite
-    category: data
-    labels: ["gha", "pypi", "conda", "jupyter", "python", "university"]
+    category: dataman
+    labels: ["python", "gha", "university"]
     github_id: PyPSA/atlite
     paper_id: 10.21105/joss.03294
     pypi_id: atlite
