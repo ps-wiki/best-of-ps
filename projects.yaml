@@ -1094,7 +1094,7 @@ projects:
 
   - name: OpenDSSDirect.py
     category: intf
-    labels: ["gha", "pypi", "python", "jupyter", "volunteer"]
+    labels: ["python", "gha", "community"]
     github_id: dss-extensions/OpenDSSDirect.py
     pypi_id: OpenDSSDirect.py
     # paper_id:
