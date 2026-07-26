@@ -687,7 +687,7 @@ projects:
 
   - name: VeraGrid
     category: steady-state
-    labels: ["gha", "pypi", "python", "for-profit"]
+    labels: ["python", "gha", "for-profit"]
     github_id: SanPen/VeraGrid
     pypi_id: veragrid
     # conda_id:
