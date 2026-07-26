@@ -1449,8 +1449,11 @@ projects:
 
   - name: RSOME
     github_id: XiongPengNUS/rsome
-    labels: ["gha", "pypi", "jupyter", "python", "university"]
+    labels: ["python", "gha", "university"]
     category: opl
+    paper_id:
+      - 10.1287/ijoc.2023.1291
+      - 10.1287/mnsc.2020.3603
     pypi_id: rsome
     # conda_id:
     # homepage:
