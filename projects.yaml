@@ -413,7 +413,7 @@ projects:
     description: Wholesale Power Market Test Bed
   - name: AMES (V4.0)
     category: steady-state
-    labels: ["java", "university"]
+    labels: ["python", "java", "university"]
     github_id: ames-market/AMES-v4.0
     # pypi_id:
     # conda_id:
