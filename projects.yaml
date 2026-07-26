@@ -379,7 +379,7 @@ projects:
 
   - name: REopt
     category: steady-state
-    labels: ["gha", "python", "julia", "lab"]
+    labels: ["python", "gha", "lab"]
     github_id: NatLabRockies/REopt_API
     # pypi_id:
     # conda_id:
