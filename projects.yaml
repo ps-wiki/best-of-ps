@@ -1083,7 +1083,7 @@ projects:
 
   - name: AltDSS-Python
     category: intf
-    labels: ["pypi", "python", "jupyter"]
+    labels: ["python", "community"]
     github_id: dss-extensions/AltDSS-Python
     pypi_id: altdss
     # conda_id:
