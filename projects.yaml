@@ -1475,7 +1475,7 @@ projects:
 
   - name: Pyomo
     github_id: Pyomo/pyomo
-    labels: ["gha", "pypi", "conda", "jupyter", "python", "lab"]
+    labels: ["python", "gha", "lab"]
     category: opl
     paper_id: 10.1007/978-3-030-68928-5
     pypi_id: Pyomo
