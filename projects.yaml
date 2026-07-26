@@ -243,7 +243,7 @@ projects:
     description: A Power System Library written in the Modelica
 
   - name: PowerSystems
-    category: phasor
+    category: electromechanical
     labels: ["modelica", "non-profit"]
     github_id: modelica-3rdparty/PowerSystems
     # pypi_id:
