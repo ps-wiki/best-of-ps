@@ -283,8 +283,8 @@ projects:
     description: Balanced large-scale AC-DC hybrid power system analysis
 
   - name: PSAT
-    category: phasor
-    labels: ["octave", "university"]
+    category: electromechanical
+    labels: ["octave", "matlab", "university"]
     github_id: Sinan81/PSAT
     # pypi_id:
     # conda_id:
