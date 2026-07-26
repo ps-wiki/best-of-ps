@@ -1698,7 +1698,7 @@ projects:
   - name: PyPSA MCP
     category: llm
     labels: ["python"]
-    github_id: cdgaete/pypsa-mcp
+    github_id: open-energy-transition/pypsa-mcp
     pypi_id: pypsamcp
     # conda_id:
     # homepage:
