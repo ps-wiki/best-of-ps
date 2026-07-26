@@ -1351,8 +1351,8 @@ projects:
     description: Python interface for SCIP
 
   - name: OptiVerse
-    category: ops
-    labels: ["python", "volunteer"]
+    category: education
+    labels: ["python", "community"]
     github_id: feyntech-opt/OptiVerse
     # pypi_id:
     # conda_id:
