@@ -1630,7 +1630,7 @@ projects:
 
   - name: OpenDataElia
     category: data
-    labels: ["non-profit"]
+    labels: ["for-profit"]
     resource: True
     homepage: https://opendata.elia.be/pages/home/
     docs_url: https://help.opendatasoft.com/en/home
