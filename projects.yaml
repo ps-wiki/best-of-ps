@@ -962,7 +962,7 @@ projects:
     description: Easy Python Access to MATPOWER
 
   - name: mypower
-    category: steady-state
+    category: intf
     labels: ["python", "university"]
     github_id: yasirroni/mypower
     # paper_id:
