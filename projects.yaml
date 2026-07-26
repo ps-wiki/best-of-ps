@@ -6,6 +6,7 @@ configuration:
   markdown_footer_file: "config/footer.md"
   project_inactive_months: 12
   project_dead_months: 24
+  extension_script: "scripts/best_of_score_extension.py"
 
 
 categories:

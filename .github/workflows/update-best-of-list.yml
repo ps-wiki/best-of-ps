@@ -43,11 +43,33 @@ jobs:
           token: ${{ secrets.PAT_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+      - name: set-up-metadata-collection
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: install-metadata-dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.3
+      - name: test-score-extension
+        run: python -m unittest discover -s tests -v
+      - name: validate-curated-metadata
+        run: python scripts/validate_metadata.py
+      - name: collect-julia-package-metrics
+        run: |
+          python scripts/collect_julia_metrics.py \
+            --output metadata/generated/julia_metrics.json
+      - name: collect-paper-citation-metrics
+        run: |
+          python scripts/collect_citation_metrics.py \
+            --output metadata/generated/citation_metrics.json
+      - name: validate-collected-metrics
+        run: python scripts/validate_collected_metrics.py
       - name: update-best-of-list
         uses: best-of-lists/best-of-update-action@v0.8.5
         with:
           libraries_key: ${{ secrets.LIBRARIES_KEY }}
           github_key: ${{ secrets.PAT_TOKEN }}
+      - name: validate-applied-score-adjustments
+        run: python scripts/validate_applied_scores.py
       - name: soften generated dead-project wording
         shell: bash
         run: |

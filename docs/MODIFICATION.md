@@ -80,32 +80,49 @@ The first local scoring extension uses these curated project fields:
   one DOI, one `arXiv:` identifier, or a list mixing both for projects with
   multiple official core citation papers.
 
-The local scripts under `scripts/` support a staged workflow:
+The local scripts under `scripts/` extend the weekly update workflow:
 
 - `validate_metadata.py` checks repository-specific metadata conventions.
 - `collect_julia_metrics.py` collects Julia package-server user download
   counts through JuliaPkgStats.
 - `collect_citation_metrics.py` collects DOI citation metadata from OpenAlex
   and records arXiv paper identifiers.
-- `preview_score_extensions.py` previews local score adjustments against the
-  latest generated history CSV.
+- `validate_collected_metrics.py` stops generation if applicable curated
+  metadata is missing from collection or a provider returns an error.
+- `score_adjustments.py` owns the bounded scoring formula shared by production
+  generation and local previews.
+- `best_of_score_extension.py` uses the generator's supported extension hook
+  to add the adjustments before filtering, sorting, medal placement, history
+  generation, and README rendering.
+- `validate_applied_scores.py` verifies the generated history after the
+  upstream action and fails the update if the hook did not apply exact scores.
+- `preview_score_extensions.py` previews the same applied adjustments against
+  the latest generated history CSV.
 
-The current score-preview formula is intentionally bounded and log-scaled:
+The score-extension formula is intentionally bounded and log-scaled:
 
 - Julia adjustment: registration bonus plus a capped package-server monthly
   download score.
 - Citation adjustment: one paper-record bonus per project plus capped
   lifetime and recent citation-count scores aggregated across the project's
   resolved DOI-backed core papers.
+- A curated paper that is absent from OpenAlex keeps the paper-record bonus
+  but receives no provider-dependent citation-count bonus.
+- The raw components are retained in generated history, while their sum is
+  rounded to an integer before it is added to the upstream integer score.
 
-These adjustments are experimental until representative projects have been
-audited. The main fairness constraints are:
+The weekly workflow collects and validates both metric sources before invoking
+`best-of-update-action`. The extension records `upstream_projectrank`,
+`julia_adjustment`, `citation_adjustment`, and `bestps_adjustment` in generated
+history so each displayed score remains auditable.
+
+The main fairness constraints are:
 
 - Do not treat Julia package-server user requests as total Julia downloads.
 - Do not treat OpenAlex citation counts as universal citation counts.
 - Do not let raw downloads or citations dominate the upstream project score.
-- Compare rank movement on representative Python, Julia, solver, simulator, and
-  data projects before wiring the adjusted score into README rendering.
+- Review rank movement across representative Python, Julia, solver, simulator,
+  and data projects when changing the formula or caps.
 
 Generated metric outputs should go under `metadata/generated/`, which is ignored
 by default because those files are volatile snapshots.
