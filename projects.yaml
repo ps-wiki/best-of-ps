@@ -494,7 +494,7 @@ projects:
   - name: PowerSimulations.jl
     category: steady-state
     labels: ["gha", "julia", "lab"]
-    github_id: NREL-Sienna/PowerSimulations.jl
+    github_id: Sienna-Platform/PowerSimulations.jl
     julia_id: PowerSimulations
     # paper_id:
     # pypi_id:
