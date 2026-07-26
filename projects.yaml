@@ -1557,6 +1557,7 @@ projects:
     labels: ["non-profit"]
     resource: True
     github_id: power-grid-lib/pglib-opf
+    paper_id: "arXiv:1908.02788"
     homepage: https://power-grid-lib.github.io
     docs_url: https://arxiv.org/abs/1908.02788
     license: CC-BY-4.0
