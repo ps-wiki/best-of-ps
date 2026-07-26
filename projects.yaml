@@ -149,8 +149,8 @@ projects:
     description: Distribution system simulator
 
   - name: OpenDER
-    category: phasor
-    labels: ["pypi", "jupyter", "python", "c", "non-profit"]
+    category: pe
+    labels: ["python", "non-profit"]
     github_id: epri-dev/OpenDER
     pypi_id: opender
     # conda_id:
