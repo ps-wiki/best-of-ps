@@ -206,9 +206,10 @@ projects:
     license: BSD-3
     description: A C++ based generalized simulation tool based on semi-analytical solutions
   - name: PowerSAS.m
-    category: phasor
-    labels: ["octave", "lab"]
+    category: electromechanical
+    labels: ["octave", "matlab", "lab"]
     github_id: ANL-CEEESA/powersas.m
+    paper_id: 10.1109/OAJPE.2023.3245040
     # pypi_id:
     # conda_id:
     docs_url: https://powersasm.readthedocs.io/en/latest/index.html
