@@ -106,6 +106,9 @@ projects:
     category: emt
     labels: ["python", "lab"]
     github_id: NatLabRockies/ParaEMT_public
+    paper_id:
+      - 10.1109/TPWRD.2023.3342715
+      - 10.1016/j.epsr.2024.110734
     # pypi_id:
     # conda_id:
     # homepage:
