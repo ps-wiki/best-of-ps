@@ -506,7 +506,7 @@ projects:
   - name: PowerSystemsInvestments.jl
     category: steady-state
     labels: ["gha", "julia", "lab"]
-    github_id: NREL-Sienna/PowerSystemsInvestments.jl
+    github_id: Sienna-Platform/PowerSystemsInvestments.jl
     julia_id: PowerSystemsInvestments
     # pypi_id:
     # conda_id:
