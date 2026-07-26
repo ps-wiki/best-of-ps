@@ -305,8 +305,8 @@ projects:
     description: Unofficial repository of PST by Prof. Joe Chow
 
   - name: matmtdc
-    category: phasor
-    labels: ["octave", "university"]
+    category: electromechanical
+    labels: ["matlab", "university"]
     github_id: HuaizhiWang/matmtdc
     # pypi_id:
     # conda_id:
