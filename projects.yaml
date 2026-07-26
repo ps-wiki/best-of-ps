@@ -1292,8 +1292,9 @@ projects:
 
   - name: PIQP
     category: ops
-    labels: ["gha", "pypi", "conda", "python", "c", "octave", "r", "university"]
+    labels: ["cpp", "gha", "university"]
     github_id: PREDICT-EPFL/piqp
+    paper_id: 10.1109/CDC49753.2023.10383915
     pypi_id: piqp
     conda_id: conda-forge/piqp
     # homepage:
