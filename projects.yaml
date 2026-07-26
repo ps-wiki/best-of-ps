@@ -2025,9 +2025,9 @@ projects:
 # --- Database Management ---
   - name: dsgrid
     category: dataman
-    labels: ["gha", "python", "pypi", "lab"]
+    labels: ["python", "rust", "gha", "lab"]
     github_id: dsgrid/dsgrid
-    pypi_id: dsgrid
+    # pypi_id:
     # conda_id:
     # dockerhub_id:
     # homepage:
