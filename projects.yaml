@@ -1535,7 +1535,7 @@ projects:
     description: Create inputs for power systems models
 
   - name: DeepSolar
-    category: data
+    category: mrl
     labels: ["python", "university"]
     github_id: wangzhecheng/DeepSolar
     # pypi_id:
