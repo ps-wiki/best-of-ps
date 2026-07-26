@@ -1016,9 +1016,10 @@ projects:
     description: Python ORM middleware for IEC CIM and CGMES datasets
 
   - name: CIMpy
-    category: intf
-    labels: ["gha", "pypi", "python", "non-profit"]
+    category: dataman
+    labels: ["python", "gha", "non-profit"]
     github_id: sogno-platform/cimpy
+    paper_id: 10.1049/tje2.12208
     pypi_id: cimpy
     # conda_id:
     # homepage:
