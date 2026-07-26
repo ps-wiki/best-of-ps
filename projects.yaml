@@ -836,8 +836,9 @@ projects:
 
   - name: hynet
     category: steady-state
-    labels: ["pypi", "python", "university"]
+    labels: ["python", "university"]
     gitlab_id: tum-msv/hynet
+    paper_id: 10.1109/TPWRS.2019.2942988
     pypi_id: hynet
     # conda_id:
     # homepage:
