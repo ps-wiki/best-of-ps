@@ -1499,7 +1499,7 @@ projects:
     description: Julia-based Optimization Modeling Language
 
   - name: ExaModels
-    labels: ["gha", "julia", "university"]
+    labels: ["julia", "gha", "lab"]
     category: opl
     github_id: exanauts/ExaModels.jl
     julia_id: ExaModels
