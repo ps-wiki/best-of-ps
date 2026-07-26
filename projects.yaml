@@ -881,8 +881,8 @@ projects:
     description: U.S. regional economy, greenhouse gas, and energy model
 
   - name: PowerfulCases
-    category: data
-    labels: ["gha", "pypi", "octave", "python"]
+    category: dataman
+    labels: ["python", "julia", "matlab", "gha"]
     github_id: cuihantao/PowerfulCases
     pypi_id: powerfulcases
     # conda_id:
