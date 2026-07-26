@@ -2006,9 +2006,9 @@ projects:
     license: BSD-3.0
     description: Monte Carlo Assessment of PV Hosting Capacity of an Integrated MV-LV Network
   - name: LTB Demo
-    category: book
+    category: education
     resource: True
-    labels: ["jupyter", "python", "university"]
+    labels: ["python", "university"]
     github_id: CURENT/demo
     license: MIT
     description: Ready-to-use LTB usage examples
