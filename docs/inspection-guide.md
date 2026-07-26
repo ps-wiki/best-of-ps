@@ -119,6 +119,8 @@ build and maintain the project's first-party core.
 | `modelica` | — | Language | Modelica is a primary implementation or model-authoring language. |
 | `rust` | — | Language | Rust substantially implements the maintained first-party core. |
 | `r` | — | Language | R is a primary implementation or model-authoring language. |
+| `pascal` | — | Language | Object Pascal substantially implements the maintained first-party core. |
+| `gams` | — | Language | GAMS is a primary implementation or model-authoring language. |
 | `gha` | — | Automation | At least one `.yml` or `.yaml` file exists under the public repository's `.github/workflows`. |
 | `university` | — | Stewardship | A university-based team is the current principal steward. |
 | `lab` | — | Stewardship | A national or government laboratory is the current principal steward. |
@@ -126,9 +128,8 @@ build and maintain the project's first-party core.
 | `community` | `volunteer` | Stewardship | An independent contributor community is the current principal steward. |
 | `for-profit` | — | Stewardship | A commercial organization is the current principal steward. |
 
-The previous complete audit found possible recurring needs for `pascal` and
-`gams`. These are proposals, not approved target labels; reassess and obtain
-human approval before adding them.
+The complete catalog audit confirmed recurring needs for `pascal` and `gams`;
+both are approved target labels.
 
 ### Retired and Structured Metadata
 
