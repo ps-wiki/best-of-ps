@@ -1028,7 +1028,7 @@ projects:
     description: CIM files to the XML/RDF format
 
   - name: PSSE RAW
-    category: intf
+    category: dataman
     labels: ["python", "for-profit"]
     github_id: anderson-optimization/em-psse
     # pypi_id:
