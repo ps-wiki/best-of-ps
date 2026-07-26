@@ -1916,7 +1916,7 @@ projects:
   - name: PowerGraphics.jl
     category: vis
     labels: ["julia", "gha", "lab"]
-    github_id: NREL-Sienna/powergraphics.jl
+    github_id: Sienna-Platform/PowerGraphics.jl
     julia_id: PowerGraphics
     # pypi_id:
     # conda_id:
