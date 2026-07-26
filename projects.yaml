@@ -6,102 +6,100 @@ configuration:
   markdown_footer_file: "config/footer.md"
   project_inactive_months: 12
   project_dead_months: 24
+  extension_script: "scripts/best_of_score_extension.py"
 
 
 categories:
-  - category: "phasor"
-    title: "Phasor Simulation"
+  - category: "electro-mechanical"
+    title: "Electro-mechanical Transient Simulation"
   - category: "emt"
-    title: "EMT Simulation"
+    title: "Electro-magnetic Transient Simulation"
   - category: "steady-state"
-    title: "Steady State Simulation"
+    title: "Steady-State Analysis and Optimization"
   - category: "intf"
-    title: "Interface"
+    title: "Software Interface"
   - category: "gasnet"
-    title: "Gas Simulation"
-  - category: "cosime"
-    title: "Co-Simulation Environment"
+    title: "Gas-Network Analysis"
+  - category: "cosim"
+    title: "Co-Simulation"
   - category: "opl"
-    title: "Optimization Modeling Language (primarily for optimization modeling)"
+    title: "Optimization Modeling Language"
   - category: "ops"
-    title: "Optimizer (capable of solving)"
+    title: "Optimization Solver"
   - category: "mrl"
-    title: "Machine/Reinforcement Learning for Power Grid"
+    title: "Machine and Reinforcement Learning"
   - category: "vis"
     title: "Visualization"
   - category: "msg"
     title: "Messaging Environment"
   - category: "data"
-    title: "Power System Data"
+    title: "Power-System Data"
   - category: "pe"
     title: "Power Electronics"
   - category: "dataman"
-    title: "Database Management"
-  - category: "book"
-    title: "Textbook"
+    title: "Data Management"
+  - category: "education"
+    title: "Educational Resources"
   - category: "llm"
-    title: "Large Language Model"
+    title: "Large-Language-Model Application"
 
 labels:
 # --- Language ---
   - label: "python"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/python.ico"
-    description: "Support Python"
+    description: "Python substantially implements the maintained first-party core"
   - label: "julia"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/julia.ico"
-    description: "Support Julia"
+    description: "Julia substantially implements the maintained first-party core"
   - label: "octave"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/octave.ico"
-    description: "Support Octave"
+    description: "GNU Octave is a primary implementation or model-authoring language"
+  - label: "matlab"
+    description: "MATLAB is a primary implementation or model-authoring language"
   - label: "java"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/java.ico"
-    description: "Support Java"
+    description: "Java substantially implements the maintained first-party core"
   - label: "c"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/c.ico"
-    description: "Support C"
+    description: "C substantially implements the maintained first-party core"
   - label: "cpp"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/cpp.ico"
-    description: "Support C++"
+    description: "C++ substantially implements the maintained first-party core"
+  - label: "csharp"
+    description: "C# substantially implements the maintained first-party core"
   - label: "modelica"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/modelica.ico"
-    description: "Support Modelica"
+    description: "Modelica is a primary implementation or model-authoring language"
   - label: "rust"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/rust.ico"
-    description: "Support Rust"
+    description: "Rust substantially implements the maintained first-party core"
   - label: "r"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/r.ico"
-    description: "Support R"
-# --- Use ---
-  - label: "jupyter"
-    image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/jupyter.ico"
-    description: "Shipped with Jupyter Notebook examples"
+    description: "R is a primary implementation or model-authoring language"
+  - label: "pascal"
+    description: "Object Pascal substantially implements the maintained first-party core"
+  - label: "gams"
+    description: "GAMS is a primary implementation or model-authoring language"
 # --- CI ---
   - label: "gha"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/github.ico"
-    description: "Public GitHub Actions automation for validation, build, docs, release, publish, or deploy workflows"
-# --- Release Channels ---
-  - label: "pypi"
-    image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/pypi2.ico"
-    description: "Available on PyPI"
-  - label: "conda"
-    image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/anaconda.ico"
-    description: "Available on Conda"
-# --- Sponsors ---
+    description: "The public repository contains a GitHub Actions workflow"
+# --- Stewardship ---
   - label: "university"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/university.ico"
-    description: "Developed mainly at a university"
+    description: "A university-based team is the current principal steward"
   - label: "lab"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/lab.ico"
-    description: "Developed mainly at a national laboratory"
+    description: "A national or government laboratory is the current principal steward"
   - label: "non-profit"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/non-profit2.ico"
-    description: "Developed mainly at a non-profit organization that is neither a university nor a national lab"
-  - label: "volunteer"
+    description: "Another non-profit organization is the current principal steward"
+  - label: "community"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/volunteer.ico"
-    description: "Developed mainly by volunteers"
+    description: "An independent contributor community is the current principal steward"
   - label: "for-profit"
     image: "https://github.com/ps-wiki/best-of-ps/blob/main/config/icons/for-profit.ico"
-    description: "Developed mainly at a for-profit organization"
+    description: "A commercial organization is the current principal steward"
 
 projects:
 # --- EMT ---
@@ -109,6 +107,9 @@ projects:
     category: emt
     labels: ["python", "lab"]
     github_id: NatLabRockies/ParaEMT_public
+    paper_id:
+      - 10.1109/TPWRD.2023.3342715
+      - 10.1016/j.epsr.2024.110734
     # pypi_id:
     # conda_id:
     # homepage:
@@ -117,9 +118,19 @@ projects:
     description: Parallel EMT simulation
 
   - name: DPsim
-    category: emt
-    labels: ["gha", "pypi", "jupyter", "python", "c", "university"]
+    category: electro-mechanical
+    labels: ["cpp", "gha", "university"]
     github_id: sogno-platform/dpsim
+    paper_id:
+      - 10.1016/j.softx.2019.100253
+      - 10.1109/OSMSES58477.2023.10089718
+      - 10.1049/tje2.12208
+      - 10.1109/OSMSES54027.2022.9769135
+      - 10.3390/en14237989
+      - 10.3390/en14071860
+      - 10.3390/en13153879
+      - 10.1109/ICCEP.2017.8004805
+      - 10.1109/EI2.2017.8245739
     pypi_id: dpsim
     homepage: https://dpsim.fein-aachen.org/
     docs_url: https://dpsim.fein-aachen.org/docs/
@@ -129,7 +140,7 @@ projects:
 # --- Phasor ---
   - name: OpenDSS
     category: steady-state
-    labels: ["python", "julia", "c", "octave", "non-profit"]
+    labels: ["pascal", "cpp", "non-profit"]
     # github_id:
     # pypi_id:
     # conda_id:
@@ -139,8 +150,8 @@ projects:
     description: Distribution system simulator
 
   - name: OpenDER
-    category: phasor
-    labels: ["pypi", "jupyter", "python", "c", "non-profit"]
+    category: electro-mechanical
+    labels: ["python", "non-profit"]
     github_id: epri-dev/OpenDER
     pypi_id: opender
     # conda_id:
@@ -149,9 +160,10 @@ projects:
     description: Inverter-based DER simulation
 
   - name: GridPACK
-    category: phasor
-    labels: ["c", "gha", "python", "lab"]
+    category: electro-mechanical
+    labels: ["cpp", "gha", "lab"]
     github_id: GridOPTICS/GridPACK
+    paper_id: 10.1177/1094342015607609
     # pypi_id:
     # conda_id:
     homepage: https://gridpack.pnnl.gov/wiki/index.php/Main_Page
@@ -160,8 +172,8 @@ projects:
     description: High-Performance Electric Grid Simulation
 
   - name: GridLAB-D
-    category: phasor
-    labels: ["c", "gha", "lab"]
+    category: steady-state
+    labels: ["cpp", "gha", "lab"]
     github_id: gridlab-d/gridlab-d
     # pypi_id:
     # conda_id:
@@ -171,11 +183,13 @@ projects:
     description: Distribution power system simulator
 
   - name: PowerSimulationsDynamics.jl
-    category: phasor
-    labels: ["gha", "julia", "lab"]
-    github_id: NREL-Sienna/PowerSimulationsDynamics.jl
+    category: electro-mechanical
+    labels: ["julia", "gha", "lab"]
+    github_id: Sienna-Platform/PowerSimulationsDynamics.jl
     julia_id: PowerSimulationsDynamics
-    # paper_id:
+    paper_id:
+      - "arXiv:2308.02921"
+      - 10.1109/TPWRS.2023.3303291
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/sienna
@@ -184,8 +198,8 @@ projects:
     description: Dynamic Power System simulations; NREL Sienna
 
   - name: GenSAS
-    category: phasor
-    labels: ["cpp", "gha", "lab"]
+    category: steady-state
+    labels: ["cpp", "modelica", "gha", "lab"]
     github_id: ANL-CEEESA/gensas
     # pypi_id:
     # conda_id:
@@ -193,9 +207,10 @@ projects:
     license: BSD-3
     description: A C++ based generalized simulation tool based on semi-analytical solutions
   - name: PowerSAS.m
-    category: phasor
-    labels: ["octave", "lab"]
+    category: electro-mechanical
+    labels: ["octave", "matlab", "lab"]
     github_id: ANL-CEEESA/powersas.m
+    paper_id: 10.1109/OAJPE.2023.3245040
     # pypi_id:
     # conda_id:
     docs_url: https://powersasm.readthedocs.io/en/latest/index.html
@@ -203,8 +218,8 @@ projects:
     description: Power grid analysis framework based on semi-analytical solutions
 
   - name: LTB ANDES
-    category: phasor
-    labels: ["gha", "pypi", "conda", "jupyter", "python", "julia", "university"]
+    category: electro-mechanical
+    labels: ["python", "gha", "university"]
     github_id: CURENT/andes
     julia_id: Andes
     paper_id: 10.1109/TPWRS.2020.3017019
@@ -217,8 +232,8 @@ projects:
     description: Transient Stability Simulator; CURENT LTB
 
   - name: OpenIPSL
-    category: phasor
-    labels: ["gha", "modelica", "university"]
+    category: electro-mechanical
+    labels: ["modelica", "gha", "university"]
     github_id: OpenIPSL/OpenIPSL
     paper_id: 10.1016/j.softx.2022.101277
     # pypi_id:
@@ -229,7 +244,7 @@ projects:
     description: A Power System Library written in the Modelica
 
   - name: PowerSystems
-    category: phasor
+    category: electro-mechanical
     labels: ["modelica", "non-profit"]
     github_id: modelica-3rdparty/PowerSystems
     # pypi_id:
@@ -240,9 +255,12 @@ projects:
     description: Modelica 3rd party library for electrical power systems
 
   - name: OpenHybridSim
-    category: phasor
+    category: cosim
     labels: ["java", "university"]
     github_id: OpenHybridSim/OpenHybridSim-code
+    paper_id:
+      - 10.1109/TPWRS.2015.2479588
+      - 10.1109/PESGM.2016.7741233
     # pypi_id:
     # conda_id:
     # homepage:
@@ -251,9 +269,13 @@ projects:
     description: EMT-TS hybrid simulation
 
   - name: STEPS
-    category: phasor
-    labels: ["c", "pypi", "python", "university"]
+    category: electro-mechanical
+    labels: ["cpp", "university"]
     github_id: changgang/steps
+    paper_id:
+      - 10.1109/TPWRS.2020.3045102
+      - 10.1016/j.ijepes.2023.109509
+      - 10.1016/j.ijepes.2025.110651
     pypi_id: stepspy
     # conda_id:
     # homepage:
@@ -262,8 +284,8 @@ projects:
     description: Balanced large-scale AC-DC hybrid power system analysis
 
   - name: PSAT
-    category: phasor
-    labels: ["octave", "university"]
+    category: electro-mechanical
+    labels: ["octave", "matlab", "university"]
     github_id: Sinan81/PSAT
     # pypi_id:
     # conda_id:
@@ -273,8 +295,8 @@ projects:
     description: Unofficial repository of PSAT by Prof. Federico Milano
 
   - name: PST
-    category: phasor
-    labels: ["octave", "university"]
+    category: electro-mechanical
+    labels: ["matlab", "community"]
     github_id: cuihantao/pst
     # pypi_id:
     # conda_id:
@@ -284,8 +306,8 @@ projects:
     description: Unofficial repository of PST by Prof. Joe Chow
 
   - name: matmtdc
-    category: phasor
-    labels: ["octave", "university"]
+    category: electro-mechanical
+    labels: ["matlab", "university"]
     github_id: HuaizhiWang/matmtdc
     # pypi_id:
     # conda_id:
@@ -295,8 +317,8 @@ projects:
     description: Dynamic analysis of AC/DC hybrid power systems
 
   - name: Dynaωo
-    category: phasor
-    labels: ["gha", "modelica", "for-profit"]
+    category: electro-mechanical
+    labels: ["cpp", "modelica", "gha", "for-profit"]
     github_id: dynawo/dynawo
     homepage: http://dynawo.org
     docs_url: https://dynawo.github.io/docs/
@@ -304,8 +326,8 @@ projects:
     description: C++/Modelica simulation tools for power systems
 
   - name: Xyce
-    category: phasor
-    labels: ["pypi", "conda", "jupyter", "python", "lab"]
+    category: emt
+    labels: ["cpp", "lab"]
     github_id: Xyce/Xyce
     pypi_id: xyce
     conda_id: vlsida-eda/xyce
@@ -320,6 +342,7 @@ projects:
     category: steady-state
     labels: ["python", "lab"]
     github_id: NatLabRockies/ASSET
+    paper_id: 10.1109/PESGM52009.2025.11225841
     # pypi_id:
     # conda_id:
     # dockerhub_id:
@@ -344,7 +367,7 @@ projects:
 
   - name: EGRIP.jl
     category: steady-state
-    labels: ["julia", "octave", "gha", "lab"]
+    labels: ["julia", "matlab", "gha", "lab"]
     github_id: ANL-CEEESA/EGRIP.jl
     julia_id: EGRIP
     # pypi_id:
@@ -357,7 +380,7 @@ projects:
 
   - name: REopt
     category: steady-state
-    labels: ["gha", "python", "julia", "lab"]
+    labels: ["python", "gha", "lab"]
     github_id: NatLabRockies/REopt_API
     # pypi_id:
     # conda_id:
@@ -369,7 +392,7 @@ projects:
 
   - name: DOPER
     category: steady-state
-    labels: ["gha", "python", "jupyter", "lab"]
+    labels: ["python", "gha", "lab"]
     github_id: LBNL-ETA/DOPER
     # pypi_id:
     # conda_id:
@@ -391,7 +414,7 @@ projects:
     description: Wholesale Power Market Test Bed
   - name: AMES (V4.0)
     category: steady-state
-    labels: ["java", "university"]
+    labels: ["python", "java", "university"]
     github_id: ames-market/AMES-v4.0
     # pypi_id:
     # conda_id:
@@ -402,7 +425,7 @@ projects:
 
   - name: LTB AMS
     category: steady-state
-    labels: ["gha", "pypi", "conda", "jupyter", "python", "university"]
+    labels: ["python", "gha", "university"]
     github_id: CURENT/ams
     paper_id: 10.1109/TSTE.2025.3528027
     pypi_id: ltbams
@@ -423,8 +446,8 @@ projects:
     license: MPL-2.0
     description: Framework to build power system software
   - name: PyPowSyBl
-    category: steady-state
-    labels: ["gha", "pypi", "python", "java", "jupyter", "non-profit"]
+    category: intf
+    labels: ["python", "java", "gha", "non-profit"]
     github_id: powsybl/pypowsybl
     pypi_id: pypowsybl
     # conda_id:
@@ -447,7 +470,7 @@ projects:
   - name: PowerFlows.jl
     category: steady-state
     labels: ["gha", "julia", "lab"]
-    github_id: NREL-Sienna/PowerFlows.jl
+    github_id: Sienna-Platform/PowerFlows.jl
     julia_id: PowerFlows
     # paper_id:
     # pypi_id:
@@ -459,7 +482,7 @@ projects:
   - name: PowerNetworkMatrices.jl
     category: steady-state
     labels: ["gha", "julia", "lab"]
-    github_id: NREL-Sienna/PowerNetworkMatrices.jl
+    github_id: Sienna-Platform/PowerNetworkMatrices.jl
     julia_id: PowerNetworkMatrices
     # paper_id:
     # pypi_id:
@@ -471,7 +494,7 @@ projects:
   - name: PowerSimulations.jl
     category: steady-state
     labels: ["gha", "julia", "lab"]
-    github_id: NREL-Sienna/PowerSimulations.jl
+    github_id: Sienna-Platform/PowerSimulations.jl
     julia_id: PowerSimulations
     # paper_id:
     # pypi_id:
@@ -483,7 +506,7 @@ projects:
   - name: PowerSystemsInvestments.jl
     category: steady-state
     labels: ["gha", "julia", "lab"]
-    github_id: NREL-Sienna/PowerSystemsInvestments.jl
+    github_id: Sienna-Platform/PowerSystemsInvestments.jl
     julia_id: PowerSystemsInvestments
     # pypi_id:
     # conda_id:
@@ -492,9 +515,9 @@ projects:
     license: BSD-3
     description: Power Systems investment models; NREL Sienna
   - name: PowerSystemsInvestmentsPortfolios.jl
-    category: steady-state
-    labels: ["gha", "julia", "lab"]
-    github_id: NREL-Sienna/PowerSystemsInvestmentsPortfolios.jl
+    category: dataman
+    labels: ["julia", "gha", "lab"]
+    github_id: Sienna-Platform/PowerSystemsInvestmentsPortfolios.jl
     julia_id: PowerSystemsInvestmentsPortfolios
     # pypi_id:
     # conda_id:
@@ -505,7 +528,7 @@ projects:
 
   - name: PyPSA
     category: steady-state
-    labels: ["gha", "pypi", "conda", "python", "jupyter", "university"]
+    labels: ["python", "gha", "university"]
     github_id: PyPSA/PyPSA
     paper_id: 10.5334/jors.188
     pypi_id: pypsa
@@ -516,7 +539,7 @@ projects:
     description: Python for Power System Analysis
   - name: PyPSA-USA
     category: steady-state
-    labels: ["gha", "python", "jupyter", "university"]
+    labels: ["python", "gha", "university"]
     github_id: PyPSA/pypsa-usa
     # paper_id:
     # pypi_id:
@@ -527,10 +550,13 @@ projects:
     description: Power System Model for the United States
   - name: PyPSA-Eur
     category: steady-state
-    labels: ["gha", "python", "university"]
+    labels: ["python", "gha", "university"]
     github_id: PyPSA/pypsa-eur
     dockerhub_id: nimfetrisa/pypsa-eur
-    # paper_id:
+    paper_id:
+      - 10.1016/j.esr.2018.08.012
+      - 10.1016/j.joule.2023.06.016
+      - 10.1016/j.joule.2022.04.016
     # pypi_id:
     # conda_id:
     homepage: https://pypsa.org
@@ -539,7 +565,7 @@ projects:
     description: Sector-Coupled Optimisation Model of the European Energy System
   - name: PyPSA-Distribution
     category: steady-state
-    labels: ["gha", "python", "volunteer"]
+    labels: ["python", "gha", "community"]
     github_id: pypsa-meets-earth/pypsa-distribution
     # pypi_id:
     # conda_id:
@@ -549,7 +575,7 @@ projects:
     description: Multi-energy model for small scale applications in high spatial and temporal resolution
   - name: PyPSA-Earth
     category: steady-state
-    labels: ["gha", "python", "volunteer"]
+    labels: ["python", "gha", "community"]
     github_id: pypsa-meets-earth/pypsa-earth
     paper_id: 10.1016/j.apenergy.2023.121096
     # pypi_id:
@@ -561,8 +587,8 @@ projects:
 
   - name: LightSim2Grid
     category: steady-state
-    labels: ["gha", "pypi", "python", "for-profit"]
-    github_id: BDonnot/lightsim2grid
+    labels: ["cpp", "gha", "for-profit"]
+    github_id: Grid2op/lightsim2grid
     pypi_id: LightSim2Grid
     # conda_id:
     dockerhub_id: bdonnot/lightsim2grid
@@ -573,7 +599,7 @@ projects:
 
   - name: MOST
     category: steady-state
-    labels: ["gha", "octave", "university"]
+    labels: ["octave", "matlab", "gha", "university"]
     github_id: MATPOWER/most
     paper_id:
       - 10.1109/TPWRS.2010.2051168
@@ -586,7 +612,7 @@ projects:
     description: MATPOWER Optimal Scheduling Tool
   - name: MATPOWER
     category: steady-state
-    labels: ["gha", "octave", "university"]
+    labels: ["octave", "matlab", "gha", "university"]
     github_id: MATPOWER/matpower
     paper_id: 10.1109/TPWRS.2010.2051168
     # pypi_id:
@@ -598,9 +624,10 @@ projects:
     description: Steady state power flow simulation
 
   - name: DPLib
-    category: steady-state
-    labels: ["octave", "university"]
+    category: data
+    labels: ["matlab", "university"]
     github_id: LSU-RAISE-LAB/DPLib
+    paper_id: "arXiv:2506.20819"
     # pypi_id:
     # conda_id:
     # homepage:
@@ -610,7 +637,7 @@ projects:
 
   - name: pandapower
     category: steady-state
-    labels: ["gha", "pypi", "conda", "jupyter", "python", "university"]
+    labels: ["python", "gha", "university", "non-profit"]
     github_id: e2nIEE/pandapower
     paper_id: 10.1109/TPWRS.2018.2829021
     pypi_id: pandapower
@@ -623,9 +650,9 @@ projects:
 
   - name: PYPOWER
     category: steady-state
-    labels: ["gha", "pypi", "conda", "python", "non-profit"]
+    labels: ["python", "gha", "community"]
     github_id: rwl/PYPOWER
-    # paper_id:
+    paper_id: 10.1109/TPWRS.2010.2051168
     pypi_id: PYPOWER
     conda_id: invenia/pypower
     dockerhub_id: hwanghust/pypower
@@ -636,8 +663,9 @@ projects:
 
   - name: EGRET
     category: steady-state
-    labels: ["gha", "python", "lab"]
+    labels: ["python", "gha", "lab"]
     github_id: grid-parity-exchange/Egret
+    paper_id: 10.1287/ijoc.2019.0944
     # pypi_id:
     # conda_id:
     # homepage:
@@ -647,10 +675,10 @@ projects:
 
   - name: PowerModels.jl
     category: steady-state
-    labels: ["gha", "julia", "lab"]
+    labels: ["julia", "gha", "lab"]
     github_id: lanl-ansi/PowerModels.jl
     julia_id: PowerModels
-    # paper_id:
+    paper_id: 10.23919/PSCC.2018.8442948
     # pypi_id:
     # conda_id:
     # homepage:
@@ -659,20 +687,20 @@ projects:
     description: Power Network Optimization
 
   - name: VeraGrid
-    category: steady-state
-    labels: ["gha", "pypi", "python", "for-profit"]
+    category: emt
+    labels: ["python", "gha", "for-profit"]
     github_id: SanPen/VeraGrid
     pypi_id: veragrid
     # conda_id:
-    homepage: https://www.eroots.tech/software
+    homepage: https://eroots.tech/veragrid-gslv
     docs_url: https://veragrid.readthedocs.io/en/latest/?badge=latest
     license: MPL-2.0
     description: Cross-platform power systems software, power flows, investments analysis, optimization and plenty of other stuff
 
   - name: GridPath
     category: steady-state
-    labels: ["gha", "pypi", "python", "for-profit"]
-    github_id: blue-marble/gridpath
+    labels: ["python", "gha", "for-profit"]
+    github_id: sylvan-energy/gridpath
     pypi_id: GridPath
     # conda_id:
     homepage: https://www.gridpath.io/
@@ -682,8 +710,8 @@ projects:
 
   - name: ExaGO
     category: steady-state
-    labels: ["gha", "jupyter", "c", "python", "lab"]
-    github_id: pnnl/ExaGO
+    labels: ["cpp", "gha", "lab"]
+    github_id: ORNL/ExaGO
     # pypi_id:
     # conda_id:
     homepage: https://www.gridpath.io/
@@ -692,8 +720,8 @@ projects:
     description: Large-scale power grid optimization
 
   - name: Gurobi OptiMods
-    category: steady-state
-    labels: ["gha", "pypi", "python", "for-profit"]
+    category: opl
+    labels: ["python", "gha", "for-profit"]
     github_id: Gurobi/gurobi-optimods
     pypi_id: gurobi-optimods
     # conda_id:
@@ -703,8 +731,8 @@ projects:
     description: Implemented optimization use cases using Gurobi
 
   - name: PowerFlowAnalyzer
-    category: steady-state
-    labels: ["octave", "java", "university"]
+    category: vis
+    labels: ["matlab", "java", "university"]
     github_id: power-flow-analyzer/PowerFlowAnalyzer
     # pypi_id:
     # conda_id:
@@ -715,9 +743,10 @@ projects:
 
   - name: ReEDS-2.0
     category: steady-state
-    labels: ["python", "gha", "lab"]
-    github_id: NatLabRockies/ReEDS-2.0
+    labels: ["python", "julia", "gams", "gha", "lab"]
+    github_id: ReEDS-Model/ReEDS
     # paper_id:
+    name: ReEDS
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/reeds/
@@ -728,7 +757,7 @@ projects:
   - name: GenX
     category: steady-state
     labels: ["julia", "gha", "university"]
-    github_id: GenXProject/GenX
+    github_id: GenXProject/GenX.jl
     julia_id: GenX
     # paper_id:
     # pypi_id:
@@ -740,7 +769,7 @@ projects:
 
   - name: Power Grid Model
     category: steady-state
-    labels: ["gha", "pypi", "conda", "python", "c", "jupyter", "non-profit"]
+    labels: ["cpp", "gha", "non-profit"]
     github_id: PowerGridModel/power-grid-model
     paper_id: 10.1049/icp.2023.0633
     pypi_id: power-grid-model
@@ -751,9 +780,10 @@ projects:
     description: Steady-state distribution power system analysis
 
   - name: EV-EcoSim
-    category: steady-state
-    labels: ["gha", "python", "university"]
+    category: cosim
+    labels: ["python", "gha", "university"]
     github_id: ebalogun01/EV-EcoSim/
+    paper_id: 10.1109/TSG.2023.3339374
     # pypi_id:
     # conda_id:
     # homepage:
@@ -762,8 +792,8 @@ projects:
     description: A grid-aware co-simulation platform for the design and optimization of EV Charging Infrastructure
 
   - name: DSSData
-    category: steady-state
-    labels: ["gha", "pypi", "python"]
+    category: intf
+    labels: ["python", "gha"]
     github_id: felipemarkson/dssdata
     # paper_id:
     pypi_id: dssdata
@@ -773,9 +803,9 @@ projects:
     description: A micro-framework for simulation and data analysis of distribution systems modeled on OpenDSS
 
   - name: TESP
-    category: steady-state
+    category: cosim
     github_id: pnnl/tesp
-    labels: ["gha", "python", "jupyter", "pypi", "lab"]
+    labels: ["python", "gha", "lab"]
     pypi_id: tesp_support
     # homepage:
     docs_url: https://tesp.readthedocs.io/en/latest/
@@ -784,8 +814,9 @@ projects:
 
   - name: openTEPES
     category: steady-state
-    labels: ["pypi", "python", "jupyter", "gha", "university"]
+    labels: ["python", "gha", "university"]
     github_id: IIT-EnergySystemModels/openTEPES
+    paper_id: 10.1016/j.softx.2022.101070
     pypi_id: openTEPES
     # conda_id:
     # homepage:
@@ -806,8 +837,9 @@ projects:
 
   - name: hynet
     category: steady-state
-    labels: ["pypi", "python", "university"]
+    labels: ["python", "university"]
     gitlab_id: tum-msv/hynet
+    paper_id: 10.1109/TPWRS.2019.2942988
     pypi_id: hynet
     # conda_id:
     # homepage:
@@ -817,8 +849,9 @@ projects:
 
   - name: OATS
     category: steady-state
-    labels: ["pypi", "python", "university"]
+    labels: ["python", "university"]
     github_id: bukhsh/oats
+    paper_id: 10.1109/TPWRS.2020.2986081
     pypi_id: oatspower
     # conda_id:
     # homepage:
@@ -828,7 +861,7 @@ projects:
 
   - name: Prescient
     category: steady-state
-    labels: ["gha", "pypi", "python"]
+    labels: ["python", "gha", "lab"]
     github_id: grid-parity-exchange/Prescient
     pypi_id: gridx-prescient
     # conda_id:
@@ -839,7 +872,7 @@ projects:
 
   - name: US-REGEN
     category: steady-state
-    labels: ["non-profit"]
+    labels: ["gams", "non-profit"]
     github_id: epri-dev/US-REGEN
     # pypi_id:
     # conda_id:
@@ -849,8 +882,8 @@ projects:
     description: U.S. regional economy, greenhouse gas, and energy model
 
   - name: PowerfulCases
-    category: data
-    labels: ["gha", "pypi", "octave", "python"]
+    category: dataman
+    labels: ["python", "julia", "matlab", "gha"]
     github_id: cuihantao/PowerfulCases
     pypi_id: powerfulcases
     # conda_id:
@@ -860,7 +893,7 @@ projects:
     description: Test case data management for power systems simulation
 
   - name: PowerDynData.jl
-    category: data
+    category: dataman
     labels: ["julia", "gha"]
     github_id: cuihantao/PowerDynData.jl
     julia_id: PowerDynData
@@ -883,9 +916,10 @@ projects:
     description: Reliability Test System dataset for Grid Modernization Lab Consortium studies
 
   - name: ERAD
-    category: intf
-    labels: ["gha", "pypi", "python", "lab"]
+    category: steady-state
+    labels: ["python", "gha", "lab"]
     github_id: NLR-Distribution-Suite/erad
+    paper_id: 10.21105/joss.08782
     pypi_id: NREL-erad
     # conda_id:
     # homepage:
@@ -895,7 +929,7 @@ projects:
 
   - name: powfacpy
     category: intf
-    labels: ["pypi", "python", "non-profit"]
+    labels: ["python", "non-profit"]
     github_id: FraunhIEE-UniKassel-PowSysStability/powfacpy
     pypi_id: powfacpy
     # conda_id:
@@ -906,7 +940,7 @@ projects:
 
   - name: PSST
     category: steady-state
-    labels: ["gha", "pypi", "python", "university"]
+    labels: ["python", "gha", "university"]
     github_id: ames-market/psst
     pypi_id: psst
     # conda_id:
@@ -918,7 +952,7 @@ projects:
 # --- Interface ---
   - name: matpower-pip
     category: intf
-    labels: ["gha", "pypi", "python", "university"]
+    labels: ["python", "gha", "university"]
     github_id: yasirroni/matpower-pip
     # paper_id:
     pypi_id: matpower
@@ -929,7 +963,7 @@ projects:
     description: Easy Python Access to MATPOWER
 
   - name: mypower
-    category: steady-state
+    category: intf
     labels: ["python", "university"]
     github_id: yasirroni/mypower
     # paper_id:
@@ -941,7 +975,7 @@ projects:
 
   - name: matpowercaseframes
     category: intf
-    labels: ["gha", "python", "pypi", "jupyter", "university"]
+    labels: ["python", "gha", "university"]
     github_id: UGM-EPSLab/matpowercaseframes
     pypi_id: matpowercaseframes
     # conda_id:
@@ -972,8 +1006,8 @@ projects:
     description: CIMug's CIMTool for the CIM.
 
   - name: cimpyorm
-    category: intf
-    labels: ["gha", "python", "pypi", "university"]
+    category: dataman
+    labels: ["python", "gha", "university"]
     github_id: RWTH-IAEW/cimpyorm
     pypi_id: cimpyorm
     # conda_id:
@@ -983,9 +1017,10 @@ projects:
     description: Python ORM middleware for IEC CIM and CGMES datasets
 
   - name: CIMpy
-    category: intf
-    labels: ["gha", "pypi", "python", "non-profit"]
+    category: dataman
+    labels: ["python", "gha", "non-profit"]
     github_id: sogno-platform/cimpy
+    paper_id: 10.1049/tje2.12208
     pypi_id: cimpy
     # conda_id:
     # homepage:
@@ -994,7 +1029,7 @@ projects:
     description: CIM files to the XML/RDF format
 
   - name: PSSE RAW
-    category: intf
+    category: dataman
     labels: ["python", "for-profit"]
     github_id: anderson-optimization/em-psse
     # pypi_id:
@@ -1005,8 +1040,8 @@ projects:
     description: PSSE RAW parser
 
   - name: grg-pssedata
-    category: intf
-    labels: ["pypi", "python", "lab"]
+    category: dataman
+    labels: ["python", "lab"]
     github_id: lanl-ansi/grg-pssedata
     pypi_id: grg-pssedata
     # conda_id:
@@ -1017,8 +1052,9 @@ projects:
 
   - name: Andes.jl
     category: intf
-    labels: ["gha", "julia", "university"]
+    labels: ["julia", "gha", "university"]
     github_id: cuihantao/Andes.jl
+    julia_id: Andes
     # pypi_id:
     # conda_id:
     homepage: https://ltb.curent.org
@@ -1027,7 +1063,7 @@ projects:
 
   - name: OpenDER interface
     category: intf
-    labels: ["python", "jupyter", "non-profit"]
+    labels: ["python", "non-profit"]
     github_id: epri-dev/OpenDER_interface
     # pypi_id:
     # conda_id:
@@ -1037,7 +1073,7 @@ projects:
 
   - name: PyDSS
     category: intf
-    labels: ["gha", "pypi", "python", "lab"]
+    labels: ["python", "gha", "lab"]
     github_id: NatLabRockies/PyDSS
     pypi_id: pydss
     # conda_id:
@@ -1048,7 +1084,7 @@ projects:
 
   - name: AltDSS-Python
     category: intf
-    labels: ["pypi", "python", "jupyter"]
+    labels: ["python", "community"]
     github_id: dss-extensions/AltDSS-Python
     pypi_id: altdss
     # conda_id:
@@ -1059,7 +1095,7 @@ projects:
 
   - name: OpenDSSDirect.py
     category: intf
-    labels: ["gha", "pypi", "python", "jupyter", "volunteer"]
+    labels: ["python", "gha", "community"]
     github_id: dss-extensions/OpenDSSDirect.py
     pypi_id: OpenDSSDirect.py
     # paper_id:
@@ -1071,7 +1107,7 @@ projects:
 
   - name: OpenDSSDirect.jl
     category: intf
-    labels: ["gha", "julia", "volunteer"]
+    labels: ["julia", "gha", "community"]
     github_id: dss-extensions/OpenDSSDirect.jl
     julia_id: OpenDSSDirect
     # pypi_id:
@@ -1082,8 +1118,8 @@ projects:
     description: Cross-platform Julia interface to OpenDSS
 
   - name: AltDSS/DSS C-API
-    category: intf
-    labels: ["gha", "volunteer"]
+    category: steady-state
+    labels: ["pascal", "gha", "community"]
     github_id: dss-extensions/dss_capi
     # pypi_id:
     # conda_id:
@@ -1094,7 +1130,7 @@ projects:
 
   - name: DSS MATLAB
     category: intf
-    labels: ["gha", "octave", "volunteer"]
+    labels: ["matlab", "gha", "community"]
     github_id: dss-extensions/dss_matlab
     # pypi_id:
     # conda_id:
@@ -1105,7 +1141,7 @@ projects:
 
   - name: DSS Sharp
     category: intf
-    labels: ["gha", "volunteer"]
+    labels: ["csharp", "gha", "community"]
     github_id: dss-extensions/dss_sharp
     # pypi_id:
     # conda_id:
@@ -1116,7 +1152,7 @@ projects:
 
   - name: py-dss-interface
     category: intf
-    labels: ["pypi", "python", "jupyter", "non-profit"]
+    labels: ["python", "non-profit"]
     github_id: PauloRadatz/py_dss_interface
     pypi_id: py-dss-interface
     # conda_id:
@@ -1126,7 +1162,7 @@ projects:
 
   - name: Easy SimAuto
     category: intf
-    labels: ["pypi", "python", "university"]
+    labels: ["python", "university"]
     github_id: mzy2240/ESA
     paper_id: 10.21105/joss.02289
     pypi_id: esa
@@ -1148,7 +1184,7 @@ projects:
 
   - name: mhi-pscad
     category: intf
-    labels: ["pypi", "python", "for-profit"]
+    labels: ["python", "for-profit"]
     # github_id:
     pypi_id: mhi-pscad
     # conda_id:
@@ -1159,7 +1195,7 @@ projects:
 
   - name: powerfactory-tools
     category: intf
-    labels: ["pypi", "python", "university", "jupyter", "gha"]
+    labels: ["python", "gha", "university"]
     github_id: ieeh-tu-dresden/powerfactory-tools
     paper_id: 10.21105/joss.09281
     pypi_id: ieeh-powerfactory-tools
@@ -1184,7 +1220,7 @@ projects:
     description: Interior-point solver for convex conic optimisation in Julia
   - name: Clarabel.rs
     category: ops
-    labels: ["gha", "pypi", "conda", "python", "rust", "university"]
+    labels: ["rust", "gha", "university"]
     github_id: oxfordcontrol/Clarabel.rs
     paper_id: "arXiv:2405.12762"
     pypi_id: clarabel
@@ -1196,7 +1232,7 @@ projects:
 
   - name: CBC
     category: ops
-    labels: ["gha", "conda", "python", "julia", "c", "non-profit"]
+    labels: ["cpp", "gha", "non-profit"]
     github_id: coin-or/Cbc
     # pypi_id:
     conda_id: conda-forge/coincbc
@@ -1207,8 +1243,8 @@ projects:
 
   - name: Clp
     category: ops
-    labels: ["gha", "conda", "python", "julia", "c", "non-profit"]
-    github_id: coin-or/Cbc
+    labels: ["cpp", "gha", "non-profit"]
+    github_id: coin-or/Clp
     # pypi_id:
     conda_id: conda-forge/coin-or-clp
     homepage: https://www.coin-or.org/
@@ -1218,7 +1254,7 @@ projects:
 
   - name: SCS
     category: ops
-    labels: ["gha", "pypi", "conda", "python", "octave", "julia", "r", "c", "university"]
+    labels: ["c", "gha", "university"]
     github_id: cvxgrp/scs
     julia_id: SCS
     paper_id: 10.1007/s10957-016-0892-3
@@ -1231,10 +1267,10 @@ projects:
 
   - name: ECOS
     category: ops
-    labels: ["pypi", "conda", "python", "julia", "c", "octave", "r", "university"]
+    labels: ["c"]
     github_id: embotech/ecos
     julia_id: ECOS
-    # paper_id:
+    paper_id: 10.23919/ECC.2013.6669541
     pypi_id: ecos
     conda_id: conda-forge/ecos
     # homepage:
@@ -1244,7 +1280,7 @@ projects:
 
   - name: OSQP
     category: ops
-    labels: ["gha", "pypi", "conda", "python", "c", "julia", "octave", "r", "university"]
+    labels: ["c", "gha", "university"]
     github_id: osqp/osqp
     julia_id: OSQP
     paper_id: 10.1007/s12532-020-00179-2
@@ -1257,8 +1293,9 @@ projects:
 
   - name: PIQP
     category: ops
-    labels: ["gha", "pypi", "conda", "python", "c", "octave", "r", "university"]
+    labels: ["cpp", "gha", "university"]
     github_id: PREDICT-EPFL/piqp
+    paper_id: 10.1109/CDC49753.2023.10383915
     pypi_id: piqp
     conda_id: conda-forge/piqp
     # homepage:
@@ -1267,8 +1304,8 @@ projects:
     description: Proximal Interior Point Quadratic Programming solver
 
   - name: AMPLPY
-    category: ops
-    labels: ["gha", "pypi", "conda", "jupyter", "python", "for-profit"]
+    category: intf
+    labels: ["python", "gha", "for-profit"]
     github_id: ampl/amplpy
     pypi_id: amplpy
     conda_id: conda-forge/amplpy
@@ -1279,8 +1316,9 @@ projects:
 
   - name: Ipopt
     category: ops
-    labels: ["pypi", "conda", "python", "non-profit"]
+    labels: ["cpp", "non-profit"]
     github_id: coin-or/Ipopt
+    paper_id: 10.1007/s10107-004-0559-y
     pypi_id: ipopt
     conda_id: conda-forge/ipopt
     homepage: https://www.coin-or.org/
@@ -1292,7 +1330,7 @@ projects:
     github_id: ERGO-Code/HiGHS
     julia_id: HiGHS
     paper_id: 10.1007/s12532-017-0130-5
-    labels: ["gha", "pypi", "conda", "jupyter", "python", "c", "julia", "rust", "r", "cpp", "university"]
+    labels: ["cpp", "c", "gha", "university"]
     category: ops
     pypi_id: highspy
     conda_id: conda-forge/highs
@@ -1302,8 +1340,8 @@ projects:
     description: Large-scale Sparse Linear Problem Optimizer
 
   - name: PySCIPOpt
-    category: ops
-    labels: ["gha", "pypi", "conda", "python", "lab"]
+    category: intf
+    labels: ["python", "gha", "community"]
     github_id: scipopt/PySCIPOpt
     paper_id: 10.1007/978-3-319-42432-3_37
     pypi_id: PySCIPOpt
@@ -1314,8 +1352,8 @@ projects:
     description: Python interface for SCIP
 
   - name: OptiVerse
-    category: ops
-    labels: ["python", "volunteer"]
+    category: education
+    labels: ["python", "community"]
     github_id: feyntech-opt/OptiVerse
     # pypi_id:
     # conda_id:
@@ -1326,7 +1364,7 @@ projects:
 
   - name: OR-Tools
     category: ops
-    labels: ["gha", "pypi", "conda", "python", "cpp", "java", "for-profit"]
+    labels: ["cpp", "gha", "for-profit"]
     github_id: google/or-tools
     pypi_id: ortools
     conda_id: conda-forge/ortools-python
@@ -1337,9 +1375,10 @@ projects:
 
   - name: Tulip
     category: ops
-    labels: ["gha", "julia", "university"]
-    github_id: google/or-tools
+    labels: ["julia", "gha", "university"]
+    github_id: ds4dm/Tulip.jl
     julia_id: Tulip
+    paper_id: 10.1007/s12532-020-00200-8
     # pypi_id:
     # conda_id:
     # homepage:
@@ -1349,8 +1388,9 @@ projects:
 
   - name: Xopt
     category: ops
-    labels: ["gha", "python", "pypi", "conda", "lab"]
-    github_id: google/or-tools
+    labels: ["python", "gha", "lab"]
+    github_id: xopt-org/Xopt
+    paper_id: 10.18429/JACoW-IPAC2023-THPL164
     pypi_id: xopt
     conda_id: conda-forge/xopt
     # homepage:
@@ -1360,7 +1400,7 @@ projects:
 
   - name: MadNLP
     category: ops
-    labels: ["gha", "julia", "university"]
+    labels: ["julia", "gha", "lab"]
     github_id: MadNLP/MadNLP.jl
     julia_id: MadNLP
     paper_id:
@@ -1374,8 +1414,8 @@ projects:
     description: A solver for nonlinear programming with GPU support
 
   - name: KVXOPT
-    github_id: sanurielf/kvxopt
-    labels: ["gha", "pypi", "conda", "python", "volunteer"]
+    github_id: kvxopt/kvxopt
+    labels: ["python", "c", "gha"]
     category: ops
     pypi_id: kvxopt
     conda_id: conda-forge/kvxopt
@@ -1386,7 +1426,7 @@ projects:
 
   - name: CVXOPT
     github_id: cvxopt/cvxopt
-    labels: ["gha", "pypi", "conda", "python", "octave", "julia", "university"]
+    labels: ["python", "c", "gha", "university"]
     category: ops
     pypi_id: cvxopt
     conda_id: conda-forge/cvxopt
@@ -1398,8 +1438,9 @@ projects:
 # --- Optimization Language ---
   - name: PyOptInterface
     github_id: metab0t/PyOptInterface
-    labels: ["gha", "pypi", "jupyter", "python", "volunteer"]
+    labels: ["python", "cpp", "gha"]
     category: opl
+    paper_id: 10.1109/TPWRS.2024.3483489
     pypi_id: pyoptinterface
     # conda_id:
     # homepage:
@@ -1409,8 +1450,11 @@ projects:
 
   - name: RSOME
     github_id: XiongPengNUS/rsome
-    labels: ["gha", "pypi", "jupyter", "python", "university"]
+    labels: ["python", "gha", "university"]
     category: opl
+    paper_id:
+      - 10.1287/ijoc.2023.1291
+      - 10.1287/mnsc.2020.3603
     pypi_id: rsome
     # conda_id:
     # homepage:
@@ -1420,8 +1464,9 @@ projects:
 
   - name: CVXPY
     github_id: cvxpy/cvxpy
-    labels: ["gha", "pypi", "conda", "python", "university"]
+    labels: ["python", "cpp", "gha", "community"]
     category: opl
+    paper_id: 10.1080/23307706.2017.1397554
     pypi_id: cvxpy
     conda_id: conda-forge/cvxpy
     # homepage:
@@ -1431,7 +1476,7 @@ projects:
 
   - name: Pyomo
     github_id: Pyomo/pyomo
-    labels: ["gha", "pypi", "conda", "jupyter", "python", "lab"]
+    labels: ["python", "gha", "lab"]
     category: opl
     paper_id: 10.1007/978-3-030-68928-5
     pypi_id: Pyomo
@@ -1442,7 +1487,7 @@ projects:
     description: Python-based Optimization Modeling Language
 
   - name: JuMP
-    labels: ["gha", "jupyter", "julia", "non-profit"]
+    labels: ["julia", "gha", "non-profit"]
     category: opl
     github_id: jump-dev/JuMP.jl
     julia_id: JuMP
@@ -1455,7 +1500,7 @@ projects:
     description: Julia-based Optimization Modeling Language
 
   - name: ExaModels
-    labels: ["gha", "julia", "university"]
+    labels: ["julia", "gha", "lab"]
     category: opl
     github_id: exanauts/ExaModels.jl
     julia_id: ExaModels
@@ -1469,8 +1514,8 @@ projects:
 
 # --- Data Source ---
   - name: EnergyDataModel
-    category: data
-    labels: ["pypi", "python", "jupyter", "for-profit"]
+    category: dataman
+    labels: ["python", "gha", "for-profit"]
     github_id: rebase-energy/EnergyDataModel
     pypi_id: energydatamodel
     # conda_id:
@@ -1480,8 +1525,8 @@ projects:
     description: Represent energy systems as Python data classes
 
   - name: PowerGenome
-    category: data
-    labels: ["gha", "pypi", "conda", "python"]
+    category: dataman
+    labels: ["python", "gha"]
     github_id: PowerGenome/PowerGenome
     pypi_id: PowerGenome
     conda_id: conda-forge/powergenome
@@ -1491,7 +1536,7 @@ projects:
     description: Create inputs for power systems models
 
   - name: DeepSolar
-    category: data
+    category: mrl
     labels: ["python", "university"]
     github_id: wangzhecheng/DeepSolar
     # pypi_id:
@@ -1502,7 +1547,7 @@ projects:
 
   - name: Australian MV-LV Networks
     category: data
-    labels: ["jupyter", "python", "university"]
+    labels: ["university"]
     resource: True
     github_id: Team-Nando/MV-LV-Networks
     license: BSD-3
@@ -1513,6 +1558,7 @@ projects:
     labels: ["non-profit"]
     resource: True
     github_id: power-grid-lib/pglib-opf
+    paper_id: "arXiv:1908.02788"
     homepage: https://power-grid-lib.github.io
     docs_url: https://arxiv.org/abs/1908.02788
     license: CC-BY-4.0
@@ -1532,6 +1578,7 @@ projects:
     labels: ["non-profit"]
     resource: True
     github_id: power-grid-lib/pglib-opf-hvdc
+    paper_id: 10.1109/TPWRS.2019.2897835
     homepage: https://power-grid-lib.github.io
     docs_url: https://ieeexplore.ieee.org/document/8636236
     license: CC-BY-4.0
@@ -1542,13 +1589,14 @@ projects:
     labels: ["university"]
     resource: True
     github_id: enliten/ENLITEN-Grid-Econ-Data
+    paper_id: 10.1038/s41597-023-02448-w
     license: GPL-3
     description: Economic data on WECC and NPCC
 
   - name: GridStatus
-    category: data
-    labels: ["gha", "pypi", "conda", "python", "for-profit"]
-    github_id: kmax12/gridstatus
+    category: dataman
+    labels: ["python", "gha", "for-profit"]
+    github_id: gridstatus/gridstatus
     # paper_id:
     pypi_id: gridstatus
     conda_id: services/gridstatus
@@ -1558,8 +1606,8 @@ projects:
     description: Extract data from ISOs and other sources
 
   - name: powerplantmatching
-    category: data
-    labels: ["gha", "pypi", "conda", "python", "university"]
+    category: dataman
+    labels: ["python", "gha", "university"]
     github_id: PyPSA/powerplantmatching
     paper_id: 10.1016/j.esr.2018.11.004
     pypi_id: powerplantmatching
@@ -1570,8 +1618,8 @@ projects:
     description: Tools to combine multiple power plant databases
 
   - name: Atlite
-    category: data
-    labels: ["gha", "pypi", "conda", "jupyter", "python", "university"]
+    category: dataman
+    labels: ["python", "gha", "university"]
     github_id: PyPSA/atlite
     paper_id: 10.21105/joss.03294
     pypi_id: atlite
@@ -1583,7 +1631,7 @@ projects:
 
   - name: OpenDataElia
     category: data
-    labels: ["non-profit"]
+    labels: ["for-profit"]
     resource: True
     homepage: https://opendata.elia.be/pages/home/
     docs_url: https://help.opendatasoft.com/en/home
@@ -1600,15 +1648,16 @@ projects:
 
   - name: COVID-EMDA
     category: data
-    labels: ["python", "university"]
+    labels: ["university"]
     resource: True
     github_id: tamu-engineering-research/COVID-EMDA
+    paper_id: "arXiv:2005.06631"
     license: MIT
     description: Cross-Domain Data Hub with Data in USA
 
   - name: SimBench
     category: data
-    labels: ["python", "pypi", "conda", "jupyter", "gha"]
+    labels: ["python", "gha", "university", "non-profit"]
     github_id: e2nIEE/simbench
     pypi_id: simbench
     conda_id: conda-forge/simbench
@@ -1630,6 +1679,7 @@ projects:
     labels: ["lab"]
     resource: True
     github_id: lbl-hub/CSEE-Benchmark
+    paper_id: 10.13334/j.0258-8013.pcsee.230534
     # homepage:
     # license:
     description: A new type of power system calculation example by the China EPRI
@@ -1639,6 +1689,7 @@ projects:
     labels: ["university"]
     resource: True
     github_id: NanpengYu/pmuBAGE
+    paper_id: "arXiv:2204.01095"
     # homepage:
     # license:
     description: Synthetic phasor measurement unit dataset
@@ -1646,8 +1697,8 @@ projects:
 # --- LLM ---
   - name: PyPSA MCP
     category: llm
-    labels: ["python", "pypi", "volunteer"]
-    github_id: cdgaete/pypsa-mcp
+    labels: ["python"]
+    github_id: open-energy-transition/pypsa-mcp
     pypi_id: pypsamcp
     # conda_id:
     # homepage:
@@ -1668,7 +1719,7 @@ projects:
 
   - name: PowerMCP
     category: llm
-    labels: ["python", "university"]
+    labels: ["python", "gha", "university"]
     github_id: Power-Agent/PowerMCP
     # pypi_id:
     # conda_id:
@@ -1700,8 +1751,9 @@ projects:
 # --- Machine/Reinforcement Learning ---
   - name: Daline
     github_id: JarvisETHZ/Daline
-    labels: ["octave", "university"]
+    labels: ["matlab", "university"]
     category: mrl
+    paper_id: 10.3929/ethz-b-000681867
     # pypi_id:
     # conda_id:
     # dockerhub_id:
@@ -1711,8 +1763,8 @@ projects:
     description: A Data-driven Power Flow Linearization Toolbox
 
   - name: Grid2Op
-    github_id: rte-france/Grid2Op
-    labels: ["gha", "pypi", "jupyter", "python", "for-profit"]
+    github_id: Grid2op/grid2op
+    labels: ["python", "gha", "for-profit"]
     category: mrl
     pypi_id: Grid2Op
     # conda_id:
@@ -1724,7 +1776,7 @@ projects:
 
   - name: andes_gym
     category: mrl
-    labels: ["python", "jupyter", "university"]
+    labels: ["python", "university"]
     github_id: cuihantao/andes_gym
     # pypi_id:
     # conda_id:
@@ -1734,8 +1786,9 @@ projects:
 
   - name: RLGC
     category: mrl
-    labels: ["python", "jupyter", "lab"]
+    labels: ["python", "java", "lab"]
     github_id: RLGC-Project/RLGC
+    paper_id: 10.1109/TSG.2019.2933191
     # pypi_id:
     # conda_id:
     # homepage:
@@ -1744,8 +1797,8 @@ projects:
 
 # --- CoSim Environment ---
   - name: OpenModelica
-    category: cosime
-    labels: ["gha", "modelica", "python", "university"]
+    category: cosim
+    labels: ["modelica", "c", "cpp", "gha", "university"]
     github_id: OpenModelica/OpenModelica
     paper_id: 10.4173/mic.2020.4.1
     # pypi_id:
@@ -1757,9 +1810,10 @@ projects:
     description: Modelica-based environment for modeling and simulation
 
   - name: precice
-    category: cosime
-    labels: ["gha", "c", "pypi", "conda", "university"]
+    category: cosim
+    labels: ["cpp", "gha", "university"]
     github_id: precice/precice
+    paper_id: 10.12688/openreseurope.14445.2
     pypi_id: pyprecice
     conda_id: conda-forge/pyprecice
     dockerhub_id: precice/precice
@@ -1771,8 +1825,9 @@ projects:
 # --- Gas Network ---
   - name: MPNG
     category: gasnet
-    labels: ["octave", "university"]
+    labels: ["matlab", "university"]
     github_id: MATPOWER/mpng
+    paper_id: 10.1109/TPWRS.2022.3195684
     # pypi_id:
     # conda_id:
     homepage: https://matpower.org/
@@ -1782,8 +1837,9 @@ projects:
 
   - name: pandapipes
     category: gasnet
-    labels: ["gha", "pypi", "jupyter", "python", "university"]
+    labels: ["python", "gha", "university", "non-profit"]
     github_id: e2nIEE/pandapipes
+    paper_id: 10.3390/su12239899
     pypi_id: pandapipes
     # conda_id:
     homepage: https://www.pandapipes.org/
@@ -1808,8 +1864,9 @@ projects:
   - name: HELICS
     github_id: GMLC-TDC/HELICS
     julia_id: HELICS
-    labels: ["gha", "pypi", "conda", "python", "julia", "octave", "java", "c", "lab"]
-    category: msg
+    labels: ["cpp", "gha", "lab"]
+    category: cosim
+    paper_id: 10.1109/ACCESS.2024.3363615
     pypi_id: helics
     conda_id: conda-forge/helics
     homepage: https://helics.org/tools/
@@ -1819,8 +1876,12 @@ projects:
 
   - name: LTB DiME
     category: msg
-    labels: ["c", "python", "octave", "university"]
+    labels: ["c", "university"]
     github_id: CURENT/dime
+    paper_id:
+      - "arXiv:2211.11990"
+      - 10.1109/MPE.2019.2959054
+      - 10.1109/TPWRS.2020.3017019
     # pypi_id:
     # conda_id:
     homepage: https://ltb.curent.org/
@@ -1831,7 +1892,7 @@ projects:
 # --- Visualization ---
   - name: PowSyBl Diagram
     category: vis
-    labels: ["gha", "java", "jupyter", "for-profit"]
+    labels: ["java", "gha", "non-profit"]
     github_id: powsybl/powsybl-diagram
     # pypi_id:
     # conda_id:
@@ -1842,7 +1903,7 @@ projects:
 
   - name: LTB AGVis
     category: vis
-    labels: ["gha", "pypi", "python", "university"]
+    labels: ["python", "gha", "university"]
     github_id: CURENT/agvis
     paper_id: 10.1109/NAPS58826.2023.10318583
     pypi_id: agvis
@@ -1854,8 +1915,8 @@ projects:
 
   - name: PowerGraphics.jl
     category: vis
-    labels: ["gha", "julia", "jupyter", "lab"]
-    github_id: NREL-Sienna/powergraphics.jl
+    labels: ["julia", "gha", "lab"]
+    github_id: Sienna-Platform/PowerGraphics.jl
     julia_id: PowerGraphics
     # pypi_id:
     # conda_id:
@@ -1867,8 +1928,8 @@ projects:
 # --- Power Electronics ---
   - name: GSEIM
     category: pe
-    labels: ["pypi", "python", "volunteer"]
-    github_id: gseim/gseim
+    labels: ["python", "cpp"]
+    # github_id:
     pypi_id: GSEIM
     # conda_id:
     # homepage:
@@ -1878,85 +1939,85 @@ projects:
 
 # --- Textbook ---
   - name: PowerCyber Training
-    category: book
+    category: education
     resource: True
-    labels: ["jupyter", "gha", "python", "university"]
+    labels: ["python", "gha", "university"]
     github_id: PowerCyberTraining/powercybertraining.github.io
     license: CC BY-NC-ND 4.0
     description: PowerCyber Training modules source.
     homepage: https://powercybertraining.github.io
 
   - name: TextbookSimulations
-    category: book
+    category: education
     resource: True
-    labels: ["julia", "jupyter", "university"]
+    labels: ["julia", "university"]
     github_id: Power-Systems-Textbook/TextbookSimulations
     license: CC0-1.0
     description: Examples and problems accompanying Daniel Kirschen's Power Systems Textbook
 
   - name: UTK ECE 522 - Power System Analysis II
-    category: book
+    category: education
     resource: True
-    labels: ["python", "jupyter", "university"]
+    labels: ["python", "university"]
     github_id: CURENT/ece522
     license: MIT
     description: Hands-on Project for Power System Analysis II (UTK ECE 522)
 
   - name: ELEC0447 Analysis of Electric Power and Energy Systems
-    category: book
+    category: education
     resource: True
-    labels: ["python", "jupyter", "university"]
+    labels: ["python", "university"]
     github_id: bcornelusse/ELEC0447-analysis-power-systems
     license: BSD-2.0
     description: Master's course of power systems analysis at ULiège.
 
   - name: Tutorial on DER Hosting Capacity Part 0
-    category: book
+    category: education
     resource: True
-    labels: ["jupyter", "python", "university"]
+    labels: ["python", "university"]
     github_id: Team-Nando/Tutorial-DERHostingCapacity-0-dss_python
     license: BSD-3.0
     description: Using dss_python
   - name: Tutorial on DER Hosting Capacity Part 1
-    category: book
+    category: education
     resource: True
-    labels: ["jupyter", "python", "university"]
+    labels: ["python", "university"]
     github_id: Team-Nando/Tutorial-DERHostingCapacity-1-AdvancedTools_LV
     license: BSD-3.0
     description: Advanced Tools for the Analysis of Three-Phase Unbalanced LV Networks
   - name: Tutorial on DER Hosting Capacity Part 2
-    category: book
+    category: education
     resource: True
-    labels: ["jupyter", "python", "university"]
+    labels: ["python", "university"]
     github_id: Team-Nando/Tutorial-DERHostingCapacity-2-TimeSeries_LV
     license: BSD-3.0
     description: Time-Series Analysis and PV Hosting Capacity of LV Networks
   - name: Tutorial on DER Hosting Capacity Part 3
-    category: book
+    category: education
     resource: True
-    labels: ["jupyter", "python", "university"]
+    labels: ["python", "university"]
     github_id: Team-Nando/Tutorial-DERHostingCapacity-3-VoltWatt_LV
     license: BSD-3.0
     description: Volt-Watt Control and PV Hosting Capacity of LV Networks
   - name: Tutorial on DER Hosting Capacity Part 4
-    category: book
+    category: education
     resource: True
-    labels: ["jupyter", "python", "university"]
+    labels: ["python", "university"]
     github_id: Team-Nando/Tutorial-DERHostingCapacity-4-MonteCarlo_MV-LV
     license: BSD-3.0
     description: Monte Carlo Assessment of PV Hosting Capacity of an Integrated MV-LV Network
   - name: LTB Demo
-    category: book
+    category: education
     resource: True
-    labels: ["jupyter", "python", "university"]
+    labels: ["python", "university"]
     github_id: CURENT/demo
     license: MIT
     description: Ready-to-use LTB usage examples
     homepage: https://ltb.curent.org
   - name: COLIB
-    category: book
+    category: data
     resource: False
-    labels: ["gha", "volunteer"]
+    labels: ["gha", "non-profit"]
     github_id: CRESYM/colib0.github.io
     license: CC-BY-4.0
     description: Collaborative dynamic library
@@ -1965,9 +2026,9 @@ projects:
 # --- Database Management ---
   - name: dsgrid
     category: dataman
-    labels: ["gha", "python", "pypi", "lab"]
+    labels: ["python", "rust", "gha", "lab"]
     github_id: dsgrid/dsgrid
-    pypi_id: dsgrid
+    # pypi_id:
     # conda_id:
     # dockerhub_id:
     # homepage:
@@ -1975,8 +2036,8 @@ projects:
     license: BSD-3
     description: Demand-side grid projects, datasets and queries
   - name: dGen
-    category: dataman
-    labels: ["gha", "python", "jupyter", "lab"]
+    category: steady-state
+    labels: ["python", "gha", "lab"]
     github_id: NatLabRockies/dgen
     # pypi_id:
     # conda_id:

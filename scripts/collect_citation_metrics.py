@@ -107,12 +107,15 @@ def collect(projects: list[dict[str, Any]], timeout: float) -> list[dict[str, An
                 "publication_year": None,
                 "cited_by_count": None,
                 "counts_by_year": [],
+                "coverage_notes": [],
                 "errors": [],
             }
             try:
                 data = fetch_openalex(doi, timeout)
                 if data is None:
-                    paper["errors"].append("openalex: DOI not found")
+                    paper["coverage_notes"].append(
+                        "openalex: DOI not found; citation counts unavailable"
+                    )
                 else:
                     paper.update(
                         {
@@ -139,8 +142,16 @@ def collect(projects: list[dict[str, Any]], timeout: float) -> list[dict[str, An
                     "errors": [],
                 }
             )
-        resolved_papers = [paper for paper in papers if paper.get("openalex_id") and not paper.get("errors")]
-        arxiv_papers = [paper for paper in papers if paper.get("paper_type") == "arxiv" and not paper.get("errors")]
+        resolved_papers = [
+            paper
+            for paper in papers
+            if paper.get("openalex_id") and not paper.get("errors")
+        ]
+        arxiv_papers = [
+            paper
+            for paper in papers
+            if paper.get("paper_type") == "arxiv" and not paper.get("errors")
+        ]
         row: dict[str, Any] = {
             "name": name,
             "paper_id": [paper["paper_id"] for paper in papers],
@@ -148,7 +159,9 @@ def collect(projects: list[dict[str, Any]], timeout: float) -> list[dict[str, An
             "paper_count": len(papers),
             "resolved_paper_count": len(resolved_papers),
             "arxiv_paper_count": len(arxiv_papers),
-            "cited_by_count": sum(int(paper.get("cited_by_count") or 0) for paper in resolved_papers),
+            "cited_by_count": sum(
+                int(paper.get("cited_by_count") or 0) for paper in resolved_papers
+            ),
             "papers": papers,
             "errors": errors,
         }
@@ -175,6 +188,7 @@ def main() -> int:
         "source": "https://api.openalex.org/works",
         "metric_notes": [
             "cited_by_count is OpenAlex coverage, not a universal citation count.",
+            "A DOI absent from OpenAlex remains a curated paper record but contributes no citation-count score.",
             "paper_id can be a DOI, an arXiv identifier prefixed with arXiv:, or a list mixing both.",
             "arXiv paper identifiers are recorded without DOI-backed citation counts.",
             "Project-level cited_by_count sums resolved papers and can double-count citing works across related papers.",

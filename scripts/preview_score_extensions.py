@@ -5,33 +5,11 @@ from __future__ import annotations
 
 import argparse
 import csv
-import json
-import math
 import sys
 from pathlib import Path
 from typing import Any
 
-
-JULIA_REGISTRATION_BONUS = 1.0
-JULIA_MONTHLY_DOWNLOAD_CAP = 6.0
-PAPER_RECORD_BONUS = 1.0
-CITATION_COUNT_CAP = 6.0
-CITATION_RECENT_CAP = 3.0
-
-
-def load_json(path: Path | None) -> dict[str, Any]:
-    if path is None:
-        return {"projects": []}
-    data = json.loads(path.read_text())
-    if not isinstance(data, dict):
-        raise ValueError(f"{path} must contain a JSON object")
-    return data
-
-
-def load_history(path: Path) -> dict[str, dict[str, str]]:
-    with path.open(newline="") as file:
-        reader = csv.DictReader(file)
-        return {row["name"]: row for row in reader if row.get("name")}
+from score_adjustments import index_by_name, load_json, score_breakdown
 
 
 def latest_history_csv(history_dir: Path = Path("history")) -> Path:
@@ -41,48 +19,10 @@ def latest_history_csv(history_dir: Path = Path("history")) -> Path:
     return candidates[-1]
 
 
-def positive_log_score(count: Any, divisor: float, offset: float, cap: float) -> float:
-    if count in (None, ""):
-        return 0.0
-    value = float(count)
-    if value <= 0:
-        return 0.0
-    return min(cap, max(0.0, math.log(value / divisor) - offset))
-
-
-def recent_citations(counts_by_year: Any, years: int = 2) -> int:
-    if not isinstance(counts_by_year, list):
-        return 0
-    rows = [row for row in counts_by_year if isinstance(row, dict)]
-    rows.sort(key=lambda row: int(row.get("year") or 0), reverse=True)
-    total = 0
-    for row in rows[:years]:
-        count = row.get("cited_by_count")
-        if isinstance(count, int):
-            total += count
-    return total
-
-
-def project_recent_citations(citation: dict[str, Any]) -> int:
-    papers = citation.get("papers")
-    if isinstance(papers, list):
-        return sum(
-            recent_citations(paper.get("counts_by_year"))
-            for paper in papers
-            if isinstance(paper, dict) and not paper.get("errors")
-        )
-    return recent_citations(citation.get("counts_by_year"))
-
-
-def index_by_name(payload: dict[str, Any]) -> dict[str, dict[str, Any]]:
-    projects = payload.get("projects")
-    if not isinstance(projects, list):
-        return {}
-    return {
-        str(project["name"]): project
-        for project in projects
-        if isinstance(project, dict) and project.get("name")
-    }
+def load_history(path: Path) -> dict[str, dict[str, str]]:
+    with path.open(newline="") as file:
+        reader = csv.DictReader(file)
+        return {row["name"]: row for row in reader if row.get("name")}
 
 
 def preview(
@@ -94,51 +34,27 @@ def preview(
     names = sorted(set(julia_metrics) | set(citation_metrics))
     for name in names:
         history_row = history.get(name, {})
-        base_score = float(history_row.get("projectrank") or 0.0)
+        base_score = float(
+            history_row.get("upstream_projectrank")
+            or history_row.get("projectrank")
+            or 0.0
+        )
 
         julia = julia_metrics.get(name, {})
-        julia_bonus = JULIA_REGISTRATION_BONUS if julia.get("julia_id") and not julia.get("errors") else 0.0
-        julia_download_score = positive_log_score(
-            julia.get("monthly_user_downloads"),
-            divisor=2.0,
-            offset=1.0,
-            cap=JULIA_MONTHLY_DOWNLOAD_CAP,
-        )
-
         citation = citation_metrics.get(name, {})
-        resolved_paper_count = int(citation.get("resolved_paper_count") or 0)
-        arxiv_paper_count = int(citation.get("arxiv_paper_count") or 0)
-        citation_bonus = PAPER_RECORD_BONUS if resolved_paper_count > 0 or arxiv_paper_count > 0 else 0.0
-        citation_count_score = positive_log_score(
-            citation.get("cited_by_count"),
-            divisor=2.0,
-            offset=1.0,
-            cap=CITATION_COUNT_CAP,
-        )
-        citation_recent_score = positive_log_score(
-            project_recent_citations(citation),
-            divisor=1.5,
-            offset=0.0,
-            cap=CITATION_RECENT_CAP,
-        )
-
-        adjustment = (
-            julia_bonus
-            + julia_download_score
-            + citation_bonus
-            + citation_count_score
-            + citation_recent_score
-        )
+        breakdown = score_breakdown(julia, citation)
         rows.append(
             {
                 "name": name,
                 "base_projectrank": round(base_score, 3),
-                "julia_adjustment": round(julia_bonus + julia_download_score, 3),
-                "citation_adjustment": round(citation_bonus + citation_count_score + citation_recent_score, 3),
-                "bestps_projectrank_preview": round(base_score + adjustment, 3),
+                "julia_adjustment": breakdown["julia_adjustment"],
+                "citation_adjustment": breakdown["citation_adjustment"],
+                "applied_adjustment": breakdown["applied_adjustment"],
+                "bestps_projectrank": int(base_score)
+                + int(breakdown["applied_adjustment"]),
             }
         )
-    rows.sort(key=lambda row: row["bestps_projectrank_preview"], reverse=True)
+    rows.sort(key=lambda row: row["bestps_projectrank"], reverse=True)
     return rows
 
 
@@ -165,7 +81,8 @@ def main() -> int:
         "base_projectrank",
         "julia_adjustment",
         "citation_adjustment",
-        "bestps_projectrank_preview",
+        "applied_adjustment",
+        "bestps_projectrank",
     ]
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
