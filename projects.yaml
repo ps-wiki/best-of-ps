@@ -1963,9 +1963,9 @@ projects:
     description: Hands-on Project for Power System Analysis II (UTK ECE 522)
 
   - name: ELEC0447 Analysis of Electric Power and Energy Systems
-    category: book
+    category: education
     resource: True
-    labels: ["python", "jupyter", "university"]
+    labels: ["python", "university"]
     github_id: bcornelusse/ELEC0447-analysis-power-systems
     license: BSD-2.0
     description: Master's course of power systems analysis at ULiège.
