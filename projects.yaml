@@ -1387,8 +1387,9 @@ projects:
 
   - name: Xopt
     category: ops
-    labels: ["gha", "python", "pypi", "conda", "lab"]
-    github_id: google/or-tools
+    labels: ["python", "gha", "lab"]
+    github_id: xopt-org/Xopt
+    paper_id: 10.18429/JACoW-IPAC2023-THPL164
     pypi_id: xopt
     conda_id: conda-forge/xopt
     # homepage:
