@@ -1329,7 +1329,7 @@ projects:
     github_id: ERGO-Code/HiGHS
     julia_id: HiGHS
     paper_id: 10.1007/s12532-017-0130-5
-    labels: ["gha", "pypi", "conda", "jupyter", "python", "c", "julia", "rust", "r", "cpp", "university"]
+    labels: ["cpp", "c", "gha", "university"]
     category: ops
     pypi_id: highspy
     conda_id: conda-forge/highs
