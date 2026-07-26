@@ -517,7 +517,7 @@ projects:
   - name: PowerSystemsInvestmentsPortfolios.jl
     category: dataman
     labels: ["julia", "gha", "lab"]
-    github_id: NREL-Sienna/PowerSystemsInvestmentsPortfolios.jl
+    github_id: Sienna-Platform/PowerSystemsInvestmentsPortfolios.jl
     julia_id: PowerSystemsInvestmentsPortfolios
     # pypi_id:
     # conda_id:
