@@ -514,8 +514,8 @@ projects:
     license: BSD-3
     description: Power Systems investment models; NREL Sienna
   - name: PowerSystemsInvestmentsPortfolios.jl
-    category: steady-state
-    labels: ["gha", "julia", "lab"]
+    category: dataman
+    labels: ["julia", "gha", "lab"]
     github_id: NREL-Sienna/PowerSystemsInvestmentsPortfolios.jl
     julia_id: PowerSystemsInvestmentsPortfolios
     # pypi_id:
