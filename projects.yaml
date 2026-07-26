@@ -662,8 +662,9 @@ projects:
 
   - name: EGRET
     category: steady-state
-    labels: ["gha", "python", "lab"]
+    labels: ["python", "gha", "lab"]
     github_id: grid-parity-exchange/Egret
+    paper_id: 10.1287/ijoc.2019.0944
     # pypi_id:
     # conda_id:
     # homepage:
