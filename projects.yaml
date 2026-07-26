@@ -2014,9 +2014,9 @@ projects:
     description: Ready-to-use LTB usage examples
     homepage: https://ltb.curent.org
   - name: COLIB
-    category: book
+    category: data
     resource: False
-    labels: ["gha", "volunteer"]
+    labels: ["gha", "non-profit"]
     github_id: CRESYM/colib0.github.io
     license: CC-BY-4.0
     description: Collaborative dynamic library
