@@ -1339,8 +1339,8 @@ projects:
     description: Large-scale Sparse Linear Problem Optimizer
 
   - name: PySCIPOpt
-    category: ops
-    labels: ["gha", "pypi", "conda", "python", "lab"]
+    category: intf
+    labels: ["python", "gha", "community"]
     github_id: scipopt/PySCIPOpt
     paper_id: 10.1007/978-3-319-42432-3_37
     pypi_id: PySCIPOpt
