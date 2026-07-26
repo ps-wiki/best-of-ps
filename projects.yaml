@@ -1183,7 +1183,7 @@ projects:
 
   - name: mhi-pscad
     category: intf
-    labels: ["pypi", "python", "for-profit"]
+    labels: ["python", "for-profit"]
     # github_id:
     pypi_id: mhi-pscad
     # conda_id:
