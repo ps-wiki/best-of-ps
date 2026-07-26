@@ -325,8 +325,8 @@ projects:
     description: C++/Modelica simulation tools for power systems
 
   - name: Xyce
-    category: phasor
-    labels: ["pypi", "conda", "jupyter", "python", "lab"]
+    category: emt
+    labels: ["cpp", "lab"]
     github_id: Xyce/Xyce
     pypi_id: xyce
     conda_id: vlsida-eda/xyce
