@@ -1106,7 +1106,7 @@ projects:
 
   - name: OpenDSSDirect.jl
     category: intf
-    labels: ["gha", "julia", "volunteer"]
+    labels: ["julia", "gha", "community"]
     github_id: dss-extensions/OpenDSSDirect.jl
     julia_id: OpenDSSDirect
     # pypi_id:
