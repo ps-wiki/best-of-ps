@@ -1875,8 +1875,12 @@ projects:
 
   - name: LTB DiME
     category: msg
-    labels: ["c", "python", "octave", "university"]
+    labels: ["c", "university"]
     github_id: CURENT/dime
+    paper_id:
+      - "arXiv:2211.11990"
+      - 10.1109/MPE.2019.2959054
+      - 10.1109/TPWRS.2020.3017019
     # pypi_id:
     # conda_id:
     homepage: https://ltb.curent.org/
