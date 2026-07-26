@@ -2035,8 +2035,8 @@ projects:
     license: BSD-3
     description: Demand-side grid projects, datasets and queries
   - name: dGen
-    category: dataman
-    labels: ["gha", "python", "jupyter", "lab"]
+    category: steady-state
+    labels: ["python", "gha", "lab"]
     github_id: NatLabRockies/dgen
     # pypi_id:
     # conda_id:
