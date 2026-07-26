@@ -24,19 +24,19 @@ jobs:
       - if: ${{ ! (env.VERSION != null && env.VERSION != '') }}
         name: set-version-via-date
         run: echo "VERSION=$(date '+%Y.%m.%d')" >> $GITHUB_ENV
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - name: check-version-tag
         shell: bash
         run: |
           git fetch --tags --force
           git show-ref --tags --verify --quiet -- "refs/tags/${{ env.VERSION }}" && echo "VERSION=$(date '+%Y.%m.%d-%H.%M')" >> $GITHUB_ENV || exit 0
       - name: create-update-branch
-        uses: peterjgrainger/action-create-branch@v2.2.0
+        uses: peterjgrainger/action-create-branch@v4.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
         with:
           branch: "${{ env.BRANCH_PREFIX }}${{ env.VERSION }}"
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ env.BRANCH_PREFIX }}${{ env.VERSION }}
@@ -44,7 +44,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
       - name: set-up-metadata-collection
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - name: install-metadata-dependencies
@@ -86,7 +86,7 @@ jobs:
           path.write_text(text)
           PY
       - name: push-update
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: ${{ env.BRANCH_PREFIX }}${{ env.VERSION  }}
           commit_user_name: best-of update
@@ -106,12 +106,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
       - name: create-release
-        uses: actions/create-release@v1
+        shell: bash
+        run: |
+          gh release create "${VERSION}" \
+            --draft \
+            --title "Update: ${VERSION}" \
+            --notes-file latest-changes.md
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
-        with:
-          tag_name: ${{ env.VERSION  }}
-          release_name: "Update: ${{ env.VERSION  }}"
-          body_path: "latest-changes.md"
-          draft: true
-          prerelease: false
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
