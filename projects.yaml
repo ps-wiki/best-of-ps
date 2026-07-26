@@ -636,7 +636,7 @@ projects:
 
   - name: pandapower
     category: steady-state
-    labels: ["gha", "pypi", "conda", "jupyter", "python", "university"]
+    labels: ["python", "gha", "university", "non-profit"]
     github_id: e2nIEE/pandapower
     paper_id: 10.1109/TPWRS.2018.2829021
     pypi_id: pandapower
