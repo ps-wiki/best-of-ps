@@ -779,9 +779,10 @@ projects:
     description: Steady-state distribution power system analysis
 
   - name: EV-EcoSim
-    category: steady-state
-    labels: ["gha", "python", "university"]
+    category: cosim
+    labels: ["python", "gha", "university"]
     github_id: ebalogun01/EV-EcoSim/
+    paper_id: 10.1109/TSG.2023.3339374
     # pypi_id:
     # conda_id:
     # homepage:
