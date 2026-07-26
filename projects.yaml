@@ -698,8 +698,8 @@ projects:
 
   - name: GridPath
     category: steady-state
-    labels: ["gha", "pypi", "python", "for-profit"]
-    github_id: blue-marble/gridpath
+    labels: ["python", "gha", "for-profit"]
+    github_id: sylvan-energy/gridpath
     pypi_id: GridPath
     # conda_id:
     homepage: https://www.gridpath.io/
