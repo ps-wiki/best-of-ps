@@ -1051,8 +1051,9 @@ projects:
 
   - name: Andes.jl
     category: intf
-    labels: ["gha", "julia", "university"]
+    labels: ["julia", "gha", "university"]
     github_id: cuihantao/Andes.jl
+    julia_id: Andes
     # pypi_id:
     # conda_id:
     homepage: https://ltb.curent.org
