@@ -1809,9 +1809,10 @@ projects:
     description: Modelica-based environment for modeling and simulation
 
   - name: precice
-    category: cosime
-    labels: ["gha", "c", "pypi", "conda", "university"]
+    category: cosim
+    labels: ["cpp", "gha", "university"]
     github_id: precice/precice
+    paper_id: 10.12688/openreseurope.14445.2
     pypi_id: pyprecice
     conda_id: conda-forge/pyprecice
     dockerhub_id: precice/precice
