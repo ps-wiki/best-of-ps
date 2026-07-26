@@ -1524,8 +1524,8 @@ projects:
     description: Represent energy systems as Python data classes
 
   - name: PowerGenome
-    category: data
-    labels: ["gha", "pypi", "conda", "python"]
+    category: dataman
+    labels: ["python", "gha"]
     github_id: PowerGenome/PowerGenome
     pypi_id: PowerGenome
     conda_id: conda-forge/powergenome
