@@ -1374,9 +1374,10 @@ projects:
 
   - name: Tulip
     category: ops
-    labels: ["gha", "julia", "university"]
-    github_id: google/or-tools
+    labels: ["julia", "gha", "university"]
+    github_id: ds4dm/Tulip.jl
     julia_id: Tulip
+    paper_id: 10.1007/s12532-020-00200-8
     # pypi_id:
     # conda_id:
     # homepage:
