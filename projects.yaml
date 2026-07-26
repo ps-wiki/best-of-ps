@@ -1836,8 +1836,9 @@ projects:
 
   - name: pandapipes
     category: gasnet
-    labels: ["gha", "pypi", "jupyter", "python", "university"]
+    labels: ["python", "gha", "university", "non-profit"]
     github_id: e2nIEE/pandapipes
+    paper_id: 10.3390/su12239899
     pypi_id: pandapipes
     # conda_id:
     homepage: https://www.pandapipes.org/
