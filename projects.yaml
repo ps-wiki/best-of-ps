@@ -564,7 +564,7 @@ projects:
     description: Sector-Coupled Optimisation Model of the European Energy System
   - name: PyPSA-Distribution
     category: steady-state
-    labels: ["gha", "python", "volunteer"]
+    labels: ["python", "gha", "community"]
     github_id: pypsa-meets-earth/pypsa-distribution
     # pypi_id:
     # conda_id:
