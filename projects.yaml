@@ -1718,7 +1718,7 @@ projects:
 
   - name: PowerMCP
     category: llm
-    labels: ["python", "university"]
+    labels: ["python", "gha", "university"]
     github_id: Power-Agent/PowerMCP
     # pypi_id:
     # conda_id:
