@@ -294,8 +294,8 @@ projects:
     description: Unofficial repository of PSAT by Prof. Federico Milano
 
   - name: PST
-    category: phasor
-    labels: ["octave", "university"]
+    category: electromechanical
+    labels: ["matlab", "community"]
     github_id: cuihantao/pst
     # pypi_id:
     # conda_id:
