@@ -848,8 +848,9 @@ projects:
 
   - name: OATS
     category: steady-state
-    labels: ["pypi", "python", "university"]
+    labels: ["python", "university"]
     github_id: bukhsh/oats
+    paper_id: 10.1109/TPWRS.2020.2986081
     pypi_id: oatspower
     # conda_id:
     # homepage:
