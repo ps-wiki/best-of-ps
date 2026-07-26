@@ -1279,7 +1279,7 @@ projects:
 
   - name: OSQP
     category: ops
-    labels: ["gha", "pypi", "conda", "python", "c", "julia", "octave", "r", "university"]
+    labels: ["c", "gha", "university"]
     github_id: osqp/osqp
     julia_id: OSQP
     paper_id: 10.1007/s12532-020-00179-2
