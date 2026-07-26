@@ -623,9 +623,10 @@ projects:
     description: Steady state power flow simulation
 
   - name: DPLib
-    category: steady-state
-    labels: ["octave", "university"]
+    category: data
+    labels: ["matlab", "university"]
     github_id: LSU-RAISE-LAB/DPLib
+    paper_id: "arXiv:2506.20819"
     # pypi_id:
     # conda_id:
     # homepage:
