@@ -588,7 +588,7 @@ projects:
   - name: LightSim2Grid
     category: steady-state
     labels: ["cpp", "gha", "for-profit"]
-    github_id: BDonnot/lightsim2grid
+    github_id: Grid2op/lightsim2grid
     pypi_id: LightSim2Grid
     # conda_id:
     dockerhub_id: bdonnot/lightsim2grid
