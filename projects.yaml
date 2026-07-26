@@ -1696,7 +1696,7 @@ projects:
 # --- LLM ---
   - name: PyPSA MCP
     category: llm
-    labels: ["python", "pypi", "volunteer"]
+    labels: ["python"]
     github_id: cdgaete/pypsa-mcp
     pypi_id: pypsamcp
     # conda_id:
