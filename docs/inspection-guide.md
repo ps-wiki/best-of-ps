@@ -43,7 +43,7 @@ For every entry:
    as interface, data, visualization, or education.
 6. When a simulator directly implements multiple time-domain or steady-state
    capabilities, choose the first applicable category in this order: `emt`,
-   `electromechanical`, then `steady-state`.
+   `electro-mechanical`, then `steady-state`.
 7. Apply that capability precedence only to first-party simulation
    formulations. It does not override the artifact role of a wrapper, binding,
    parser, or other interface.
@@ -55,8 +55,8 @@ For every entry:
 
 | Target ID | Legacy ID | Title | Definition |
 | --- | --- | --- | --- |
-| `electromechanical` | `phasor` | Electromechanical Transient Simulation | Phasor-domain differential-algebraic simulation of electromechanical transients and related dynamic behavior. |
-| `emt` | — | Electromagnetic Transient Simulation | Waveform-level time-domain circuit or network simulation using ODE/DAE models or discretized companion-circuit and nodal equivalents, including switching. |
+| `electro-mechanical` | `phasor` | Electro-mechanical Transient Simulation | Phasor-domain differential-algebraic simulation of electro-mechanical transients and related dynamic behavior. |
+| `emt` | — | Electro-magnetic Transient Simulation | Waveform-level time-domain circuit or network simulation using ODE/DAE models or discretized companion-circuit and nodal equivalents, including switching. |
 | `steady-state` | — | Steady-State Analysis and Optimization | Steady-state power-system equations, including AC/DC power flow, OPF, economic dispatch, unit commitment, and related planning or operational optimization. |
 | `intf` | — | Software Interface | A user-facing API, binding, wrapper, parser, or interchange bridge to another tool or format. |
 | `gasnet` | — | Gas-Network Analysis | Modeling, simulation, or optimization of gas networks or tightly coupled gas-power systems. |
@@ -269,7 +269,7 @@ the catalog.
 
 Review related projects together so family-level decisions stay consistent:
 
-1. `electromechanical`, `emt`, `pe`, `cosim`, `msg`, and `education`;
+1. `electro-mechanical`, `emt`, `pe`, `cosim`, `msg`, and `education`;
 2. `opl` and `ops`;
 3. `intf`, grouped by tool ecosystem;
 4. `steady-state`, planning, operations, and markets;

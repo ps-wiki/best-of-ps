@@ -59,7 +59,7 @@ paper_id:
 
 | Field | Current | Recommended | Finding |
 | --- | --- | --- | --- |
-| Category | `emt` | `electromechanical` | Change. DPsim is a hybrid EMT/dynamic-phasor simulator, but its project identity, principal software paper, and distinctive formulation are dynamic phasor/shifted-frequency simulation. The included EMT and power-flow domains are important secondary capabilities. |
+| Category | `emt` | `electro-mechanical` | Change. DPsim is a hybrid EMT/dynamic-phasor simulator, but its project identity, principal software paper, and distinctive formulation are dynamic phasor/shifted-frequency simulation. The included EMT and power-flow domains are important secondary capabilities. |
 | Labels | `gha`, `pypi`, `jupyter`, `python`, `c`, `university` | `cpp`, `gha`, `university` | Change. The simulation kernel and component models are C++, not C. Python is the binding and scripting layer, so it does not qualify under the core implementation-language rule. `pypi` and `jupyter` are retired labels. |
 | GitHub Actions | present | `gha` | Keep. Multiple YAML workflow files exist under `.github/workflows`. |
 | `paper_id` | absent | nine-identifier list below | Add. The official documentation explicitly asks users to cite one of its listed papers; nine listed journal/conference papers have DOI identifiers. |
@@ -75,7 +75,7 @@ Evidence:
 Suggested catalog change:
 
 ```yaml
-category: electromechanical
+category: electro-mechanical
 labels: ["cpp", "gha", "university"]
 paper_id:
   - 10.1016/j.softx.2019.100253
@@ -129,7 +129,7 @@ labels: ["cpp", "non-profit"]
 
 | Field | Current | Recommended | Finding |
 | --- | --- | --- | --- |
-| Category | `phasor` | `pe` | Change. OpenDER's primary artifact is an inverter-based DER behavior and control model covering grid-support, ride-through, trip, and enter-service behavior. That converter/device/control focus fits `pe` better than the renamed system-level electromechanical-transient category. |
+| Category | `phasor` | `pe` | Change. OpenDER's primary artifact is an inverter-based DER behavior and control model covering grid-support, ride-through, trip, and enter-service behavior. That converter/device/control focus fits `pe` better than the renamed system-level electro-mechanical-transient category. |
 | Labels | `pypi`, `jupyter`, `python`, `c`, `non-profit` | `python`, `non-profit` | Change. The maintained model, packaging, and tests are Python. No maintained first-party C core was found. `pypi` and `jupyter` are retired labels. |
 | GitHub Actions | absent | absent | Keep. No workflow file exists under `.github/workflows`. |
 | `paper_id` | absent | absent | Confirmed skip. No citation file or README citation section explicitly recommends a paper. The linked EPRI model specification is a product report, not an identified paper citation. |
@@ -157,7 +157,7 @@ labels: ["python", "non-profit"]
 
 | Field | Current | Recommended | Finding |
 | --- | --- | --- | --- |
-| Category | `phasor` | `electromechanical` | Rename with the category migration. GridPACK is a multi-application grid-simulation framework; among dynamic formulations, its mature capability is conventional dynamics simulation, while EMT remains under development. Its AC power flow, contingency, and state-estimation applications are substantial secondary capabilities. |
+| Category | `phasor` | `electro-mechanical` | Rename with the category migration. GridPACK is a multi-application grid-simulation framework; among dynamic formulations, its mature capability is conventional dynamics simulation, while EMT remains under development. Its AC power flow, contingency, and state-estimation applications are substantial secondary capabilities. |
 | Labels | `c`, `gha`, `python`, `lab` | `cpp`, `gha`, `lab` | Change. GridPACK explicitly identifies its implementation as C++ with Python wrappers. The wrapper does not qualify as another core implementation language, and `c` should be corrected to `cpp`. |
 | GitHub Actions | present | `gha` | Keep. YAML workflows exist under `.github/workflows`. |
 | `paper_id` | absent | `10.1177/1094342015607609` | Add. The README has a dedicated “Citing GridPACK” section with this DOI. |
@@ -171,7 +171,7 @@ Evidence:
 Suggested catalog change:
 
 ```yaml
-category: electromechanical
+category: electro-mechanical
 labels: ["cpp", "gha", "lab"]
 paper_id: 10.1177/1094342015607609
 ```
@@ -185,7 +185,7 @@ paper_id: 10.1177/1094342015607609
 
 | Field | Current | Recommended | Finding |
 | --- | --- | --- | --- |
-| Category | `phasor` | `steady-state` | Change. GridLAB-D is an event/time-series distribution simulator whose electrical network is solved as a sequence of steady states separated by state transitions. Its core grid formulation is unbalanced distribution power flow, not electromechanical transient simulation. |
+| Category | `phasor` | `steady-state` | Change. GridLAB-D is an event/time-series distribution simulator whose electrical network is solved as a sequence of steady states separated by state transitions. Its core grid formulation is unbalanced distribution power flow, not electro-mechanical transient simulation. |
 | Labels | `c`, `gha`, `lab` | `cpp`, `gha`, `lab` | Change. The maintained simulator core and modules are C++; the build requires a C++ compiler. MATLAB, Python, and Java material does not constitute another primary first-party core. |
 | GitHub Actions | present | `gha` | Keep. A YAML workflow exists under `.github/workflows`. |
 | `paper_id` | absent | absent | Confirmed skip. No citation file or repository README citation section explicitly recommends a paper. A relevant PNNL publication exists, but the process forbids substituting a literature search for a project-authored citation instruction. |
@@ -214,7 +214,7 @@ labels: ["cpp", "gha", "lab"]
 
 | Field | Current | Recommended | Finding |
 | --- | --- | --- | --- |
-| Category | `phasor` | `electromechanical` | Rename with the category migration. The package performs full-system phasor-domain time simulation of differential-algebraic generator, inverter, controller, load, and network models. |
+| Category | `phasor` | `electro-mechanical` | Rename with the category migration. The package performs full-system phasor-domain time simulation of differential-algebraic generator, inverter, controller, load, and network models. |
 | Labels | `gha`, `julia`, `lab` | `julia`, `gha`, `lab` | Keep the same set in canonical order. Julia is the first-party implementation; National Laboratory of the Rockies develops the package; GitHub Actions workflows are present. |
 | GitHub Actions | present | `gha` | Keep. Multiple YAML workflows exist under `.github/workflows`. |
 | `julia_id` | `PowerSimulationsDynamics` | `PowerSimulationsDynamics` | Confirmed current. It matches `Project.toml` and the Julia package name. |
@@ -223,14 +223,14 @@ labels: ["cpp", "gha", "lab"]
 Evidence:
 
 - The [README](https://github.com/NREL-Sienna/PowerSimulationsDynamics.jl/blob/f77d3dfc77d82174ff85a4f4fdcf20dcec3c01d1/README.md) describes power-system dynamics simulation, provides both citations, and identifies development under the laboratory's SIIP/Sienna initiative.
-- The [model documentation](https://github.com/NREL-Sienna/PowerSimulationsDynamics.jl/blob/f77d3dfc77d82174ff85a4f4fdcf20dcec3c01d1/docs/src/models.md) describes simultaneous time integration of differential and algebraic states and explicitly covers electromechanical generator dynamics.
+- The [model documentation](https://github.com/NREL-Sienna/PowerSimulationsDynamics.jl/blob/f77d3dfc77d82174ff85a4f4fdcf20dcec3c01d1/docs/src/models.md) describes simultaneous time integration of differential and algebraic states and explicitly covers electro-mechanical generator dynamics.
 - The first-party package source is Julia. Small Python and MATLAB file counts come from support or test material, not separate maintained simulation implementations.
 - The README's Zenodo badge identifies software releases and is correctly excluded from `paper_id`.
 
 Suggested catalog change:
 
 ```yaml
-category: electromechanical
+category: electro-mechanical
 labels: ["julia", "gha", "lab"]
 paper_id:
   - "arXiv:2308.02921"
@@ -268,7 +268,7 @@ labels: ["cpp", "modelica", "gha", "lab"]
 
 | Field | Current | Recommended | Finding |
 | --- | --- | --- | --- |
-| Category | `phasor` | `electromechanical` | Rename. Its distinguishing capability is phasor-domain dynamic security and transient-stability simulation, alongside power flow and contingency analysis. |
+| Category | `phasor` | `electro-mechanical` | Rename. Its distinguishing capability is phasor-domain dynamic security and transient-stability simulation, alongside power flow and contingency analysis. |
 | Labels | `octave`, `lab` | `octave`, `matlab`, `lab` | Add `matlab`: the maintained `.m` implementation explicitly supports both MATLAB and GNU Octave. No GitHub Actions workflow exists. |
 | `paper_id` | absent | `10.1109/OAJPE.2023.3245040` | Add the DOI explicitly required by the README's “Citing” section. |
 
@@ -277,7 +277,7 @@ Evidence: the [README](https://github.com/ANL-CEEESA/powersas.m/blob/40f06eae3fe
 Suggested change:
 
 ```yaml
-category: electromechanical
+category: electro-mechanical
 labels: ["octave", "matlab", "lab"]
 paper_id: 10.1109/OAJPE.2023.3245040
 ```
@@ -291,7 +291,7 @@ paper_id: 10.1109/OAJPE.2023.3245040
 
 | Field | Current | Recommended | Finding |
 | --- | --- | --- | --- |
-| Category | `phasor` | `electromechanical` | Rename. ANDES is a phasor-domain power-system dynamics and transient-stability simulator with power flow for initialization and analysis. |
+| Category | `phasor` | `electro-mechanical` | Rename. ANDES is a phasor-domain power-system dynamics and transient-stability simulator with power flow for initialization and analysis. |
 | Labels | `gha`, `pypi`, `conda`, `jupyter`, `python`, `julia`, `university` | `python`, `gha`, `university` | Python is the first-party implementation and model-definition language. Remove retired distribution/notebook labels and the non-core Julia interoperability label. |
 | `paper_id` | `10.1109/TPWRS.2020.3017019` | same | Confirmed current against both `CITATION.bib` and the README. |
 
@@ -300,7 +300,7 @@ Evidence: the [README](https://github.com/CURENT/andes/blob/eda5163c9ee8d19945a1
 Suggested change:
 
 ```yaml
-category: electromechanical
+category: electro-mechanical
 labels: ["python", "gha", "university"]
 ```
 
@@ -313,7 +313,7 @@ labels: ["python", "gha", "university"]
 
 | Field | Current | Recommended | Finding |
 | --- | --- | --- | --- |
-| Category | `phasor` | `electromechanical` | Rename. OpenIPSL explicitly provides Modelica component models for phasor time-domain dynamic analysis. |
+| Category | `phasor` | `electro-mechanical` | Rename. OpenIPSL explicitly provides Modelica component models for phasor time-domain dynamic analysis. |
 | Labels | `gha`, `modelica`, `university` | `modelica`, `gha`, `university` | Confirmed, reordered canonically. RPI's ALSETLab currently maintains it and workflows are present. |
 | `paper_id` | `10.1016/j.softx.2022.101277` | same | Confirmed current against the `CITATION.cff` preferred citation. |
 
@@ -322,7 +322,7 @@ Evidence: the [README](https://github.com/OpenIPSL/OpenIPSL/blob/8155c73f51ceeec
 Suggested change:
 
 ```yaml
-category: electromechanical
+category: electro-mechanical
 labels: ["modelica", "gha", "university"]
 ```
 
@@ -335,7 +335,7 @@ labels: ["modelica", "gha", "university"]
 
 | Field | Current | Recommended | Finding |
 | --- | --- | --- | --- |
-| Category | `phasor` | `electromechanical` | Rename. This Modelica library supports transient and steady-state AC/DC system models; its dynamic component-modeling role is the best exclusive fit. |
+| Category | `phasor` | `electro-mechanical` | Rename. This Modelica library supports transient and steady-state AC/DC system models; its dynamic component-modeling role is the best exclusive fit. |
 | Labels | `modelica`, `non-profit` | same | Keep. The source is Modelica and the library is under Modelica Association copyright/stewardship. No GitHub Actions workflow exists. |
 | `paper_id` | absent | absent | Confirmed skip. The README links a related publication with DOI `10.3384/ECP14096515`, but does not instruct users to cite it. |
 
@@ -344,7 +344,7 @@ Evidence: the [README](https://github.com/modelica-3rdparty/PowerSystems/blob/1e
 Suggested change:
 
 ```yaml
-category: electromechanical
+category: electro-mechanical
 ```
 
 ### 13. OpenHybridSim
@@ -381,14 +381,14 @@ paper_id:
 
 | Field | Current | Recommended | Finding |
 | --- | --- | --- | --- |
-| Category | `phasor` | `electromechanical` | Rename. Dynamic simulation is a principal capability; power flow and short-circuit analysis are supporting analyses. |
+| Category | `phasor` | `electro-mechanical` | Rename. Dynamic simulation is a principal capability; power flow and short-circuit analysis are supporting analyses. |
 | Labels | `c`, `pypi`, `python`, `university` | `cpp`, `university` | The first-party kernel is C++. Its `.c` files are bundled SuiteSparse/deprecated dependencies and Python is the `stepspy` binding. Remove retired `pypi`. No workflow exists. |
 | `paper_id` | absent | three-DOI list below | Add all three papers the README explicitly asks users to cite. |
 
 Evidence: the [README](https://github.com/changgang/steps/blob/4f380e8de9ba2ecd8fb59ed3e072001484923c3b/README.md) identifies the Shandong University maintainer, simulator scope, C++ implementation details, and citation set.
 
 ```yaml
-category: electromechanical
+category: electro-mechanical
 labels: ["cpp", "university"]
 paper_id:
   - 10.1109/TPWRS.2020.3045102
@@ -405,14 +405,14 @@ paper_id:
 
 | Field | Current | Recommended | Finding |
 | --- | --- | --- | --- |
-| Category | `phasor` | `electromechanical` | Rename. PSAT includes phasor-domain time-domain and small-signal stability analysis as well as power flow, continuation power flow, and OPF. |
+| Category | `phasor` | `electro-mechanical` | Rename. PSAT includes phasor-domain time-domain and small-signal stability analysis as well as power flow, continuation power flow, and OPF. |
 | Labels | `octave`, `university` | `octave`, `matlab`, `university` | The maintained `.m` toolbox explicitly contains MATLAB and GNU Octave execution paths. No workflow exists. |
 | `paper_id` | absent | absent | Confirmed skip for this repository snapshot: it has no citation file or README citation instruction. |
 
 Evidence: the source identifies Federico Milano and University College Dublin, maintains separate MATLAB/Octave paths, and contains the time-domain, small-signal, power-flow, CPF, and OPF implementations. The GitHub repository is a distribution mirror rather than an active upstream.
 
 ```yaml
-category: electromechanical
+category: electro-mechanical
 labels: ["octave", "matlab", "university"]
 ```
 
@@ -425,14 +425,14 @@ labels: ["octave", "matlab", "university"]
 
 | Field | Current | Recommended | Finding |
 | --- | --- | --- | --- |
-| Category | `phasor` | `electromechanical` | Rename. PST is a MATLAB power-system transient-stability and dynamic-equivalencing toolbox. |
+| Category | `phasor` | `electro-mechanical` | Rename. PST is a MATLAB power-system transient-stability and dynamic-equivalencing toolbox. |
 | Labels | `octave`, `university` | `matlab`, `community` | The implementation is explicitly MATLAB; no repository evidence establishes GNU Octave compatibility. This personal archival mirror is better represented as community stewardship than as a currently university-governed project. |
 | `paper_id` | absent | absent | Confirmed skip. No citation file or README citation instruction exists. |
 
 Evidence: the `.m` source repeatedly identifies the MATLAB Power System Toolbox and its original authors/copyright, while the reviewed repository consists of a single archival import without governance or citation documentation.
 
 ```yaml
-category: electromechanical
+category: electro-mechanical
 labels: ["matlab", "community"]
 ```
 
@@ -445,14 +445,14 @@ labels: ["matlab", "community"]
 
 | Field | Current | Recommended | Finding |
 | --- | --- | --- | --- |
-| Category | `phasor` | `electromechanical` | Rename. MATMTDC performs dynamic analysis of hybrid AC/DC power systems using time-domain machine, control, and network models. |
+| Category | `phasor` | `electro-mechanical` | Rename. MATMTDC performs dynamic analysis of hybrid AC/DC power systems using time-domain machine, control, and network models. |
 | Labels | `octave`, `university` | `matlab`, `university` | The project describes itself as MATLAB-based. Octave references occur in bundled MATPOWER-derived functions and do not establish compatibility for the dynamic simulator. |
 | `paper_id` | absent | absent | Confirmed skip. No explicit project paper citation was found. |
 
 Evidence: the [README](https://github.com/HuaizhiWang/matmtdc/blob/4c84180373fe691dccd826aa5948c64e9e6f4922/README.md) states MATLAB implementation, dynamic AC/DC scope, and a Shenzhen University contact.
 
 ```yaml
-category: electromechanical
+category: electro-mechanical
 labels: ["matlab", "university"]
 ```
 
@@ -465,14 +465,14 @@ labels: ["matlab", "university"]
 
 | Field | Current | Recommended | Finding |
 | --- | --- | --- | --- |
-| Category | `phasor` | `electromechanical` | Rename. Dynaωo is a time-domain power-system stability suite using differential-algebraic component and network models. |
+| Category | `phasor` | `electro-mechanical` | Rename. Dynaωo is a time-domain power-system stability suite using differential-algebraic component and network models. |
 | Labels | `gha`, `modelica`, `for-profit` | `cpp`, `modelica`, `gha`, `for-profit` | Add C++: the project explicitly calls itself a hybrid C++/Modelica suite and implements models in both. Python is build/support tooling. RTE remains the named corporate steward and workflows exist. |
 | `paper_id` | absent | absent | Confirmed skip. The repository has literature bibliographies but no citation file or README instruction recommending a core paper. |
 
 Evidence: the [README](https://github.com/dynawo/dynawo/blob/ce7edf72710f4e367a2ffdc84fb5d1afb710f141/README.md) defines the architecture and lists current RTE maintainers.
 
 ```yaml
-category: electromechanical
+category: electro-mechanical
 labels: ["cpp", "modelica", "gha", "for-profit"]
 ```
 
@@ -2864,7 +2864,7 @@ classification is otherwise sound.
 ### Category Conclusions
 
 The exclusive-category principle is workable for all 170 entries. The audit
-supports the agreed migrations `phasor` → `electromechanical`, `cosime` →
+supports the agreed migrations `phasor` → `electro-mechanical`, `cosime` →
 `cosim`, and `book` → `education`. It also found substantive corrections where
 the existing category described a repository artifact or historical placement
 rather than the project's primary formulation.

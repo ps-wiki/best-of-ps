@@ -10,10 +10,10 @@ configuration:
 
 
 categories:
-  - category: "electromechanical"
-    title: "Electromechanical Transient Simulation"
+  - category: "electro-mechanical"
+    title: "Electro-mechanical Transient Simulation"
   - category: "emt"
-    title: "Electromagnetic Transient Simulation"
+    title: "Electro-magnetic Transient Simulation"
   - category: "steady-state"
     title: "Steady-State Analysis and Optimization"
   - category: "intf"
@@ -118,7 +118,7 @@ projects:
     description: Parallel EMT simulation
 
   - name: DPsim
-    category: electromechanical
+    category: electro-mechanical
     labels: ["cpp", "gha", "university"]
     github_id: sogno-platform/dpsim
     paper_id:
@@ -150,7 +150,7 @@ projects:
     description: Distribution system simulator
 
   - name: OpenDER
-    category: electromechanical
+    category: electro-mechanical
     labels: ["python", "non-profit"]
     github_id: epri-dev/OpenDER
     pypi_id: opender
@@ -160,7 +160,7 @@ projects:
     description: Inverter-based DER simulation
 
   - name: GridPACK
-    category: electromechanical
+    category: electro-mechanical
     labels: ["cpp", "gha", "lab"]
     github_id: GridOPTICS/GridPACK
     paper_id: 10.1177/1094342015607609
@@ -183,7 +183,7 @@ projects:
     description: Distribution power system simulator
 
   - name: PowerSimulationsDynamics.jl
-    category: electromechanical
+    category: electro-mechanical
     labels: ["julia", "gha", "lab"]
     github_id: NREL-Sienna/PowerSimulationsDynamics.jl
     julia_id: PowerSimulationsDynamics
@@ -207,7 +207,7 @@ projects:
     license: BSD-3
     description: A C++ based generalized simulation tool based on semi-analytical solutions
   - name: PowerSAS.m
-    category: electromechanical
+    category: electro-mechanical
     labels: ["octave", "matlab", "lab"]
     github_id: ANL-CEEESA/powersas.m
     paper_id: 10.1109/OAJPE.2023.3245040
@@ -218,7 +218,7 @@ projects:
     description: Power grid analysis framework based on semi-analytical solutions
 
   - name: LTB ANDES
-    category: electromechanical
+    category: electro-mechanical
     labels: ["python", "gha", "university"]
     github_id: CURENT/andes
     julia_id: Andes
@@ -232,7 +232,7 @@ projects:
     description: Transient Stability Simulator; CURENT LTB
 
   - name: OpenIPSL
-    category: electromechanical
+    category: electro-mechanical
     labels: ["modelica", "gha", "university"]
     github_id: OpenIPSL/OpenIPSL
     paper_id: 10.1016/j.softx.2022.101277
@@ -244,7 +244,7 @@ projects:
     description: A Power System Library written in the Modelica
 
   - name: PowerSystems
-    category: electromechanical
+    category: electro-mechanical
     labels: ["modelica", "non-profit"]
     github_id: modelica-3rdparty/PowerSystems
     # pypi_id:
@@ -269,7 +269,7 @@ projects:
     description: EMT-TS hybrid simulation
 
   - name: STEPS
-    category: electromechanical
+    category: electro-mechanical
     labels: ["cpp", "university"]
     github_id: changgang/steps
     paper_id:
@@ -284,7 +284,7 @@ projects:
     description: Balanced large-scale AC-DC hybrid power system analysis
 
   - name: PSAT
-    category: electromechanical
+    category: electro-mechanical
     labels: ["octave", "matlab", "university"]
     github_id: Sinan81/PSAT
     # pypi_id:
@@ -295,7 +295,7 @@ projects:
     description: Unofficial repository of PSAT by Prof. Federico Milano
 
   - name: PST
-    category: electromechanical
+    category: electro-mechanical
     labels: ["matlab", "community"]
     github_id: cuihantao/pst
     # pypi_id:
@@ -306,7 +306,7 @@ projects:
     description: Unofficial repository of PST by Prof. Joe Chow
 
   - name: matmtdc
-    category: electromechanical
+    category: electro-mechanical
     labels: ["matlab", "university"]
     github_id: HuaizhiWang/matmtdc
     # pypi_id:
@@ -317,7 +317,7 @@ projects:
     description: Dynamic analysis of AC/DC hybrid power systems
 
   - name: Dynaωo
-    category: electromechanical
+    category: electro-mechanical
     labels: ["cpp", "modelica", "gha", "for-profit"]
     github_id: dynawo/dynawo
     homepage: http://dynawo.org
