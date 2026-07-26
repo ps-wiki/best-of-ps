@@ -1785,8 +1785,9 @@ projects:
 
   - name: RLGC
     category: mrl
-    labels: ["python", "jupyter", "lab"]
+    labels: ["python", "java", "lab"]
     github_id: RLGC-Project/RLGC
+    paper_id: 10.1109/TSG.2019.2933191
     # pypi_id:
     # conda_id:
     # homepage:
