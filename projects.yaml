@@ -757,7 +757,7 @@ projects:
   - name: GenX
     category: steady-state
     labels: ["julia", "gha", "university"]
-    github_id: GenXProject/GenX
+    github_id: GenXProject/GenX.jl
     julia_id: GenX
     # paper_id:
     # pypi_id:
