@@ -185,7 +185,7 @@ projects:
   - name: PowerSimulationsDynamics.jl
     category: electro-mechanical
     labels: ["julia", "gha", "lab"]
-    github_id: NREL-Sienna/PowerSimulationsDynamics.jl
+    github_id: Sienna-Platform/PowerSimulationsDynamics.jl
     julia_id: PowerSimulationsDynamics
     paper_id:
       - "arXiv:2308.02921"
