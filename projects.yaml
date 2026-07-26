@@ -150,7 +150,7 @@ projects:
     description: Distribution system simulator
 
   - name: OpenDER
-    category: pe
+    category: electromechanical
     labels: ["python", "non-profit"]
     github_id: epri-dev/OpenDER
     pypi_id: opender
