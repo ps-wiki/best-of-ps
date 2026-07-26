@@ -1242,8 +1242,8 @@ projects:
 
   - name: Clp
     category: ops
-    labels: ["gha", "conda", "python", "julia", "c", "non-profit"]
-    github_id: coin-or/Cbc
+    labels: ["cpp", "gha", "non-profit"]
+    github_id: coin-or/Clp
     # pypi_id:
     conda_id: conda-forge/coin-or-clp
     homepage: https://www.coin-or.org/
