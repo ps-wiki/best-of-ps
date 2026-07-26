@@ -1891,7 +1891,7 @@ projects:
 # --- Visualization ---
   - name: PowSyBl Diagram
     category: vis
-    labels: ["gha", "java", "jupyter", "for-profit"]
+    labels: ["java", "gha", "non-profit"]
     github_id: powsybl/powsybl-diagram
     # pypi_id:
     # conda_id:
