@@ -1140,7 +1140,7 @@ projects:
 
   - name: DSS Sharp
     category: intf
-    labels: ["gha", "volunteer"]
+    labels: ["csharp", "gha", "community"]
     github_id: dss-extensions/dss_sharp
     # pypi_id:
     # conda_id:
