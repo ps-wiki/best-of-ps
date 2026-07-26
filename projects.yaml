@@ -598,7 +598,7 @@ projects:
 
   - name: MOST
     category: steady-state
-    labels: ["gha", "octave", "university"]
+    labels: ["octave", "matlab", "gha", "university"]
     github_id: MATPOWER/most
     paper_id:
       - 10.1109/TPWRS.2010.2051168
