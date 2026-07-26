@@ -1955,9 +1955,9 @@ projects:
     description: Examples and problems accompanying Daniel Kirschen's Power Systems Textbook
 
   - name: UTK ECE 522 - Power System Analysis II
-    category: book
+    category: education
     resource: True
-    labels: ["python", "jupyter", "university"]
+    labels: ["python", "university"]
     github_id: CURENT/ece522
     license: MIT
     description: Hands-on Project for Power System Analysis II (UTK ECE 522)
