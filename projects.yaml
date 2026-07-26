@@ -915,9 +915,10 @@ projects:
     description: Reliability Test System dataset for Grid Modernization Lab Consortium studies
 
   - name: ERAD
-    category: intf
-    labels: ["gha", "pypi", "python", "lab"]
+    category: steady-state
+    labels: ["python", "gha", "lab"]
     github_id: NLR-Distribution-Suite/erad
+    paper_id: 10.21105/joss.08782
     pypi_id: NREL-erad
     # conda_id:
     # homepage:
