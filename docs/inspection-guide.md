@@ -41,9 +41,15 @@ For every entry:
    formulating or solving an optimization problem.
 5. If no central formulation applies, choose the primary artifact role, such
    as interface, data, visualization, or education.
-6. When several choices remain defensible, use the project's official scope
+6. When a simulator directly implements multiple time-domain or steady-state
+   capabilities, choose the first applicable category in this order: `emt`,
+   `electromechanical`, then `steady-state`.
+7. Apply that capability precedence only to first-party simulation
+   formulations. It does not override the artifact role of a wrapper, binding,
+   parser, or other interface.
+8. When several choices remain defensible, use the project's official scope
    and the main reason it belongs in this catalog.
-7. Record unresolved cases as `ambiguous` for human review.
+9. Record unresolved cases as `ambiguous` for human review.
 
 ## Target Categories
 
