@@ -316,8 +316,8 @@ projects:
     description: Dynamic analysis of AC/DC hybrid power systems
 
   - name: Dynaωo
-    category: phasor
-    labels: ["gha", "modelica", "for-profit"]
+    category: electromechanical
+    labels: ["cpp", "modelica", "gha", "for-profit"]
     github_id: dynawo/dynawo
     homepage: http://dynawo.org
     docs_url: https://dynawo.github.io/docs/
