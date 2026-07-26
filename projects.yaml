@@ -649,9 +649,9 @@ projects:
 
   - name: PYPOWER
     category: steady-state
-    labels: ["gha", "pypi", "conda", "python", "non-profit"]
+    labels: ["python", "gha", "community"]
     github_id: rwl/PYPOWER
-    # paper_id:
+    paper_id: 10.1109/TPWRS.2010.2051168
     pypi_id: PYPOWER
     conda_id: invenia/pypower
     dockerhub_id: hwanghust/pypower
