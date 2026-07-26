@@ -217,8 +217,8 @@ projects:
     description: Power grid analysis framework based on semi-analytical solutions
 
   - name: LTB ANDES
-    category: phasor
-    labels: ["gha", "pypi", "conda", "jupyter", "python", "julia", "university"]
+    category: electromechanical
+    labels: ["python", "gha", "university"]
     github_id: CURENT/andes
     julia_id: Andes
     paper_id: 10.1109/TPWRS.2020.3017019
