@@ -928,7 +928,7 @@ projects:
 
   - name: powfacpy
     category: intf
-    labels: ["pypi", "python", "non-profit"]
+    labels: ["python", "non-profit"]
     github_id: FraunhIEE-UniKassel-PowSysStability/powfacpy
     pypi_id: powfacpy
     # conda_id:
