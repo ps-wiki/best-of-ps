@@ -791,8 +791,8 @@ projects:
     description: A grid-aware co-simulation platform for the design and optimization of EV Charging Infrastructure
 
   - name: DSSData
-    category: steady-state
-    labels: ["gha", "pypi", "python"]
+    category: intf
+    labels: ["python", "gha"]
     github_id: felipemarkson/dssdata
     # paper_id:
     pypi_id: dssdata
