@@ -1266,10 +1266,10 @@ projects:
 
   - name: ECOS
     category: ops
-    labels: ["pypi", "conda", "python", "julia", "c", "octave", "r", "university"]
+    labels: ["c"]
     github_id: embotech/ecos
     julia_id: ECOS
-    # paper_id:
+    paper_id: 10.23919/ECC.2013.6669541
     pypi_id: ecos
     conda_id: conda-forge/ecos
     # homepage:
