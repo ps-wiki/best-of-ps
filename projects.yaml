@@ -1546,7 +1546,7 @@ projects:
 
   - name: Australian MV-LV Networks
     category: data
-    labels: ["jupyter", "python", "university"]
+    labels: ["university"]
     resource: True
     github_id: Team-Nando/MV-LV-Networks
     license: BSD-3
