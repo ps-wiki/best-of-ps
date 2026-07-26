@@ -1486,7 +1486,7 @@ projects:
     description: Python-based Optimization Modeling Language
 
   - name: JuMP
-    labels: ["gha", "jupyter", "julia", "non-profit"]
+    labels: ["julia", "gha", "non-profit"]
     category: opl
     github_id: jump-dev/JuMP.jl
     julia_id: JuMP
