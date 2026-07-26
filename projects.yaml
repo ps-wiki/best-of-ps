@@ -231,8 +231,8 @@ projects:
     description: Transient Stability Simulator; CURENT LTB
 
   - name: OpenIPSL
-    category: phasor
-    labels: ["gha", "modelica", "university"]
+    category: electromechanical
+    labels: ["modelica", "gha", "university"]
     github_id: OpenIPSL/OpenIPSL
     paper_id: 10.1016/j.softx.2022.101277
     # pypi_id:
