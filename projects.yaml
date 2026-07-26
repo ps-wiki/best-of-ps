@@ -1796,8 +1796,8 @@ projects:
 
 # --- CoSim Environment ---
   - name: OpenModelica
-    category: cosime
-    labels: ["gha", "modelica", "python", "university"]
+    category: cosim
+    labels: ["modelica", "c", "cpp", "gha", "university"]
     github_id: OpenModelica/OpenModelica
     paper_id: 10.4173/mic.2020.4.1
     # pypi_id:
