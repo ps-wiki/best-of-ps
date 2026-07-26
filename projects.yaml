@@ -1129,7 +1129,7 @@ projects:
 
   - name: DSS MATLAB
     category: intf
-    labels: ["gha", "octave", "volunteer"]
+    labels: ["matlab", "gha", "community"]
     github_id: dss-extensions/dss_matlab
     # pypi_id:
     # conda_id:
