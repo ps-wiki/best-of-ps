@@ -1914,7 +1914,7 @@ projects:
 
   - name: PowerGraphics.jl
     category: vis
-    labels: ["gha", "julia", "jupyter", "lab"]
+    labels: ["julia", "gha", "lab"]
     github_id: NREL-Sienna/powergraphics.jl
     julia_id: PowerGraphics
     # pypi_id:
