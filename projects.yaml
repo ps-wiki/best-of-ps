@@ -1647,9 +1647,10 @@ projects:
 
   - name: COVID-EMDA
     category: data
-    labels: ["python", "university"]
+    labels: ["university"]
     resource: True
     github_id: tamu-engineering-research/COVID-EMDA
+    paper_id: "arXiv:2005.06631"
     license: MIT
     description: Cross-Domain Data Hub with Data in USA
 
