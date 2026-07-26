@@ -674,10 +674,10 @@ projects:
 
   - name: PowerModels.jl
     category: steady-state
-    labels: ["gha", "julia", "lab"]
+    labels: ["julia", "gha", "lab"]
     github_id: lanl-ansi/PowerModels.jl
     julia_id: PowerModels
-    # paper_id:
+    paper_id: 10.23919/PSCC.2018.8442948
     # pypi_id:
     # conda_id:
     # homepage:
