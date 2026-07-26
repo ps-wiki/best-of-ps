@@ -802,9 +802,9 @@ projects:
     description: A micro-framework for simulation and data analysis of distribution systems modeled on OpenDSS
 
   - name: TESP
-    category: steady-state
+    category: cosim
     github_id: pnnl/tesp
-    labels: ["gha", "python", "jupyter", "pypi", "lab"]
+    labels: ["python", "gha", "lab"]
     pypi_id: tesp_support
     # homepage:
     docs_url: https://tesp.readthedocs.io/en/latest/
