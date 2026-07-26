@@ -117,9 +117,19 @@ projects:
     description: Parallel EMT simulation
 
   - name: DPsim
-    category: emt
-    labels: ["gha", "pypi", "jupyter", "python", "c", "university"]
+    category: electromechanical
+    labels: ["cpp", "gha", "university"]
     github_id: sogno-platform/dpsim
+    paper_id:
+      - 10.1016/j.softx.2019.100253
+      - 10.1109/OSMSES58477.2023.10089718
+      - 10.1049/tje2.12208
+      - 10.1109/OSMSES54027.2022.9769135
+      - 10.3390/en14237989
+      - 10.3390/en14071860
+      - 10.3390/en13153879
+      - 10.1109/ICCEP.2017.8004805
+      - 10.1109/EI2.2017.8245739
     pypi_id: dpsim
     homepage: https://dpsim.fein-aachen.org/
     docs_url: https://dpsim.fein-aachen.org/docs/
