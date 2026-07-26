@@ -446,7 +446,7 @@ projects:
     description: Framework to build power system software
   - name: PyPowSyBl
     category: steady-state
-    labels: ["gha", "pypi", "python", "java", "jupyter", "non-profit"]
+    labels: ["python", "java", "gha", "non-profit"]
     github_id: powsybl/pypowsybl
     pypi_id: pypowsybl
     # conda_id:
