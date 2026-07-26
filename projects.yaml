@@ -424,7 +424,7 @@ projects:
 
   - name: LTB AMS
     category: steady-state
-    labels: ["gha", "pypi", "conda", "jupyter", "python", "university"]
+    labels: ["python", "gha", "university"]
     github_id: CURENT/ams
     paper_id: 10.1109/TSTE.2025.3528027
     pypi_id: ltbams
