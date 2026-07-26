@@ -1363,7 +1363,7 @@ projects:
 
   - name: OR-Tools
     category: ops
-    labels: ["gha", "pypi", "conda", "python", "cpp", "java", "for-profit"]
+    labels: ["cpp", "gha", "for-profit"]
     github_id: google/or-tools
     pypi_id: ortools
     conda_id: conda-forge/ortools-python
