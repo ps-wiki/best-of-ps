@@ -446,7 +446,7 @@ projects:
     license: MPL-2.0
     description: Framework to build power system software
   - name: PyPowSyBl
-    category: steady-state
+    category: intf
     labels: ["python", "java", "gha", "non-profit"]
     github_id: powsybl/pypowsybl
     pypi_id: pypowsybl
