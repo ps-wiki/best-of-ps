@@ -860,7 +860,7 @@ projects:
 
   - name: Prescient
     category: steady-state
-    labels: ["gha", "pypi", "python"]
+    labels: ["python", "gha", "lab"]
     github_id: grid-parity-exchange/Prescient
     pypi_id: gridx-prescient
     # conda_id:
