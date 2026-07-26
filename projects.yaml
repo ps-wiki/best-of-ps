@@ -159,9 +159,10 @@ projects:
     description: Inverter-based DER simulation
 
   - name: GridPACK
-    category: phasor
-    labels: ["c", "gha", "python", "lab"]
+    category: electromechanical
+    labels: ["cpp", "gha", "lab"]
     github_id: GridOPTICS/GridPACK
+    paper_id: 10.1177/1094342015607609
     # pypi_id:
     # conda_id:
     homepage: https://gridpack.pnnl.gov/wiki/index.php/Main_Page
