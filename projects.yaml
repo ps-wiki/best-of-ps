@@ -341,6 +341,7 @@ projects:
     category: steady-state
     labels: ["python", "lab"]
     github_id: NatLabRockies/ASSET
+    paper_id: 10.1109/PESGM52009.2025.11225841
     # pypi_id:
     # conda_id:
     # dockerhub_id:
