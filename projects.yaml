@@ -1775,7 +1775,7 @@ projects:
 
   - name: andes_gym
     category: mrl
-    labels: ["python", "jupyter", "university"]
+    labels: ["python", "university"]
     github_id: cuihantao/andes_gym
     # pypi_id:
     # conda_id:
