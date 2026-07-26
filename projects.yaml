@@ -1763,7 +1763,7 @@ projects:
 
   - name: Grid2Op
     github_id: rte-france/Grid2Op
-    labels: ["gha", "pypi", "jupyter", "python", "for-profit"]
+    labels: ["python", "gha", "for-profit"]
     category: mrl
     pypi_id: Grid2Op
     # conda_id:
