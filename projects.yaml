@@ -1315,8 +1315,9 @@ projects:
 
   - name: Ipopt
     category: ops
-    labels: ["pypi", "conda", "python", "non-profit"]
+    labels: ["cpp", "non-profit"]
     github_id: coin-or/Ipopt
+    paper_id: 10.1007/s10107-004-0559-y
     pypi_id: ipopt
     conda_id: conda-forge/ipopt
     homepage: https://www.coin-or.org/
