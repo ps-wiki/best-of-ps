@@ -1902,7 +1902,7 @@ projects:
 
   - name: LTB AGVis
     category: vis
-    labels: ["gha", "pypi", "python", "university"]
+    labels: ["python", "gha", "university"]
     github_id: CURENT/agvis
     paper_id: 10.1109/NAPS58826.2023.10318583
     pypi_id: agvis
