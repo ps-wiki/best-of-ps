@@ -1688,6 +1688,7 @@ projects:
     labels: ["university"]
     resource: True
     github_id: NanpengYu/pmuBAGE
+    paper_id: "arXiv:2204.01095"
     # homepage:
     # license:
     description: Synthetic phasor measurement unit dataset
