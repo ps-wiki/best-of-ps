@@ -538,7 +538,7 @@ projects:
     description: Python for Power System Analysis
   - name: PyPSA-USA
     category: steady-state
-    labels: ["gha", "python", "jupyter", "university"]
+    labels: ["python", "gha", "university"]
     github_id: PyPSA/pypsa-usa
     # paper_id:
     # pypi_id:
