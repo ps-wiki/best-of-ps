@@ -1824,8 +1824,9 @@ projects:
 # --- Gas Network ---
   - name: MPNG
     category: gasnet
-    labels: ["octave", "university"]
+    labels: ["matlab", "university"]
     github_id: MATPOWER/mpng
+    paper_id: 10.1109/TPWRS.2022.3195684
     # pypi_id:
     # conda_id:
     homepage: https://matpower.org/
