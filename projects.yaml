@@ -1985,9 +1985,9 @@ projects:
     license: BSD-3.0
     description: Advanced Tools for the Analysis of Three-Phase Unbalanced LV Networks
   - name: Tutorial on DER Hosting Capacity Part 2
-    category: book
+    category: education
     resource: True
-    labels: ["jupyter", "python", "university"]
+    labels: ["python", "university"]
     github_id: Team-Nando/Tutorial-DERHostingCapacity-2-TimeSeries_LV
     license: BSD-3.0
     description: Time-Series Analysis and PV Hosting Capacity of LV Networks
