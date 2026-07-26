@@ -1437,8 +1437,9 @@ projects:
 # --- Optimization Language ---
   - name: PyOptInterface
     github_id: metab0t/PyOptInterface
-    labels: ["gha", "pypi", "jupyter", "python", "volunteer"]
+    labels: ["python", "cpp", "gha"]
     category: opl
+    paper_id: 10.1109/TPWRS.2024.3483489
     pypi_id: pyoptinterface
     # conda_id:
     # homepage:
