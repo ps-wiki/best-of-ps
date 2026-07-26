@@ -1151,7 +1151,7 @@ projects:
 
   - name: py-dss-interface
     category: intf
-    labels: ["pypi", "python", "jupyter", "non-profit"]
+    labels: ["python", "non-profit"]
     github_id: PauloRadatz/py_dss_interface
     pypi_id: py-dss-interface
     # conda_id:
