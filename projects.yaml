@@ -939,7 +939,7 @@ projects:
 
   - name: PSST
     category: steady-state
-    labels: ["gha", "pypi", "python", "university"]
+    labels: ["python", "gha", "university"]
     github_id: ames-market/psst
     pypi_id: psst
     # conda_id:
