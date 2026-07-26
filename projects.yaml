@@ -892,7 +892,7 @@ projects:
     description: Test case data management for power systems simulation
 
   - name: PowerDynData.jl
-    category: data
+    category: dataman
     labels: ["julia", "gha"]
     github_id: cuihantao/PowerDynData.jl
     julia_id: PowerDynData
