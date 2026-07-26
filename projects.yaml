@@ -687,12 +687,12 @@ projects:
     description: Power Network Optimization
 
   - name: VeraGrid
-    category: steady-state
+    category: emt
     labels: ["python", "gha", "for-profit"]
     github_id: SanPen/VeraGrid
     pypi_id: veragrid
     # conda_id:
-    homepage: https://www.eroots.tech/software
+    homepage: https://eroots.tech/veragrid-gslv
     docs_url: https://veragrid.readthedocs.io/en/latest/?badge=latest
     license: MPL-2.0
     description: Cross-platform power systems software, power flows, investments analysis, optimization and plenty of other stuff
