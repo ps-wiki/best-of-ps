@@ -1219,7 +1219,7 @@ projects:
     description: Interior-point solver for convex conic optimisation in Julia
   - name: Clarabel.rs
     category: ops
-    labels: ["gha", "pypi", "conda", "python", "rust", "university"]
+    labels: ["rust", "gha", "university"]
     github_id: oxfordcontrol/Clarabel.rs
     paper_id: "arXiv:2405.12762"
     pypi_id: clarabel
