@@ -1656,7 +1656,7 @@ projects:
 
   - name: SimBench
     category: data
-    labels: ["python", "pypi", "conda", "jupyter", "gha"]
+    labels: ["python", "gha", "university", "non-profit"]
     github_id: e2nIEE/simbench
     pypi_id: simbench
     conda_id: conda-forge/simbench
