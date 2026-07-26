@@ -470,7 +470,7 @@ projects:
   - name: PowerFlows.jl
     category: steady-state
     labels: ["gha", "julia", "lab"]
-    github_id: NREL-Sienna/PowerFlows.jl
+    github_id: Sienna-Platform/PowerFlows.jl
     julia_id: PowerFlows
     # paper_id:
     # pypi_id:
