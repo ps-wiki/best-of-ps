@@ -1513,8 +1513,8 @@ projects:
 
 # --- Data Source ---
   - name: EnergyDataModel
-    category: data
-    labels: ["pypi", "python", "jupyter", "for-profit"]
+    category: dataman
+    labels: ["python", "gha", "for-profit"]
     github_id: rebase-energy/EnergyDataModel
     pypi_id: energydatamodel
     # conda_id:
