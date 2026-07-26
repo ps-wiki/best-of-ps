@@ -742,9 +742,10 @@ projects:
 
   - name: ReEDS-2.0
     category: steady-state
-    labels: ["python", "gha", "lab"]
-    github_id: NatLabRockies/ReEDS-2.0
+    labels: ["python", "julia", "gams", "gha", "lab"]
+    github_id: ReEDS-Model/ReEDS
     # paper_id:
+    name: ReEDS
     # pypi_id:
     # conda_id:
     homepage: https://www.nlr.gov/analysis/reeds/
