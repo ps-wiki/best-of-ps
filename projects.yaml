@@ -254,9 +254,12 @@ projects:
     description: Modelica 3rd party library for electrical power systems
 
   - name: OpenHybridSim
-    category: phasor
+    category: cosim
     labels: ["java", "university"]
     github_id: OpenHybridSim/OpenHybridSim-code
+    paper_id:
+      - 10.1109/TPWRS.2015.2479588
+      - 10.1109/PESGM.2016.7741233
     # pypi_id:
     # conda_id:
     # homepage:
