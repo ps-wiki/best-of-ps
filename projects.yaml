@@ -1414,7 +1414,7 @@ projects:
     description: A solver for nonlinear programming with GPU support
 
   - name: KVXOPT
-    github_id: sanurielf/kvxopt
+    github_id: kvxopt/kvxopt
     labels: ["python", "c", "gha"]
     category: ops
     pypi_id: kvxopt
