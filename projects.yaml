@@ -482,7 +482,7 @@ projects:
   - name: PowerNetworkMatrices.jl
     category: steady-state
     labels: ["gha", "julia", "lab"]
-    github_id: NREL-Sienna/PowerNetworkMatrices.jl
+    github_id: Sienna-Platform/PowerNetworkMatrices.jl
     julia_id: PowerNetworkMatrices
     # paper_id:
     # pypi_id:
