@@ -268,9 +268,13 @@ projects:
     description: EMT-TS hybrid simulation
 
   - name: STEPS
-    category: phasor
-    labels: ["c", "pypi", "python", "university"]
+    category: electromechanical
+    labels: ["cpp", "university"]
     github_id: changgang/steps
+    paper_id:
+      - 10.1109/TPWRS.2020.3045102
+      - 10.1016/j.ijepes.2023.109509
+      - 10.1016/j.ijepes.2025.110651
     pypi_id: stepspy
     # conda_id:
     # homepage:
