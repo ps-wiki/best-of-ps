@@ -139,7 +139,7 @@ projects:
 # --- Phasor ---
   - name: OpenDSS
     category: steady-state
-    labels: ["python", "julia", "c", "octave", "non-profit"]
+    labels: ["pascal", "cpp", "non-profit"]
     # github_id:
     # pypi_id:
     # conda_id:
