@@ -1593,8 +1593,8 @@ projects:
     description: Economic data on WECC and NPCC
 
   - name: GridStatus
-    category: data
-    labels: ["gha", "pypi", "conda", "python", "for-profit"]
+    category: dataman
+    labels: ["python", "gha", "for-profit"]
     github_id: kmax12/gridstatus
     # paper_id:
     pypi_id: gridstatus
