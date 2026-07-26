@@ -1062,7 +1062,7 @@ projects:
 
   - name: OpenDER interface
     category: intf
-    labels: ["python", "jupyter", "non-profit"]
+    labels: ["python", "non-profit"]
     github_id: epri-dev/OpenDER_interface
     # pypi_id:
     # conda_id:
