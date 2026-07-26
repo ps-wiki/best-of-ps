@@ -709,8 +709,8 @@ projects:
 
   - name: ExaGO
     category: steady-state
-    labels: ["gha", "jupyter", "c", "python", "lab"]
-    github_id: pnnl/ExaGO
+    labels: ["cpp", "gha", "lab"]
+    github_id: ORNL/ExaGO
     # pypi_id:
     # conda_id:
     homepage: https://www.gridpath.io/
