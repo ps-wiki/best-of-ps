@@ -93,7 +93,9 @@ The local scripts under `scripts/` extend the weekly update workflow:
   generation and local previews.
 - `best_of_score_extension.py` uses the generator's supported extension hook
   to add the adjustments before filtering, sorting, medal placement, history
-  generation, and README rendering.
+  generation, and README rendering. It also registers Julia-package and paper
+  detail integrations so `julia_id` links to JuliaHub and every DOI or arXiv
+  `paper_id` links to its canonical record.
 - `validate_applied_scores.py` verifies the generated history after the
   upstream action and fails the update if the hook did not apply exact scores.
 - `preview_score_extensions.py` previews the same applied adjustments against

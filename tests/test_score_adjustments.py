@@ -142,8 +142,14 @@ class GeneratorExtensionTests(unittest.TestCase):
                 calls.append(project["projectrank"])
 
             projects_collection.apply_filters = upstream_apply_filters
+            integrations = types.ModuleType("best_of.integrations")
+            integrations.AVAILABLE_PACKAGE_MANAGER = []
+            utils = types.ModuleType("best_of.utils")
+            utils.simplify_number = lambda value: str(value)
             best_of = types.ModuleType("best_of")
             best_of.projects_collection = projects_collection
+            best_of.integrations = integrations
+            best_of.utils = utils
 
             old_best_of = sys.modules.get("best_of")
             old_collection = sys.modules.get("best_of.projects_collection")
@@ -182,6 +188,126 @@ class GeneratorExtensionTests(unittest.TestCase):
                 self.assertEqual(project["upstream_projectrank"], 20)
                 self.assertEqual(project["projectrank"], 20 + expected)
                 self.assertEqual(calls, [20 + expected, 20 + expected])
+                self.assertEqual(
+                    [item.name for item in integrations.AVAILABLE_PACKAGE_MANAGER],
+                    ["julia", "paper"],
+                )
+            finally:
+                if old_best_of is None:
+                    sys.modules.pop("best_of", None)
+                else:
+                    sys.modules["best_of"] = old_best_of
+                if old_collection is None:
+                    sys.modules.pop("best_of.projects_collection", None)
+                else:
+                    sys.modules["best_of.projects_collection"] = old_collection
+                if old_julia is None:
+                    os.environ.pop("BESTPS_JULIA_METRICS", None)
+                else:
+                    os.environ["BESTPS_JULIA_METRICS"] = old_julia
+                if old_citation is None:
+                    os.environ.pop("BESTPS_CITATION_METRICS", None)
+                else:
+                    os.environ["BESTPS_CITATION_METRICS"] = old_citation
+
+    def test_metadata_integrations_render_links_and_metrics(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp = Path(temp_dir)
+            julia_path = temp / "julia.json"
+            citation_path = temp / "citation.json"
+            julia_path.write_text(
+                json.dumps(
+                    {
+                        "projects": [
+                            {
+                                "name": "Example",
+                                "julia_id": "Example",
+                                "monthly_user_downloads": 200,
+                                "total_user_downloads": 1000,
+                                "errors": [],
+                            }
+                        ]
+                    }
+                )
+            )
+            citation_path.write_text(
+                json.dumps(
+                    {
+                        "projects": [
+                            {
+                                "name": "Example",
+                                "paper_id": ["10.1000/example(1)"],
+                                "paper_count": 1,
+                                "resolved_paper_count": 1,
+                                "arxiv_paper_count": 0,
+                                "cited_by_count": 1,
+                                "papers": [],
+                                "errors": [],
+                            }
+                        ]
+                    }
+                )
+            )
+
+            projects_collection = types.ModuleType("best_of.projects_collection")
+            projects_collection.apply_filters = lambda *_args: None
+            integrations = types.ModuleType("best_of.integrations")
+            integrations.AVAILABLE_PACKAGE_MANAGER = []
+            utils = types.ModuleType("best_of.utils")
+            utils.simplify_number = lambda value: str(value)
+            best_of = types.ModuleType("best_of")
+            best_of.projects_collection = projects_collection
+            best_of.integrations = integrations
+            best_of.utils = utils
+
+            old_best_of = sys.modules.get("best_of")
+            old_collection = sys.modules.get("best_of.projects_collection")
+            old_julia = os.environ.get("BESTPS_JULIA_METRICS")
+            old_citation = os.environ.get("BESTPS_CITATION_METRICS")
+            try:
+                sys.modules["best_of"] = best_of
+                sys.modules["best_of.projects_collection"] = projects_collection
+                os.environ["BESTPS_JULIA_METRICS"] = str(julia_path)
+                os.environ["BESTPS_CITATION_METRICS"] = str(citation_path)
+
+                spec = spec_from_file_location(
+                    "best_of_render_extension_test",
+                    SCRIPTS / "best_of_score_extension.py",
+                )
+                module = module_from_spec(spec)
+                assert spec and spec.loader
+                spec.loader.exec_module(module)
+
+                project = {
+                    "name": "Example",
+                    "julia_id": "Example",
+                    "paper_id": "10.1000/example(1)",
+                }
+                for integration in integrations.AVAILABLE_PACKAGE_MANAGER:
+                    integration.update_project_info(project)
+                configuration = types.SimpleNamespace(generate_install_hints=True)
+                julia_md = integrations.AVAILABLE_PACKAGE_MANAGER[
+                    0
+                ].generate_md_details(project, configuration)
+                paper_md = integrations.AVAILABLE_PACKAGE_MANAGER[
+                    1
+                ].generate_md_details(project, configuration)
+
+                self.assertIn(
+                    "https://juliahub.com/ui/Packages/General/Example",
+                    julia_md,
+                )
+                self.assertIn('Pkg.add("Example")', julia_md)
+                self.assertIn("📥 200 / month", julia_md)
+                self.assertIn(
+                    "https://doi.org/10.1000/example%281%29",
+                    paper_md,
+                )
+                self.assertIn("📚 1 citation", paper_md)
+                self.assertEqual(
+                    module.PaperIntegration.paper_link("arXiv:2401.00001"),
+                    "[arXiv:2401.00001](https://arxiv.org/abs/2401.00001)",
+                )
             finally:
                 if old_best_of is None:
                     sys.modules.pop("best_of", None)
