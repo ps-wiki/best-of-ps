@@ -150,33 +150,6 @@ jobs:
             echo "UPDATE_BRANCH=$update_branch"
           } >> "$GITHUB_ENV"
 
-      - name: Wait for two-hour review window
-        if: ${{ github.event_name == 'workflow_run' }}
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          pr_json="$(gh api "repos/$REPO/pulls/$PR_NUMBER")"
-          created_at="$(jq -r '.created_at' <<<"$pr_json")"
-          draft="$(jq -r '.draft' <<<"$pr_json")"
-
-          [[ "$draft" == "false" ]] || {
-            echo "PR is still a draft; automatic finalization will not proceed" >&2
-            exit 1
-          }
-
-          created_epoch="$(date -u -d "$created_at" +%s)"
-          ready_epoch=$((created_epoch + 2 * 60 * 60))
-          now_epoch="$(date -u +%s)"
-          remaining=$((ready_epoch - now_epoch))
-
-          if (( remaining > 0 )); then
-            echo "Waiting $remaining seconds until the two-hour review window ends"
-            sleep "$remaining"
-          else
-            echo "The two-hour review window has already elapsed"
-          fi
-
       - name: Checkout trusted workflow repository
         uses: actions/checkout@v6
         with:
@@ -218,7 +191,7 @@ jobs:
           python -m unittest discover -s trusted/tests -v
           python trusted/scripts/validate_metadata.py
 
-      - name: Verify reviewed pull request state
+      - name: Verify reviewed pull request state before waiting
         shell: bash
         run: |
           set -euo pipefail
@@ -249,7 +222,7 @@ jobs:
             exit 1
           }
 
-      - name: Verify matching draft release exists
+      - name: Verify matching draft release exists before waiting
         shell: bash
         run: |
           set -euo pipefail
@@ -264,6 +237,111 @@ jobs:
           is_draft="$(jq -r --arg tag "$VERSION" '.[] | select(.tag_name == $tag) | .draft' <<<"$releases")"
           is_prerelease="$(jq -r --arg tag "$VERSION" '.[] | select(.tag_name == $tag) | .prerelease' <<<"$releases")"
           [[ "$is_draft" == "true" && "$is_prerelease" == "false" ]]
+
+      - name: Announce automatic finalization window
+        if: ${{ github.event_name == 'workflow_run' }}
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          pr_json="$(gh api "repos/$REPO/pulls/$PR_NUMBER")"
+          created_at="$(jq -r '.created_at' <<<"$pr_json")"
+          created_epoch="$(date -u -d "$created_at" +%s)"
+          ready_epoch=$((created_epoch + 2 * 60 * 60))
+          now_epoch="$(date -u +%s)"
+          remaining=$((ready_epoch - now_epoch))
+          ready_at="$(date -u -d "@$ready_epoch" '+%Y-%m-%d %H:%M UTC')"
+
+          if (( remaining > 0 )); then
+            hours=$((remaining / 3600))
+            minutes=$(((remaining % 3600 + 59) / 60))
+            if (( hours > 0 )); then
+              delay="$hours hour"
+              (( hours != 1 )) && delay+="s"
+              if (( minutes > 0 )); then
+                delay+=" $minutes minute"
+                (( minutes != 1 )) && delay+="s"
+              fi
+            else
+              delay="$minutes minute"
+              (( minutes != 1 )) && delay+="s"
+            fi
+          else
+            delay="less than 1 minute"
+          fi
+
+          echo "AUTO_FINALIZE_AT_EPOCH=$ready_epoch" >> "$GITHUB_ENV"
+
+          marker="<!-- best-of-auto-finalize: $EXPECTED_HEAD_SHA -->"
+          existing_comment="$(gh api --paginate --slurp \
+            "repos/$REPO/issues/$PR_NUMBER/comments?per_page=100" \
+            | jq -r --arg marker "$marker" \
+              '[add[] | select((.body // "") | contains($marker)) | .id][0] // empty')"
+          if [[ -n "$existing_comment" ]]; then
+            echo "Automatic finalization announcement already exists: $existing_comment"
+            exit 0
+          fi
+
+          comment_body="$(printf '%s\n\n%s\n\n%s\n' \
+            "$marker" \
+            "The weekly update PR passed the initial automated checks." \
+            "If no one changes, closes, merges, or releases it manually, it will be rechecked and automatically merged with its draft release published as latest in approximately $delay (target: $ready_at).")"
+          gh pr comment "$PR_NUMBER" \
+            --repo "$REPO" \
+            --body "$comment_body"
+
+      - name: Wait for two-hour review window
+        if: ${{ github.event_name == 'workflow_run' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          now_epoch="$(date -u +%s)"
+          remaining=$((AUTO_FINALIZE_AT_EPOCH - now_epoch))
+          if (( remaining > 0 )); then
+            echo "Waiting $remaining seconds until the two-hour review window ends"
+            sleep "$remaining"
+          else
+            echo "The two-hour review window has already elapsed"
+          fi
+
+      - name: Reverify reviewed state after waiting
+        if: ${{ github.event_name == 'workflow_run' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          pr_json="$(gh api "repos/$REPO/pulls/$PR_NUMBER")"
+          state="$(jq -r '.state' <<<"$pr_json")"
+          draft="$(jq -r '.draft' <<<"$pr_json")"
+          title="$(jq -r '.title' <<<"$pr_json")"
+          base_ref="$(jq -r '.base.ref' <<<"$pr_json")"
+          head_ref="$(jq -r '.head.ref' <<<"$pr_json")"
+          head_sha="$(jq -r '.head.sha' <<<"$pr_json")"
+          head_repo="$(jq -r '.head.repo.full_name' <<<"$pr_json")"
+          merged="$(jq -r '.merged' <<<"$pr_json")"
+
+          [[ "$state" == "open" && "$merged" == "false" && "$draft" == "false" ]]
+          [[ "$title" == "Best-of update: $VERSION" ]]
+          [[ "$base_ref" == "$DEFAULT_BRANCH" ]]
+          [[ "$head_ref" == "$UPDATE_BRANCH" ]]
+          [[ "$head_repo" == "$REPO" ]]
+          [[ "$head_sha" == "$EXPECTED_HEAD_SHA" ]] || {
+            echo "PR head SHA changed during the review window" >&2
+            exit 1
+          }
+
+          branch_sha="$(gh api "repos/$REPO/git/ref/heads/$UPDATE_BRANCH" --jq '.object.sha')"
+          [[ "$branch_sha" == "$EXPECTED_HEAD_SHA" ]] || {
+            echo "Update branch moved during the review window" >&2
+            exit 1
+          }
+
+          release_json="$(gh api "repos/$REPO/releases/tags/$VERSION")"
+          [[ "$(jq -r '.draft' <<<"$release_json")" == "true" ]]
+          [[ "$(jq -r '.prerelease' <<<"$release_json")" == "false" ]]
 
       - name: Post automatic finalize comment
         if: ${{ github.event_name == 'workflow_run' }}
