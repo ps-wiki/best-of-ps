@@ -114,3 +114,44 @@ jobs:
             --notes-file latest-changes.md
         env:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+      - name: record-finish-metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          update_branch="${BRANCH_PREFIX}${VERSION}"
+          head_sha="$(git rev-parse HEAD)"
+          pull_requests="$(gh pr list \
+            --repo "${{ github.repository }}" \
+            --base "${DEFAULT_BRANCH}" \
+            --head "${update_branch}" \
+            --state open \
+            --json number,headRefName \
+            --limit 20)"
+          pr_number="$(jq -r --arg branch "$update_branch" \
+            'map(select(.headRefName == $branch)) | if length == 1 then .[0].number else empty end' \
+            <<<"$pull_requests")"
+
+          [[ -n "$pr_number" ]] || {
+            echo "Expected exactly one open update PR for $update_branch" >&2
+            echo "$pull_requests" >&2
+            exit 1
+          }
+
+          mkdir -p "$RUNNER_TEMP/best-of-update"
+          jq -n \
+            --arg pr_number "$pr_number" \
+            --arg expected_head_sha "$head_sha" \
+            --arg version "$VERSION" \
+            --arg update_branch "$update_branch" \
+            '{pr_number: ($pr_number | tonumber), expected_head_sha: $expected_head_sha, version: $version, update_branch: $update_branch}' \
+            > "$RUNNER_TEMP/best-of-update/finish-metadata.json"
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+      - name: upload-finish-metadata
+        uses: actions/upload-artifact@v4
+        with:
+          name: best-of-update-finish
+          path: ${{ runner.temp }}/best-of-update/finish-metadata.json
+          if-no-files-found: error
+          retention-days: 14

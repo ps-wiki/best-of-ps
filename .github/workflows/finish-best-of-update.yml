@@ -21,14 +21,18 @@ on:
         type: string
   issue_comment:
     types: [created]
+  workflow_run:
+    workflows: [update-best-of-list]
+    types: [completed]
 
 permissions:
+  actions: read
   contents: write
   pull-requests: write
-  issues: read
+  issues: write
 
 concurrency:
-  group: finish-best-of-update-${{ github.event.issue.number || inputs.version }}
+  group: finish-best-of-update-${{ github.event.issue.number || inputs.version || github.event.workflow_run.id }}
   cancel-in-progress: false
 
 jobs:
@@ -37,14 +41,26 @@ jobs:
       github.event_name == 'workflow_dispatch' ||
       (github.event_name == 'issue_comment' &&
        github.event.issue.pull_request &&
-       startsWith(github.event.comment.body, '/finish-best-of-update '))
+       startsWith(github.event.comment.body, '/finish-best-of-update ')) ||
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
+    timeout-minutes: 150
     env:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
       DEFAULT_BRANCH: main
 
     steps:
+      - name: Download update metadata
+        if: ${{ github.event_name == 'workflow_run' }}
+        uses: actions/download-artifact@v5
+        with:
+          name: best-of-update-finish
+          path: ${{ runner.temp }}/best-of-update
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+
       - name: Resolve and authorize request
         shell: bash
         env:
@@ -57,6 +73,7 @@ jobs:
           COMMENTER: ${{ github.event.comment.user.login }}
           AUTHOR_ASSOCIATION: ${{ github.event.comment.author_association }}
           COMMENT_PR_NUMBER: ${{ github.event.issue.number }}
+          WORKFLOW_METADATA: ${{ runner.temp }}/best-of-update/finish-metadata.json
         run: |
           set -euo pipefail
 
@@ -65,6 +82,16 @@ jobs:
             expected_head_sha="$DISPATCH_EXPECTED_HEAD_SHA"
             version="$DISPATCH_VERSION"
             update_branch="$DISPATCH_UPDATE_BRANCH"
+          elif [[ "$EVENT_NAME" == "workflow_run" ]]; then
+            [[ -s "$WORKFLOW_METADATA" ]] || {
+              echo "Update workflow metadata is missing" >&2
+              exit 1
+            }
+
+            pr_number="$(jq -r '.pr_number' "$WORKFLOW_METADATA")"
+            expected_head_sha="$(jq -r '.expected_head_sha' "$WORKFLOW_METADATA")"
+            version="$(jq -r '.version' "$WORKFLOW_METADATA")"
+            update_branch="$(jq -r '.update_branch' "$WORKFLOW_METADATA")"
           else
             [[ "$AUTHOR_ASSOCIATION" =~ ^(OWNER|MEMBER|COLLABORATOR)$ ]] || {
               echo "Comment author association is not trusted: $AUTHOR_ASSOCIATION" >&2
@@ -123,6 +150,74 @@ jobs:
             echo "UPDATE_BRANCH=$update_branch"
           } >> "$GITHUB_ENV"
 
+      - name: Wait for two-hour review window
+        if: ${{ github.event_name == 'workflow_run' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          pr_json="$(gh api "repos/$REPO/pulls/$PR_NUMBER")"
+          created_at="$(jq -r '.created_at' <<<"$pr_json")"
+          draft="$(jq -r '.draft' <<<"$pr_json")"
+
+          [[ "$draft" == "false" ]] || {
+            echo "PR is still a draft; automatic finalization will not proceed" >&2
+            exit 1
+          }
+
+          created_epoch="$(date -u -d "$created_at" +%s)"
+          ready_epoch=$((created_epoch + 2 * 60 * 60))
+          now_epoch="$(date -u +%s)"
+          remaining=$((ready_epoch - now_epoch))
+
+          if (( remaining > 0 )); then
+            echo "Waiting $remaining seconds until the two-hour review window ends"
+            sleep "$remaining"
+          else
+            echo "The two-hour review window has already elapsed"
+          fi
+
+      - name: Checkout trusted workflow repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          path: trusted
+
+      - name: Checkout reviewed repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Checkout reviewed update commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin \
+            "refs/heads/$UPDATE_BRANCH:refs/remotes/origin/$UPDATE_BRANCH"
+          git checkout --detach "$EXPECTED_HEAD_SHA"
+
+      - name: Validate generated weekly update
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin "$DEFAULT_BRANCH"
+          python trusted/scripts/validate_generated_update.py --base-ref "origin/$DEFAULT_BRANCH"
+
+      - name: Set up validation Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install validation dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.3
+
+      - name: Run repository validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s trusted/tests -v
+          python trusted/scripts/validate_metadata.py
+
       - name: Verify reviewed pull request state
         shell: bash
         run: |
@@ -170,19 +265,43 @@ jobs:
           is_prerelease="$(jq -r --arg tag "$VERSION" '.[] | select(.tag_name == $tag) | .prerelease' <<<"$releases")"
           [[ "$is_draft" == "true" && "$is_prerelease" == "false" ]]
 
+      - name: Post automatic finalize comment
+        if: ${{ github.event_name == 'workflow_run' }}
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          existing_comment="$(gh api --paginate --slurp \
+            "repos/$REPO/issues/$PR_NUMBER/comments?per_page=100" \
+            | jq -r --arg body "/finish-best-of-update $EXPECTED_HEAD_SHA" \
+              '[add[] | select(.body == $body) | .id][0] // empty')"
+          if [[ -n "$existing_comment" ]]; then
+            echo "Finalize comment already exists: $existing_comment"
+            exit 0
+          fi
+
+          gh pr comment "$PR_NUMBER" \
+            --repo "$REPO" \
+            --body "/finish-best-of-update $EXPECTED_HEAD_SHA"
+
       - name: Merge reviewed pull request
+        if: ${{ github.event_name != 'workflow_run' }}
         shell: bash
         run: |
           set -euo pipefail
           gh pr merge "$PR_NUMBER" --repo "$REPO" --merge --match-head-commit "$EXPECTED_HEAD_SHA"
 
       - name: Verify merge completed
+        if: ${{ github.event_name != 'workflow_run' }}
         shell: bash
         run: |
           set -euo pipefail
           [[ "$(gh api "repos/$REPO/pulls/$PR_NUMBER" --jq '.merged')" == "true" ]]
 
       - name: Publish matching draft release as latest
+        if: ${{ github.event_name != 'workflow_run' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -193,6 +312,7 @@ jobs:
             -F draft=false -F prerelease=false -F make_latest=true >/dev/null
 
       - name: Verify release publication
+        if: ${{ github.event_name != 'workflow_run' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -203,6 +323,7 @@ jobs:
           [[ "$(gh api "repos/$REPO/releases/latest" --jq '.tag_name')" == "$VERSION" ]]
 
       - name: Delete reviewed update branch
+        if: ${{ github.event_name != 'workflow_run' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -215,6 +336,7 @@ jobs:
           gh api --method DELETE "repos/$REPO/git/refs/heads/$UPDATE_BRANCH"
 
       - name: Verify final state
+        if: ${{ github.event_name != 'workflow_run' }}
         shell: bash
         run: |
           set -euo pipefail
