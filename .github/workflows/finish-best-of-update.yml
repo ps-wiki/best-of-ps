@@ -45,6 +45,7 @@ jobs:
       (github.event_name == 'workflow_run' &&
        github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
+    timeout-minutes: 150
     env:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
@@ -148,6 +149,33 @@ jobs:
             echo "VERSION=$version"
             echo "UPDATE_BRANCH=$update_branch"
           } >> "$GITHUB_ENV"
+
+      - name: Wait for two-hour review window
+        if: ${{ github.event_name == 'workflow_run' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          pr_json="$(gh api "repos/$REPO/pulls/$PR_NUMBER")"
+          created_at="$(jq -r '.created_at' <<<"$pr_json")"
+          draft="$(jq -r '.draft' <<<"$pr_json")"
+
+          [[ "$draft" == "false" ]] || {
+            echo "PR is still a draft; automatic finalization will not proceed" >&2
+            exit 1
+          }
+
+          created_epoch="$(date -u -d "$created_at" +%s)"
+          ready_epoch=$((created_epoch + 2 * 60 * 60))
+          now_epoch="$(date -u +%s)"
+          remaining=$((ready_epoch - now_epoch))
+
+          if (( remaining > 0 )); then
+            echo "Waiting $remaining seconds until the two-hour review window ends"
+            sleep "$remaining"
+          else
+            echo "The two-hour review window has already elapsed"
+          fi
 
       - name: Checkout trusted workflow repository
         uses: actions/checkout@v6
