@@ -150,16 +150,16 @@ jobs:
             echo "UPDATE_BRANCH=$update_branch"
           } >> "$GITHUB_ENV"
 
+      - name: Checkout reviewed repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
       - name: Checkout trusted workflow repository
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
           path: trusted
-
-      - name: Checkout reviewed repository
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
 
       - name: Checkout reviewed update commit
         shell: bash
