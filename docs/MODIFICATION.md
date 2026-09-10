@@ -44,35 +44,17 @@ changes for the power-system software scope and weekly maintenance process.
   license, and repository-size badges.
 - Visitor badges are intentionally omitted because third-party visitor counters
   have been unreliable and can create noisy external dependencies.
-- The footer is maintained through `config/footer.md` and includes project
-  scoring notes, data-collection limitations, related power-system resources,
-  contribution guidance, and license information.
+- The detailed score and data-collection documentation is maintained in
+  `docs/SCORING.md`; the generated README footer links to it without repeating
+  the formula.
+- Contribution guidance is maintained in `CONTRIBUTING.md`; the generated
+  README footer links to it without duplicating the workflow.
 - The repository keeps a `CITATION` file and Zenodo DOI metadata so the list can
   be cited as a research dataset.
 
-## Planned Metadata Extensions
+## Local Metadata and Score Extension
 
-Two important sources are not represented as first-class upstream generator
-integrations in the current workflow:
-
-- Julia package registry metadata. Julia projects are currently visible through
-  the `julia` language label, but PyPI and Conda do not capture Julia package
-  availability, releases, dependencies, or download-like adoption signals. This
-  repository should add curated Julia registry metadata and decide how it feeds
-  rendering and project scoring.
-- Core paper DOI and citation metadata. Several projects are closely tied to a
-  method, philosophy, or software paper. DOI and citation information can be an
-  important adoption signal, but citation counts are provider-dependent and
-  must be collected with a documented source and scoring rule.
-
-The preferred long-run direction is to keep power-system-specific metadata
-scripts in this repository first. A forked generator or custom GitHub Action
-should be considered only if local scripts become hard to maintain or if the
-metadata model becomes broadly useful to other best-of lists.
-
-## Score Extension Experiment
-
-The first local scoring extension uses these curated project fields:
+The active local scoring extension uses these curated project fields:
 
 - `julia_id`: Julia package name used by JuliaPkgStats and the Julia General
   registry ecosystem.
@@ -101,17 +83,9 @@ The local scripts under `scripts/` extend the weekly update workflow:
 - `preview_score_extensions.py` previews the same applied adjustments against
   the latest generated history CSV.
 
-The score-extension formula is intentionally bounded and log-scaled:
-
-- Julia adjustment: registration bonus plus a capped package-server monthly
-  download score.
-- Citation adjustment: one paper-record bonus per project plus capped
-  lifetime and recent citation-count scores aggregated across the project's
-  resolved DOI-backed core papers.
-- A curated paper that is absent from OpenAlex keeps the paper-record bonus
-  but receives no provider-dependent citation-count bonus.
-- The raw components are retained in generated history, while their sum is
-  rounded to an integer before it is added to the upstream integer score.
+The full score-extension formula and collection caveats are documented in
+[`docs/SCORING.md`](SCORING.md). That page is the public source of truth for
+the adjustment semantics; the scripts below remain the implementation source.
 
 The weekly workflow collects and validates both metric sources before invoking
 `best-of-update-action`. The extension records `upstream_projectrank`,
