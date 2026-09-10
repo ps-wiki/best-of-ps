@@ -15,6 +15,10 @@ from pathlib import Path
 HISTORY_RE = re.compile(r"^history/(\d{4}-\d{2}-\d{2})_(changes|projects)\.(md|csv)$")
 ALLOWED_STATIC_FILES = {"README.md", "latest-changes.md"}
 CONFLICT_RE = re.compile(r"^(<<<<<<<|=======|>>>>>>>)")
+UPSTREAM_EOF_BLANK_LINE_RE = re.compile(
+    r"^(?:history/\d{4}-\d{2}-\d{2}_changes\.md|latest-changes\.md):\d+: "
+    r"new blank line at EOF\.$"
+)
 PROJECT_SUMMARY_RE = re.compile(
     r"This curated list contains (?P<projects>\d+) open-source projects "
     r"with a total of .* grouped into (?P<categories>\d+) categories\."
@@ -202,9 +206,27 @@ def validate_generated_consistency(files: list[str]) -> list[str]:
     return errors
 
 
+def unexpected_diff_check_lines(
+    output: str, *, allow_upstream_eof_blank_line: bool
+) -> list[str]:
+    lines = [line for line in output.splitlines() if line]
+    if allow_upstream_eof_blank_line:
+        lines = [
+            line
+            for line in lines
+            if not UPSTREAM_EOF_BLANK_LINE_RE.fullmatch(line)
+        ]
+    return lines
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base-ref", default="origin/main")
+    parser.add_argument(
+        "--allow-upstream-eof-blank-line",
+        action="store_true",
+        help="Allow the known upstream blank line at EOF in generated Markdown files.",
+    )
     args = parser.parse_args()
 
     try:
@@ -220,8 +242,12 @@ def main() -> int:
             capture_output=True,
             text=True,
         )
-        if diff_check.returncode:
-            errors.append("git diff --check failed:\n" + diff_check.stdout + diff_check.stderr)
+        diff_check_lines = unexpected_diff_check_lines(
+            diff_check.stdout + diff_check.stderr,
+            allow_upstream_eof_blank_line=args.allow_upstream_eof_blank_line,
+        )
+        if diff_check_lines:
+            errors.append("git diff --check failed:\n" + "\n".join(diff_check_lines))
     except (OSError, subprocess.CalledProcessError, UnicodeError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1

@@ -174,7 +174,9 @@ jobs:
         run: |
           set -euo pipefail
           git fetch --no-tags origin "$DEFAULT_BRANCH"
-          python trusted/scripts/validate_generated_update.py --base-ref "origin/$DEFAULT_BRANCH"
+          python trusted/scripts/validate_generated_update.py \
+            --base-ref "origin/$DEFAULT_BRANCH" \
+            --allow-upstream-eof-blank-line
 
       - name: Set up validation Python
         uses: actions/setup-python@v6
