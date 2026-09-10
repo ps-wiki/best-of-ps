@@ -13,7 +13,7 @@
     <a href="https://best-of.org" title="Best-of Badge"><img src="http://bit.ly/3o3EHNN"></a>
     <a href="https://doi.org/10.5281/zenodo.14941137"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.14941137.svg" alt="DOI"></a>
     <a href="#Contents" title="Project Count"><img src="https://img.shields.io/badge/projects-170-blue.svg?color=5ac4bf"></a>
-    <a href="#Contribution" title="Contributions are welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
+    <a href="CONTRIBUTING.md" title="Contributions are welcome"><img src="https://img.shields.io/badge/contributions-welcome-green.svg"></a>
     <img alt="GitHub Created At" src="https://img.shields.io/github/created-at/ps-wiki/best-of-ps">
     <a href="https://github.com/ps-wiki/best-of-ps/releases" title="Best-of Updates"><img src="https://img.shields.io/github/release-date/ps-wiki/best-of-ps?color=green&label=updated"></a>
     <a href="https://www.repostatus.org/#active"><img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed." /></a>
@@ -21,7 +21,7 @@
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/ps-wiki/best-of-ps">
 </p>
 
-This curated list contains 170 open-source projects with a total of 58K stars grouped into 16 categories. All projects are ranked by a project-popularity score, which is calculated based on various metrics automatically collected from GitHub and different package managers. If you like to add or update projects, feel free to open an [issue](https://github.com/ps-wiki/best-of-ps/issues/new/choose), submit a [pull request](https://github.com/ps-wiki/best-of-ps/pulls), or directly edit the [projects.yaml](https://github.com/ps-wiki/best-of-ps/edit/main/projects.yaml). Contributions are very welcome!
+This curated list contains 170 open-source projects with a total of 58K stars grouped into 16 categories. All projects are ranked by a project-popularity score calculated from metadata collected from GitHub, package managers, JuliaPkgStats, and OpenAlex where applicable. The score is an empirical comparison signal, not a direct measure of software quality. If you like to add or update projects, feel free to open an [issue](https://github.com/ps-wiki/best-of-ps/issues/new/choose), submit a [pull request](https://github.com/ps-wiki/best-of-ps/pulls), or directly edit the [projects.yaml](https://github.com/ps-wiki/best-of-ps/edit/main/projects.yaml). Contributions are very welcome!
 
 ## Contents
 
@@ -1762,32 +1762,9 @@ This curated list contains 170 open-source projects with a total of 58K stars gr
 
 ---
 
-## Project Popularity Score
-
-- Has homepage link & description: `+ 1`
-- Has an existing GitHub repository: `+ 1`
-- Has a license: `+ 1`
-- Has a commonly used license (e.g. MIT): `+ 1`
-- Has multiple releases: `+ 1`
-- Has stable releases based on semantic version: `+ 1`
-- Has a release that is less than 6 months old: `+ 1`
-- Repo was update in the last 3 months: `+ 1`
-- Is older than 6 months: `+ 1`
-- Metrics from GitHub & package mangers:
-  - Number of stars: `+ log(COUNT / 2)`
-  - Number of contributors: `+ log(COUNT / 2) - 1`
-  - Number of commits: `+ log(COUNT / 2) - 1`
-  - Number of forks: `+ log(COUNT / 2)`
-  - Number of monthly downloads: `+ log(COUNT / 2) - 1`
-  - Number of dependent projects: `+ log(COUNT / 1.5)`
-  - Number of watchers: `+ log(COUNT / 2) - 1`
-  - Number of closed issues: `+ log(COUNT / 2) - 1`
-
-**NOTE**: This calculation is just chosen by ***EXPERIENCE***. There is ***NO*** scientific proof that this really reflects the ***QUALITY*** of a project.
-
-## Project Data Collection
-
-The data collection can be deficient for the projects that are not majorly hosted in GitHub.
+For the score formula and data-collection limitations, see
+[`docs/SCORING.md`](docs/SCORING.md). For contribution guidance, see
+[`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Related Resources
 
@@ -1804,17 +1781,6 @@ The data collection can be deficient for the projects that are not majorly hoste
 - [Open Source Software (OSS) for Electricity Market Research, Teaching, and Training](https://www2.econ.iastate.edu/tesfatsi/ElectricOSS.htm)
 - [Open-Source-Power-Electronic-Tools](https://github.com/upb-lea/awesome-open-source-power-electronics)
 - [PowerMatlab - Telegram Channel](https://t.me/powermatlab): matlab codes and simulation matlab files in field of power electrical engineering.
-
-## Contribution
-
-Contributions are encouraged and always welcome! If you like to add or update projects, choose one of the following ways:
-
-- Open an issue by selecting one of the provided categories from the [issue page](https://github.com/ps-wiki/best-of-ps/issues/new/choose) and fill in the requested information.
-- Modify the [projects.yaml](https://github.com/ps-wiki/best-of-ps/blob/main/projects.yaml) with your additions or changes, and submit a pull request. This can also be done directly via the [Github UI](https://github.com/ps-wiki/best-of-ps/edit/main/projects.yaml).
-
-If you like to contribute to or share suggestions regarding the project metadata collection or markdown generation, please refer to the [best-of-generator](https://github.com/best-of-lists/best-of-generator) repository. If you like to create your own best-of list, we recommend to follow [this guide](https://github.com/best-of-lists/best-of/blob/main/create-best-of-list.md).
-
-For more information on how to add or update projects, please read the [contribution guidelines](https://github.com/ps-wiki/best-of-ps/blob/main/CONTRIBUTING.md). By participating in this project, you agree to abide by its [Code of Conduct](https://github.com/ps-wiki/best-of-ps/blob/main/.github/CODE_OF_CONDUCT.md).
 
 ## License
 

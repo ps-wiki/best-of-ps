@@ -3,13 +3,16 @@
 
 Thanks for your interest in contributing to our project. This page will give you a quick overview of how things are organized and, most importantly, how to get involved. Everyone is welcome to contribute, and we value everybody's contribution.
 
+For the current projectrank formula and metadata limitations, see
+[`docs/SCORING.md`](docs/SCORING.md).
+
 ## Table of contents
 
 1. [Add a project](#add-a-project)
 2. [Update a project](#update-a-project)
 3. [Improve metadata collection](#improve-metadata-collection)
 4. [Improve markdown generation](#improve-markdown-generation)
-5. [Create your own best-of list](#improve-markdown-generation)
+5. [Create your own best-of list](#create-your-own-best-of-list)
 6. [Code of conduct](#code-of-conduct)
 
 ## Add a project
@@ -113,13 +116,13 @@ Before opening an issue or pull request, please ensure that you adhere to the fo
 
 Please refer to the [best-of-generator documentation](https://github.com/best-of-lists/best-of-generator#project-properties) for a complete and up-to-date list of supported project properties.
 
-The curated metadata extensions are repository-specific and are not consumed by
-the upstream best-of generator yet. They are intended to support future local
-metadata collection, rendering, and scoring scripts for Julia registry adoption
-signals and paper citation signals. Keep these values conservative: leave a
-field blank when the registry identity or core paper is uncertain. A commented
-curated metadata field, such as <code># paper_id:</code>, means the field was
-checked and is currently considered not applicable; re-check it during later
+The curated metadata extensions are repository-specific and are consumed by the
+local metadata collection and scoring workflow. `julia_id` feeds JuliaPkgStats
+collection and the Julia adjustment; `paper_id` feeds OpenAlex collection and
+the citation adjustment. Keep these values conservative: leave a field blank
+when the registry identity or core paper is uncertain. A commented curated
+metadata field, such as <code># paper_id:</code>, means the field was checked
+and is currently considered not applicable; re-check it during later
 validation passes because project packaging and citation metadata can change.
 
 ## Improve metadata collection
