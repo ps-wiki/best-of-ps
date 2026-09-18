@@ -16,7 +16,7 @@ env:
 
 jobs:
   update-best-of-list:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - if: ${{ github.event.inputs != null  &&  github.event.inputs.version != null }}
         name: set-version-from-input

@@ -35,6 +35,12 @@ class FinishWorkflowTests(unittest.TestCase):
         self.assertIn("SKIP_FINISH=true", WORKFLOW)
         self.assertIn("env.SKIP_FINISH != 'true'", WORKFLOW)
 
+    def test_workflows_pin_ubuntu_runner_image(self):
+        self.assertIn("runs-on: ubuntu-24.04", WORKFLOW)
+        self.assertIn("runs-on: ubuntu-24.04", UPDATE_WORKFLOW)
+        self.assertNotIn("runs-on: ubuntu-latest", WORKFLOW)
+        self.assertNotIn("runs-on: ubuntu-latest", UPDATE_WORKFLOW)
+
     def test_scheduled_finalization_discovers_current_update(self):
         schedule = WORKFLOW.index('cron: "0 21 * * 4"')
         section = WORKFLOW[schedule:]
