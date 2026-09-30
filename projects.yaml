@@ -1674,6 +1674,16 @@ projects:
     license: ODbL-1.0
     description: Voltage and current samples from Digital Fault Recorder
 
+  - name: COMTRADE Sample Files
+    category: data
+    labels: ["for-profit"]
+    resource: True
+    github_id: sagswell/comtrade-sample-files
+    homepage: https://sagswell.com/
+    docs_url: https://sagswell.com/guides/comtrade-file-format
+    license: CC0-1.0
+    description: Synthetic COMTRADE disturbance records for testing and teaching
+
   - name: A new power system benchmark
     category: data
     labels: ["lab"]
