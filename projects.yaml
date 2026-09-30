@@ -1676,7 +1676,7 @@ projects:
 
   - name: COMTRADE Sample Files
     category: data
-    labels: ["for-profit"]
+    labels: ["community"]
     resource: True
     github_id: sagswell/comtrade-sample-files
     homepage: https://sagswell.com/
