@@ -18,11 +18,15 @@ changes for the power-system software scope and weekly maintenance process.
   "Long-inactive project" and the ice marker.
 - A separate `finish-best-of-update` workflow verifies the reviewed update pull
   request, expected head SHA, draft release, merge result, release publication,
-  and update-branch deletion. It runs automatically at 21:00 UTC on Thursday,
-  three hours after the scheduled update workflow, and can also be triggered
-  manually or by a trusted maintainer comment. The scheduled path performs
-  discovery and the same trusted validation in one short job rather than
-  holding a runner during the grace period.
+  and update-branch deletion. It runs automatically at 01:00 UTC on Friday,
+  seven hours after the scheduled update workflow, and can also be triggered
+  manually or by a trusted maintainer comment. The scheduled path accepts one
+  canonical update PR dated today, yesterday, or two days ago, so delayed
+  execution can cross UTC midnight without selecting an old weekly PR. Zero or
+  multiple candidates fail the job; a scheduled run cannot report success
+  without completing the merge and final-state checks. Discovery and the same
+  trusted validation run in one short job rather than holding a runner during
+  the grace period.
 
 ## List Configuration Changes
 

@@ -22,7 +22,7 @@ on:
   issue_comment:
     types: [created]
   schedule:
-    - cron: "0 21 * * 4" # Three hours after update-best-of-list at 18:00 UTC
+    - cron: "0 1 * * 5" # Seven hours after update-best-of-list at 18:00 UTC
 
 permissions:
   contents: write
@@ -71,7 +71,13 @@ jobs:
             update_branch="$DISPATCH_UPDATE_BRANCH"
           elif [[ "$EVENT_NAME" == "schedule" ]]; then
             today="$(date -u '+%Y.%m.%d')"
-            title_prefix="Best-of update: $today"
+            yesterday="$(date -u -d '1 day ago' '+%Y.%m.%d')"
+            two_days_ago="$(date -u -d '2 days ago' '+%Y.%m.%d')"
+            allowed_dates="$(jq -cn \
+              --arg today "$today" \
+              --arg yesterday "$yesterday" \
+              --arg two_days_ago "$two_days_ago" \
+              '[ $today, $yesterday, $two_days_ago ]')"
             open_prs="$(gh pr list \
               --repo "$REPO" \
               --base "$DEFAULT_BRANCH" \
@@ -79,25 +85,26 @@ jobs:
               --json number,title,headRefName,headRefOid,isDraft \
               --limit 100)"
 
-            candidates="$(jq -c --arg title_prefix "$title_prefix" '
+            candidates="$(jq -c --argjson allowed_dates "$allowed_dates" '
               [
                 .[]
                 | select(.isDraft == false)
                 | select(.title | test("^Best-of update: [0-9]{4}\\.[0-9]{2}\\.[0-9]{2}(-[0-9]{2}\\.[0-9]{2})?$"))
-                | select(.title == $title_prefix or (.title | startswith($title_prefix + "-")))
                 | . + {version: (.title | sub("^Best-of update: "; ""))}
+                | . + {version_date: (.version | sub("(-[0-9]{2}\\.[0-9]{2})$"; ""))}
+                | . as $candidate
+                | select($allowed_dates | index($candidate.version_date))
                 | select(.headRefName == ("update/" + .version))
               ]
             ' <<<"$open_prs")"
             candidate_count="$(jq 'length' <<<"$candidates")"
 
             if [[ "$candidate_count" == "0" ]]; then
-              echo "No current open update PR found for $today"
-              echo "SKIP_FINISH=true" >> "$GITHUB_ENV"
-              exit 0
+              echo "No recent open update PR found for UTC dates: $today, $yesterday, $two_days_ago" >&2
+              exit 1
             fi
             [[ "$candidate_count" == "1" ]] || {
-              echo "Expected at most one current open update PR, found $candidate_count" >&2
+              echo "Expected exactly one recent open update PR, found $candidate_count" >&2
               jq -r '.[] | "#\(.number) \(.title) \(.headRefName)"' <<<"$candidates" >&2
               exit 1
             }
@@ -166,20 +173,17 @@ jobs:
           } >> "$GITHUB_ENV"
 
       - name: Checkout reviewed repository
-        if: ${{ env.SKIP_FINISH != 'true' }}
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Checkout trusted workflow repository
-        if: ${{ env.SKIP_FINISH != 'true' }}
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
           path: trusted
 
       - name: Checkout reviewed update commit
-        if: ${{ env.SKIP_FINISH != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -188,7 +192,6 @@ jobs:
           git checkout --detach "$EXPECTED_HEAD_SHA"
 
       - name: Validate generated weekly update
-        if: ${{ env.SKIP_FINISH != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -198,17 +201,14 @@ jobs:
             --allow-upstream-eof-blank-line
 
       - name: Set up validation Python
-        if: ${{ env.SKIP_FINISH != 'true' }}
         uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
       - name: Install validation dependencies
-        if: ${{ env.SKIP_FINISH != 'true' }}
         run: python -m pip install --disable-pip-version-check PyYAML==6.0.3
 
       - name: Run repository validation
-        if: ${{ env.SKIP_FINISH != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -216,7 +216,6 @@ jobs:
           python trusted/scripts/validate_metadata.py
 
       - name: Verify reviewed pull request state
-        if: ${{ env.SKIP_FINISH != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -248,7 +247,6 @@ jobs:
           }
 
       - name: Verify matching draft release exists
-        if: ${{ env.SKIP_FINISH != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -265,21 +263,18 @@ jobs:
           [[ "$is_draft" == "true" && "$is_prerelease" == "false" ]]
 
       - name: Merge reviewed pull request
-        if: ${{ env.SKIP_FINISH != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
           gh pr merge "$PR_NUMBER" --repo "$REPO" --merge --match-head-commit "$EXPECTED_HEAD_SHA"
 
       - name: Verify merge completed
-        if: ${{ env.SKIP_FINISH != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
           [[ "$(gh api "repos/$REPO/pulls/$PR_NUMBER" --jq '.merged')" == "true" ]]
 
       - name: Publish matching draft release as latest
-        if: ${{ env.SKIP_FINISH != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -290,7 +285,6 @@ jobs:
             -F draft=false -F prerelease=false -F make_latest=true >/dev/null
 
       - name: Verify release publication
-        if: ${{ env.SKIP_FINISH != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -301,7 +295,6 @@ jobs:
           [[ "$(gh api "repos/$REPO/releases/latest" --jq '.tag_name')" == "$VERSION" ]]
 
       - name: Delete reviewed update branch
-        if: ${{ env.SKIP_FINISH != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -314,7 +307,6 @@ jobs:
           gh api --method DELETE "repos/$REPO/git/refs/heads/$UPDATE_BRANCH"
 
       - name: Verify final state
-        if: ${{ env.SKIP_FINISH != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
