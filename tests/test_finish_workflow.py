@@ -48,6 +48,19 @@ class FinishWorkflowTests(unittest.TestCase):
         self.assertNotIn("runs-on: ubuntu-latest", WORKFLOW)
         self.assertNotIn("runs-on: ubuntu-latest", UPDATE_WORKFLOW)
 
+    def test_updater_normalizes_and_validates_before_publishing(self):
+        normalization = UPDATE_WORKFLOW.index("- name: normalize generated project count")
+        validation = UPDATE_WORKFLOW.index("- name: validate generated weekly update")
+        publishing = UPDATE_WORKFLOW.index("- name: push-update")
+        section = UPDATE_WORKFLOW[validation:publishing]
+
+        self.assertLess(normalization, validation)
+        self.assertLess(validation, publishing)
+        self.assertIn("normalize_generated_project_count.py", UPDATE_WORKFLOW[normalization:validation])
+        self.assertIn("scripts/validate_generated_update.py", section)
+        self.assertIn("--working-tree", section)
+        self.assertIn("--allow-upstream-eof-blank-line", section)
+
     def test_scheduled_finalization_discovers_current_update(self):
         schedule = WORKFLOW.index('cron: "17 21 * * 4"')
         section = WORKFLOW[schedule:]

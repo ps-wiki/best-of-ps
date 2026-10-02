@@ -16,6 +16,10 @@ changes for the power-system software scope and weekly maintenance process.
 - Generated wording for long-inactive projects is softened after generation:
   upstream "dead project" wording and the skull marker are replaced with
   "Long-inactive project" and the ice marker.
+- After generation, a narrow normalization step repairs a stale README project
+  badge and summary only when the README category totals already match the
+  generated history CSV. The generated-file validator then checks the complete
+  update before the updater commits or publishes its branch.
 - A separate `finish-best-of-update` workflow verifies the reviewed update pull
   request, expected head SHA, draft release, merge result, release publication,
   and update-branch deletion. It runs automatically at 21:17, 22:17, and
@@ -89,6 +93,11 @@ The local scripts under `scripts/` extend the weekly update workflow:
   `paper_id` links to its canonical record.
 - `validate_applied_scores.py` verifies the generated history after the
   upstream action and fails the update if the hook did not apply exact scores.
+- `normalize_generated_project_count.py` repairs the generated README project
+  count only when category totals and the history CSV agree; it refuses broader
+  inconsistencies.
+- `validate_generated_update.py` validates the generated working tree before
+  publication and the committed update again during finalization.
 - `preview_score_extensions.py` previews the same applied adjustments against
   the latest generated history CSV.
 
