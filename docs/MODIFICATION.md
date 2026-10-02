@@ -19,10 +19,11 @@ changes for the power-system software scope and weekly maintenance process.
 - A separate `finish-best-of-update` workflow verifies the reviewed update pull
   request, expected head SHA, draft release, merge result, release publication,
   and update-branch deletion. It runs automatically at 21:17, 22:17, and
-  23:17 UTC on Thursday, followed by 00:17 and 01:17 UTC on Friday. The first
-  attempt is about three hours after the scheduled update workflow, and later
-  slots retry delayed discovery without using a runner-held sleep. It can also
-  be triggered manually or by a trusted maintainer comment. The scheduled path
+  23:17 UTC on Thursday, followed by 00:17 and 01:17 UTC on Friday. The update
+  workflow starts at 18:17 UTC on Thursday, so the first finalization attempt
+  remains three hours later while both workflows avoid the top-of-hour peak.
+  Later slots retry delayed discovery without using a runner-held sleep. It can
+  also be triggered manually or by a trusted maintainer comment. The scheduled path
   accepts one canonical update PR dated today, yesterday, or two days ago, so
   delayed execution can cross UTC midnight without selecting an old weekly PR.
   If an earlier retry already completed the merge, release publication, and

@@ -33,7 +33,8 @@ class FinishWorkflowTests(unittest.TestCase):
             'cron: "17 1 * * 5"',
         ):
             self.assertIn(schedule, WORKFLOW)
-        self.assertIn('cron: "0 18 * * 4"', UPDATE_WORKFLOW)
+        self.assertIn('cron: "17 18 * * 4"', UPDATE_WORKFLOW)
+        self.assertNotIn('cron: "0 18 * * 4"', UPDATE_WORKFLOW)
 
     def test_automatic_finalization_does_not_hold_runner(self):
         self.assertNotIn("workflow_run", WORKFLOW)
