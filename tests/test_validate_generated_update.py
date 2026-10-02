@@ -1,6 +1,38 @@
 import unittest
+from unittest.mock import patch
 
-from scripts.validate_generated_update import unexpected_diff_check_lines
+from scripts.validate_generated_update import (
+    changed_files,
+    diff_reference,
+    unexpected_diff_check_lines,
+)
+
+
+class DiffReferenceTests(unittest.TestCase):
+    def test_committed_head_diff_uses_three_dot_range(self):
+        self.assertEqual(
+            diff_reference("origin/main", working_tree=False), "origin/main...HEAD"
+        )
+
+    def test_working_tree_diff_uses_base_revision(self):
+        self.assertEqual(diff_reference("origin/main", working_tree=True), "origin/main")
+
+    @patch("scripts.validate_generated_update.git_output")
+    def test_working_tree_includes_untracked_files(self, git_output_mock):
+        git_output_mock.side_effect = [
+            "README.md\nlatest-changes.md\n",
+            "history/2026-10-02_changes.md\nhistory/2026-10-02_projects.csv\n",
+        ]
+
+        self.assertEqual(
+            changed_files("origin/main", working_tree=True),
+            [
+                "README.md",
+                "history/2026-10-02_changes.md",
+                "history/2026-10-02_projects.csv",
+                "latest-changes.md",
+            ],
+        )
 
 
 class DiffCheckCompatibilityTests(unittest.TestCase):
