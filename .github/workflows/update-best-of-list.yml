@@ -85,6 +85,12 @@ jobs:
           text = text.replace('Dead project', 'Long-inactive project')
           path.write_text(text)
           PY
+      - name: validate generated weekly update
+        run: |
+          python scripts/validate_generated_update.py \
+            --base-ref origin/main \
+            --working-tree \
+            --allow-upstream-eof-blank-line
       - name: push-update
         uses: stefanzweifel/git-auto-commit-action@v7
         with:

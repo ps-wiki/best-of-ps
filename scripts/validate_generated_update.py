@@ -40,10 +40,16 @@ def git_output(*args: str) -> str:
     return result.stdout
 
 
-def changed_files(base_ref: str) -> list[str]:
+def diff_reference(base_ref: str, *, working_tree: bool) -> str:
+    return base_ref if working_tree else f"{base_ref}...HEAD"
+
+
+def changed_files(base_ref: str, *, working_tree: bool) -> list[str]:
     return [
         path
-        for path in git_output("diff", "--name-only", f"{base_ref}...HEAD").splitlines()
+        for path in git_output(
+            "diff", "--name-only", diff_reference(base_ref, working_tree=working_tree)
+        ).splitlines()
         if path
     ]
 
@@ -223,6 +229,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base-ref", default="origin/main")
     parser.add_argument(
+        "--working-tree",
+        action="store_true",
+        help="Validate uncommitted files in the working tree against the base ref.",
+    )
+    parser.add_argument(
         "--allow-upstream-eof-blank-line",
         action="store_true",
         help="Allow the known upstream blank line at EOF in generated Markdown files.",
@@ -230,7 +241,7 @@ def main() -> int:
     args = parser.parse_args()
 
     try:
-        files = changed_files(args.base_ref)
+        files = changed_files(args.base_ref, working_tree=args.working_tree)
         errors = [] if files else ["generated update has no changed files"]
         errors.extend(validate_changed_files(files))
         errors.extend(validate_text_files(files))
@@ -238,7 +249,12 @@ def main() -> int:
         errors.extend(validate_generated_consistency(files))
 
         diff_check = subprocess.run(
-            ["git", "diff", "--check", f"{args.base_ref}...HEAD"],
+            [
+                "git",
+                "diff",
+                "--check",
+                diff_reference(args.base_ref, working_tree=args.working_tree),
+            ],
             capture_output=True,
             text=True,
         )

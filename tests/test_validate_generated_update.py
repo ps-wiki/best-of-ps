@@ -1,6 +1,16 @@
 import unittest
 
-from scripts.validate_generated_update import unexpected_diff_check_lines
+from scripts.validate_generated_update import diff_reference, unexpected_diff_check_lines
+
+
+class DiffReferenceTests(unittest.TestCase):
+    def test_committed_head_diff_uses_three_dot_range(self):
+        self.assertEqual(
+            diff_reference("origin/main", working_tree=False), "origin/main...HEAD"
+        )
+
+    def test_working_tree_diff_uses_base_revision(self):
+        self.assertEqual(diff_reference("origin/main", working_tree=True), "origin/main")
 
 
 class DiffCheckCompatibilityTests(unittest.TestCase):
