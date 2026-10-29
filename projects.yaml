@@ -2056,3 +2056,14 @@ projects:
     docs_url: https://natlabrockies.github.io/dgen/
     license: BSD-3
     description: The Distributed Generation Market Demand (dGen) model
+  - name: odys
+    category: steady-state
+    labels: ["python", "gha"]
+    github_id: ramirocrc/odys
+    pypi_id: odys
+    # conda_id:
+    # dockerhub_id:
+    # homepage:
+    docs_url: https://ramirocrc.github.io/odys/
+    license: MIT
+    description: Stochastic scheduling of an energy asset portfolio across electricity markets
