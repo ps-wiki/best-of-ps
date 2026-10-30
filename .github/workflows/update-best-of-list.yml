@@ -74,16 +74,30 @@ jobs:
         shell: bash
         run: |
           python3 - <<'PY'
+          import os
           from pathlib import Path
-          path = Path('README.md')
-          text = path.read_text()
-          text = text.replace(
-              '- 💀&nbsp; Dead project _(24 months no activity)_',
-              '- 🧊&nbsp; Long-inactive project _(24 months no visible activity)_'
+
+          version_date = os.environ["VERSION"].split("-", 1)[0].replace(".", "-")
+          paths = (
+              Path("README.md"),
+              Path("latest-changes.md"),
+              Path("history") / f"{version_date}_changes.md",
           )
-          text = text.replace('💀', '🧊')
-          text = text.replace('Dead project', 'Long-inactive project')
-          path.write_text(text)
+          replacements = (
+              (
+                  "- 💀&nbsp; Dead project _(24 months no activity)_",
+                  "- 🧊&nbsp; Long-inactive project _(24 months no visible activity)_",
+              ),
+              ("💀", "🧊"),
+              ("Dead project", "Long-inactive project"),
+              ("project-quality score", "project-popularity score"),
+          )
+
+          for path in paths:
+              text = path.read_text(encoding="utf-8")
+              for old, new in replacements:
+                  text = text.replace(old, new)
+              path.write_text(text, encoding="utf-8")
           PY
       - name: normalize generated project count
         run: python scripts/normalize_generated_project_count.py

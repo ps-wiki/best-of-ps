@@ -61,6 +61,15 @@ class FinishWorkflowTests(unittest.TestCase):
         self.assertIn("--working-tree", section)
         self.assertIn("--allow-upstream-eof-blank-line", section)
 
+    def test_updater_post_processes_generated_wording(self):
+        wording = UPDATE_WORKFLOW[
+            UPDATE_WORKFLOW.index("- name: soften generated dead-project wording") :
+        ]
+        self.assertIn("project-quality score", wording)
+        self.assertIn("project-popularity score", wording)
+        self.assertIn('Path("latest-changes.md")', wording)
+        self.assertIn('Path("history") / f"{version_date}_changes.md"', wording)
+
     def test_scheduled_finalization_discovers_current_update(self):
         schedule = WORKFLOW.index('cron: "17 21 * * 4"')
         section = WORKFLOW[schedule:]
